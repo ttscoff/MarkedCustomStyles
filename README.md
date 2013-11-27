@@ -23,6 +23,12 @@ Please customize and include the contents of `header.css` in any submitted style
 
 *By Brett Terpstra*
 
+### Image Reference Pane
+
+[Info](http://crateofpenguins.com/blog/2013-6-image-reference-pane-with-css-in-marked)
+
+*By Sid O'Neill*
+
 ### Using a Style
 
 Just save the CSS file to your disk. You can open any Style in the list and then hit the "Raw" button to get a file ready for "Save to...". I suggest saving to `~/Library/Application Support/Marked/Custom CSS`, as in the near future Marked will read from that folder automatically. 
