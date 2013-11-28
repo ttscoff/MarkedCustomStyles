@@ -19,6 +19,12 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   font-size: 100%;
   vertical-align: baseline; }
 
+code {
+  overflow: auto;
+  word-break:break-all;
+  word-break:break-word;
+}
+
 table {
   border-collapse: collapse;
   border-spacing: 0; }
@@ -169,7 +175,8 @@ body {
     overflow: auto; }
 
   img, pre, blockquote, table, figure, p {
-    page-break-inside: avoid; }
+    page-break-inside: avoid; 
+  }
 
   #wrapper {
     background: #fff;
