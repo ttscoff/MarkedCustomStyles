@@ -1,5 +1,5 @@
 /*
-   This document has been created with Marked.app <http://markedapp.com>, Copyright 2011 Brett Terpstra
+   This document has been created with Marked.app <http://marked2app.com>
    Please leave this notice in place, along with any additional credits below.
    ---------------------------------------------------------------
    Title: Grump
@@ -136,6 +136,8 @@ body {
     border-radius: 8px;
     border: solid 1px #ddd;
     font-size: .9em; }
+    #wrapper pre code {
+      overflow: auto; }
   .poetry #wrapper pre {
     display: block;
     font-family: Georgia, Garamond, serif !important;
