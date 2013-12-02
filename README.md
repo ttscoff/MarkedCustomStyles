@@ -34,21 +34,3 @@ The one thing your Style does need (aside from looking great in Marked), is the 
 I prefer to Base 64 encode any custom fonts in order to make the Stylesheet a single-file download with no online requirements. If you can make it work other ways, I'm open to folder downloads, etc. Eventually I plan to create a bundle format for them.
 
 Thanks, and I hope you'll consider sharing the custom styles you create, even if they're revisions and evolutions of existing styles!
-
-## Custom Styles
-
-### Grump
-
-![Grump Screenshot](http://ckyp.us/tRPi+)
-
-*By Brett Terpstra*
-
-### Image Reference Pane
-
-[Info](http://crateofpenguins.com/blog/2013-6-image-reference-pane-with-css-in-marked)
-
-*By Sid O'Neill*
-
-### Kult
-
-*Peter Sziebig*
