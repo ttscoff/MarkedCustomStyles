@@ -19,12 +19,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   font-size: 100%;
   vertical-align: baseline; }
 
-code {
-  overflow: auto;
-  word-break:break-all;
-  word-break:break-word;
-}
-
 table {
   border-collapse: collapse;
   border-spacing: 0; }
@@ -167,16 +161,17 @@ body {
     vertical-align: super; }
   #wrapper .footnotes p {
     font-size: 1.9ex; }
-  #wrapper ul ul {
+  #wrapper ul ul, #wrapper ol ol {
     margin-left: 1em; }
+  #wrapper li ul, #wrapper li ol {
+    margin-bottom: 0; }
 
 @media print {
   body {
     overflow: auto; }
 
   img, pre, blockquote, table, figure, p {
-    page-break-inside: avoid; 
-  }
+    page-break-inside: avoid; }
 
   #wrapper {
     background: #fff;
@@ -190,18 +185,14 @@ body {
     box-shadow: none !important;
     border: none; } }
 @media screen {
-  .inverted #wrapper, .inverted {
+  .inverted, .inverted #wrapper {
     background: #252a2a; }
-
   .inverted hr {
     border-color: #333f40 !important; }
-
   .inverted p, .inverted td, .inverted li, .inverted h1, .inverted h2, .inverted h3, .inverted h4, .inverted h5, .inverted h6, .inverted pre, .inverted code, .inverted th, .inverted .math, .inverted caption, .inverted dd, .inverted dt {
-    color: #eee !important; }
-
+    color: #fcf9f7 !important; }
   .inverted table tr:nth-child(odd), .inverted table th:nth-child(odd), .inverted table td:nth-child(odd) {
     background: none; }
-
   .inverted a {
     color: #acd1d5; } }
 .max-width {
