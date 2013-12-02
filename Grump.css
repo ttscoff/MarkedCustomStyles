@@ -177,7 +177,11 @@ body {
     font-size: 85%;
     padding: 10px;
     position: relative;
-    text-indent: 0; } }
+    text-indent: 0;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+    border: none; } }
 @media screen {
   .inverted #wrapper, .inverted {
     background: #252a2a; }
@@ -269,6 +273,9 @@ ol, ul {
 
 li {
   line-height: auto; }
+
+code {
+  font-family: menlo, courier, monospace; }
 
 ul {
   list-style-position: outside;
