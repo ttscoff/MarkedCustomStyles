@@ -69,6 +69,15 @@ body {
 
 #wrapper {
   margin-bottom: 0; }
+  .poetry #wrapper pre {
+    display: block;
+    font-family: Georgia, Garamond, serif !important;
+    font-size: 110% !important;
+    font-style: italic;
+    line-height: 1.6em;
+    margin-left: 1em; }
+  .poetry #wrapper pre code {
+    font-family: Georgia, Garamond, serif !important; }
   #wrapper img {
     max-width: 100%;
     height: auto; }
@@ -138,15 +147,6 @@ body {
     font-size: .9em; }
     #wrapper pre code {
       overflow: auto; }
-  .poetry #wrapper pre {
-    display: block;
-    font-family: Georgia, Garamond, serif !important;
-    font-size: 110% !important;
-    font-style: italic;
-    line-height: 1.6em;
-    margin-left: 1em; }
-  .poetry #wrapper pre code {
-    font-family: Georgia, Garamond, serif !important; }
   #wrapper sup, #wrapper sub, #wrapper a.footnote {
     font-size: 1.4ex;
     height: 0;
@@ -195,6 +195,10 @@ body {
     background: none; }
   .inverted a {
     color: #acd1d5; } }
+@media print {
+  #wrapper, body {
+    background: #fff;
+    border: none; } }
 .max-width {
   max-width: 100%;
   height: auto; }
