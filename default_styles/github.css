@@ -9,7 +9,7 @@ Description: Github README style. Includes theme for Pygmentized code blocks.
 */
 html, body {
   color: black;
-  font-style: Garamond, Georgia, serif;
+  font-style: "Frutiger", Helvetica, sans-serif;
 }
 
 *:not('#mkdbuttons') {
@@ -17,7 +17,7 @@ html, body {
   padding: 0; }
 
 #wrapper {
-  font: 15px "Frutiger", Georgia, serif;
+  font: 15px "Frutiger", Helvetica, sans-serif;
 
   -webkit-font-smoothing: antialiased;
   line-height: 1.7;
