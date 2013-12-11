@@ -29,7 +29,8 @@ html, body {
 }
 
 p {
-  margin: 1em 0; }
+  margin: 1em 0; 
+}
 
 a {
   color: #4183c4;
@@ -59,14 +60,18 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 2.5em;
-  border-bottom: 1px solid #ddd; }
+  border-bottom: 1px solid #ddd;
+}
 
 h2 {
   font-size: 2em;
-  border-bottom: 1px solid #eee; }
+  border-bottom: 1px solid #eee;
+  color: #00f;
+}
 
 h3 {
-  font-size: 1.5em; }
+  font-size: 1.5em;
+}
 
 h4 {
   font-size: 1.2em; }
@@ -155,6 +160,8 @@ em {
   background-color: #efefef;
   padding-left: 3px;
   padding-right: 3px;
+  margin-left: 1px;
+  margin-right: 1px;
 
 }
 
