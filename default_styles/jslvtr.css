@@ -8,24 +8,29 @@ Author: Brett Terpstra
 Description: Github README style. Includes theme for Pygmentized code blocks.
 */
 html, body {
-  color: black; }
+  color: black;
+  font-style: "Frutiger", Helvetica, sans-serif;
+}
 
 *:not('#mkdbuttons') {
   margin: 0;
   padding: 0; }
 
 #wrapper {
-  font: 15px helvetica,arial,freesans,clean,sans-serif;
+  font: 15px "Frutiger", Helvetica, sans-serif;
+
   -webkit-font-smoothing: antialiased;
   line-height: 1.7;
   padding: 3px;
   background: #fff;
   border-radius: 3px;
   -moz-border-radius: 3px;
-  -webkit-border-radius: 3px; }
+  -webkit-border-radius: 3px; 
+}
 
 p {
-  margin: 1em 0; }
+  margin: 1em 0; 
+}
 
 a {
   color: #4183c4;
@@ -47,7 +52,7 @@ a {
     box-shadow: 0 0 0 1px #cacaca, 0 0 0 4px #eee; } }
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
-  line-height: 1.7;
+  line-height: 1.0;
   cursor: text;
   position: relative;
   margin: 1em 0 15px;
@@ -55,14 +60,18 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 2.5em;
-  border-bottom: 1px solid #ddd; }
+  border-bottom: 1px solid #ddd;
+}
 
 h2 {
   font-size: 2em;
-  border-bottom: 1px solid #eee; }
+  border-bottom: 1px solid #eee;
+  color: #00f;
+}
 
 h3 {
-  font-size: 1.5em; }
+  font-size: 1.5em;
+}
 
 h4 {
   font-size: 1.2em; }
@@ -75,7 +84,7 @@ h6 {
   font-size: 1em; }
 
 p, blockquote, table, pre {
-  margin: 15px 0; }
+  margin: 3px 0; }
 
 ul {
   padding-left: 30px; }
@@ -142,13 +151,25 @@ blockquote {
   blockquote > :first-child {
     margin-top: 0; }
   blockquote > :last-child {
-    margin-bottom: 0; }
+    margin-bottom: 10px; }
+
+em {
+  font-style: normal;
+  border: 1px solid #f00;
+  border-radius: 3px;
+  background-color: #efefef;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin-left: 1px;
+  margin-right: 1px;
+
+}
 
 table {
   border-collapse: collapse;
   border-spacing: 0;
   font-size: 100%;
-  font: inherit; }
+}
   table th {
     font-weight: bold;
     border: 1px solid #ccc;
@@ -172,8 +193,8 @@ code, tt {
   border: 1px solid #eaeaea;
   background-color: #f8f8f8;
   border-radius: 3px;
-  font-family: Consolas, 'Liberation Mono', Courier, monospace;
-  font-size: 12px;
+  font-family: "Source Code Pro", Consolas, Courier, monospace;
+  font-size: 80%;
   color: #333333; }
 
 pre > code {
@@ -186,7 +207,7 @@ pre > code {
 .highlight pre {
   background-color: #f8f8f8;
   border: 1px solid #ccc;
-  font-size: 13px;
+  font-size: 80%;
   line-height: 19px;
   overflow: auto;
   padding: 6px 10px;
@@ -195,7 +216,7 @@ pre > code {
 pre {
   background-color: #f8f8f8;
   border: 1px solid #ccc;
-  font-size: 14px;
+  font-size: 110%;
   line-height: 19px;
   overflow: auto;
   padding: 6px 10px;
@@ -206,14 +227,14 @@ pre {
     border: none; }
 
 .poetry pre {
-  font-family: Georgia, Garamond, serif !important;
+  font-family: Garamond, Georgia, serif !important;
   font-style: italic;
   font-size: 110% !important;
   line-height: 1.6em;
   display: block;
   margin-left: 1em; }
   .poetry pre code {
-    font-family: Georgia, Garamond, serif !important;
+    font-family: Garamond, Georgia, serif !important;
     word-break: break-all;
     word-break: break-word;
     /* Non standard for webkit */
