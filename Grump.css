@@ -134,6 +134,7 @@ body {
   #wrapper figure:hover > figcaption {
     /* background: rgba(0,0,0,1) */ }
   #wrapper pre {
+    overflow: auto;
     display: block;
     margin: 1.4em auto;
     background: #FAF8F5;
@@ -145,8 +146,6 @@ body {
     border-radius: 8px;
     border: solid 1px #ddd;
     font-size: .9em; }
-    #wrapper pre code {
-      overflow: auto; }
   #wrapper sup, #wrapper sub, #wrapper a.footnote {
     font-size: 1.4ex;
     height: 0;
@@ -191,10 +190,12 @@ body {
     border-color: #333f40 !important; }
   .inverted p, .inverted td, .inverted li, .inverted h1, .inverted h2, .inverted h3, .inverted h4, .inverted h5, .inverted h6, .inverted pre, .inverted code, .inverted th, .inverted .math, .inverted caption, .inverted dd, .inverted dt {
     color: #fcf9f7 !important; }
+  .inverted pre code {
+    color: #111 !important; }
   .inverted table tr:nth-child(odd), .inverted table th:nth-child(odd), .inverted table td:nth-child(odd) {
     background: none; }
   .inverted a {
-    color: #acd1d5; } }
+    color: #a6d6db !important; } }
 @media print {
   #wrapper, body {
     background: #fff;
