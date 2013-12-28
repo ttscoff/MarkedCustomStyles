@@ -2,7 +2,7 @@ body {
   font-size: 40px;
   line-height: 1.7;
   background-color: rgba(63, 63, 63, 1);
-  background-image: linear-gradient(0deg , rgba(63, 63, 63, 1) 25%, rgba(29, 29, 29, 1) 25%, rgba(29, 29, 29, 1) 75%, rgba(63, 63, 63, 1) 75%);
+  background-image: linear-gradient(0deg, rgba(63, 63, 63, 1) 25%, rgba(29, 29, 29, 1) 25%, rgba(29, 29, 29, 1) 75%, rgba(63, 63, 63, 1) 75%);
   font-family: Helvetica;
   font-size: 52px;
   color: #fff;
@@ -21,7 +21,7 @@ a {
   margin: 0 auto!important;
 }
 body:before {
-  content: ' ';
+  content:' ';
   display: block;
   position: fixed;
   left: 0;
@@ -33,34 +33,37 @@ body:before {
 h1, h2, h3, h4, h5, h6 {
   font-size: 1em;
 }
-
 ul, ol {
   list-style-position: outside;
   text-indent: 0;
   padding: 0;
   margin: 0;
 }
-
 ul ul, ul ol, ol ul, ol ol {
   margin-left: 30px;
 }
-
-h1:before,
-h2:before,
-h3:before,
-h4:before,
-h5:before,
-h6:before {
+h1:before, h2:before, h3:before, h4:before, h5:before, h6:before {
   display: block;
   position: absolute;
   width: 70px;
   left: -80px;
   text-align: right;
 }
-
-h1:before { content: '#'; }
-h2:before { content: '##'; }
-h3:before { content: '###'; }
-h4:before { content: '-'; }
-h5:before { content: '--'; }
-h6:before { content: '---'; }
+h1:before {
+  content:'#';
+}
+h2:before {
+  content:'##';
+}
+h3:before {
+  content:'###';
+}
+h4:before {
+  content:'-';
+}
+h5:before {
+  content:'--';
+}
+h6:before {
+  content:'---';
+}
