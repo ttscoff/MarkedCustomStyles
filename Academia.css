@@ -10,7 +10,7 @@ body {
     -webkit-font-smoothing: antialiased;
     font-style: normal;
     font-size: 12pt;
-    font-family; "Hoefler Text", Palatino, Georgia, Times, Serif;
+    font: normal 1em "Palatino", Serif;
 	text-align: justify;
 	hyphens: auto;
 	width: 825px;
@@ -19,7 +19,7 @@ body {
 
 
 li {
-    font-size: 110%;
+    font-size: 100%;
 }
 
 li li {
