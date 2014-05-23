@@ -234,14 +234,14 @@ blockquote p {
     line-height: 1.6em;
 }
 
-sup,sub,a.footnote {
-    font-size: 1.8ex;
+.footnoteRef sup,sub {
+    font-size: 2ex;
     font-style: normal;
     height: 0;
     line-height: 1;
     position: relative;
     vertical-align: super;
-    padding-left: 0.25ex;
+    padding-left: 0.35ex;
 }
 
 sub {
