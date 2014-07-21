@@ -1,0 +1,260 @@
+/*
+This document has been created with Marked.app <http://marked2app.com>, Copyright 2013 Brett Terpstra
+Content is property of the document author
+Please leave this notice in place, along with any additional credits below.
+---------------------------------------------------------------
+Title:  Academic
+Author:  Brett Terpstra
+Description:  Courier, Double-spaced, paragraph indent. Use `###### #` to create "#" centered dividers
+*/
+
+body {
+	-webkit-font-smoothing: antialiased;
+	font: normal 1em/2em "Times New Roman", courier, monospace;
+	margin: 4em 1in 1in 4em;
+	width: auto; }
+
+html > body {
+	font-size: 14px;
+	text-align: left; }
+
+#wrapper img {
+	max-width: 100%;
+	height: auto; }
+#wrapper p {
+	margin: 0;
+	text-indent: 1.5em;
+	page-break-inside: auto; }
+#wrapper ul, #wrapper ol {
+	list-style-position: inside;
+	padding: 0;
+	margin: 0; }
+	#wrapper ul ul, #wrapper ul ol, #wrapper ol ul, #wrapper ol ol {
+		padding-left: 0; }
+#wrapper ul {
+	list-style-type: none; }
+	#wrapper ul > li:before {
+		content: '* '; }
+	#wrapper ul li > p:first-child {
+		margin: 0; }
+	#wrapper ul li p {
+		display: inline; }
+	#wrapper ul ul, #wrapper ul ol {
+		margin-bottom: 0; }
+#wrapper ol {
+	list-style-type: decimal;
+	margin-left: 0; }
+	#wrapper ol ul, #wrapper ol ol {
+		margin-bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 1em 0;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+h1 {
+	text-align: center; }
+
+h2 {
+	text-align: left;
+}
+
+hr {
+	border: none;
+	margin-top: 3em; }
+
+body, p, td, div {
+	color: #111111;
+	word-wrap: break-word; }
+
+h1, h2, h3, h4, h5, h6 {
+	color: #111111;
+	line-height: 1.5em;
+	font-weight: 700; }
+
+a {
+	color: #3c779c;
+	text-decoration: none;
+	-webkit-transition: color 0.2s ease-in-out;
+	-moz-transition: color 0.2s ease-in-out;
+	-o-transition: color 0.2s ease-in-out;
+	-ms-transition: color 0.2s ease-in-out;
+	transition: color 0.2s ease-in-out; }
+	a:hover {
+		color: #3593d9; }
+
+strong {
+	font-weight: bold;
+}
+
+em {
+	font-style: italic;
+	}
+
+strong em, em strong {
+	font-weight: 700;
+	font-style: italic; }
+
+.footnote {
+	color: #3c779c;
+	font-size: 1em;
+	vertical-align: super; }
+
+dd {
+	margin-bottom: 0; }
+
+caption, col, colgroup, table, tbody, td, tfoot, th, thead, tr {
+	border-spacing: 0; }
+
+table {
+	border: 1px solid rgba(0, 0, 0, 0.25);
+	border-collapse: collapse;
+	display: table;
+	empty-cells: hide;
+	margin: -1px 0 1em;
+	padding: 0;
+	table-layout: fixed; }
+
+caption {
+	display: table-caption;
+}
+
+col {
+	display: table-column; }
+
+colgroup {
+	display: table-column-group; }
+
+tbody {
+	display: table-row-group; }
+
+tfoot {
+	display: table-footer-group; }
+
+thead {
+	display: table-header-group; }
+
+td, th {
+	display: table-cell; }
+
+tr {
+	display: table-row; }
+
+table th, table td {
+	padding: 0 1em; }
+
+table thead {
+	background: rgba(0, 0, 0, 0.15);
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
+
+table tbody {
+	background: rgba(0, 0, 0, 0.05); }
+
+table tfoot {
+	background: rgba(0, 0, 0, 0.15);
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	border-top: 1px solid rgba(0, 0, 0, 0.2); }
+
+figure {
+	display: inline-block;
+	position: relative;
+	margin: 1em 0 1em; }
+
+figcaption {
+	font-style: italic;
+	text-align: center;
+	background: white;
+	color: #666666;
+	position: absolute;
+	left: 0;
+	bottom: -24px;
+	width: 98%;
+	padding: 1%;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out; }
+
+figure:hover > figcaption {
+	/* background: rgba(0,0,0,1) */ }
+
+.poetry pre {
+	display: block;
+	font-style: italic;
+	margin-left: 1em; }
+	.poetry pre code {
+		word-break: break-all;
+		word-break: break-word;
+		/* Non standard for webkit */
+		-webkit-hyphens: auto;
+		-moz-hyphens: auto;
+		hyphens: auto;
+		white-space: pre-wrap; }
+
+blockquote {
+	text-indent: 0;
+	padding-left: 1em;
+}
+
+#wrapper blockquote p {
+	text-indent: 0;
+}
+
+sup, sub, a.footnote {
+	font-size: 1em;
+	height: 0;
+	line-height: 1;
+	position: relative;
+	vertical-align: super; }
+
+sub {
+	vertical-align: sub;
+	top: -1px; }
+
+p, h5 {
+	margin: 0; }
+
+dt, th {
+	font-weight: bold;
+		}
+
+table tr:nth-child(odd), table th:nth-child(odd), table td:nth-child(odd) {
+	background: rgba(255, 255, 255, 0.06); }
+
+table tr:nth-child(even), table td:nth-child(even) {
+	background: rgba(200, 200, 200, 0.25); }
+
+@media print {
+	body {
+		overflow: auto; }
+
+	img, pre, blockquote, table, figure, p {
+		page-break-inside: auto; }
+
+	#wrapper {
+		background: transparent;
+		color: #000;
+		position: relative; } }
+@media screen {
+	.inverted {
+		background: #252a2a; }
+		.inverted #wrapper {
+			background: #252a2a;
+			color: #eeeeee; }
+		.inverted hr {
+			border-color: #333f40 !important; }
+		.inverted p, .inverted td, .inverted li, .inverted h1, .inverted h2, .inverted h3, .inverted h4, .inverted h5, .inverted h6, .inverted th, .inverted .math, .inverted caption, .inverted dt, .inverted dd {
+			color: #eeeeee; }
+		.inverted table {
+			background: none; }
+			.inverted table tr:nth-child(odd), .inverted table td:nth-child(odd) {
+				background: none; }
+		.inverted a {
+			color: #acd1d5; }
+
+	::selection {
+		background: rgba(157, 193, 200, 0.5); } }
+
