@@ -31,14 +31,14 @@ $color-ui-light   : lighten($color-text-light, 11%);
 // Non-retina regular weight fonts
 @media (-webkit-max-device-pixel-ratio: 1.49),
        (max-resolution: 143dpi) {
-    // Body text
+	// Body text
 	@font-face {
 		font-family: "Source Sans Pro";
 		font-style: normal;
 		font-weight: 300;
 		src: local("Source Sans Pro Light"), local("SourceSansPro-Light"), url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/toadOcfmlt9b38dHJxOBGMVNtom4QlEDNJaqqqzqdSs.woff) format("woff");
 	}
-    // Body text italic
+	// Body text italic
 	@font-face {
 		font-family: "Source Sans Pro";
 		font-style: italic;
@@ -56,21 +56,21 @@ $color-ui-light   : lighten($color-text-light, 11%);
 // Retina regular weight fonts
 @media (-webkit-min-device-pixel-ratio: 1.5),
        (min-resolution: 144dpi) {
-    // Body text
+	// Body text
 	@font-face {
 		font-family: "Source Sans Pro";
 		font-style: normal;
 		font-weight: 400;
 		src: local("Source Sans Pro"), local("SourceSansPro-Regular"), url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/ODelI1aHBYDBqgeIAH2zlNHq-FFgoDNV3GTKpHwuvtI.woff) format("woff");
 	}
-    // Body text italic
+	// Body text italic
 	@font-face {
 		font-family: "Source Sans Pro";
 		font-style: italic;
 		font-weight: 400;
 		src: local("Source Sans Pro Italic"), local("SourceSansPro-It"), url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/M2Jd71oPJhLKp0zdtTvoM_bce-VcyLJMRR1FC9qWbU8.woff) format("woff");
 	}
-    // Monospace
+	// Monospace
 	@font-face {
 		font-family: "Source Code Pro";
 		font-style: normal;
