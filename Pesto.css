@@ -1,0 +1,425 @@
+/*!
+   This document has been created with Marked.app <http://marked2app.com>
+   Please leave this notice in place, along with any additional credits below.
+   ---------------------------------------------------------------
+   Title: Pesto
+   Author: Andrew Patton @acusti <http://www.acusti.ca>
+   Description: Attention to typography, easy on the eyes, mobile first, retina-ready
+*/
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+@media (-webkit-max-device-pixel-ratio: 1.49), (max-resolution: 143dpi) {
+  @font-face {
+    font-family: "Source Sans Pro";
+    font-style: normal;
+    font-weight: 300;
+    src: local("Source Sans Pro Light"), local("SourceSansPro-Light"), url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/toadOcfmlt9b38dHJxOBGMVNtom4QlEDNJaqqqzqdSs.woff) format("woff"); }
+  @font-face {
+    font-family: "Source Sans Pro";
+    font-style: italic;
+    font-weight: 300;
+    src: local("Source Sans Pro Light Italic"), local("SourceSansPro-LightIt"), url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/fpTVHK8qsXbIeTHTrnQH6H7XMO6S-yJpg1torQFmnv33rGVtsTkPsbDajuO5ueQw.woff) format("woff"); }
+  @font-face {
+    font-family: "Source Code Pro";
+    font-style: normal;
+    font-weight: 300;
+    src: local("Source Code Pro Light"), local("SourceCodePro-Light"), url(http://themes.googleusercontent.com/static/fonts/sourcecodepro/v4/leqv3v-yTsJNC7nFznSMqcVNtom4QlEDNJaqqqzqdSs.woff) format("woff"); } }
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  @font-face {
+    font-family: "Source Sans Pro";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Source Sans Pro"), local("SourceSansPro-Regular"), url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/ODelI1aHBYDBqgeIAH2zlNHq-FFgoDNV3GTKpHwuvtI.woff) format("woff"); }
+  @font-face {
+    font-family: "Source Sans Pro";
+    font-style: italic;
+    font-weight: 400;
+    src: local("Source Sans Pro Italic"), local("SourceSansPro-It"), url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/M2Jd71oPJhLKp0zdtTvoM_bce-VcyLJMRR1FC9qWbU8.woff) format("woff"); }
+  @font-face {
+    font-family: "Source Code Pro";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Source Code Pro"), local("SourceCodePro-Regular"), url(http://themes.googleusercontent.com/static/fonts/sourcecodepro/v4/mrl8jkM18OlOQN8JLgasD9Hq-FFgoDNV3GTKpHwuvtI.woff) format("woff"); } }
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Source Sans Pro Bold"), local("SourceSansPro-Bold"), url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/toadOcfmlt9b38dHJxOBGIqjGYJUyOXcBwUQbRaNH6c.woff) format("woff"); }
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: italic;
+  font-weight: 700;
+  src: local("Source Sans Pro Bold Italic"), local("SourceSansPro-BoldIt"), url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/fpTVHK8qsXbIeTHTrnQH6PgYMAt3u4NmhhzLLLPJ5qH3rGVtsTkPsbDajuO5ueQw.woff) format("woff"); }
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%; }
+  @media (min-width: 723.8px) {
+    html {
+      font-size: 112.5%; } }
+  @media (min-width: 844.76px) {
+    html {
+      font-size: 125%; } }
+
+html, button, input, select, textarea {
+  font-family: sans-serif; }
+
+html, body, button, input, select, textarea {
+  color: #57534a;
+  font-family: "Source Sans Pro", "Myriad Pro", "Myriad", sans-serif;
+  font-weight: 300; }
+
+body {
+  margin: 0 auto;
+  background-color: white; }
+
+body, textarea {
+  line-height: 1.4; }
+
+body:after {
+  clear: both;
+  content: "";
+  display: table; }
+
+body {
+  padding: 1rem 1.25rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 950px;
+  display: block; }
+  @media (min-width: 446px) {
+    body {
+      padding-left: 1.75rem;
+      padding-right: 1.75rem; } }
+  @media (min-width: 572px) {
+    body {
+      padding-left: 3rem;
+      padding-right: 3rem; } }
+  @media (min-width: 798.8px) {
+    body {
+      padding-left: 4rem;
+      padding-right: 4rem; } }
+  @media (min-width: 919.76px) {
+    body {
+      padding-left: 5rem;
+      padding-right: 5rem; } }
+
+h1, h2, h3, dt {
+  color: #423F37;
+  font-weight: 700; }
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/* = Resume-specific styles = */
+/* Heading 1 and first block of content immediately following have no margin between them */
+.resume h1 {
+  margin-bottom: 0; }
+
+.resume h1 + p,
+.resume h1 + section > :first-child {
+  margin-top: 0; }
+
+h2,
+.article-list .article-title {
+  font-size: 1.45em;
+  margin: 1.25em 0 0.5em; }
+
+h3, dt {
+  font-size: 1.17em;
+  margin: 0.94em 0; }
+
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0; }
+
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0; }
+
+h6 {
+  font-size: 0.75em;
+  margin: 2.33em 0; }
+
+/* Link underline from http://practice.typekit.com/ */
+a {
+  color: #8db359;
+  text-decoration: none;
+  /* Underline via gradient background */
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 50%, #d5d6d7 0%);
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 50%, #d5d6d7 0%);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, #d5d6d7 0%);
+  background-repeat: repeat-x;
+  -moz-background-size: 1px 1px;
+  -o-background-size: 1px 1px;
+  -webkit-background-size: 1px 1px;
+  background-size: 1px 1px;
+  background-position: 0 92%;
+  /* Clear descendors */
+  text-shadow: 1px 0 white, 2px 0 white, -1px 0 white, -2px 0 white;
+  cursor: pointer;
+  outline: 0 none; }
+
+a:hover {
+  outline: 0 none;
+  color: #709143;
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 50%, #7ea34b 50%);
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 50%, #7ea34b 50%);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, #7ea34b 50%); }
+
+p, pre {
+  margin: 1em 0; }
+
+code, kbd, pre, samp, tt {
+  font-family: "Source Code Pro", monospace;
+  font-size: 1em;
+  margin: 0;
+  padding: 0; }
+
+pre {
+  background-color: #F8F5F0;
+  font-size: 0.7rem;
+  overflow-x: auto;
+  padding: 1.3rem;
+  position: relative;
+  white-space: pre;
+  word-wrap: normal; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+  font-size: 0.85em;
+  color: #423F37;
+  padding: 0 5px; }
+
+pre > code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+aside {
+  display: block;
+  float: right;
+  width: 390px; }
+
+b, strong {
+  font-weight: bold;
+  color: #423F37;
+  font-weight: 700; }
+
+blockquote {
+  color: #423F37;
+  font-size: 1.25em;
+  font-weight: 700;
+  margin: 1em 40px; }
+
+blockquote {
+  margin-bottom: 2em;
+  margin-top: 2em; }
+
+figure {
+  margin-left: -4.5rem;
+  margin-right: -4.5rem;
+  margin-bottom: 2em;
+  margin-top: 2em; }
+
+hr {
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  border-color: -moz-use-text-color -moz-use-text-color #ECE6DA;
+  border-image: none;
+  border-style: none none solid;
+  border-width: medium medium 1px;
+  margin: 3em 6em; }
+
+img {
+  max-width: 100%;
+  display: block;
+  border: 0 none; }
+
+ol > li:before {
+  color: #423F37;
+  content: counter(ol,decimal) ".";
+  counter-increment: ol;
+  font-weight: 700;
+  margin-right: 0.333em;
+  position: absolute;
+  right: 100%; }
+
+ul > li:before {
+  background-color: #423F37;
+  border-radius: 50%;
+  content: "";
+  height: 0.3em;
+  width: 0.3em;
+  margin-right: 0.5em;
+  margin-top: 0.6em;
+  position: absolute;
+  right: 100%; }
+
+ol, ul, dl {
+  margin-left: 2rem;
+  padding: 0; }
+
+ol {
+  counter-reset: ol; }
+
+li + li, dd + dt {
+  margin-top: 0em; }
+
+ul > li {
+  position: relative; }
+
+ol > li {
+  position: relative; }
+
+li {
+  list-style: none outside none; }
+
+figure > figcaption {
+  margin-top: 0.5em; }
+
+small, dd, figcaption {
+  color: #A19C91;
+  display: block;
+  font-size: 0.8rem;
+  font-style: italic;
+  line-height: 1.2; }
+
+tbody {
+  display: table-row-group; }
+
+tfoot {
+  display: table-footer-group; }
+
+table {
+  margin-bottom: 2em;
+  font-size: 0.89em;
+  padding: 0;
+  border-collapse: collapse;
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.35);
+  width: 91%;
+  margin: 0 auto 2em auto; }
+
+table th, table td {
+  padding: 10px 10px 9px;
+  line-height: 18px;
+  text-align: left; }
+
+table th {
+  padding-top: 9px;
+  text-transform: uppercase;
+  vertical-align: middle; }
+
+table td {
+  vertical-align: top;
+  border-top: 1px solid #ddd; }
+
+table tbody th {
+  border-top: 1px solid #ddd;
+  vertical-align: top; }
+
+table {
+  border: 1px solid #ddd;
+  border-collapse: separate;
+  *border-collapse: collapse;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px; }
+
+table th + th, table td + td, table th + td {
+  border-left: 1px solid #ddd; }
+
+table thead tr:first-child th:first-child, table tbody tr:first-child td:first-child {
+  -webkit-border-radius: 4px 0 0 0;
+  -moz-border-radius: 4px 0 0 0;
+  border-radius: 4px 0 0 0; }
+
+table thead tr:first-child th:last-child, table tbody tr:first-child td:last-child {
+  -webkit-border-radius: 0 4px 0 0;
+  -moz-border-radius: 0 4px 0 0;
+  border-radius: 0 4px 0 0; }
+
+table tbody tr:last-child td:first-child {
+  -webkit-border-radius: 0 0 0 4px;
+  -moz-border-radius: 0 0 0 4px;
+  border-radius: 0 0 0 4px; }
+
+table tbody tr:last-child td:last-child {
+  -webkit-border-radius: 0 0 4px 0;
+  -moz-border-radius: 0 0 4px 0;
+  border-radius: 0 0 4px 0; }
+
+tbody tr:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.03); }
+
+caption {
+  display: table-caption;
+  font-weight: 300;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  word-spacing: .2em;
+  background: rgba(0, 0, 0, 0.75);
+  color: #EEE;
+  padding: 4px;
+  -webkit-border-radius: 4px;
+  margin: 4px 0;
+  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.35); }
+
+/* grey out placeholders */
+:-moz-placeholder {
+  color: #bfbfbf; }
+
+::-webkit-input-placeholder {
+  color: #bfbfbf; }
+
+/* == Custom classes == */
+.article-date {
+  color: #C7C2B8;
+  display: block;
+  font-size: 0.8rem; }
+
+.projects__time-period {
+  display: inline-block;
+  width: 100%;
+  font-style: italic;
+  color: #b8babc; }
+  @media (min-width: 572px) {
+    .projects__time-period {
+      float: right;
+      width: 11em;
+      font-style: normal;
+      font-weight: 700;
+      color: inherit; } }
+
+/*.column-lists-start + h3,
+.column-lists-start + h3 + ul,
+.column-lists-start + h3 + ol {
+	display: inline-block;
+	vertical-align: top;
+}*/
+/* == Print -- */
+@media print {
+  html {
+    font-size: 130%; }
+
+  body {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 100%; }
+
+  ul > li:before {
+    height: 0.325em;
+    width: 0.325em; } }
