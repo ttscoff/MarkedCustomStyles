@@ -1,0 +1,392 @@
+/* 
+   This document has been created with Marked.app <http://markedapp.com>, Copyright 2011 Brett Terpstra
+   Please leave this notice in place, along with any additional credits below.
+   ---------------------------------------------------------------
+   Title: Pandoctor
+   Author: Stephen Margheim
+   Description: Clean, academic paper style
+*/
+
+/*** Font Definitions ***/
+@font-face {
+    font-family: "Hoefler Text";
+}
+@font-face {
+    font-family: "Consolas";
+}
+
+/*** Style Definitions ***/
+html {
+    font-size: 100%;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+body, div, p {
+    -webkit-font-smoothing: antialiased;
+    color: #111;
+    font-family: "Hoefler Text";
+    hyphens: auto;
+    margin: 0in;
+    text-align: justify;
+    text-indent: .25in;
+    line-height: 200%;
+    pagination: widow-orphan;
+    font-size: 12pt;
+}
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+    color: #111;
+    margin-top: 20.0pt;
+    margin-right: 0in;
+    margin-bottom: 10.0pt;
+    margin-left: 0in;
+    text-indent: 0;
+    line-height: 100%;
+}
+h1, h2, h3 {
+    font-size: 12pt;
+}
+h4, h5, h6 {
+    font-size: 11pt;
+}
+h1 {
+    font-weight: bold;
+    font-size: 13pt;
+}
+h2 {
+    font-variant: small-caps;
+    font-weight: normal;
+}
+h3 {
+    font-weight: normal;
+    font-style: italic;
+}
+h4 { 
+    font-weight: bold;
+}
+h5 {
+    font-weight: normal;
+    font-style: italic;
+}
+h6 {
+    font-variant: small-caps;
+}
+/* Metadata */
+.title {
+    margin-top: 12.0pt;
+    margin-right: 0in;
+    margin-bottom: 12.0pt;
+    margin-left: 0in;
+    text-align: center;
+    font-weight: normal;
+    font-size: 14.0pt;
+}
+.author, .date, .caption, .affiliation {
+    margin-top:0in;
+    margin-right:0in;
+    margin-bottom:10.0pt;
+    margin-left:0in;
+    text-align:center;
+    font-size:12.0pt;
+}
+/* Footnotes */
+.footnotes {
+    margin-top: 0in;
+    margin-right: 0in;
+    margin-bottom: 0in;
+    margin-left: 0in;
+}
+.footnotes ol li {
+    font-size: 10pt;
+}
+.footnotes ol li p {
+    text-indent: 0;
+    line-height: 100%;
+    font-size: 10pt;
+    margin-bottom: 2rem;
+}
+/* Blockquotes */
+blockquote p {
+    margin-top: 12.0pt;
+    margin-right: 1.0in;
+    margin-bottom: 12.0pt;
+    margin-left: 1.0in;
+    text-align: justify;
+    text-indent: 0;
+    line-height: 120%;
+}
+/* Lists */
+li {
+  font-size: 100%; 
+  text-indent: 0;
+  line-height: 150%;
+}
+li li {
+    font-size: 100%; 
+}
+li p {
+    font-size: 100%;
+    margin: .5em 0; 
+}
+li > p:first-child {
+  margin: 0; }
+
+ul ul, ul ol {
+  margin-bottom: .2em; 
+}
+ul > li {
+    position: relative;
+}
+
+ol > li {
+    position: relative;
+}
+/* Code */
+.poetry, pre, code {
+    font-family: Consolas;
+    text-indent: 0;
+}
+.poetry, pre {
+    display: block;
+    margin-left: 1em;
+}
+/* Hyperlinks */
+a {
+    -webkit-transition: color .2s ease-in-out;
+    -moz-transition: color .2s ease-in-out;
+    -o-transition: color .2s ease-in-out;
+    -ms-transition: color .2s ease-in-out;
+    transition: color .2s ease-in-out;
+    color: #0d6ea1;
+    text-decoration: none;
+}
+a:hover {
+    color: #3593d9;
+}
+.footnote, .footnoteRef {
+    color: #0d6ea1;
+    font-size: 12pt;
+    vertical-align: super;
+}
+
+#wrapper img {
+    max-width: 100%;
+    height: auto;
+}
+
+dd {
+    margin-bottom: 1em;
+}
+
+
+
+caption,col,colgroup,table,tbody,td,tfoot,th,thead,tr {
+    border-spacing: 0;
+}
+
+table {
+    border: 1px solid rgba(0,0,0,0.25);
+    border-collapse: collapse;
+    display: table;
+    empty-cells: hide;
+    margin: -1px 0 23px;
+    padding: 0;
+    table-layout: fixed;
+}
+
+caption {
+    display: table-caption;
+    font-weight: 700;
+}
+
+col {
+    display: table-column;
+}
+
+colgroup {
+    display: table-column-group;
+}
+
+tbody {
+    display: table-row-group;
+}
+
+tfoot {
+    display: table-footer-group;
+}
+
+thead {
+    display: table-header-group;
+}
+
+td,th {
+    display: table-cell;
+}
+
+tr {
+    display: table-row;
+}
+
+table th,table td {
+    font-size: 1.1em;
+    line-height: 23px;
+    padding: 0 1em;
+}
+
+table thead {
+    background: rgba(0,0,0,0.15);
+    border: 1px solid rgba(0,0,0,0.15);
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+table tbody {
+    background: rgba(0,0,0,0.05);
+}
+
+table tfoot {
+    background: rgba(0,0,0,0.15);
+    border: 1px solid rgba(0,0,0,0.15);
+    border-top: 1px solid rgba(0,0,0,0.2);
+}
+
+figure {
+    display: inline-block;
+    position: relative;
+    margin: 1em 0 2em;
+}
+
+figcaption {
+    font-style: italic;
+    text-align: center;
+    background: white;
+    color: #666;
+    position: absolute;
+    left: 0;
+    bottom: -24px;
+    width: 98%;
+    padding: 1%;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+figure:hover>figcaption {
+    /* background: rgba(0,0,0,1) */
+}
+
+
+
+
+sup,sub,a.footnote {
+    font-size: 1.4ex;
+    height: 0;
+    line-height: 1;
+    position: relative;
+    vertical-align: super;
+}
+
+sub {
+    vertical-align: sub;
+    top: -1px;
+}
+
+
+
+dt,th {
+    font-weight: 700;
+}
+
+table tr:nth-child(odd),table th:nth-child(odd),table td:nth-child(odd) {
+    background: rgba(255,255,255,0.06);
+}
+
+table tr:nth-child(even),table td:nth-child(even) {
+    background: rgba(200,200,200,0.25);
+}
+
+@media print {
+    body {
+        overflow: auto;
+    }
+
+    img,pre,blockquote,table,figure,p {
+        page-break-inside: avoid;
+    }
+
+    #wrapper {
+        background: #fff;
+        color: #303030;
+        font-size: 85%;
+        padding: 10px;
+        position: relative;
+        text-indent: 0;
+    }
+}
+
+@media screen {
+    .inverted #wrapper,.inverted {
+        background: rgba(37, 42, 42, 1);
+    }
+
+    .inverted hr {
+        border-color: rgba(51, 63, 64, 1) !important;
+    }
+
+    .inverted p,.inverted td,.inverted li,.inverted h1,.inverted h2,.inverted h3,.inverted h4,.inverted h5,.inverted h6,.inverted pre,.inverted code,.inverted th,.inverted .math,.inverted caption,.inverted dd,.inverted dt {
+        color: #eee !important;
+    }
+
+    .inverted table tr:nth-child(odd),.inverted table th:nth-child(odd),.inverted table td:nth-child(odd) {
+        background: none;
+    }
+
+    .inverted a {
+        color: rgba(172, 209, 213, 1);
+    }
+
+    #wrapper {
+        padding: 20px;
+    }
+
+    ::selection {
+        background: rgba(157, 193, 200,.5);
+    }
+
+    h1::selection {
+        background-color: rgba(45, 156, 208, .3);
+    }
+
+    h2::selection {
+        background-color: rgba(90, 182, 224, .3);
+    }
+
+    h3::selection,h4::selection,h5::selection,h6::selection,li::selection,ol::selection {
+        background-color: rgba(133, 201, 232, .3);
+    }
+
+    code::selection {
+        background-color: rgba(0,0,0,.7);
+        color: #eee;
+    }
+
+    code span::selection {
+        background-color: rgba(0,0,0,.7) !important;
+        color: #eee !important;
+    }
+
+    a::selection {
+        background-color: rgba(255, 230, 102,.2);
+    }
+
+    .inverted a::selection {
+        background-color: rgba(255, 230, 102,.6);
+    }
+
+    td::selection,th::selection,caption::selection {
+        background-color: rgba(180, 237, 95, .5);
+    }
+}
