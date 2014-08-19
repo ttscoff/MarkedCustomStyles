@@ -203,12 +203,12 @@ a {
 	color: $color-accent;
 	text-decoration: none;
 	/* Underline via gradient background */
-	@include background-image(linear-gradient(top, rgba(0, 0, 0, 0) 50%, $color-ui-light 0%));
+	background-image: linear-gradient(to bottom, transparent 50%, $color-ui-light 50%);
 	background-repeat: repeat-x;
-	@include background-size(1px 1px);
+	background-size: 1px 1px;
 	background-position: 0 92%;
 	/* Clear descendors */
-	text-shadow: 1px 0 rgb(255, 255, 255),2px 0 rgb(255, 255, 255),-1px 0 rgb(255, 255, 255),-2px 0 rgb(255, 255, 255);
+	text-shadow: 1px 0 white, 2px 0 white, -1px 0 white, -2px 0 white;
 	cursor: pointer;
 	outline: 0 none;
 }
@@ -216,7 +216,7 @@ a {
 a:hover {
 	outline: 0 none;
 	color: darken($color-accent, 11%);
-	@include background-image(linear-gradient(top, rgba(0, 0, 0, 0) 50%, darken($color-accent, 6%) 50%));
+	background-image: linear-gradient(to bottom, transparent 50%, darken($color-accent, 6%) 50%);
 }
 
 
