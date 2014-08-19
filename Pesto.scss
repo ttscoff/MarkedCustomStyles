@@ -28,70 +28,42 @@ $color-ui-light   : lighten($color-text-light, 11%);
 *, *:before, *:after {
 	@include box-sizing(border-box);
 }
-// Non-retina regular weight fonts
+
+// ============
+// Font Embeds
+// ============
+
+// Fonts used are Adobe's Source Sans Pro and Source Code Pro, which are:
+// Copyright © 2010, Adobe Systems, Inc. (http://www.adobe.com/)
+// Licensed under the SIL Open Font License, Version 1.1:
+// http://www.adobe.com/type/browser/legal/pdfs/OpenFontLicense.pdf
+
+// Non-retina regular weight fonts (use 300)
 @media (-webkit-max-device-pixel-ratio: 1.49),
        (max-resolution: 143dpi) {
 	// Body text
-	@font-face {
-		font-family: "Source Sans Pro";
-		font-style: normal;
-		font-weight: 300;
-		src: local("Source Sans Pro Light"), local("SourceSansPro-Light"), url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/toadOcfmlt9b38dHJxOBGMVNtom4QlEDNJaqqqzqdSs.woff) format("woff");
-	}
+	@include font-face("Source Sans Pro", inline-font-files("SourceSansPro-Light.otf.woff", "woff"), false, 300, normal);
 	// Body text italic
-	@font-face {
-		font-family: "Source Sans Pro";
-		font-style: italic;
-		font-weight: 300;
-		src: local("Source Sans Pro Light Italic"), local("SourceSansPro-LightIt"), url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/fpTVHK8qsXbIeTHTrnQH6H7XMO6S-yJpg1torQFmnv33rGVtsTkPsbDajuO5ueQw.woff) format("woff");
-	}
+	@include font-face("Source Sans Pro", inline-font-files("SourceSansPro-LightIt.otf.woff", "woff"), false, 300, italic);
 	// Monospace
-	@font-face {
-		font-family: "Source Code Pro";
-		font-style: normal;
-		font-weight: 300;
-		src: local("Source Code Pro Light"), local("SourceCodePro-Light"), url(http://themes.googleusercontent.com/static/fonts/sourcecodepro/v4/leqv3v-yTsJNC7nFznSMqcVNtom4QlEDNJaqqqzqdSs.woff) format("woff");
-	}
+	@include font-face("Source Code Pro", inline-font-files("SourceCodePro-Light.otf.woff", "woff"), false, 300, normal);
 }
-// Retina regular weight fonts
+// Retina regular weight fonts (use 400)
 @media (-webkit-min-device-pixel-ratio: 1.5),
        (min-resolution: 144dpi) {
 	// Body text
-	@font-face {
-		font-family: "Source Sans Pro";
-		font-style: normal;
-		font-weight: 400;
-		src: local("Source Sans Pro"), local("SourceSansPro-Regular"), url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/ODelI1aHBYDBqgeIAH2zlNHq-FFgoDNV3GTKpHwuvtI.woff) format("woff");
-	}
+	@include font-face("Source Sans Pro", inline-font-files("SourceSansPro-Regular.otf.woff", "woff"), false, 400, normal);
 	// Body text italic
-	@font-face {
-		font-family: "Source Sans Pro";
-		font-style: italic;
-		font-weight: 400;
-		src: local("Source Sans Pro Italic"), local("SourceSansPro-It"), url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/M2Jd71oPJhLKp0zdtTvoM_bce-VcyLJMRR1FC9qWbU8.woff) format("woff");
-	}
+	@include font-face("Source Sans Pro", inline-font-files("SourceSansPro-It.otf.woff", "woff"), false, 400, italic);
 	// Monospace
-	@font-face {
-		font-family: "Source Code Pro";
-		font-style: normal;
-		font-weight: 400;
-		src: local("Source Code Pro"), local("SourceCodePro-Regular"), url(http://themes.googleusercontent.com/static/fonts/sourcecodepro/v4/mrl8jkM18OlOQN8JLgasD9Hq-FFgoDNV3GTKpHwuvtI.woff) format("woff");
-	}
+	@include font-face("Source Code Pro", inline-font-files("SourceCodePro-Regular.otf.woff", "woff"), false, 400, normal);
 }
 // Body text bold
-@font-face {
-	font-family: "Source Sans Pro";
-	font-style: normal;
-	font-weight: 700;
-	src: local("Source Sans Pro Bold"), local("SourceSansPro-Bold"), url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/toadOcfmlt9b38dHJxOBGIqjGYJUyOXcBwUQbRaNH6c.woff) format("woff");
-}
+@include font-face("Source Sans Pro", inline-font-files("SourceSansPro-Bold.otf.woff", "woff"), false, 700, normal);
 // Body text bold italic
-@font-face {
-	font-family: "Source Sans Pro";
-	font-style: italic;
-	font-weight: 700;
-	src: local("Source Sans Pro Bold Italic"), local("SourceSansPro-BoldIt"), url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/fpTVHK8qsXbIeTHTrnQH6PgYMAt3u4NmhhzLLLPJ5qH3rGVtsTkPsbDajuO5ueQw.woff) format("woff");
-}
+@include font-face("Source Sans Pro", inline-font-files("SourceSansPro-BoldIt.otf.woff", "woff"), false, 700, italic);
+// Monospace
+@include font-face("Source Code Pro", inline-font-files("SourceCodePro-Bold.otf.woff", "woff"), false, 700, normal);
 
 
 html {
