@@ -149,13 +149,8 @@ a {
   color: #8db359;
   text-decoration: none;
   /* Underline via gradient background */
-  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 50%, #d5d6d7 0%);
-  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 50%, #d5d6d7 0%);
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, #d5d6d7 0%);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, #d5d6d7 50%);
   background-repeat: repeat-x;
-  -moz-background-size: 1px 1px;
-  -o-background-size: 1px 1px;
-  -webkit-background-size: 1px 1px;
   background-size: 1px 1px;
   background-position: 0 92%;
   /* Clear descendors */
@@ -166,8 +161,6 @@ a {
 a:hover {
   outline: 0 none;
   color: #709143;
-  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 50%, #7ea34b 50%);
-  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 50%, #7ea34b 50%);
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, #7ea34b 50%); }
 
 p, pre {
