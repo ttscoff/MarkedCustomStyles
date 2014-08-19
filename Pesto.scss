@@ -18,6 +18,15 @@ $medium-width : $min-width + ($max-width - $min-width) * 0.4;
 $large-width  : $medium-width + ($max-width - $medium-width) * 0.6;
 $full-width   : $large-width + ($max-width - $large-width) * 0.8;
 
+// Structure
+$body-padding-horizontal : (
+	"base"        : 1rem,
+	$small-width  : 1.75rem,
+	$medium-width : 3rem,
+	$large-width  : 4rem,
+	$full-width   : 5rem
+);
+
 // Colors
 $color-accent     : rgb(141, 179, 89);
 $color-text-body  : rgb(87, 83, 74);
@@ -106,27 +115,17 @@ body:after {
 }
 
 body {
-	padding: 1rem 1.25rem;
+	padding: map-get($body-padding-horizontal, "base") 1.25rem;
 	margin-left: auto;
 	margin-right: auto;
 	max-width: $max-width;
 	display: block;
-	
-	@media (min-width: $small-width) {
-		padding-left: 1.75rem;
-		padding-right: 1.75rem;
-	}
-	@media (min-width: $medium-width) {
-		padding-left: 3rem;
-		padding-right: 3rem;
-	}
-	@media (min-width: $large-width) {
-		padding-left: 4rem;
-		padding-right: 4rem;
-	}
-	@media (min-width: $full-width) {
-		padding-left: 5rem;
-		padding-right: 5rem;
+
+	@each $width, $padding in $body-padding-horizontal {
+		@media (min-width: #{$width}) {
+			padding-left  : $padding;
+			padding-right : $padding;
+		}
 	}
 }
 
@@ -255,10 +254,17 @@ blockquote {
 }
 
 figure {
-	margin-left: -4.5rem;
-	margin-right: -4.5rem;
+	margin-left: map-get($body-padding-horizontal, "base") * -1;
+	margin-right: map-get($body-padding-horizontal, "base") * -1;
 	margin-bottom: 2em;
 	margin-top: 2em;
+
+	@each $width, $padding in $body-padding-horizontal {
+		@media (min-width: #{$width}) {
+			margin-left  : ($padding - 0.25) * -1;
+			margin-right : ($padding - 0.25) * -1;
+		}
+	}
 }
 
 
@@ -342,7 +348,6 @@ small, dd, figcaption {
 	vertical-align: super;
 }
 
-
 tbody{display:table-row-group}
 tfoot{display:table-footer-group}
 table{margin-bottom:2em;font-size: 0.89em;padding:0;border-collapse:collapse;-webkit-box-shadow:1px 1px 2px rgba(0,0,0,.35);width:91%;margin:0 auto 2em auto}
@@ -382,7 +387,7 @@ caption{display:table-caption;font-weight:300;font-size:1.3em;text-transform:upp
 	width: 100%;
 	font-style: italic;
 	color: $color-text-light;
-	
+
 	@media (min-width: $medium-width) {
 		float: right;
 		width: 11em;
