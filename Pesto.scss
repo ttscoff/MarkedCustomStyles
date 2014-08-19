@@ -331,11 +331,15 @@ figure > figcaption {
 	margin-top: 0.5em;
 }
 small, dd, figcaption {
-	color: #A19C91;
+	color: $color-text-light;
 	display: block;
 	font-size: 0.8rem;
 	font-style: italic;
 	line-height: 1.2;
+}
+.footnote {
+	font-size: 0.8rem;
+	vertical-align: super;
 }
 
 
