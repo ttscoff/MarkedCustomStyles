@@ -42,10 +42,12 @@ $color-ui-light   : lighten($color-text-light, 11%);
 // Font Embeds
 // ============
 
-// Fonts used are Adobe's Source Sans Pro and Source Code Pro, which are:
-// Copyright © 2010, Adobe Systems, Inc. (http://www.adobe.com/)
-// Licensed under the SIL Open Font License, Version 1.1:
-// http://www.adobe.com/type/browser/legal/pdfs/OpenFontLicense.pdf
+/*!
+   Fonts used are Adobe's Source Sans Pro and Source Code Pro, which are:
+   Copyright © 2010, Adobe Systems, Inc. (http://www.adobe.com/)
+   Licensed under the SIL Open Font License, Version 1.1:
+   http://www.adobe.com/type/browser/legal/pdfs/OpenFontLicense.pdf
+*/
 
 // Non-retina regular weight fonts (use 300)
 @media (-webkit-max-device-pixel-ratio: 1.49),

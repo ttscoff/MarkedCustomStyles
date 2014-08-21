@@ -11,6 +11,12 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+/*!
+   Fonts used are Adobe's Source Sans Pro and Source Code Pro, which are:
+   Copyright © 2010, Adobe Systems, Inc. (http://www.adobe.com/)
+   Licensed under the SIL Open Font License, Version 1.1:
+   http://www.adobe.com/type/browser/legal/pdfs/OpenFontLicense.pdf
+*/
 @media (-webkit-max-device-pixel-ratio: 1.49), (max-resolution: 143dpi) {
   @font-face {
     font-family: "Source Sans Pro";
