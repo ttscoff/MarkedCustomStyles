@@ -1,0 +1,405 @@
+/*
+   This document has been created with Marked.app <http://markedapp.com>, Copyright 2011 Brett Terpstra
+   Please leave this notice in place, along with any additional credits below.
+   ---------------------------------------------------------------
+   Title: Base16 Tomorrow
+   Author: Newton https://github.com/chrisopedia/base16-marked
+   Description: Based on Chris Kempson's Base16 color scheme
+*/
+/* @TODO: tables */
+/* @TODO: fenced code blocks */
+/* @TODO: code syntax hightlighting  */
+body {
+	background-color: #ffffff;
+	-webkit-font-smoothing: antialiased;
+	font: normal .8764em/1.5em Arial,Verdana,sans-serif;
+	margin: 0;
+}
+
+html>body {
+	font-size: 13px;
+}
+
+h1 {
+	/* base00 */
+	color: #81a2be;
+	font-size: 2.2857em;
+	line-height: .6563em;
+	margin: .6563em 0;
+}
+
+h2 {
+	color: #81a2be;
+	font-size: 1.7143em;
+	line-height: .875em;
+	margin: .875em 0;
+}
+
+h3 {
+	color: #81a2be;
+	font-size: 1.5em;
+	line-height: 1em;
+	margin: 1em 0;
+}
+
+h4 {
+	color: #81a2be;
+	font-size: 1.2857em;
+	line-height: 1.1667em;
+	margin: 1.1667em 0;
+}
+
+h5 {
+	color: #81a2be;
+	font-size: 1.15em;
+	line-height: 1.3em;
+	margin: 1.3em 0;
+}
+
+h6 {
+	color: #81a2be;
+	font-size: 1em;
+	line-height: 1.5em;
+	margin: 1.5em 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	line-height: 1.5em;
+}
+
+body,p,td,div {
+	color: #373b41;
+	font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+	word-wrap: break-word;
+}
+
+a {
+	-webkit-transition: color .2s ease-in-out;
+	-moz-transition: color .2s ease-in-out;
+	-o-transition: color .2s ease-in-out;
+	-ms-transition: color .2s ease-in-out;
+	transition: color .2s ease-in-out;
+	color: #de935f;
+	text-decoration: none;
+}
+
+a[href^="mailto"] { 
+	color: #8abeb7;
+}
+
+a:hover {
+	color: #de935f;
+}
+
+li {
+	font-size: 110%;
+}
+
+li li {
+	font-size: 100%;
+}
+
+li p {
+	font-size: 100%;
+	margin: .5em 0;
+}
+
+.footnote {
+	color: #b4b7b4;
+	font-size: .8em;
+	vertical-align: super;
+}
+
+hr {
+	height: 10px;
+	border: none;
+	background-color: #c5c8c6;
+	color: #373b41;
+}
+
+#wrapper img {
+	max-width: 100%;
+	height: auto;
+}
+
+strong, b {
+	color: #f0c674;
+}
+
+em, i {
+	color: #b294bb;
+}
+
+dd {
+	margin-bottom: 1em;
+}
+
+li {
+	list-style: none;
+	position: relative;
+}
+li::before {
+	position: absolute;
+	top: 0;
+	left: -17px;
+	color: #cc6666;
+}
+ul li::before {
+	font-size: 160%;
+	content: '\2022';
+}
+
+ol {
+	counter-reset: index;
+}
+
+ol li {
+	counter-increment: index;
+}
+
+ol li::before {
+	content: counter(index) ".";
+}
+
+li > p:first-child {
+	margin: 0;
+}
+
+ul ul,ul ol {
+	margin-bottom: .4em;
+}
+
+caption,col,colgroup,table,tbody,td,tfoot,th,thead,tr {
+	border-spacing: 0;
+}
+
+table {
+	border: 1px solid rgba(0,0,0,0.25);
+	border-collapse: collapse;
+	display: table;
+	empty-cells: hide;
+	margin: -1px 0 23px;
+	padding: 0;
+	table-layout: fixed;
+}
+
+caption {
+	display: table-caption;
+	font-weight: 700;
+}
+
+col {
+	display: table-column;
+}
+
+colgroup {
+	display: table-column-group;
+}
+
+tbody {
+	display: table-row-group;
+}
+
+tfoot {
+	display: table-footer-group;
+}
+
+thead {
+	display: table-header-group;
+}
+
+td,th {
+	display: table-cell;
+}
+
+tr {
+	display: table-row;
+}
+
+table th,table td {
+	font-size: 1.1em;
+	line-height: 23px;
+	padding: 0 1em;
+}
+
+table thead {
+	background: rgba(0,0,0,0.15);
+	border: 1px solid rgba(0,0,0,0.15);
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+table tbody {
+	background: rgba(0,0,0,0.05);
+}
+
+table tfoot {
+	background: rgba(0,0,0,0.15);
+	border: 1px solid rgba(0,0,0,0.15);
+	border-top: 1px solid rgba(0,0,0,0.2);
+}
+
+figure {
+	display: inline-block;
+	position: relative;
+	margin: 1em 0 2em;
+}
+
+figcaption {
+	font-style: italic;
+	text-align: center;
+	background: white;
+	color: #8abeb7;
+	position: absolute;
+	left: 0;
+	bottom: -24px;
+	width: 98%;
+	padding: 1%;
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+	-ms-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+}
+
+figure:hover>figcaption {
+	/* background: rgba(0,0,0,1) */
+}
+
+code {
+	color: #b5bd68;
+}
+
+.poetry pre {
+	display: block;
+	font-family: Georgia, Garamond, serif !important;
+	font-size: 110% !important;
+	font-style: italic;
+	line-height: 1.6em;
+	margin-left: 1em;
+}
+
+.poetry pre code {
+	font-family: Georgia, Garamond, serif !important;
+}
+
+blockquote p {
+	font-size: 110%;
+	font-style: italic;
+	line-height: 1.6em;
+}
+
+sup,sub,a.footnote {
+	font-size: 1.4ex;
+	height: 0;
+	line-height: 1;
+	position: relative;
+	vertical-align: super;
+}
+
+sub {
+	vertical-align: sub;
+	top: -1px;
+}
+
+p,h5 {
+	font-size: 1.1429em;
+	line-height: 1.3125em;
+	margin: 1.3125em 0;
+}
+
+dt,th {
+	font-weight: 700;
+}
+
+table tr:nth-child(odd),table th:nth-child(odd),table td:nth-child(odd) {
+	background: rgba(255,255,255,0.06);
+}
+
+table tr:nth-child(even),table td:nth-child(even) {
+	background: rgba(200,200,200,0.25);
+}
+
+@media print {
+	body {
+		overflow: auto;
+	}
+
+	img,pre,blockquote,table,figure,p {
+		page-break-inside: avoid;
+	}
+
+	#wrapper {
+		background-color: #ffffff;
+		color: #373b41;
+		font-size: 85%;
+		padding: 10px;
+		position: relative;
+		text-indent: 0;
+	}
+}
+
+@media screen {
+	.inverted #wrapper,.inverted {
+		background: #1d1f21;
+	}
+
+	.inverted hr {
+		color: #c5c8c6;
+		background-color: 373b41
+	}
+
+	.inverted p,.inverted td, .inverted div {
+		color: #c5c8c6 !important;
+	}
+
+	.inverted table tr:nth-child(odd),.inverted table th:nth-child(odd),.inverted table td:nth-child(odd) {
+		background: none;
+	}
+
+	#wrapper {
+		padding: 20px;
+	}
+
+	::selection {
+		background: #c5c8c6;
+		color: #373b41;
+	}
+	.inverted::selection {
+		color: #c5c8c6;
+		background: #373b41;
+	}
+
+	h1::selection {
+		background-color: rgba(45, 156, 208, .3);
+	}
+
+	h2::selection {
+		background-color: rgba(90, 182, 224, .3);
+	}
+
+	h3::selection,h4::selection,h5::selection,h6::selection,li::selection,ol::selection {
+		background-color: rgba(133, 201, 232, .3);
+	}
+
+	code::selection {
+		background-color: rgba(0,0,0,.7);
+		color: #eee;
+	}
+
+	code span::selection {
+		background-color: rgba(0,0,0,.7) !important;
+		color: #eee !important;
+	}
+
+	a::selection {
+		background-color: rgba(255, 230, 102,.2);
+	}
+
+	.inverted a::selection {
+		background-color: rgba(255, 230, 102,.6);
+	}
+
+	td::selection,th::selection,caption::selection {
+		background-color: rgba(180, 237, 95, .5);
+	}
+}
