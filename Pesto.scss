@@ -1,0 +1,423 @@
+/*!
+   This document has been created with Marked.app <http://marked2app.com>
+   Please leave this notice in place, along with any additional credits below.
+   ---------------------------------------------------------------
+   Title: Pesto
+   Author: Andrew Patton @acusti <http://www.acusti.ca>
+   Description: Attention to typography, easy on the eyes, mobile first, retina-ready
+*/
+
+@import "compass";
+@import "compass/css3/user-interface";
+
+// Breakpoints
+$min-width    : 320px;
+$max-width    : 950px;
+$small-width  : $min-width + ($max-width - $min-width) * 0.2;
+$medium-width : $min-width + ($max-width - $min-width) * 0.4;
+$large-width  : $medium-width + ($max-width - $medium-width) * 0.6;
+$full-width   : $large-width + ($max-width - $large-width) * 0.8;
+
+// Structure
+$body-padding-horizontal : (
+	"base"        : 1rem,
+	$small-width  : 1.75rem,
+	$medium-width : 3rem,
+	$large-width  : 4rem,
+	$full-width   : 5rem
+);
+
+// Colors
+$color-accent     : rgb(141, 179, 89);
+$color-text-body  : rgb(87, 83, 74);
+$color-text-light : rgb(184, 186, 188);
+$color-ui-light   : lighten($color-text-light, 11%);
+
+// Box sizing
+*, *:before, *:after {
+	@include box-sizing(border-box);
+}
+
+// ============
+// Font Embeds
+// ============
+
+/*!
+   Fonts used are Adobe's Source Sans Pro and Source Code Pro, which are:
+   Copyright © 2010, Adobe Systems, Inc. (http://www.adobe.com/)
+   Licensed under the SIL Open Font License, Version 1.1:
+   http://www.adobe.com/type/browser/legal/pdfs/OpenFontLicense.pdf
+*/
+
+// Non-retina regular weight fonts (use 300)
+@media (-webkit-max-device-pixel-ratio: 1.49),
+       (max-resolution: 143dpi) {
+	// Body text
+	@include font-face("Source Sans Pro", inline-font-files("SourceSansPro-Light.otf.woff", "woff"), false, 300, normal);
+	// Body text italic
+	@include font-face("Source Sans Pro", inline-font-files("SourceSansPro-LightIt.otf.woff", "woff"), false, 300, italic);
+	// Monospace
+	@include font-face("Source Code Pro", inline-font-files("SourceCodePro-Light.otf.woff", "woff"), false, 300, normal);
+}
+// Retina regular weight fonts (use 400)
+@media (-webkit-min-device-pixel-ratio: 1.5),
+       (min-resolution: 144dpi) {
+	// Body text
+	@include font-face("Source Sans Pro", inline-font-files("SourceSansPro-Regular.otf.woff", "woff"), false, 400, normal);
+	// Body text italic
+	@include font-face("Source Sans Pro", inline-font-files("SourceSansPro-It.otf.woff", "woff"), false, 400, italic);
+	// Monospace
+	@include font-face("Source Code Pro", inline-font-files("SourceCodePro-Regular.otf.woff", "woff"), false, 400, normal);
+}
+// Body text bold
+@include font-face("Source Sans Pro", inline-font-files("SourceSansPro-Bold.otf.woff", "woff"), false, 700, normal);
+// Body text bold italic
+@include font-face("Source Sans Pro", inline-font-files("SourceSansPro-BoldIt.otf.woff", "woff"), false, 700, italic);
+// Monospace
+@include font-face("Source Code Pro", inline-font-files("SourceCodePro-Bold.otf.woff", "woff"), false, 700, normal);
+
+
+html {
+	font-size: 100%;
+	// Change font size (which will increase other relative sizes) first
+	@media (min-width: $large-width - 75px) {
+		font-size: 112.5%;
+	}
+	// Change font size (which will increase other relative sizes) first
+	@media (min-width: $full-width - 75px) {
+		font-size: 125%;
+	}
+	// Don't adjust font size on device orientation change in webkit
+	-webkit-text-size-adjust: 100%;
+}
+html, button, input, select, textarea {
+	font-family: sans-serif;
+}
+
+html, body, button, input, select, textarea {
+	color: $color-text-body;
+	font-family: "Source Sans Pro", "Myriad Pro", "Myriad", sans-serif;
+	font-weight: 300;
+}
+
+body{
+	margin: 0 auto;
+	background-color: white;
+}
+
+body, textarea {
+	line-height: 1.4;
+}
+
+
+body:after {
+	clear: both;
+	content: "";
+	display: table;
+}
+
+body {
+	padding: map-get($body-padding-horizontal, "base") 1.25rem;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: $max-width;
+	display: block;
+
+	@each $width, $padding in $body-padding-horizontal {
+		@media (min-width: #{$width}) {
+			padding-left  : $padding;
+			padding-right : $padding;
+		}
+	}
+}
+
+
+h1, h2, h3, dt {
+	color: #423F37;
+	font-weight: 700;
+}
+
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+/* = Resume-specific styles = */
+/* Heading 1 and first block of content immediately following have no margin between them */
+.resume h1 {
+	margin-bottom: 0;
+}
+.resume h1 + p,
+.resume h1 + section > :first-child {
+	margin-top: 0;
+}
+h2,
+.article-list .article-title {
+	font-size: 1.45em;
+	margin: 1.25em 0 0.5em;
+}
+h3, dt {
+	font-size: 1.17em;
+	margin: 0.94em 0;
+}
+h4 {
+	font-size: 1em;
+	margin: 1.33em 0;
+}
+h5 {
+	font-size: 0.83em;
+	margin: 1.67em 0;
+}
+h6 {
+	font-size: 0.75em;
+	margin: 2.33em 0;
+}
+/* Link underline from http://practice.typekit.com/ */
+a {
+	color: $color-accent;
+	text-decoration: none;
+	/* Underline via gradient background */
+	background-image: linear-gradient(to bottom, transparent 50%, $color-ui-light 50%);
+	background-repeat: repeat-x;
+	background-size: 1px 1px;
+	background-position: 0 92%;
+	/* Clear descendors */
+	text-shadow: 1px 0 white, 2px 0 white, -1px 0 white, -2px 0 white;
+	cursor: pointer;
+	outline: 0 none;
+}
+
+a:hover {
+	outline: 0 none;
+	color: darken($color-accent, 11%);
+	background-image: linear-gradient(to bottom, transparent 50%, darken($color-accent, 6%) 50%);
+}
+
+
+p, pre {
+	margin: 1em 0;
+}
+code, kbd, pre, samp, tt {
+	font-family: "Source Code Pro", monospace;
+	font-size: 1em;
+	margin: 0;
+	padding: 0;
+}
+pre {
+	background-color: #F8F5F0;
+	font-size: 0.7rem;
+	overflow-x: auto;
+	padding: 1.3rem;
+	position: relative;
+	white-space: pre;
+	word-wrap: normal;
+}
+code, tt {
+	margin: 0 2px;
+	padding: 0 5px;
+	white-space: nowrap;
+	border: 1px solid #eaeaea;
+	background-color: #f8f8f8;
+	border-radius: 3px;
+	font-size: 0.85em;
+	color: #423F37;
+	padding: 0 5px;
+}
+pre > code {
+	margin: 0;
+	padding: 0;
+	white-space: pre;
+	border: none;
+	background: transparent;
+}
+
+aside {
+	display: block;
+	float: right;
+	width: 390px;
+}
+
+
+b, strong {
+	font-weight: bold;
+	color: #423F37;
+	font-weight: 700;
+}
+
+blockquote {
+	color: #423F37;
+	font-size: 1.25em;
+	font-weight: 700;
+	margin: 1em 40px;
+}
+
+blockquote {
+	margin-bottom: 2em;
+	margin-top: 2em;
+}
+
+figure {
+	margin-left: map-get($body-padding-horizontal, "base") * -1;
+	margin-right: map-get($body-padding-horizontal, "base") * -1;
+	margin-bottom: 2em;
+	margin-top: 2em;
+
+	@each $width, $padding in $body-padding-horizontal {
+		@media (min-width: #{$width}) {
+			margin-left  : ($padding - 0.25) * -1;
+			margin-right : ($padding - 0.25) * -1;
+		}
+	}
+}
+
+
+hr {
+	-moz-border-bottom-colors: none;
+	-moz-border-left-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-top-colors: none;
+	border-color: -moz-use-text-color -moz-use-text-color #ECE6DA;
+	border-image: none;
+	border-style: none none solid;
+	border-width: medium medium 1px;
+	margin: 3em 6em;
+}
+
+
+img {
+	max-width: 100%;
+	display: block;
+	border: 0 none;
+}
+
+
+ol > li:before {
+	color: #423F37;
+	content: counter(ol, decimal) ".";
+	counter-increment: ol;
+	font-weight: 700;
+	margin-right: 0.333em;
+	position: absolute;
+	right: 100%;
+}
+
+ul > li:before {
+	background-color: #423F37;
+	border-radius: 50%;
+	content: "";
+	height: 0.3em;
+	width: 0.3em;
+	margin-right: 0.5em;
+	margin-top: 0.6em;
+	position: absolute;
+	right: 100%;
+}
+
+ol, ul, dl {
+	margin-left: 2rem;
+	padding: 0;
+}
+ol {
+	counter-reset: ol;
+}
+li + li, dd + dt {
+	margin-top: 0em;
+}
+
+ul > li {
+	position: relative;
+}
+
+ol > li {
+	position: relative;
+}
+li {
+	list-style: none outside none;
+}
+
+
+figure > figcaption {
+	margin-top: 0.5em;
+}
+small, dd, figcaption {
+	color: $color-text-light;
+	display: block;
+	font-size: 0.8rem;
+	font-style: italic;
+	line-height: 1.2;
+}
+.footnote {
+	font-size: 0.8rem;
+	vertical-align: super;
+}
+
+tbody{display:table-row-group}
+tfoot{display:table-footer-group}
+table{margin-bottom:2em;font-size: 0.89em;padding:0;border-collapse:collapse;-webkit-box-shadow:1px 1px 2px rgba(0,0,0,.35);width:91%;margin:0 auto 2em auto}
+table th,table td{padding:10px 10px 9px;line-height:18px;text-align:left}
+table th{
+padding-top:9px;text-transform:uppercase;vertical-align:middle}
+table td{vertical-align:top;border-top:1px solid #ddd;}
+table tbody th{border-top:1px solid #ddd;vertical-align:top}
+table{border:1px solid #ddd;border-collapse:separate;*border-collapse:collapse;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px}
+table th+th,table td+td,table th+td{border-left:1px solid #ddd}
+table thead tr:first-child th:first-child,table tbody tr:first-child td:first-child{-webkit-border-radius:4px 0 0 0;-moz-border-radius:4px 0 0 0;border-radius:4px 0 0 0}
+table thead tr:first-child th:last-child,table tbody tr:first-child td:last-child{-webkit-border-radius:0 4px 0 0;-moz-border-radius:0 4px 0 0;border-radius:0 4px 0 0}
+table tbody tr:last-child td:first-child{-webkit-border-radius:0 0 0 4px;-moz-border-radius:0 0 0 4px;border-radius:0 0 0 4px}
+table tbody tr:last-child td:last-child{-webkit-border-radius:0 0 4px 0;-moz-border-radius:0 0 4px 0;border-radius:0 0 4px 0}
+tbody tr:nth-child(odd){background-color:rgba(0,0,0,0.03)}
+
+caption{display:table-caption;font-weight:300;font-size:1.3em;text-transform:uppercase;letter-spacing:2px;word-spacing:.2em;background:rgba(0,0,0,.75);color:#EEE;padding:4px;-webkit-border-radius:4px;margin:4px 0;-webkit-box-shadow:2px 2px 2px rgba(0,0,0,.35)}
+
+/* grey out placeholders */
+:-moz-placeholder {
+  color: #bfbfbf;
+}
+::-webkit-input-placeholder {
+  color: #bfbfbf;
+}
+
+/* == Custom classes == */
+
+.article-date {
+	color: #C7C2B8;
+	display: block;
+	font-size: 0.8rem;
+}
+
+.projects__time-period {
+	display: inline-block;
+	width: 100%;
+	font-style: italic;
+	color: $color-text-light;
+
+	@media (min-width: $medium-width) {
+		float: right;
+		width: 11em;
+		font-style: normal;
+		font-weight: 700;
+		color: inherit;
+	}
+}
+
+/*.column-lists-start + h3,
+.column-lists-start + h3 + ul,
+.column-lists-start + h3 + ol {
+	display: inline-block;
+	vertical-align: top;
+}*/
+
+/* == Print -- */
+@media print {
+	html {
+		font-size: 130%;
+	}
+	body {
+		padding-left: 0;
+		padding-right: 0;
+		max-width: 100%;
+	}
+	ul > li:before {
+		height: 0.325em;
+		width: 0.325em;
+	}
+}
