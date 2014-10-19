@@ -12,23 +12,78 @@ Description: modern retro
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
+html {
+  font-size: 16px;
 }
 table {
+  border: 1px solid rgba(0,0,0,0.25);
   border-collapse: collapse;
-  border-spacing: 0;
+  display: table;
+  empty-cells: hide;
+  margin: -1px 0 23px;
+  padding: 0;
+  table-layout: fixed;
 }
-caption, th, td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
+
+caption {
+  display: table-caption;
+  font-weight: 700;
 }
+
+col {
+  display: table-column;
+}
+
+colgroup {
+  display: table-column-group;
+}
+
+tbody {
+  display: table-row-group;
+}
+
+tfoot {
+  display: table-footer-group;
+}
+
+thead {
+  display: table-header-group;
+}
+
+td,th {
+  display: table-cell;
+}
+
+tr {
+  display: table-row;
+}
+
+table th,table td {
+  font-size: 1.1em;
+  padding: 1em;
+}
+
+table thead {
+  background: rgba(0,0,0,0.15);
+  border: 1px solid rgba(0,0,0,0.15);
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+table tbody {
+  background: rgba(0,0,0,0.05);
+}
+table tfoot {
+    background: rgba(0,0,0,0.15);
+    border: 1px solid rgba(0,0,0,0.15);
+    border-top: 1px solid rgba(0,0,0,0.2);
+}
+
+table tr:nth-child(odd),table th:nth-child(odd),table td:nth-child(odd) {
+  background: rgba(255,255,255,0.06);
+}
+table tr:nth-child(even),table td:nth-child(even) {
+  background: rgba(200,200,200,0.25);
+}
+
 q, blockquote {
   quotes: none;
 }
@@ -38,9 +93,6 @@ q:before, q:after, blockquote:before, blockquote:after {
 }
 a img {
   border: none;
-}
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
-  display: block;
 }
 button, input {
   line-height: normal;
@@ -71,83 +123,33 @@ body {
 #wrapper {
   margin-bottom: 0;
 }
+img,
 #wrapper img {
   max-width: 100%;
   height: auto;
 }
-#wrapper dd {
+dd {
   margin-bottom: 1em;
 }
-#wrapper li > p:first-child {
+li > p:first-child {
   margin: 0;
 }
-#wrapper caption, #wrapper col, #wrapper colgroup, #wrapper table, #wrapper tbody, #wrapper td, #wrapper tfoot, #wrapper th, #wrapper thead, #wrapper tr {
-  border-spacing: 0;
-}
-#wrapper table {
-  border: 1px solid rgba(0, 0, 0, 0.25);
-  border-collapse: collapse;
-  display: table;
-  empty-cells: hide;
-  margin: -1px 0 23px;
-  padding: 0;
-  table-layout: fixed;
-  width: 100%;
-}
-#wrapper caption {
-  display: table-caption;
-  font-weight: 700;
-}
-#wrapper col {
-  display: table-column;
-}
-#wrapper colgroup {
-  display: table-column-group;
-}
-#wrapper tbody {
-  display: table-row-group;
-}
-#wrapper tfoot {
-  display: table-footer-group;
-}
-#wrapper thead {
-  display: table-header-group;
-  border-bottom: solid 1px #999;
-}
-#wrapper td, #wrapper th {
-  display: table-cell;
-}
-#wrapper tr {
-  display: table-row;
-}
-#wrapper table th, #wrapper table td {
-  font-size: 1.1rem;
-  line-height: 1.5;
-  padding: 0 1em;
-}
-#wrapper dt, #wrapper th {
-  font-weight: 700;
-}
-#wrapper dd {
+dd {
   padding-left: 1.4em;
 }
-#wrapper table tr:nth-child(even) {
+table tr:nth-child(even) {
   background: rgba(200, 200, 200, 0.25);
 }
-#wrapper figure {
+figure {
   display: inline-block;
   position: relative;
   margin: 1em 0 2em;
 }
-#wrapper figcaption {
+figcaption {
   font-family: AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
   font-style: italic;
   text-align: center;
 }
-#wrapper figure:hover > figcaption {
-  /* background: rgba(0,0,0,1) */
-}
-/* #wrapper pre { moved down to base styles; } */
 .poetry #wrapper pre {
   display: block;
   font-family: Georgia, Garamond, serif !important;
@@ -160,34 +162,34 @@ body {
   font-family: Georgia, Garamond, serif !important;
 
 }
-#wrapper sup, #wrapper sub, #wrapper a.footnote {
+sup, sub, a.footnote {
   font-size: 1.4ex;
   height: 0;
   line-height: 1;
   position: relative;
   vertical-align: super;
 }
-#wrapper sub {
+sub {
   vertical-align: sub;
   top: -1px;
 }
-#wrapper .footnote {
+.footnote {
   font-size: .8rem;
   vertical-align: super;
 }
-#wrapper .footnotes p {
+.footnotes p {
   font-size: 1.9ex;
 }
-#wrapper ul ul {
+ul ul {
   margin-left: 1em;
 }
 
-#wrapper ul ul,
-#wrapper ol ol {
+ul ul,
+ol ol {
   margin-left: 1em;
 }
-#wrapper li ul,
-#wrapper li ol {
+li ul,
+li ol {
   margin-bottom: 0;
 }
 
@@ -260,12 +262,13 @@ a:hover, a:focus, a:active {
   color: #ff2450;
 }
 h1, h2, h3, h4, h5, h6 {
-  font-family: AvenirNextCondensed-DemiBold, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
-  /* margin: 0; */
+  font-family: AvenirNextCondensed-DemiBold, AvenirNext-Regular, Avenir-Black, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  margin: 0;
   padding: .5em 0 0;
 }
 h2, h3, h4, h5 {
-  border-bottom: 1px solid #777;
+  border-bottom: 2px solid #888;
+}
 }
 h1 {
   font-size: 2.25rem;
@@ -298,7 +301,7 @@ pre, label {
 p {
   font-size: 1.388rem;
   line-height: 1.33333;
-  /* margin: 0; */
+  margin: 0 1em;
   padding: .5em 0;
   max-width: 30em;
 }
@@ -306,39 +309,17 @@ h2 + p,
 h3 + p,
 h4 + p,
 h5 + p {
-  padding-top: 0;
+  padding-top: .125em;
   margin-top: 1px;
-  border-top: 1px solid #999;
+  border-top: 1px solid #888;
 }
 ol, ul {
   font-size: 1rem;
   line-height: 1.5;
-  margin: 0 0 2em 0;
+  margin: 0 0 2em -1rem;
 }
-li {
-  line-height: auto;
-}
-pre {
-  display: block;
-  margin: 1.4em auto;
-  background: #fcf9f1;
-  /* f9f9f9; */
-  padding: 15px 10px 10px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
-  border: solid 1px  #f0e0b2;
-  font-family: Consolas, Menlo, Monaco, monospace !important;
-  font-size: .875rem;
-  max-width: 90%;
-}
-pre * {
-  background: #fcf9f1 !important;
-}
-code {
-  font-family: Consolas, Menlo, Monaco, monospace;
+ul ul,ul ol {
+  margin-bottom: .4em;
 }
 ul {
   list-style-position: outside;
@@ -348,12 +329,29 @@ ol {
   list-style-position: outside;
   list-style-type: decimal;
 }
-strong, b {
-  font-family: AvenirNext-Bold, AvenirNextCondensed-DemiBold, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+pre {
+  display: block;
+  margin: 1.4em auto;
+  padding: .5em 1em 1em;
+  border-radius: 3px;
+  font-family: Consolas, Menlo, Monaco, monospace !important;
+  font-size: .875rem;
+  max-width: 90%;
+}
+code {
+  font-family: Consolas, Menlo, Monaco, monospace;
+}
+
+strong, b, dt {
+  font-family: AvenirNext-Medium, AvenirNext-Bold, AvenirNextCondensed-DemiBold, Avenir-Black, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
   font-weight: 600;
 }
-em, i, q {
-  font-family: AvenirNext-BoldItalic, AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+em, q, blockquote, blockquote p  {
+  font-family: AvenirNext-MediumItalic, AvenirNext-BoldItalic, Avenir-MediumOblique, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+}
+i {
+  font-family: AvenirNext-Italic, Avenir-Oblique, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
   font-style: italic;
 }
 blockquote {
@@ -363,9 +361,7 @@ blockquote {
   /* margin: 0; */
 }
 blockquote p {
-  font-family: AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
   font-style: italic;
-  /* margin: 0; */
   font-size: 1.25rem;
   line-height: 1.2;
   margin: 1.2em 0 1.2em 0;
