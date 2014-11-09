@@ -71,6 +71,7 @@ html>body {
 }
 li {
   font-size: 110%;
+  line-height: 1.5;
 }
 
 li li {
@@ -90,7 +91,7 @@ ul>li {
 ul>li::before {
   content: "";
   position: absolute;
-  top:.55em;left:0;
+  top:45%;left:0;
   color: #666;
   padding: 2px;
   height: 1px;
@@ -100,7 +101,6 @@ ul>li::before {
   border-radius: 50%;
   display: inline-block;
   line-height: 1;
-  font-size: 1em;
 }
 h1 {
   font-size: 2.2857em;
@@ -198,19 +198,20 @@ pre code:after {
   content: normal;
 }
 p>code,
-ul>code {
+li>code {
   font-size: .875em;
   margin: 0;
   border: 1px solid #ddd;
   background-color: #f8f8f8;
   border-radius: 3px;
-  padding: 2px 0 0 0;
+  /* padding: 2px 0 0 0; */
+  padding: 0;
   color: #b31940;
 }
 p>code:before,
 p>code:after,
-ul>code:before,
-ul>code:after {
+li>code:before,
+li>code:after {
   content: "\00a0";
   letter-spacing: -0.2em;
 }
