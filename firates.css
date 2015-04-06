@@ -83,24 +83,7 @@ li p {
   margin: .5em 0;
 }
 ul>li {
-  list-style: none;
-  position: relative;
-  margin-left: -.75em;
-  padding-left: .75em;
-}
-ul>li::before {
-  content: "";
-  position: absolute;
-  top:45%;left:0;
-  color: #666;
-  padding: 2px;
-  height: 1px;
-  width: 1px;
-  background-color: #3ca555;
-  border: 1px solid #666;
-  border-radius: 50%;
-  display: inline-block;
-  line-height: 1;
+  list-style: circle;
 }
 h1 {
   font-size: 2.2857em;
