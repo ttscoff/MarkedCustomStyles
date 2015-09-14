@@ -86,6 +86,10 @@ blockquote + p {
     text-indent: 0em;
 }
 
+h1+p,h2+p,h3+p,h4+p,h5+p,h6+p {
+    text-indent: 0em;
+}
+
 h1,h2,h3,h4,h5,h6 {
     line-height: 1.5em;
 }
