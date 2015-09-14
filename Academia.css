@@ -1,4 +1,4 @@
-/* 
+/*
    This document has been created with Marked.app <http://markedapp.com>, Copyright 2011 Brett Terpstra
    Please leave this notice in place, along with any additional credits below.
    ---------------------------------------------------------------
@@ -256,7 +256,7 @@ blockquote p {
     padding-left: 0.35ex;
 }
 
-div.references,div#references {
+div.references>p,div#references>p {
     padding-left: 2em;
     text-indent: -2em;
 }
