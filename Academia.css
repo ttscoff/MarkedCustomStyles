@@ -1,4 +1,4 @@
-/* 
+/*
    This document has been created with Marked.app <http://markedapp.com>, Copyright 2011 Brett Terpstra
    Please leave this notice in place, along with any additional credits below.
    ---------------------------------------------------------------
@@ -10,7 +10,7 @@ body {
     -webkit-font-smoothing: antialiased;
     font-style: normal;
     font-size: 12pt;
-    font-family; "Hoefler Text", Palatino, Georgia, Times, Serif;
+    font-family: "Hoefler Text", Palatino, Georgia, Times, Serif;
 	text-align: justify;
 	hyphens: auto;
 	width: 825px;
@@ -78,6 +78,18 @@ body,p,td,div {
     word-wrap: break-word;
 }
 
+p {
+    text-indent: 2em;
+}
+
+blockquote + p {
+    text-indent: 0em;
+}
+
+h1+p,h2+p,h3+p,h4+p,h5+p,h6+p {
+    text-indent: 0em;
+}
+
 h1,h2,h3,h4,h5,h6 {
     line-height: 1.5em;
 }
@@ -98,7 +110,7 @@ a:hover {
 
 .footnote {
     color: #0d6ea1;
-    font-size: .8em;
+    font-size: .83em;
     vertical-align: super;
 }
 
@@ -217,21 +229,25 @@ figure:hover>figcaption {
 
 .poetry pre {
     display: block;
-    font-family: Georgia, Garamond, serif !important;
-    font-size: 110% !important;
+    font-family: "Hoefler Text", Georgia, Garamond, serif !important;
+    font-size: .83em !important;
     font-style: normal;
     line-height: 1.6em;
     margin-left: 1em;
+    text-indene: 0em;
 }
 
 .poetry pre code {
-    font-family: Georgia, Garamond, serif !important;
+    font-family: "Hoefler Text", Georgia, Garamond, serif !important;
+    font-size: .83em !important;
+    text-indent: 0em;
 }
 
 blockquote p {
-    font-size: 110%;
+    font-size: .83em;
     font-style: normal;
     line-height: 1.6em;
+    text-indent: 0em;
 }
 
 .footnoteRef sup,sub {
@@ -242,6 +258,11 @@ blockquote p {
     position: relative;
     vertical-align: super;
     padding-left: 0.35ex;
+}
+
+div.refs>p,div#refs>p {
+    padding-left: 2em;
+    text-indent: -2em;
 }
 
 sub {
