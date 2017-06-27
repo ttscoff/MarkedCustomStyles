@@ -260,7 +260,7 @@ blockquote p {
     padding-left: 0.35ex;
 }
 
-div.refs>p,div#refs>p {
+div.refs>p,div#refs>div[id^="ref"]>p {
     padding-left: 2em;
     text-indent: -2em;
 }
