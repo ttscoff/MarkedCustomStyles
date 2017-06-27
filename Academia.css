@@ -261,7 +261,7 @@ blockquote p {
 }
 
 div.refs>p,div#refs>div[id^="ref"]>p {
-    padding-left: 4em;
+    padding-left: 2em;
     text-indent: -2em;
 }
 
