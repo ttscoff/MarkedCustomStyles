@@ -1,99 +1,158 @@
-/*
+/* 
    This document has been created with Marked.app <http://markedapp.com>, Copyright 2011 Brett Terpstra
    Please leave this notice in place, along with any additional credits below.
    ---------------------------------------------------------------
-   Title: Academia
-   Author: David Smith <http://www.davidsmith.name>
-   Description: A basic theme for displaying academic documents.
+   Title: Pandoctor
+   Author: Stephen Margheim
+   Description: Clean, academic paper style
 */
-body {
-    -webkit-font-smoothing: antialiased;
-    font-style: normal;
-    font-size: 12pt;
-    font-family: "Hoefler Text", Palatino, Georgia, Times, Serif;
-	text-align: justify;
-	hyphens: auto;
-	width: 825px;
-	margin: auto;
+
+/*** Font Definitions ***/
+@font-face {
+    font-family: "Hoefler Text";
+}
+@font-face {
+    font-family: "Consolas";
 }
 
-
-li {
-    font-size: 110%;
-}
-
-li li {
+/*** Style Definitions ***/
+html {
     font-size: 100%;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    margin-left: auto;
+    margin-right: auto;
 }
-
+body, div, p {
+    -webkit-font-smoothing: antialiased;
+    color: #111;
+    font-family: "Hoefler Text";
+    hyphens: auto;
+    margin: 0in;
+    text-align: justify;
+    text-indent: .25in;
+    line-height: 200%;
+    pagination: widow-orphan;
+    font-size: 12pt;
+}
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+    color: #111;
+    margin-top: 20.0pt;
+    margin-right: 0in;
+    margin-bottom: 10.0pt;
+    margin-left: 0in;
+    text-indent: 0;
+    line-height: 100%;
+}
+h1, h2, h3 {
+    font-size: 12pt;
+}
+h4, h5, h6 {
+    font-size: 11pt;
+}
+h1 {
+    font-weight: bold;
+    font-size: 13pt;
+}
+h2 {
+    font-variant: small-caps;
+    font-weight: normal;
+}
+h3 {
+    font-weight: normal;
+    font-style: italic;
+}
+h4 { 
+    font-weight: bold;
+}
+h5 {
+    font-weight: normal;
+    font-style: italic;
+}
+h6 {
+    font-variant: small-caps;
+}
+/* Metadata */
+.title {
+    margin-top: 12.0pt;
+    margin-right: 0in;
+    margin-bottom: 12.0pt;
+    margin-left: 0in;
+    text-align: center;
+    font-weight: normal;
+    font-size: 14.0pt;
+}
+.author, .date, .caption, .affiliation {
+    margin-top:0in;
+    margin-right:0in;
+    margin-bottom:10.0pt;
+    margin-left:0in;
+    text-align:center;
+    font-size:12.0pt;
+}
+/* Footnotes */
+.footnotes {
+    margin-top: 0in;
+    margin-right: 0in;
+    margin-bottom: 0in;
+    margin-left: 0in;
+}
+.footnotes ol li {
+    font-size: 10pt;
+}
+.footnotes ol li p {
+    text-indent: 0;
+    line-height: 100%;
+    font-size: 10pt;
+    margin-bottom: 2rem;
+}
+/* Blockquotes */
+blockquote p {
+    margin-top: 12.0pt;
+    margin-right: 1.0in;
+    margin-bottom: 12.0pt;
+    margin-left: 1.0in;
+    text-align: justify;
+    text-indent: 0;
+    line-height: 120%;
+}
+/* Lists */
+li {
+  font-size: 100%; 
+  text-indent: 0;
+  line-height: 150%;
+}
+li li {
+    font-size: 100%; 
+}
 li p {
     font-size: 100%;
-    margin: .5em 0;
+    margin: .5em 0; 
+}
+li > p:first-child {
+  margin: 0; }
+
+ul ul, ul ol {
+  margin-bottom: .2em; 
+}
+ul > li {
+    position: relative;
 }
 
-h1 {
-    color: #000;
-    font-size: 2.2857em;
-    line-height: .6563em;
-    margin: .6563em 0;
+ol > li {
+    position: relative;
 }
-
-h2 {
-    color: #111;
-    font-size: 1.7143em;
-    line-height: .875em;
-    margin: .875em 0;
+/* Code */
+.poetry, pre, code {
+    font-family: Consolas;
+    text-indent: 0;
 }
-
-h3 {
-    color: #111;
-    font-size: 1.5em;
-    line-height: 1em;
-    margin: 1em 0;
+.poetry, pre {
+    display: block;
+    margin-left: 1em;
 }
-
-h4 {
-    color: #111;
-    font-size: 1.2857em;
-    line-height: 1.1667em;
-    margin: 1.1667em 0;
-}
-
-h5 {
-    color: #111;
-    font-size: 1.15em;
-    line-height: 1.3em;
-    margin: 1.3em 0;
-}
-
-h6 {
-    font-size: 1em;
-    line-height: 1.5em;
-    margin: 1.5em 0;
-}
-
-body,p,td,div {
-    color: #111;
-    font-family: "Hoefler Text", Palatino, Georgia, Times, Serif;
-    word-wrap: break-word;
-}
-
-p {
-    text-indent: 2em;
-}
-
-blockquote + p {
-    text-indent: 0em;
-}
-
-h1+p,h2+p,h3+p,h4+p,h5+p,h6+p {
-    text-indent: 0em;
-}
-
-h1,h2,h3,h4,h5,h6 {
-    line-height: 1.5em;
-}
-
+/* Hyperlinks */
 a {
     -webkit-transition: color .2s ease-in-out;
     -moz-transition: color .2s ease-in-out;
@@ -103,14 +162,12 @@ a {
     color: #0d6ea1;
     text-decoration: none;
 }
-
 a:hover {
     color: #3593d9;
 }
-
-.footnote {
+.footnote, .footnoteRef {
     color: #0d6ea1;
-    font-size: .83em;
+    font-size: 12pt;
     vertical-align: super;
 }
 
@@ -123,13 +180,7 @@ dd {
     margin-bottom: 1em;
 }
 
-li > p:first-child {
-    margin: 0;
-}
 
-ul ul,ul ol {
-    margin-bottom: .4em;
-}
 
 caption,col,colgroup,table,tbody,td,tfoot,th,thead,tr {
     border-spacing: 0;
@@ -227,42 +278,15 @@ figure:hover>figcaption {
     /* background: rgba(0,0,0,1) */
 }
 
-.poetry pre {
-    display: block;
-    font-family: "Hoefler Text", Georgia, Garamond, serif !important;
-    font-size: .83em !important;
-    font-style: normal;
-    line-height: 1.6em;
-    margin-left: 1em;
-    text-indene: 0em;
-}
 
-.poetry pre code {
-    font-family: "Hoefler Text", Georgia, Garamond, serif !important;
-    font-size: .83em !important;
-    text-indent: 0em;
-}
 
-blockquote p {
-    font-size: .83em;
-    font-style: normal;
-    line-height: 1.6em;
-    text-indent: 0em;
-}
 
-.footnoteRef sup,sub {
-    font-size: 2ex;
-    font-style: normal;
+sup,sub,a.footnote {
+    font-size: 1.4ex;
     height: 0;
     line-height: 1;
     position: relative;
     vertical-align: super;
-    padding-left: 0.35ex;
-}
-
-div.refs>p,div#refs>div[id^="ref"]>p {
-    padding-left: 2em;
-    text-indent: -2em;
 }
 
 sub {
@@ -270,11 +294,7 @@ sub {
     top: -1px;
 }
 
-p,h5 {
-    font-size: 1.1429em;
-    line-height: 1.3125em;
-    margin: 1.3125em 0;
-}
+
 
 dt,th {
     font-weight: 700;
