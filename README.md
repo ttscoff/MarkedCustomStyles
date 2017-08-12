@@ -2,16 +2,20 @@
 
 Please feel free to fork and submit new styles! If you're not a Github user and you'd like to contribute, just [drop me a line](http://brettterpstra.com/contact/).
 
-Please customize and include the contents of `header.css` in any submitted styles.
+Please customize and include the contents of `header.css` in any submitted styles. The portion between the `---` borders should be in YAML format.
 
 ```css
 /*
-   This document has been created with Marked.app <http://marked2app.com>
-   Please leave this notice in place, along with any additional credits below.
-   ---------------------------------------------------------------
-   Title: Your Style Title
-   Author: Your Name <http://yoursite.com>
-   Description: Short description
+This document has been created with Marked.app <http://marked2app.com>
+Content is property of the document author
+Please leave this notice in place, along with any additional credits below.
+---------------------------------------------------------------
+Title: Your style title
+Author: Your Name <your url>
+Description: Description of theme
+Non-standard fonts used: (optional) [Rockwell, Rokkit, etc.]
+Note: (optional) Additional notes, where to get custom fonts, etc.
+---
 */
 ```
 
