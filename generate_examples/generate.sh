@@ -10,6 +10,6 @@ do
   cp example.html "$outname"
 
   # Set this css in the filename
-  sed -i -e "s/&&&/$name/g" "$outname"
+  sed -i -e "s/XXX/$name/g" "$outname"
   rm "$outname-e" # An I using Sed wrong!?
 done
