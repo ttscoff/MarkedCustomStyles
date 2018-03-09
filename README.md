@@ -2,7 +2,7 @@
 
 Please feel free to fork and submit new styles! If you're not a Github user and you'd like to contribute, just [drop me a line](http://brettterpstra.com/contact/).
 
-Please customize and include the contents of `header.css` in any submitted styles. The portion between the `---` borders should be in YAML format.
+Please customize and include the contents of `Header.css` in any submitted styles. The portion between the `---` borders should be in YAML format.
 
 ```css
 /*
@@ -11,9 +11,10 @@ Content is property of the document author
 Please leave this notice in place, along with any additional credits below.
 ---------------------------------------------------------------
 Title: Your style title
-Author: Your Name <your url>
+Author: Your Name
+URL: <your url>
 Description: Description of theme
-Non-standard fonts used: (optional) [Rockwell, Rokkit, etc.]
+Fonts: (optional) [Rockwell, Rokkit, etc.]
 Note: (optional) Additional notes, where to get custom fonts, etc.
 ---
 */
@@ -33,7 +34,7 @@ I've been creating my styles with [Compass and Sass](http://compass-style.org/),
 
 The document markup hasn't changed between v1 and v2 of Marked, so the [original style guide](http://support.markedapp.com/kb/how-to-tips-and-tricks/writing-custom-css-for-marked) still applies. There are just a few things to worry about for full compatibility. Inverted styles, poetry mode and print settings. However, submissions that lack any of these are still accepted, as people can add their own if they need to.
 
-The one thing your Style does need (aside from looking great in Marked), is the [header.css](https://github.com/ttscoff/MarkedCustomStyles/blob/master/header.css) information, customized to your Style. Just stick it at the top.
+The one thing your Style does need (aside from looking great in Marked), is the [Header.css](https://github.com/ttscoff/MarkedCustomStyles/blob/master/Header.css) information, customized to your Style. Just stick it at the top.
 
 I prefer to Base 64 encode any custom fonts in order to make the Stylesheet a single-file download with no online requirements. If you can make it work other ways, I'm open to folder downloads, etc. Eventually I plan to create a bundle format for them.
 
