@@ -1,0 +1,76 @@
+body {
+	padding: 20px;
+}
+
+header {
+    background: rgba(0,0,0,.5);
+    display: block;
+    position: fixed;
+    width: 95%;
+    left: 0;
+    padding: 5px 2.5%;
+    z-index: 100;
+    color: white;
+    top: 0;
+    box-sizing: content-box;
+}
+
+header label {
+    font-weight: 400;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+}
+
+header select#style {
+    font-size: 14px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+header nav {
+    float: right;
+    font-size: 16px;
+    line-height: 1;
+}
+
+header nav a {
+    color: #fff!important;
+    font-family: Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+    float: left;
+    padding: 5px 10px;
+    background: none;
+    border: none;
+    border-radius: 0;
+}
+
+header nav a:hover {
+	background: #666;
+	color: #fff;
+	border: none;
+	padding: 5px 10px;
+	border-radius: 8px;
+	box-shadow: none;
+	text-decoration: none;
+}
+
+header nav a:focus {
+    outline: auto;
+    text-decoration: none;
+    border: none;
+}
+
+span.elementType {
+    font-size: 12px;
+    font-style: normal;
+    background: rgba(255,255,255,.5);
+    padding: 2px 8px;
+    border: solid 1px #ccc;
+    color: #666;
+    border-radius: 5px;
+    text-transform: lowercase;
+    margin-left: -15px;
+}
