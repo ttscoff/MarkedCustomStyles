@@ -66,11 +66,11 @@ header nav a:focus {
 span.elementType {
     font-size: 12px;
     font-style: normal;
-    background: rgba(255,255,255,.5);
+    background: rgba(255,228,73,0.13);
     padding: 2px 8px;
-    border: solid 1px #ccc;
-    color: #666;
+    border: dotted 1px rgba(180,157,30,0.75);
+    color: rgba(0,0,0,.5);
     border-radius: 5px;
     text-transform: lowercase;
-    margin-left: -15px;
+    margin-left: -10px;
 }
