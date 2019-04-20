@@ -34,7 +34,7 @@ Custom Styles are added to the keyboard menu under Command-Opt-#, where # is 1-9
 
 I've been creating my styles with [Compass and Sass](http://compass-style.org/), with a [document containing a full range of markup elements](https://raw.github.com/ttscoff/MarkedCustomStyles/master/test_markup.md) for testing. I just turn on `compass watch` and point Marked's Style to the output CSS file. Turn on "Track CSS Changes" under the Style list in Marked, and every time Compass compiles, Marked will update without refreshing the page (LiveReload-style injection). You can use whatever you like, including directly editing plain CSS.
 
-The document markup hasn't changed between v1 and v2 of Marked, so the [original style guide](http://support.markedapp.com/kb/how-to-tips-and-tricks/writing-custom-css-for-marked) still applies. There are just a few things to worry about for full compatibility. Inverted styles, poetry mode and print settings. However, submissions that lack any of these are still accepted, as people can add their own if they need to.
+The document markup hasn't changed between v1 and v2 of Marked, so the [original style guide](https://marked2app.com/help/Writing_Custom_CSS.html) still applies. There are just a few things to worry about for full compatibility. Inverted styles, poetry mode and print settings. However, submissions that lack any of these are still accepted, as people can add their own if they need to.
 
 The one thing your Style does need (aside from looking great in Marked), is the [Header.css](https://github.com/ttscoff/MarkedCustomStyles/blob/master/Header.css) information, customized to your Style. Just stick it at the top.
 

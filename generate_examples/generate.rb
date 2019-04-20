@@ -7,6 +7,7 @@ def generate_options
   files.each do |f|
     # style = File.basename(f,".css")
     next if File.basename(File.dirname(f)) == File.basename(Dir.pwd)
+    next if File.basename(f) == "Header.css"
     style = f.sub(/\.\.\/(.*?)\.css/,'\1')
     options += %Q{\t\t<option value="#{style}">#{style}</option>\n}
   end
