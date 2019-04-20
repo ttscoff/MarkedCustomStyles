@@ -5,46 +5,20 @@
     <link id="mainstyle" rel="stylesheet" type="text/css" href="">
   </head>
 
+  <style>
+  	#wrapper { max-width: 800px; margin: 0 auto; }
+  </style>
+
 <body>
 
 <header>
 	<label for="style">Select style: </label>
-	<select id="style" name="style" onchange="switchStyle(this)">
+	<select id="style" name="style" onchange="switchStyleWithObj(this)">
 		<option value="Academia">Academia</option>
 		<option value="Academic">Academic</option>
 		<option value="Amelia">Amelia</option>
 		<option value="Avenue">Avenue</option>
-		<option value="Base16 3024">Base16 3024</option>
-		<option value="Base16 Ashes">Base16 Ashes</option>
-		<option value="Base16 Atelier Dune">Base16 Atelier Dune</option>
-		<option value="Base16 Atelier Forest">Base16 Atelier Forest</option>
-		<option value="Base16 Atelier Heath">Base16 Atelier Heath</option>
-		<option value="Base16 Atelier Lakeside">Base16 Atelier Lakeside</option>
-		<option value="Base16 Atelier Seaside">Base16 Atelier Seaside</option>
-		<option value="Base16 Bespin">Base16 Bespin</option>
-		<option value="Base16 Brewer">Base16 Brewer</option>
-		<option value="Base16 Chalk">Base16 Chalk</option>
-		<option value="Base16 Codeschool">Base16 Codeschool</option>
-		<option value="Base16 Default">Base16 Default</option>
-		<option value="Base16 Eighties">Base16 Eighties</option>
-		<option value="Base16 Embers">Base16 Embers</option>
-		<option value="Base16 Flat">Base16 Flat</option>
-		<option value="Base16 Google">Base16 Google</option>
-		<option value="Base16 Grayscale">Base16 Grayscale</option>
-		<option value="Base16 Green Screen">Base16 Green Screen</option>
-		<option value="Base16 Isotope">Base16 Isotope</option>
-		<option value="Base16 London Tube">Base16 London Tube</option>
-		<option value="Base16 Marrakesh">Base16 Marrakesh</option>
-		<option value="Base16 Mocha">Base16 Mocha</option>
-		<option value="Base16 Monokai">Base16 Monokai</option>
-		<option value="Base16 Ocean">Base16 Ocean</option>
-		<option value="Base16 Paraiso">Base16 Paraiso</option>
-		<option value="Base16 Pop">Base16 Pop</option>
-		<option value="Base16 Railscasts">Base16 Railscasts</option>
-		<option value="Base16 Shapeshifter">Base16 Shapeshifter</option>
-		<option value="Base16 Solarized">Base16 Solarized</option>
-		<option value="Base16 Tomorrow">Base16 Tomorrow</option>
-		<option value="Base16 Twilight">Base16 Twilight</option>
+		<option value="Bear">Bear</option>
 		<option value="Blank Code Theme">Blank Code Theme</option>
 		<option value="Custom">Custom</option>
 		<option value="Firates">Firates</option>
@@ -65,12 +39,56 @@
 		<option value="Ulysses Freestraction Light">Ulysses Freestraction Light</option>
 		<option value="Vostock">Vostock</option>
 		<option value="Yeti">Yeti</option>
+		<option value="Base16/Base16 3024">Base16/Base16 3024</option>
+		<option value="Base16/Base16 Ashes">Base16/Base16 Ashes</option>
+		<option value="Base16/Base16 Atelier Dune">Base16/Base16 Atelier Dune</option>
+		<option value="Base16/Base16 Atelier Forest">Base16/Base16 Atelier Forest</option>
+		<option value="Base16/Base16 Atelier Heath">Base16/Base16 Atelier Heath</option>
+		<option value="Base16/Base16 Atelier Lakeside">Base16/Base16 Atelier Lakeside</option>
+		<option value="Base16/Base16 Atelier Seaside">Base16/Base16 Atelier Seaside</option>
+		<option value="Base16/Base16 Bespin">Base16/Base16 Bespin</option>
+		<option value="Base16/Base16 Brewer">Base16/Base16 Brewer</option>
+		<option value="Base16/Base16 Chalk">Base16/Base16 Chalk</option>
+		<option value="Base16/Base16 Codeschool">Base16/Base16 Codeschool</option>
+		<option value="Base16/Base16 Default">Base16/Base16 Default</option>
+		<option value="Base16/Base16 Eighties">Base16/Base16 Eighties</option>
+		<option value="Base16/Base16 Embers">Base16/Base16 Embers</option>
+		<option value="Base16/Base16 Flat">Base16/Base16 Flat</option>
+		<option value="Base16/Base16 Google">Base16/Base16 Google</option>
+		<option value="Base16/Base16 Grayscale">Base16/Base16 Grayscale</option>
+		<option value="Base16/Base16 Green Screen">Base16/Base16 Green Screen</option>
+		<option value="Base16/Base16 Isotope">Base16/Base16 Isotope</option>
+		<option value="Base16/Base16 London Tube">Base16/Base16 London Tube</option>
+		<option value="Base16/Base16 Marrakesh">Base16/Base16 Marrakesh</option>
+		<option value="Base16/Base16 Mocha">Base16/Base16 Mocha</option>
+		<option value="Base16/Base16 Monokai">Base16/Base16 Monokai</option>
+		<option value="Base16/Base16 Ocean">Base16/Base16 Ocean</option>
+		<option value="Base16/Base16 Paraiso">Base16/Base16 Paraiso</option>
+		<option value="Base16/Base16 Pop">Base16/Base16 Pop</option>
+		<option value="Base16/Base16 Railscasts">Base16/Base16 Railscasts</option>
+		<option value="Base16/Base16 Shapeshifter">Base16/Base16 Shapeshifter</option>
+		<option value="Base16/Base16 Solarized">Base16/Base16 Solarized</option>
+		<option value="Base16/Base16 Tomorrow">Base16/Base16 Tomorrow</option>
+		<option value="Base16/Base16 Twilight">Base16/Base16 Twilight</option>
+		<option value="default_styles/amblin">default_styles/amblin</option>
+		<option value="default_styles/antique">default_styles/antique</option>
+		<option value="default_styles/Fountain">default_styles/Fountain</option>
+		<option value="default_styles/github">default_styles/github</option>
+		<option value="default_styles/Grump">default_styles/Grump</option>
+		<option value="default_styles/ink">default_styles/ink</option>
+		<option value="default_styles/Lopash">default_styles/Lopash</option>
+		<option value="default_styles/manuscript">default_styles/manuscript</option>
+		<option value="default_styles/modern">default_styles/modern</option>
+		<option value="default_styles/swiss">default_styles/swiss</option>
+		<option value="default_styles/UpstandingCitizen">default_styles/UpstandingCitizen</option>
 
 	</select>
+	<input type="checkbox" name="highcontrast" value="highcontrast" id="highcontrast"><label for="highcontrast"> High Contrast mode</label>
 
 	<nav><a href="javascript:void(0)" id="prevstyle">&larr; Previous</a> <a href="javascript:void(0)" id="nextstyle">Next &rarr;</a></nav>
 </header>
 
+<div id="wrapper">
 <p>This text is generated using raingrams from Lewis Carroll&#8217;s <a href="https://www.cs.cmu.edu/~rgs/alice-table.html">Alice in Wonderland</a>. It contains most standard elements generated by Markdown.</p>
 
 <p><span class="elementType">Header 1</span></p>
@@ -246,41 +264,90 @@ the riddle yet had now let him into a mineral I could have said</p>
 
 </ol>
 </div>
+</div>
+
 <script>
-  function switchStyle (obj) {
-  	var value = obj.value,
-  		styleEl = document.querySelector('#mainstyle');
-	styleEl.href = "../" + value + ".css";
+	function switchStyleWithObj(obj) {
+		switchStyle(obj.value);
+	}
+  function switchStyle (value) {
+  	var styleEl = document.querySelector('#mainstyle');
+
+	  styleEl.href = "../" + value + ".css";
+	  window.localStorage.setItem('style', value);
+  }
+
+  function indexMatchingValue(ele, text) {
+      for (var i=0; i<ele.length;i++) {
+          if (ele[i].childNodes[0].nodeValue === text){
+              return i;
+          }
+      }
+      return undefined;
+  }
+
+  firstLoad = function() {
+  	var styleMenu = document.querySelector('#style');
+		var prevStyle = window.localStorage.getItem('style');
+		if (prevStyle) {
+			var idx = indexMatchingValue(styleMenu, prevStyle);
+			styleMenu.selectedIndex = idx;
+		}
+		var inverted = window.localStorage.getItem('highcontrast');
+		if (inverted && inverted !== "false") {
+	  	var body = document.querySelector('body');
+			addClass(body, 'inverted');
+			document.querySelector('#highcontrast').checked = inverted;
+		} else {
+			document.querySelector('#highcontrast').checked = false;
+		}
+  	syncStyle();
   }
 
   syncStyle = function() {
-	switchStyle(document.querySelector('#style')[document.querySelector('#style').selectedIndex]);
+  	var styleMenu = document.querySelector('#style')
+		switchStyleWithObj(styleMenu[styleMenu.selectedIndex]);
+  }
+
+  function hasClass(ele,cls) {
+    return !!ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+  }
+
+  function addClass(ele,cls) {
+    if (!hasClass(ele,cls)) ele.className += " "+cls;
+  }
+
+  function removeClass(ele,cls) {
+    if (hasClass(ele,cls)) {
+      var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+      ele.className=ele.className.replace(reg,' ');
+    }
   }
 
   function adjustIndex(inc) {
-	var stylemenu = document.querySelector('#style');
-	var curr = stylemenu.selectedIndex,
-		min = 0,
-		max = stylemenu.length - 1;
+		var stylemenu = document.querySelector('#style');
+		var curr = stylemenu.selectedIndex,
+			min = 0,
+			max = stylemenu.length - 1;
 
-	if (inc > 0) {
-		if (curr + inc <= max) {
-			curr += inc;
+		if (inc > 0) {
+			if (curr + inc <= max) {
+				curr += inc;
+			} else {
+				curr = max;
+			}
 		} else {
-			curr = max;
+			if (curr + inc >= 0) {
+				curr += inc;
+			} else {
+				curr = 0;
+			}
 		}
-	} else {
-		if (curr + inc >= 0) {
-			curr += inc;
-		} else {
-			curr = 0;
-		}
-	}
-	stylemenu.selectedIndex = curr;
-	syncStyle();
+		stylemenu.selectedIndex = curr;
+		syncStyle();
   }
 
-  document.addEventListener('load', syncStyle);
+  window.addEventListener('load', firstLoad, false);
 
   document.querySelector('#prevstyle').addEventListener('click',function() {
 	adjustIndex(-1);
@@ -289,6 +356,19 @@ the riddle yet had now let him into a mineral I could have said</p>
   document.querySelector('#nextstyle').addEventListener('click',function() {
 	adjustIndex(1);
   });
+
+  document.querySelector('#highcontrast').addEventListener('click',function() {
+  	var body = document.querySelector('body');
+  	if (this.checked) {
+			if (!hasClass(body, 'inverted')) {
+				addClass(body, 'inverted');
+			}
+  	} else {
+  		removeClass(body, 'inverted');
+  	}
+  	window.localStorage.setItem('highcontrast',this.checked);
+  });
+
 </script>
 
 </body>
