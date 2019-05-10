@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  	<link id="basestyle" rel="stylesheet" type="text/css" href="basestyle.css">
-    <link id="mainstyle" rel="stylesheet" type="text/css" href="">
-  </head>
+	<head>
+		<link id="basestyle" rel="stylesheet" type="text/css" href="basestyle.css">
+		<link id="mainstyle" rel="stylesheet" type="text/css" href="">
+	</head>
 
-  <style>
-  	#wrapper { max-width: 800px; margin: 20px auto; }
-  </style>
+	<style>
+		#wrapper { max-width: 800px; margin: 20px auto; }
+	</style>
 
 <body>
 
@@ -203,61 +203,73 @@ the riddle yet had now let him into a mineral I could have said</p>
 	function switchStyleWithObj(obj) {
 		switchStyle(obj.value);
 	}
-  function switchStyle (value) {
-  	var styleEl = document.querySelector('#mainstyle');
 
-	  styleEl.href = "../" + value + ".css";
-	  window.localStorage.setItem('style', value);
-  }
+	function switchStyle(value) {
+		var styleEl = document.querySelector('#mainstyle');
 
-  function indexMatchingValue(ele, text) {
-      for (var i=0; i<ele.length;i++) {
-          if (ele[i].childNodes[0].nodeValue === text){
-              return i;
-          }
-      }
-      return undefined;
-  }
+		styleEl.href = "../" + value + ".css";
+		window.localStorage.setItem('style', value);
+		document.location.hash = value;
+	}
 
-  firstLoad = function() {
-  	var styleMenu = document.querySelector('#style');
-		var prevStyle = window.localStorage.getItem('style');
-		if (prevStyle) {
-			var idx = indexMatchingValue(styleMenu, prevStyle);
+	function indexMatchingValue(ele, text) {
+			for (var i=0; i<ele.length;i++) {
+					if (ele[i].childNodes[0].nodeValue === text){
+							return i;
+					}
+			}
+			return undefined;
+	}
+
+	firstLoad = function() {
+		var styleMenu = document.querySelector('#style'),
+		prevStyle = window.localStorage.getItem('style'),
+		hash = document.location.hash,
+		idx = false;
+
+		if (hash) {
+			var style = hash.replace(/^#/,'');
+			idx = indexMatchingValue(styleMenu, style);
+		} else if (prevStyle) {
+			idx = indexMatchingValue(styleMenu, prevStyle);
+		}
+
+		if (idx) {
 			styleMenu.selectedIndex = idx;
 		}
+
 		var inverted = window.localStorage.getItem('highcontrast');
 		if (inverted && inverted !== "false") {
-	  	var body = document.querySelector('body');
+			var body = document.querySelector('body');
 			addClass(body, 'inverted');
 			document.querySelector('#highcontrast').checked = inverted;
 		} else {
 			document.querySelector('#highcontrast').checked = false;
 		}
-  	syncStyle();
-  }
+		syncStyle();
+	}
 
-  syncStyle = function() {
-  	var styleMenu = document.querySelector('#style')
+	syncStyle = function() {
+		var styleMenu = document.querySelector('#style')
 		switchStyleWithObj(styleMenu[styleMenu.selectedIndex]);
-  }
+	}
 
-  function hasClass(ele,cls) {
-    return !!ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
-  }
+	function hasClass(ele,cls) {
+		return !!ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+	}
 
-  function addClass(ele,cls) {
-    if (!hasClass(ele,cls)) ele.className += " "+cls;
-  }
+	function addClass(ele,cls) {
+		if (!hasClass(ele,cls)) ele.className += " "+cls;
+	}
 
-  function removeClass(ele,cls) {
-    if (hasClass(ele,cls)) {
-      var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
-      ele.className=ele.className.replace(reg,' ');
-    }
-  }
+	function removeClass(ele,cls) {
+		if (hasClass(ele,cls)) {
+			var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+			ele.className=ele.className.replace(reg,' ');
+		}
+	}
 
-  function adjustIndex(inc) {
+	function adjustIndex(inc) {
 		var stylemenu = document.querySelector('#style');
 		var curr = stylemenu.selectedIndex,
 			min = 0,
@@ -278,29 +290,29 @@ the riddle yet had now let him into a mineral I could have said</p>
 		}
 		stylemenu.selectedIndex = curr;
 		syncStyle();
-  }
+	}
 
-  window.addEventListener('load', firstLoad, false);
+	window.addEventListener('load', firstLoad, false);
 
-  document.querySelector('#prevstyle').addEventListener('click',function() {
+	document.querySelector('#prevstyle').addEventListener('click',function() {
 	adjustIndex(-1);
-  });
+	});
 
-  document.querySelector('#nextstyle').addEventListener('click',function() {
+	document.querySelector('#nextstyle').addEventListener('click',function() {
 	adjustIndex(1);
-  });
+	});
 
-  document.querySelector('#highcontrast').addEventListener('click',function() {
-  	var body = document.querySelector('body');
-  	if (this.checked) {
+	document.querySelector('#highcontrast').addEventListener('click',function() {
+		var body = document.querySelector('body');
+		if (this.checked) {
 			if (!hasClass(body, 'inverted')) {
 				addClass(body, 'inverted');
 			}
-  	} else {
-  		removeClass(body, 'inverted');
-  	}
-  	window.localStorage.setItem('highcontrast',this.checked);
-  });
+		} else {
+			removeClass(body, 'inverted');
+		}
+		window.localStorage.setItem('highcontrast',this.checked);
+	});
 
 </script>
 
