@@ -30,6 +30,7 @@ header label {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 16px;
     display: inline;
+    color: #fff;
 }
 
 header select#style {
@@ -37,6 +38,45 @@ header select#style {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 300;
     letter-spacing: 1px;
+}
+
+.headerleft {
+    float: left;
+}
+
+.headercenter {
+    display: inline-block;
+    text-align: center;
+    margin: 0 10px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1;
+    text-indent: 0;
+}
+
+.headercenter a {
+    color: #fff;
+    font-weight: 700;
+    padding: 5px;
+    display: inline-block;
+    background: #666;
+    border-radius: 4px;
+    transition: background .2s linear;
+}
+
+.headercenter a:link,
+.headercenter a:active,
+.headercenter a:hover,
+.headercenter a:visited {
+    color: #fff;
+    border: none;
+    outline: none;
+    text-shadow: none;
+    text-decoration: none;
+}
+
+.headercenter a:hover {
+    background: #888;
 }
 
 header nav {
@@ -104,6 +144,25 @@ header nav a:focus, , #meta nav a:focus {
 
 #meta span.title {
     font-weight: 700;
+}
+
+#meta a.themedownload:link,
+#meta a.themedownload:active,
+#meta a.themedownload:hover,
+#meta a.themedownload:visited {
+    color: #fff;
+    border: none;
+    outline: none;
+    text-shadow: none;
+    text-decoration: none;
+}
+#meta a.themedownload {
+    font-weight: 600;
+    color: #eee;
+    text-decoration: none;
+}
+#meta a.themedownload:hover {
+    color: #ccc;
 }
 
 #meta nav {

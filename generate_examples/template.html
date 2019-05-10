@@ -16,19 +16,26 @@
 <body>
 
 <header>
-	<label for="style">Select style: </label>
-	<select id="style" name="style" onchange="switchStyleWithObj(this)">
-%%stylemenu%%
-	</select>
-	<input type="checkbox" name="highcontrast" value="highcontrast" id="highcontrast"><label for="highcontrast"> High Contrast mode</label>
+	<div class="headerleft">
+		<label for="style">Select style: </label>
+		<select id="style" name="style" onchange="switchStyleWithObj(this)">
+	%%stylemenu%%
+		</select>
+		<input type="checkbox" name="highcontrast" value="highcontrast" id="highcontrast"><label for="highcontrast"> High Contrast mode</label>
+	</div>
 
-	<nav><a href="javascript:void(0)" id="prevstyle" class="prevlink">&larr; Previous</a> <a href="javascript:void(0)" id="nextstyle" class="nextlink">Next &rarr;</a></nav>
+	<div class="headercenter">
+		<a href="" class="themedownload" target="_blank" title="Right click and Save As to download">Download This Theme</a>
+		<a href="https://github.com/ttscoff/MarkedCustomStyles">Repository</a>
+	</div>
+
+	<nav class="headerright"><a href="javascript:void(0)" id="prevstyle" class="prevlink">&larr; Previous</a> <a href="javascript:void(0)" id="nextstyle" class="nextlink">Next &rarr;</a></nav>
 </header>
 
 <div id="meta">
 	<div class="info">
 		<p><span class="title"></span> by <span class="author"></span></p>
-		<p><span class="description"></span></p>
+		<p><span class="description"></span> <a target="_blank" title="Right click and Save As to download" href="" class="themedownload">[Download]</a></p>
 	</div>
 
 	<nav>
@@ -260,6 +267,11 @@ the riddle yet had now let him into a mineral I could have said</p>
 		updateMeta(value);
 		window.localStorage.setItem('style', value);
 		document.location.hash = value;
+
+		var downloadLinks = document.querySelectorAll('a.themedownload');
+		for (var i = 0; i < downloadLinks.length; i++) {
+		    downloadLinks[i].href = 'https://raw.githubusercontent.com/ttscoff/MarkedCustomStyles/master/'+ value + '.css';
+		}
 	}
 
 	function indexMatchingValue(ele, text) {
