@@ -2,8 +2,9 @@
 
 def generate_options
   options = ""
-  files = Dir.glob('../*.css')
-  files.concat(Dir.glob('../*/*.css'))
+  files = Dir.glob('../*.css').sort
+  subfiles = Dir.glob('../*/*.css').sort
+  files.concat(subfiles)
   files.each do |f|
     # style = File.basename(f,".css")
     next if File.basename(File.dirname(f)) == File.basename(Dir.pwd)
