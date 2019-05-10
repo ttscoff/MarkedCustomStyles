@@ -2,23 +2,30 @@ body {
 	padding: 20px;
 }
 
-header {
+header, #meta {
     background: rgba(0,0,0,.5);
+    color: white;
     display: block;
     position: fixed;
-    width: 95%;
-    left: 0;
-    padding: 5px 2.5%!important;
     z-index: 100;
-    color: white;
+    box-sizing: border-box;
+    width: 100%;
+    text-indent: 0;
+    line-height: 1;
+    text-shadow: none;
+}
+
+header {
+    left: 0;
+    padding: 5px!important;
     top: 0;
-    box-sizing: content-box;
 }
 
 header label {
     font-weight: 400;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 16px;
+    display: inline;
 }
 
 header select#style {
@@ -34,7 +41,7 @@ header nav {
     line-height: 1;
 }
 
-header nav a {
+header nav a, #meta nav a {
     color: #fff!important;
     font-family: Helvetica, Arial, sans-serif;
     text-decoration: none;
@@ -48,7 +55,7 @@ header nav a {
     text-shadow: none;
 }
 
-header nav a:hover {
+header nav a:hover, #meta nav a:hover {
 	background: #666;
 	color: #fff;
 	border: none;
@@ -58,21 +65,22 @@ header nav a:hover {
 	text-decoration: none;
 }
 
-header nav a:focus {
+header nav a:focus, , #meta nav a:focus {
     outline: auto;
     text-decoration: none;
     border: none;
 }
 
 #meta {
-    background: #eee;
     padding: 2px 50px;
-    width: 100%;
-    border: 1px solid #ccc;
-    z-index: 100000;
-    position: fixed;
     bottom: 0;
     left: 0;
+    min-height: 50px;
+}
+
+#meta .info {
+    width: 60%;
+    float: left;
 }
 
 #meta p {
@@ -86,12 +94,19 @@ header nav a:focus {
 }
 
 #meta p span {
-    color: #555;
+    color: #eee;
     font-size: 14px!important;
 }
 
 #meta span.title {
     font-weight: 700;
+}
+
+#meta nav {
+    float: right;
+    padding: 0;
+    margin: 10px 0 0;
+    font-size: 14px;
 }
 
 span.elementType {

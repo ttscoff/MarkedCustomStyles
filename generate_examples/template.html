@@ -22,12 +22,19 @@
 	</select>
 	<input type="checkbox" name="highcontrast" value="highcontrast" id="highcontrast"><label for="highcontrast"> High Contrast mode</label>
 
-	<nav><a href="javascript:void(0)" id="prevstyle">&larr; Previous</a> <a href="javascript:void(0)" id="nextstyle">Next &rarr;</a></nav>
+	<nav><a href="javascript:void(0)" id="prevstyle" class="prevlink">&larr; Previous</a> <a href="javascript:void(0)" id="nextstyle" class="nextlink">Next &rarr;</a></nav>
 </header>
 
 <div id="meta">
-	<p><span class="title"></span> by <span class="author"></span></p>
-	<p><span class="description"></span></p>
+	<div class="info">
+		<p><span class="title"></span> by <span class="author"></span></p>
+		<p><span class="description"></span></p>
+	</div>
+
+	<nav>
+		<a href="javascript:void(0)" class="prevlink">&larr; Previous</a>
+		<a href="javascript:void(0)" class="nextlink">Next &rarr;</a>
+	</nav>
 </div>
 
 <div id="wrapper">
@@ -313,13 +320,19 @@ the riddle yet had now let him into a mineral I could have said</p>
 
 	window.addEventListener('load', firstLoad, false);
 
-	document.querySelector('#prevstyle').addEventListener('click',function() {
-	adjustIndex(-1);
-	});
+	var prevlinks = document.querySelectorAll('.prevlink');
+	for (var i = 0; i < prevlinks.length; i++) {
+	    prevlinks[i].addEventListener('click', function(event) {
+	        adjustIndex(-1);
+	    });
+	}
 
-	document.querySelector('#nextstyle').addEventListener('click',function() {
-	adjustIndex(1);
-	});
+	var nextlinks = document.querySelectorAll('.nextlink');
+	for (var i = 0; i < nextlinks.length; i++) {
+	    nextlinks[i].addEventListener('click', function(event) {
+	        adjustIndex(1);
+	    });
+	}
 
 	document.querySelector('#highcontrast').addEventListener('click',function() {
 		var body = document.querySelector('body');
