@@ -64,6 +64,36 @@ header nav a:focus {
     border: none;
 }
 
+#meta {
+    background: #eee;
+    padding: 2px 50px;
+    width: 100%;
+    border: 1px solid #ccc;
+    z-index: 100000;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+#meta p {
+    font-size: 14px!important;
+    font-family: "Helvetica Neue", Arial, Helvetica!important;
+    color: #aaa;
+    font-weight: 400;
+    line-height: 1;
+    margin: 4px 0 7px 0;
+    padding: 0;
+}
+
+#meta p span {
+    color: #555;
+    font-size: 14px!important;
+}
+
+#meta span.title {
+    font-weight: 700;
+}
+
 span.elementType {
     font-size: 12px;
     font-style: normal;
