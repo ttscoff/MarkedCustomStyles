@@ -172,6 +172,8 @@
   #wrapper ul ul, #wrapper ol ol, #wrapper ul ol, #wrapper ol ul {
     margin-top: 0em;
     margin-bottom: 0em; }
+  #wrapper li p {
+    display: inline-block; }
   #wrapper hr, #wrapper .hr {
     border: 1px solid #ddd; }
   #wrapper a, #wrapper b, #wrapper i, #wrapper strong, #wrapper em, #wrapper small, #wrapper code {
