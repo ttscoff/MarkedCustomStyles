@@ -225,6 +225,15 @@ Description: Github README style. Includes theme for Pygmentized code blocks.
   margin: 24px 0 16px;
   padding: 0;
 }
+
+#wrapper h1 code,
+#wrapper h2 code,
+#wrapper h3 code,
+#wrapper h4 code,
+#wrapper h5 code,
+#wrapper h6 code {
+  font-size: inherit;
+}
 #wrapper h1,
 #wrapper h2 {
   border-bottom: 1px solid #eaecef;
@@ -279,13 +288,16 @@ Description: Github README style. Includes theme for Pygmentized code blocks.
 }
 #wrapper tt,
 #wrapper code {
-  font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
-  font-size: 12px;
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+  font-size: 85%;
 }
 #wrapper pre {
-  font: 12px Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  font: 100% SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace; 
   margin-bottom: 0;
-  margin-top: 0;
+  margin-top: 16px;
+  line-height: 1.45;
+  padding: 10px;
+  border-radius: 3px;
 }
 
 #wrapper {
@@ -503,7 +515,7 @@ code, tt {
   margin: 0;
   padding-bottom: .2em;
   padding-top: .2em;
-  padding: 0;
+  padding: .4 .2;
 }
 
 code::before, code::after {
@@ -543,7 +555,7 @@ pre > code {
   overflow: auto;
   font-size: 85%;
   line-height: 1.45;
-  background-color: #f7f7f7;
+  background-color: #f6f8fa;
   border-radius: 3px;
 }
 
