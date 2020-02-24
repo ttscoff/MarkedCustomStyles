@@ -48,6 +48,8 @@ def generate_options
       preview += %Q{</figcaption></figure></a></li>}
       previews.push(preview)
     end
+
+  [options, metadata]
   end
   {
     :stylemenu => options.join("\n"),
