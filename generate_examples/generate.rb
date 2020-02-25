@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 require 'json'
+require 'fileutils'
 
 def get_meta(file)
   content = IO.read(file)
@@ -37,7 +38,7 @@ def generate_options
     # style = File.basename(f,".css")
     next if File.basename(File.dirname(f)) == File.basename(Dir.pwd) || ignored_styles.include?(File.basename(f))
     Dir.mkdir("styles") unless File.directory?("styles")
-    File.cp(f, "styles")
+    FileUtils.cp(f, "styles")
     style = File.basename(f,".css")
     meta = get_meta(f)
     metadata[style] = meta

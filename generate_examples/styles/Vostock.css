@@ -1,0 +1,486 @@
+/*
+This document has been created with Marked.app <http://markedapp.com>, Copyright 2014 Brett Terpstra
+Please leave this notice in place, along with any additional credits below.
+---------------------------------------------------------------
+Title: Vostock
+Author: Jocelyn Richard <http://jocelynrichard.com/>
+Description: Works best with the free PT fonts: http://www.paratype.com/public/
+ */
+
+
+/* ================================================ */
+/* 1. Remise à zéro */
+/* 2. Squelette */
+/* 3. Media queries */
+/* ================================================ */
+
+
+
+/* ================================================ */
+/* 1. Remise à zéro */
+/* ================================================ */
+
+html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, blockquote, pre, form, fieldset, table, th, td, img {margin: 0; padding: 0; border: 0;}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {display: block;} /* Définition des balises sémantiques pour IE 6/7/8/9 et Firefox 3 */
+
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;} /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+
+
+
+/* ================================================ */
+/* 2. Squelette */
+/* ================================================ */
+
+/* ------------------------------------------------- */
+/* Général */
+/* ------------------------------------------------- */
+
+html {font-size: 15px;}
+
+body {
+	font-family: "pt serif", Georgia, serif;
+	margin: 1rem 1rem 5rem 1rem; /* Pour avoir des marges même si l'outil hôte n'en prévoit pas */
+	color: rgba(0,0,0,0.7);
+	text-shadow: 0 1px 0 white;
+	background-color: #ececec;
+}
+
+#wrapper { /* #wrapper : id ajoutée par Marked; tout le corps de texte y est injecté. */
+	max-width: 38rem;
+	margin: 0 auto;
+	margin-left: auto !important; /* Pour contrer toc.css ajouté par Marked */
+}
+
+/* ------------------------------------------------- */
+/* Typographie */
+/* ------------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "pt sans", "avenir next", sans-serif;
+	font-weight: 700;
+	line-height: 1.25;
+	margin: 1.5rem 0;
+	color: rgba(0,0,0,1);
+}
+
+h1 {
+	font-size: 2.24rem;
+	margin: 3rem 0 1rem 0;
+	}
+
+h2 {
+	font-size: 1.59rem;
+	margin: 2rem 0 1rem 0;
+	font-family: "pt sans narrow", "avenir next condensed", sans-serif;}
+
+h3 {
+	font-size: 1rem;
+	text-transform: uppercase;
+}
+
+h4,
+h5,
+h6 {
+	font-size: 1rem;
+}
+
+h5 {
+	color: rgba(0,0,0,0.4);
+}
+
+h6 {
+	margin-left: 1rem;
+	color: rgba(0,0,0,0.4);
+}
+
+p,
+ul,
+ol,
+blockquote {
+	font-size: 1rem;
+	line-height: 1.75;
+	margin: 1rem 0;
+	font-weight: 300;
+}
+
+ul,
+ol {
+	margin-left: 2rem;
+	list-style-position: outside !important;
+}
+
+ul {
+	list-style-type: none;
+}
+
+ul > li:before {
+	content: "\2022";
+	margin-left: -1.2rem;
+	padding-right: 0.75rem;
+}
+
+ul li,
+ol li {
+	margin: 0;
+}
+
+ul ul,
+ul ol,
+ol ul,
+ol ol,
+ul p:not(:first-child),
+ol p:not(:first-child) {
+	margin-left: 2rem;
+}
+
+ul li p:first-child,
+ol li p:first-child {
+	display: inline;
+}
+
+blockquote {
+	margin: 1rem 0 1rem 2rem;
+	font-style: italic;
+}
+
+ul li blockquote {
+	display: inline;
+	margin-left: 0rem;
+}
+
+a:link { /* p a:link ? */
+	text-decoration: none;
+	font-weight: 700;
+	color: rgba(25,107,240,1);
+}
+
+a:visited { /* p a:visited ? */
+	color: #2c508a;
+}
+
+a:hover { /* p a:hover ? */
+	color: #2DAB5F;
+}
+
+a:focus {
+	outline: 0.125rem solid;
+}
+
+table,
+caption,
+figcaption {
+	font-family: "pt sans", "avenir next", sans-serif;
+	font-size: 0.85rem;
+	line-height: 1.5;
+	margin: 0 1rem;
+}
+
+/* ------------------------------------------------- */
+/* Tableaux */
+/* ------------------------------------------------- */
+
+table {
+	margin: 1rem 0 1.75rem 0;
+	border-collapse: collapse;
+}
+
+th {
+	border-bottom: 0.125rem solid rgba(0,0,0,0.3);
+	background-color: rgba(255,255,255,0.7);
+}
+
+th,
+td {
+	padding: 0.25rem 0.75rem;
+}
+
+tbody tr:nth-child(even) {
+	background-color: rgba(255,255,255,0.5);
+}
+
+/* ------------------------------------------------- */
+/* Divers */
+/* ------------------------------------------------- */
+
+a:link, /* Mentions white-space pour forcer les retours à la ligne. */
+pre {
+	white-space:     pre;       /* CSS 2.0 */
+	white-space:     pre-wrap;  /* CSS 2.1 */
+	white-space:     pre-line;  /* CSS 3.0 */
+	white-space:    -pre-wrap;  /* Opera 4-6 */
+	white-space:   -o-pre-wrap; /* Opera 7 */
+	white-space: -moz-pre-wrap; /* Mozilla */
+	white-space:  -hp-pre-wrap; /* HP Printers */
+	word-wrap: break-word;      /* IE 5+ */
+}
+
+dt {
+	margin: 1rem 1rem 0.5rem 0;
+	font-weight: bold;
+}
+
+dd {
+	margin-bottom: 0.5rem
+}
+
+code {
+	font-family: "Menlo", "Courier New", "Courier", monospace;
+	font-size: 0.85rem;
+	border: 0.0625rem solid rgba(255,255,255,0.7);
+	background-color: rgba(255,255,255,0.5);
+	border-radius: 2px; color: #2DAB5F; /* #2DAB5F */
+	text-shadow: none;
+/*
+	border: 0.0625rem solid rgba(0,0,0,0.1);
+	background-color: rgba(0,0,0,0.03);
+	border-radius: 2px; color: #2aa198;}
+*/
+}
+
+figure {
+	margin: 1.5rem 0;
+}
+
+figure img,
+li img {
+	max-width: 100%; height: auto;
+}
+
+hr {
+	clear: none;
+	height: 2px; /* height: 0.125rem; */
+	border: none;
+	margin: 1.5rem auto;
+	width: 14rem;
+	color: rgba(0,0,0,0.6);
+	background-color: rgba(0,0,0,0.6);
+}
+
+sup,
+sub,
+a.footnote { /* important rules for keeping line-height from being affected by sub */
+   font-size: 1.4ex;
+   height: 0;
+   line-height: 1;
+   position: relative;
+}
+
+sup,
+a.footnote  {
+    vertical-align:super;
+}
+
+sub {
+    vertical-align: sub;
+    top: -1px;
+}
+
+a.footnote {
+	font-size: 0.75rem;
+}
+
+::selection {background-color: #fbfb48;}
+::-moz-selection {background-color: #fbfb48;}
+
+/* #generated-toc : id ajoutée par Marked pilotant l'affichage de la table des matières */
+
+#generated-toc {
+	text-shadow: none;
+}
+
+#generated-toc ul { /* Pour compenser l'attribution d'une puce custom plus haut */
+	margin: 0;
+	list-style-type: none;
+}
+
+#generated-toc ul li { /* Pour compenser l'attribution d'une puce custom plus haut */
+	margin: 0;
+}
+
+#generated-toc ul > li:before { /* Pour compenser l'attribution d'une puce custom plus haut */
+	content: none;
+	margin-left: 0;
+	padding-right: 0;
+}
+
+#generated-toc ul li a {
+	font-weight: normal;
+	display: inline;
+}
+
+#generated-toc ul li ul li ul li a {
+	text-transform: lowercase;
+
+}
+
+/* ------------------------------------------------- */
+/* Animations */
+/* ------------------------------------------------- */
+
+a:hover {
+	   -moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote {
+	   -moz-transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+}
+
+
+
+/* ================================================ */
+/* 3. Media queries */
+/* ================================================ */
+
+/* Les styles par défaut sont prévus pour l'iPhone, on rajoute des éléments de style par tranche. */
+
+/* iPad et desktop */
+
+@media only screen and (min-width: 641px) {
+
+	html {
+		font-size: 17px;
+	}
+
+	h1 {
+		font-size: 2.81rem;
+	}
+
+	h2 {
+		font-size: 1.78rem;
+	}
+
+	ul,
+	ol {
+		margin-left: 0;
+	}
+
+}
+
+/* Impression */
+
+@media print {
+
+	* {
+		background: transparent !important;
+		color: #000 !important; /* Le noir imprime plus vite et les navigateurs sont de toute manière inconsistants dans le traitement de la couleur : h5bp.com/s */
+		text-shadow: none !important;
+	}
+
+	@page {
+		margin: 1cm; /* Combiné avec le margin de #wrapper */
+	}
+
+	html {font-size: 15px;}
+
+	#wrapper {
+		max-width: none;
+		margin: 1rem !important; /* Marge de sécurité pour les browser ne supportant pas @page */
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p {
+		orphans: 3;
+		widows: 3;
+		page-break-after: avoid;
+	}
+
+	ul,
+	ol {
+		list-style-position: inside !important;
+		padding-right: 0 !important;
+		margin-left: 0 !important;
+	}
+
+	ul ul,
+	ul ol,
+	ol ul,
+	ol ol,
+	ul p:not(:first-child),
+	ol p:not(:first-child) {
+		margin-left: 2rem !important;
+	}
+
+	a:link,
+	a:visited {
+		text-decoration: underline !important;
+		font-weight: normal !important;
+	}
+
+	a[href]:after {
+		content: " (" attr(href) ")";
+	}
+
+	a[href^="javascript:"]:after,
+	a[href^="#"]:after {
+		content: ""; /* Do not show javascript and internal links */
+	}
+
+	a[href^="#"] {
+		text-decoration: none !important;
+	}
+
+	th {
+		background-color: rgba(0,0,0,0.2) !important;
+		border-bottom: none !important;
+	}
+
+	tr {
+		page-break-inside: avoid;
+	}
+
+	tbody tr:nth-child(even) {
+		background-color: rgba(0,0,0,0.1) !important;
+	}
+
+	pre {
+		border: 1px solid rgba(0,0,0,0.2);
+		page-break-inside: avoid;
+	}
+
+	img {
+		max-width: 100% !important;
+		page-break-inside: avoid;
+	}
+
+	pre {border: 1px solid #999; page-break-inside: avoid;}
+
+	/* #generated-toc : id ajoutée par Marked pilotant l'affichage de la table des matières */
+
+	#wrapper #generated-toc ul, /* Impression de la table des matières dans Marked */
+	#wrapper #generated-toc ol {
+		list-style-type: decimal;
+	}
+
+	#wrapper #generated-toc ul li,
+	#wrapper #generated-toc ol li {
+		margin: 1rem 0;
+	}
+
+	#wrapper #generated-toc ul { /* Pour compenser l'attribution d'une puce custom plus haut */
+		list-style-position: inside;
+	}
+
+	#wrapper #generated-toc ul > li:before { /* Pour compenser l'attribution d'une puce custom plus haut */
+		content: none;
+	}
+
+}

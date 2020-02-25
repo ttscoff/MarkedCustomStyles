@@ -17,7 +17,7 @@
 
   <header>
     <div class="headerleft">
-      <a class="backbutton" href="styles.html">&larr;</a>
+      <a class="backbutton" href="index.html">&larr;</a>
       <select id="style" name="style" onchange="switchStyleWithObj(this)">
     <option value="Academia">Academia</option>
 <option value="Academic">Academic</option>
@@ -359,7 +359,7 @@
   function switchStyle(value) {
     var styleEl = document.querySelector('#mainstyle');
 
-    styleEl.href = "../" + value + ".css";
+    styleEl.href = "styles/" + value + ".css";
     updateMeta(value);
     window.localStorage.setItem('style', value);
 
