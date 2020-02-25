@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+    <style type="text/css">
+      #c {
+        fill: transparent;
+        stroke: #ffffff;
+        stroke-width: 4;
+        stroke-linecap: round;
+        stroke-dasharray: 62.8;
+        transform-origin: 10px 10px 0;
+        animation: spinner 2s linear infinite;
+      }
+
+      @keyframes spinner {
+        0% {
+          transform: rotate(0deg);
+          stroke-dashoffset: 13.2;
+        }
+        50% {
+          transform: rotate(720deg);
+          stroke-dashoffset: 62.8;
+        }
+        100% {
+          transform: rotate(1080deg);
+          stroke-dashoffset: 13.2;
+        }
+      }
+
+    </style>
+    <circle id="c" cx="10" cy="10" r="8"></circle>
+</svg>

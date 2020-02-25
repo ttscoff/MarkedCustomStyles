@@ -122,6 +122,8 @@
 
     $('.button-add').on('click', function(ev) {
       ev.preventDefault();
+      var $button = $(this);
+      $button.addClass('waiting');
       var title = $(this).data('title'),
           style = $(this).data('style');
 
@@ -129,6 +131,7 @@
         name: title,
         style: style
         }, function(data) {
+          $button.removeClass('waiting');
           if (data.success) {
             document.location = data.url;
           } else {

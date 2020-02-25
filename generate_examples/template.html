@@ -375,10 +375,13 @@
       $(n).data('style', styleURL);
     }).off('click').on('click', function(ev) {
       ev.preventDefault();
+      var $button = $(this);
+      $button.addClass('waiting');
       $.getJSON('generate_url.cgi', {
         name: $(this).data('title'),
         style: $(this).data('style')
         }, function(data) {
+          $button.removeClass('waiting');
           if (data.success) {
             document.location = data.url;
           }
