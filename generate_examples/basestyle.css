@@ -521,7 +521,7 @@ template {
 
 body #wrapper {
   border-left: 1px solid rgba(0,0,0,.15);
-  padding: 50px 0 40px 40px;
+  padding: 50px 0 80px 40px;
 }
 
 #wrapper .elementType {
