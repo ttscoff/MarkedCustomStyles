@@ -1,46 +1,97 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link href="https://fonts.googleapis.com/css?family=Fira+Code|Fira+Sans:400,700&display=swap" rel="stylesheet">
-    <link id="basestyle" rel="stylesheet" type="text/css" href="basestyle.css">
-  </head>
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en" itemscope itemtype="http://schema.org/Product"> <!--<![endif]-->
+<head>
 
-  <body id="stylepreviews">
 
-  <h1>Marked Custom Styles</h1>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <p>A collection of custom styles available for Marked 2. Have your own and want to share? Contact the super-friendly Marked developer, Brett Terpstra.</p>
+  <title>Marked 2 - Smarter tools for smarter writers</title>
+  <meta name="description" content="Marked is a Markdown preview with an elegant and powerful set of tools for all writers." />
+  <meta name="keywords" content="Mac markdown multimarkdown preview" />
+  <meta name="author" content="humans.txt">
 
-  <ul class="previews">
-    <li class="preview"><a href="preview.html#Academia"><figure><h3>Academia</h3><img src="previews/Academia.png"><figcaption><p class="byline">by David Smith <http://www.davidsmith.name></p><p class="description">A basic theme for displaying academic documents.</p></figcaption></figure></a></li>
-<li class="preview"><a href="preview.html#Academic"><figure><h3>Academic</h3><img src="previews/Academic.png"><figcaption><p class="byline">by Brett Terpstra</p><p class="description">Courier, Double-spaced, paragraph indent. Use `###### #` to create "#" centered dividers</p></figcaption></figure></a></li>
-<li class="preview"><a href="preview.html#Amelia"><figure><h3>Amelia</h3><img src="previews/Amelia.png"><figcaption><p class="byline">by Brett Terpstra <http://brettterpstra.com></p><p class="description">Lifted from http://bootswatch.com/ [https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE]</p></figcaption></figure></a></li>
-<li class="preview"><a href="preview.html#Avenue"><figure><h3>Avenue</h3><img src="previews/Avenue.png"><figcaption><p class="byline">by Bram de Haan <http://atelierbramdehaan.nl></p><p class="description">modern retro</p></figcaption></figure></a></li>
-<li class="preview"><a href="preview.html#Bear"><figure><h3>Bear</h3><img src="previews/Bear.png"><figcaption><p class="byline">by Brett Terpstra</p><p class="description">A simulation of Bear.app</p></figcaption></figure></a></li>
-<li class="preview"><a href="preview.html#Firates"><figure><h3>Firates</h3><img src="previews/Firates.png"><figcaption><p class="byline">by Bram de Haan <http://atelierbramdehaan.nl></p><p class="description">Viewport scaling typography (with viewport-units) and woff-embedded Fira Sans and Fira Mono fonts</p></figcaption></figure></a></li>
-<li class="preview"><a href="preview.html#Gotham"><figure><h3>Gotham</h3><img src="previews/Gotham.png"><figcaption><p class="byline">by Anonymous</p><p class="description">New York State of Mind</p></figcaption></figure></a></li>
-<li class="preview"><a href="preview.html#Gregarious"><figure><h3>Gregarious</h3><img src="previews/Gregarious.png"><figcaption><p class="byline">by Brett Terpstra</p><p class="description">A clean, friendly theme. Originally designed for use in nvUltra.</p></figcaption></figure></a></li>
-<li class="preview"><a href="preview.html#Highlighter"><figure><h3>Highlighter</h3><img src="previews/Highlighter.png"><figcaption><p class="byline">by Gordon Brander http://gordonbrander.com</p><p class="description">Minimal theme with careful typographic scale and highlighed bold.</p></figcaption></figure></a></li>
-<li class="preview"><a href="preview.html#Image Reference Pane"><figure><h3>Just images</h3><img src="previews/ImageReferencePane.png"><figcaption><p class="byline">by Sid O'Neill http://crateofpenguins.com</p><p class="description">Just for image reference.</p></figcaption></figure></a></li>
-<li class="preview"><a href="preview.html#Juridico"><figure><h3>Juridico</h3><img src="previews/Juridico.png"><figcaption><p class="byline">by Anonymous</p><p class="description">Clean, Swiss typography with no frills.</p></figcaption></figure></a></li>
-<li class="preview"><a href="preview.html#Kult"><figure><h3>Kult</h3><img src="previews/Kult.png"><figcaption><p class="byline">by Peter Sziebig - @bigpe</p><p class="description">Easy to read</p></figcaption></figure></a></li>
-<li class="preview"><a href="preview.html#Palatino Memo"><figure><h3>Palatino Memo</h3><img src="previews/PalatinoMemo.png"><figcaption><p class="byline">by Chase Nordengren, http://semicolons.net</p><p class="description">A layout for a basic memo or other printed document, using the font Palatino Linotype.</p></figcaption></figure></a></li>
-<li class="preview"><a href="preview.html#Pandoctor"><figure><h3>Pandoctor</h3><img src="previews/Pandoctor.png"><figcaption><p class="byline">by Stephen Margheim</p><p class="description">Clean, academic paper style</p></figcaption></figure></a></li>
-<li class="preview"><a href="preview.html#Pesto"><figure><h3>Pesto</h3><img src="previews/Pesto.png"><figcaption><p class="byline">by Andrew Patton @acusti <http://www.acusti.ca></p><p class="description">Attention to typography, easy on the eyes, mobile first, retina-ready</p></figcaption></figure></a></li>
-<li class="preview"><a href="preview.html#Simplex"><figure><h3>Simplex</h3><img src="previews/Simplex.png"><figcaption><p class="byline">by Brett Terpstra <http://brettterpstra.com></p><p class="description">Lifted from http://bootswatch.com/ [https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE]</p></figcaption></figure></a></li>
-<li class="preview"><a href="preview.html#Swiss Mou"><figure><h3>Swiss Mou</h3><img src="previews/SwissMou.png"><figcaption><p class="byline">by Waldemar Schott <http://waldemarschott.com/>, Brett Terpstra</p><p class="description">Based on Brett Terpstra's Swiss style included in Marked.app 2.4.11. Inline code style, the single change, is borrowed from Mou.app <http://25.io/mou/>.</p></figcaption></figure></a></li>
-<li class="preview"><a href="preview.html#Teleprompter"><figure><h3>Teleprompter</h3><img src="previews/Teleprompter.png"><figcaption><p class="byline">by Brett Terpstra <http://brettterpstra.com></p><p class="description">Use Marked as a Teleprompter ("s" to autoscroll)</p></figcaption></figure></a></li>
-<li class="preview"><a href="preview.html#Torpedo"><figure><h3>Torpedo</h3><img src="previews/Torpedo.png"><figcaption><p class="byline">by Jocelyn Richard <http://jocelynrichard.com/></p><p class="description">Works best with the font Cinta: http://www.myfonts.com/fonts/tipo-pepel/cinta/</p></figcaption></figure></a></li>
-<li class="preview"><a href="preview.html#Ulysses Freestraction Light"><figure><h3>Ulysses Freestraction Light</h3><img src="previews/UlyssesFreestractionLight.png"><figcaption><p class="byline">by Jonathan Poritsky <http://candlerblog.com></p><p class="description">Based on the Freestraction color scheme used in Ulysses III <http://www.ulyssesapp.com>.</p></figcaption></figure></a></li>
-<li class="preview"><a href="preview.html#Vostock"><figure><h3>Vostock</h3><img src="previews/Vostock.png"><figcaption><p class="byline">by Jocelyn Richard <http://jocelynrichard.com/></p><p class="description">Works best with the free PT fonts: http://www.paratype.com/public/</p></figcaption></figure></a></li>
-<li class="preview"><a href="preview.html#Yeti"><figure><h3>Yeti</h3><img src="previews/Yeti.png"><figcaption><p class="byline">by Brett Terpstra <http://brettterpstra.com></p><p class="description">Lifted from http://bootswatch.com/ [https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE]</p></figcaption></figure></a></li>
-<li class="preview"><a href="preview.html#github-updated"><figure><h3>GitHub Updated</h3><img src="previews/github-updated.png"><figcaption><p class="byline">by Luis Puerto</p><p class="description">Github README style. Includes theme for Pygmentized code blocks.</p></figcaption></figure></a></li>
-  </ul>
+  <link rel="shortcut icon" href="favicon.png?9" type="image/x-icon" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png">
+  <!-- Facebook Metadata /-->
+
+  <meta property="og:image" content="https://marked2app.com/img/Marked-512.png" />
+  <meta property="og:description" content="Marked is a Markdown preview with an elegant and powerful set of tools for all writers."/>
+  <meta property="og:title" content="Marked 2. Smarter tools for smarter writers."/>
+
+  <!-- Google+ Metadata /-->
+  <meta itemprop="name" content="Marked 2">
+  <meta itemprop="description" content="Marked is a Markdown preview with an elegant and powerful set of tools for all writers.">
+  <meta itemprop="image" content="https://marked2app.com/img/Marked-512.png">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <link rel="stylesheet" href="/css/marked2.css?9">
+  <link rel="stylesheet" href="/css/marked2add.css?9">
+  <link href='https://fonts.googleapis.com/css?family=Advent+Pro:600|Alef:400,700' rel='stylesheet' type='text/css'>
+  <link id="basestyle" rel="stylesheet" type="text/css" href="basestyle.css">
+
+  <script src="js/libs/modernizr-2.6.2.min.js"></script>
+</head>
+
+<body id="stylepreviews">
+
+  <header>
+    <div class="row">
+      <p id="headmeta"><a href="/">Home</a> | <a href="/help/">Documentation</a> | <a href="http://support.markedapp.com">Support</a> | <a href="https://twitter.com/markedapp">Twitter</a></p>
+      <div class="twelve columns special head">
+        <h1 class="title text-pop-up-top">Marked 2</h1>
+      </div>
+    </div>
+
+  </header>
+
+  <section id="previews">
+    <h2>Marked Custom Styles</h2>
+
+    <p>A collection of custom styles available for Marked 2. Have your own and want to share? Use the <a href="/styleshare/">Custom Style Uploader</a> to submit for review.</p>
+
+    <ul class="previews">
+      <li class="preview"><a href="preview#Academia"><figure><h3>Academia</h3><img src="previews/Academia.png"><figcaption><p class="byline">by David Smith <http://www.davidsmith.name></p><p class="description">A basic theme for displaying academic documents.</p></figcaption></figure></a></li>
+<li class="preview"><a href="preview#Academic"><figure><h3>Academic</h3><img src="previews/Academic.png"><figcaption><p class="byline">by Brett Terpstra</p><p class="description">Courier, Double-spaced, paragraph indent. Use `###### #` to create "#" centered dividers</p></figcaption></figure></a></li>
+<li class="preview"><a href="preview#Amelia"><figure><h3>Amelia</h3><img src="previews/Amelia.png"><figcaption><p class="byline">by Brett Terpstra <http://brettterpstra.com></p><p class="description">Lifted from http://bootswatch.com/ [https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE]</p></figcaption></figure></a></li>
+<li class="preview"><a href="preview#Avenue"><figure><h3>Avenue</h3><img src="previews/Avenue.png"><figcaption><p class="byline">by Bram de Haan <http://atelierbramdehaan.nl></p><p class="description">modern retro</p></figcaption></figure></a></li>
+<li class="preview"><a href="preview#Bear"><figure><h3>Bear</h3><img src="previews/Bear.png"><figcaption><p class="byline">by Brett Terpstra</p><p class="description">A simulation of Bear.app</p></figcaption></figure></a></li>
+<li class="preview"><a href="preview#brettterpstra"><figure><h3>BrettTerpstra.com 2020</h3><img src="previews/brettterpstra.png"><figcaption><p class="byline">by Brett Terpstra</p><p class="description">Borrowed from from https://brettterpstra.com/</p></figcaption></figure></a></li>
+<li class="preview"><a href="preview#Firates"><figure><h3>Firates</h3><img src="previews/Firates.png"><figcaption><p class="byline">by Bram de Haan <http://atelierbramdehaan.nl></p><p class="description">Viewport scaling typography (with viewport-units) and woff-embedded Fira Sans and Fira Mono fonts</p></figcaption></figure></a></li>
+<li class="preview"><a href="preview#github-updated"><figure><h3>GitHub Updated</h3><img src="previews/github-updated.png"><figcaption><p class="byline">by Luis Puerto</p><p class="description">Github README style. Includes theme for Pygmentized code blocks.</p></figcaption></figure></a></li>
+<li class="preview"><a href="preview#Gotham"><figure><h3>Gotham</h3><img src="previews/Gotham.png"><figcaption><p class="byline">by Anonymous</p><p class="description">New York State of Mind</p></figcaption></figure></a></li>
+<li class="preview"><a href="preview#Gregarious"><figure><h3>Gregarious</h3><img src="previews/Gregarious.png"><figcaption><p class="byline">by Brett Terpstra</p><p class="description">A clean, friendly theme. Originally designed for use in nvUltra.</p></figcaption></figure></a></li>
+<li class="preview"><a href="preview#Highlighter"><figure><h3>Highlighter</h3><img src="previews/Highlighter.png"><figcaption><p class="byline">by Gordon Brander http://gordonbrander.com</p><p class="description">Minimal theme with careful typographic scale and highlighed bold.</p></figcaption></figure></a></li>
+<li class="preview"><a href="preview#Image Reference Pane"><figure><h3>Just images</h3><img src="previews/ImageReferencePane.png"><figcaption><p class="byline">by Sid O'Neill http://crateofpenguins.com</p><p class="description">Just for image reference.</p></figcaption></figure></a></li>
+<li class="preview"><a href="preview#Juridico"><figure><h3>Juridico</h3><img src="previews/Juridico.png"><figcaption><p class="byline">by Anonymous</p><p class="description">Clean, Swiss typography with no frills.</p></figcaption></figure></a></li>
+<li class="preview"><a href="preview#Kult"><figure><h3>Kult</h3><img src="previews/Kult.png"><figcaption><p class="byline">by Peter Sziebig - @bigpe</p><p class="description">Easy to read</p></figcaption></figure></a></li>
+<li class="preview"><a href="preview#Palatino Memo"><figure><h3>Palatino Memo</h3><img src="previews/PalatinoMemo.png"><figcaption><p class="byline">by Chase Nordengren, http://semicolons.net</p><p class="description">A layout for a basic memo or other printed document, using the font Palatino Linotype.</p></figcaption></figure></a></li>
+<li class="preview"><a href="preview#Pandoctor"><figure><h3>Pandoctor</h3><img src="previews/Pandoctor.png"><figcaption><p class="byline">by Stephen Margheim</p><p class="description">Clean, academic paper style</p></figcaption></figure></a></li>
+<li class="preview"><a href="preview#Pesto"><figure><h3>Pesto</h3><img src="previews/Pesto.png"><figcaption><p class="byline">by Andrew Patton @acusti <http://www.acusti.ca></p><p class="description">Attention to typography, easy on the eyes, mobile first, retina-ready</p></figcaption></figure></a></li>
+<li class="preview"><a href="preview#Simplex"><figure><h3>Simplex</h3><img src="previews/Simplex.png"><figcaption><p class="byline">by Brett Terpstra <http://brettterpstra.com></p><p class="description">Lifted from http://bootswatch.com/ [https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE]</p></figcaption></figure></a></li>
+<li class="preview"><a href="preview#Swiss Mou"><figure><h3>Swiss Mou</h3><img src="previews/SwissMou.png"><figcaption><p class="byline">by Waldemar Schott <http://waldemarschott.com/>, Brett Terpstra</p><p class="description">Based on Brett Terpstra's Swiss style included in Marked.app 2.4.11. Inline code style, the single change, is borrowed from Mou.app <http://25.io/mou/>.</p></figcaption></figure></a></li>
+<li class="preview"><a href="preview#Teleprompter"><figure><h3>Teleprompter</h3><img src="previews/Teleprompter.png"><figcaption><p class="byline">by Brett Terpstra <http://brettterpstra.com></p><p class="description">Use Marked as a Teleprompter ("s" to autoscroll)</p></figcaption></figure></a></li>
+<li class="preview"><a href="preview#Torpedo"><figure><h3>Torpedo</h3><img src="previews/Torpedo.png"><figcaption><p class="byline">by Jocelyn Richard <http://jocelynrichard.com/></p><p class="description">Works best with the font Cinta: http://www.myfonts.com/fonts/tipo-pepel/cinta/</p></figcaption></figure></a></li>
+<li class="preview"><a href="preview#Ulysses Freestraction Light"><figure><h3>Ulysses Freestraction Light</h3><img src="previews/UlyssesFreestractionLight.png"><figcaption><p class="byline">by Jonathan Poritsky <http://candlerblog.com></p><p class="description">Based on the Freestraction color scheme used in Ulysses III <http://www.ulyssesapp.com>.</p></figcaption></figure></a></li>
+<li class="preview"><a href="preview#Vostock"><figure><h3>Vostock</h3><img src="previews/Vostock.png"><figcaption><p class="byline">by Jocelyn Richard <http://jocelynrichard.com/></p><p class="description">Works best with the free PT fonts: http://www.paratype.com/public/</p></figcaption></figure></a></li>
+<li class="preview"><a href="preview#Yeti"><figure><h3>Yeti</h3><img src="previews/Yeti.png"><figcaption><p class="byline">by Brett Terpstra <http://brettterpstra.com></p><p class="description">Lifted from http://bootswatch.com/ [https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE]</p></figcaption></figure></a></li>
+    </ul>
+  </section>
 
   <script>
     function jumpToStyle(obj) {
       document.location = 'preview.html#' + obj.value;
     }
   </script>
-  </body>
+</body>
 </html>

@@ -32,7 +32,7 @@ def generate_options
   options = []
   previews = []
   ignored_styles = ["Header.css", "Custom.css"]
-  files = Dir.glob('../*.css').sort
+  files = Dir.glob('../*.css').sort_by(&:downcase)
   # files.concat(Dir.glob('../*/*.css'))
   files.each do |f|
     # style = File.basename(f,".css")
@@ -45,7 +45,7 @@ def generate_options
     options.push(%Q{<option value="#{style}">#{style}</option>})
     if File.exists?("previews/#{style.gsub(/ /,'')}.png")
       preview = %Q{<li class="preview">}
-      preview += %Q{<a href="preview.html##{style}">}
+      preview += %Q{<a href="preview##{style}">}
       preview += %Q{<figure><h3>#{meta['title']}</h3>}
       preview += %Q{<img src="previews/#{style.gsub(/ /,'')}.png">}
       preview += %Q{<figcaption><p class="byline">by #{meta['author']}</p>}
