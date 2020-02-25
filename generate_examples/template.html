@@ -26,8 +26,8 @@
 
     <nav class="headerright">
       <div class="themelinks">
-        <a href="" class="themedownload" target="_blank" title="Right click and Save As to download">Download</a>
-        <a href="https://github.com/ttscoff/MarkedCustomStyles">Repository</a>
+        <a href="javascript:void(0)" class="addtomarked">Install</a>
+        <a href="" class="themedownload" target="_blank" title="Right click and Save As to download">CSS</a>
       </div>
       <a href="javascript:void(0)" id="prevstyle" class="prevlink">&#9664;</a>
       <a href="javascript:void(0)" id="nextstyle" class="nextlink">&#9654;</a>
@@ -37,7 +37,7 @@
   <div id="meta">
     <div class="info">
       <p><span class="title"></span> by <span class="author"></span></p>
-      <p><span class="description"></span> <a target="_blank" title="Right click and Save As to download" href="" class="themedownload">[Download]</a></p>
+      <p><span class="description"></span> <a target="_blank" title="Right click and Save As to download" href="" class="themedownload">[CSS]</a> <a href="javascript:void(0)" class="addtomarked">[Install]</a></p>
     </div>
 
     <nav>
@@ -245,6 +245,28 @@
   </div>
   </div>
 
+  <script>
+  var oldieCheck = Boolean(document.getElementsByTagName('html')[0].className.match(/\soldie\s/g));
+  if(!oldieCheck) {
+    document.write('<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"><\/script>');
+  } else {
+    document.write('<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"><\/script>');
+  }
+  </script>
+  <script>
+  if(!window.jQuery) {
+    if(!oldieCheck) {
+      document.write('<script src="js/libs/jquery-2.0.2.min.js"><\/script>');
+    } else {
+      document.write('<script src="js/libs/jquery-1.10.1.min.js"><\/script>');
+    }
+  }
+  </script>
+
+  <script type="text/javascript">
+  var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-19894778-5"]);_gaq.push(["_trackPageview"]);(function(){var b=document.createElement("script");b.type="text/javascript";b.async=true;b.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(b,a);})();
+  </script>
+
 <script>
   var Classes = {
     has: function(ele,cls) {
@@ -293,7 +315,7 @@
         idx = false;
 
     if (hash) {
-      var style = hash.replace(/^#/,'');
+      var style = decodeURIComponent(hash.replace(/^#/,''));
       idx = indexMatchingValue(styleMenu, style);
     } else if (prevStyle) {
       idx = indexMatchingValue(styleMenu, prevStyle);
@@ -306,7 +328,7 @@
     var inverted = window.localStorage.getItem('highcontrast');
     if (inverted && inverted !== "false") {
       var body = document.querySelector('body');
-      addClass(body, 'inverted');
+      Classes.add(body, 'inverted');
       document.querySelector('#highcontrast').checked = inverted;
     } else {
       document.querySelector('#highcontrast').checked = false;
@@ -333,9 +355,10 @@
   }
 
   function switchStyle(value) {
-    var styleEl = document.querySelector('#mainstyle');
+    var styleEl = document.querySelector('#mainstyle'),
+        styleURL = "styles/" + value + ".css";
 
-    styleEl.href = "styles/" + value + ".css";
+    styleEl.href = styleURL;
     updateMeta(value);
     window.localStorage.setItem('style', value);
 
@@ -345,6 +368,22 @@
     for (var i = 0; i < downloadLinks.length; i++) {
         downloadLinks[i].href = 'https://raw.githubusercontent.com/ttscoff/MarkedCustomStyles/master/'+ value + '.css';
     }
+
+    var data = window.MCSmetadata[value];
+    $('.addtomarked').each(function(i,n) {
+      $(n).data('title', data.title);
+      $(n).data('style', styleURL);
+    }).off('click').on('click', function(ev) {
+      ev.preventDefault();
+      $.getJSON('generate_url.cgi', {
+        name: $(this).data('title'),
+        style: $(this).data('style')
+        }, function(data) {
+          if (data.success) {
+            document.location = data.url;
+          }
+        });
+    });
   }
 
   function updateMeta(style) {

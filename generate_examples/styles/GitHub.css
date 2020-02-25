@@ -12,13 +12,13 @@ html, body {
   font-style: "Frutiger", Helvetica, sans-serif;
 }
 
-*:not('#mkdbuttons') {
+*:not(#mkdbuttons) {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 #wrapper {
   font: 15px "Frutiger", Helvetica, sans-serif;
-
   -webkit-font-smoothing: antialiased;
   line-height: 1.7;
   padding: 3px;

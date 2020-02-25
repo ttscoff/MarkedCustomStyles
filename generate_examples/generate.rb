@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 require 'json'
 require 'fileutils'
+require 'uri'
 
 def get_meta(file)
   content = IO.read(file)
@@ -44,13 +45,22 @@ def generate_options
     metadata[style] = meta
     options.push(%Q{<option value="#{style}">#{style}</option>})
     if File.exists?("previews/#{style.gsub(/ /,'')}.png")
-      preview = %Q{<li class="preview">}
-      preview += %Q{<a href="preview##{style}">}
-      preview += %Q{<figure><h3>#{meta['title']}</h3>}
+      preview = %Q{<li class="preview"><figure>}
+
+      preview += %Q{<h3><a href="preview##{style}" title="#{meta['title']}">#{meta['title']}</a></h3>}
+
+      preview += %Q{<span class="actions">}
+      preview += %Q{<button data-url="preview##{URI.encode(style)}" class="button-preview" title="Preview #{style}">Preview</button>}
+      preview += %Q{<button data-title="#{meta['title']}" data-style="styles/#{style}.css" class="button-add" title="Add to Marked">Install</button>}
+      preview += %Q{</span>}
+
+      preview += %Q{<a href="preview##{URI.encode(style)}" title="#{meta['title']}">}
       preview += %Q{<img src="previews/#{style.gsub(/ /,'')}.png">}
-      preview += %Q{<figcaption><p class="byline">by #{meta['author']}</p>}
+      preview += %Q{</a>}
+      preview += %Q{<figcaption>}
+      preview += %Q{<p class="byline">by #{meta['author']}</p>}
       preview += %Q{<p class="description">#{meta['description']}</p>}
-      preview += %Q{</figcaption></figure></a></li>}
+      preview += %Q{</figcaption></figure></li>}
       previews.push(preview)
     end
   end

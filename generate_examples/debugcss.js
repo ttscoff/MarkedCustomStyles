@@ -23,20 +23,20 @@
       obj['e' + type + fn] = fn;
       obj[type + fn] = function(){
         obj['e' + type + fn](window.event);
-      }
+      };
       obj.attachEvent('on' + type, obj[type + fn]);
     } else {
       obj.addEventListener(type, fn, false);
     }
   }
-  function removeEvent(obj, type, fn) {
-    if (obj.detachEvent) {
-      obj.detachEvent('on' + type, obj[type + fn]);
-      obj[type + fn] = null;
-    } else {
-      obj.removeEventListener(type, fn, false);
-    }
-  }
+  // function removeEvent(obj, type, fn) {
+  //   if (obj.detachEvent) {
+  //     obj.detachEvent('on' + type, obj[type + fn]);
+  //     obj[type + fn] = null;
+  //   } else {
+  //     obj.removeEventListener(type, fn, false);
+  //   }
+  // }
 
   function addStyleElement(css) {
     var head = document.head || document.getElementsByTagName('head')[0];
@@ -96,12 +96,12 @@
     showInfo(info);
   }
   function mouseOutHandler(e) {
-    hideBoxVis();
+    hideBoxVis(e);
   }
 
   function scrollHandler(e) {
     if (!scrollTimeout) {
-      onScrollStart();
+      onScrollStart(e);
     }
 
     scrollTimeout = setTimeout(onScrollEnd, scrollendDelay);
@@ -239,7 +239,7 @@
     boxvis.box.inner.style.width = (info.box.width - info.border.left - info.border.right - info.padding.left - info.padding.right) + 'px';
   }
 
-  function AddOutliners() {
+  function addOutliners() {
     var styles = '.boxvis > div > div{pointer-events:none;position:fixed;z-index:2147483637;top:-10px;bottom:-10px;left:-10px;right:-10px}.boxvis:not(.noln) > div > div{border-width:1px;border-style:dashed}.boxvis > .mg > div{border-color:#e67700}.boxvis > .bd > div{border-color:#dcdc40}.boxvis > .pd > div{border-color:#00bb20}.boxvis > .bx > div{border-color:#0000e6}.boxvis > div > .o{z-index:2147483638;border:none;display:none}.boxvis:not(.nobg) > .mg > .o{background-color:rgba(255,153,0,0.125)}.boxvis:not(.nobg) > .pd > .o{background-color:rgba(0,140,64,0.125)}.boxvis:not(.nobg) > .bd > .o{background-color:rgba(255,255,0,0.125)}.boxvis:not(.nobg) > .bx > .o{background-color:rgba(0,100,255,0.35)}.boxvis > .i{box-shadow:0 0 4px -1px rgba(255,255,255,1);pointer-events:none;position:fixed;z-index:2147483638;background-color:#000;font-size:12px;padding:3px 8px 5px 10px;border-radius:4px;white-space:nowrap;display:none}.boxvis > .i:before{content:"";position:absolute;top:100%;left:10px;border:solid 6px transparent;border-top-color:#000}.boxvis > .i.top:before{top:-12px;border:solid 6px transparent;border-top-color:transparent;border-bottom-color:#000}.boxvis > .i.right:before{left:auto;right:10px}.boxvis > .i > .t{color:#FF74FF;font-weight:700}.boxvis > .i > .i{color:#FFB952}.boxvis > .i > .c{color:#75CFFF}.boxvis > .i > .d{font-size:10px;margin-left:3px;color:#CCC}';
     addStyleElement(styles);
 
@@ -285,7 +285,7 @@
   //  I can check if the mouse position is or is not within the element, but sometimes, the pseudo is within the element.
 
   readQueryString();
-  AddOutliners();
+  addOutliners();
   addEvent(document.body, 'mouseover', mouseHandler);
   addEvent(window, 'scroll', scrollHandler);
   addEvent(document.body, 'mouseout', mouseOutHandler);

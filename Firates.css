@@ -1,10 +1,10 @@
 /*
-   This document has been created with Marked.app <http://markedapp.com>, Copyright 2011 Brett Terpstra
+   This document has been created with Marked.app <https://marked2app.com>
    Please leave this notice in place, along with any additional credits below.
    ---------------------------------------------------------------
    Title: Firates
-Author: Bram de Haan <http://atelierbramdehaan.nl>
-Description: Viewport scaling typography (with viewport-units) and woff-embedded Fira Sans and Fira Mono fonts
+   Author: Bram de Haan <http://atelierbramdehaan.nl>
+   Description: Viewport scaling typography (with viewport-units) and woff-embedded Fira Sans and Fira Mono fonts
 */
 
 /*!
@@ -64,7 +64,7 @@ body {
 }
 html,
 html>body {
-  font-size: 16px;
+  font-size: 12px;
 }
 html>body {
   padding: 1rem 4vw 2rem;

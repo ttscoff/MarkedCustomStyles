@@ -5,7 +5,7 @@
    Title: Ulysses Freestraction Light
    Author: Jonathan Poritsky <http://candlerblog.com>
    Description: Based on the Freestraction color scheme used in Ulysses III <http://www.ulyssesapp.com>.
-   For more information read the introductory post: http://candlerblog.com/2013/04/11/ulysses-iii-and-marked/ 
+   For more information read the introductory post: http://candlerblog.com/2013/04/11/ulysses-iii-and-marked/
 */
 
 html {
@@ -20,7 +20,6 @@ body {
 	font-size: 1em;
 	line-height: 1.7em;
 	font-family: "Source Sans Pro","Helvetica Neue",Helvetica,sans-serif;
-	max-width: 35em;
 }
 a {
 	padding:0 0.3em 0.1em 0.3em;
@@ -44,7 +43,7 @@ a:hover {
 }
 h1, h2, h3, h4, h5, h6 {
 	text-align: center;
-	color: rgb(12,139,186);	
+	color: rgb(12,139,186);
 	line-height: 1;
 	font-weight: 600;
 	font-family: "Minion Pro","Chaparral Pro",Georgia,serif;
@@ -92,7 +91,7 @@ ul li:before {
 }
 
 
-   
+
 li {
 	font-size: .9em;
 }
@@ -117,7 +116,7 @@ blockquote {
 	display: block;
 	font-style:italic;
 	font-weight:200;
-	color: rgb(12,139,186);	
+	color: rgb(12,139,186);
 	padding:0.2em 2em 0.2em 2em;
 	-webkit-margin-before: 1em;
 	-webkit-margin-after: 1em;
