@@ -3,8 +3,8 @@ This document has been created with Marked.app <https://marked2app.com>
 Content is property of the document author
 Please leave this notice in place, along with any additional credits below.
 ---------------------------------------------------------------
-Title: GitHub
-Author: Brett Terpstra
+Title: GitHub Updated
+Author: Luis Puerto
 Description: Github README style. Includes theme for Pygmentized code blocks.
 ---
 */
@@ -14,7 +14,7 @@ Description: Github README style. Includes theme for Pygmentized code blocks.
   margin: 0;
   text-size-adjust: 100%;
   max-width: 980px !important;
-  padding: 40px 48px 48px !important; 
+  padding: 40px 48px 48px !important;
 }
 #wrapper aside,
 #wrapper article,
@@ -294,7 +294,7 @@ Description: Github README style. Includes theme for Pygmentized code blocks.
   font-size: 85%;
 }
 #wrapper pre {
-  font: 100% SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace; 
+  font: 100% SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
   margin-bottom: 0;
   margin-top: 16px;
   line-height: 1.45;

@@ -9,219 +9,265 @@
     #wrapper { max-width: 800px; margin: 0 auto; }
   </style>
 
+  <script>
+    window.MCSmetadata = {"Academia":{"title":"Academia","author":"David Smith <http://www.davidsmith.name>","description":"A basic theme for displaying academic documents."},"Academic":{"title":"Academic","author":"Brett Terpstra","description":"Courier, Double-spaced, paragraph indent. Use `###### #` to create \"#\" centered dividers"},"Amelia":{"title":"Amelia","author":"Brett Terpstra <http://brettterpstra.com>","description":"Lifted from http://bootswatch.com/ [https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE]"},"Avenue":{"title":"Avenue","author":"Bram de Haan <http://atelierbramdehaan.nl>","description":"modern retro"},"Bear":{"title":"Bear","author":"Brett Terpstra","description":"A simulation of Bear.app"},"Blank Code Theme":{"title":"Blank/Code Theme","author":"Jose Salvatierra &c 2013-4 jslvtr.com","description":"A very simple theme with Garamond as a main font. Titles are in Crimson Text, and the code in Source Code Pro or Consolas."},"Firates":{"title":"Firates","author":"Bram de Haan <http://atelierbramdehaan.nl>","description":"Viewport scaling typography (with viewport-units) and woff-embedded Fira Sans and Fira Mono fonts"},"GitHub":{"title":"GitHub","author":"Brett Terpstra","description":"Github README style. Includes theme for Pygmentized code blocks."},"Gotham":{"title":"Gotham","author":"Anonymous","description":"New York State of Mind"},"Gregarious":{"title":"Gregarious","author":"Brett Terpstra","description":"A clean, friendly theme. Originally designed for use in nvUltra."},"Highlighter":{"title":"Highlighter","author":"Gordon Brander http://gordonbrander.com","description":"Minimal theme with careful typographic scale and highlighed bold."},"Image Reference Pane":{"title":"Just images","author":"Sid O'Neill http://crateofpenguins.com","description":"Just for image reference."},"Juridico":{"title":"Juridico","author":"Anonymous","description":"Clean, Swiss typography with no frills."},"Kult":{"title":"Kult","author":"Peter Sziebig - @bigpe","description":"Easy to read"},"Palatino Memo":{"title":"Palatino Memo","author":"Chase Nordengren, http://semicolons.net","description":"A layout for a basic memo or other printed document, using the font Palatino Linotype."},"Pandoctor":{"title":"Pandoctor","author":"Stephen Margheim","description":"Clean, academic paper style"},"Pesto":{"title":"Pesto","author":"Andrew Patton @acusti <http://www.acusti.ca>","description":"Attention to typography, easy on the eyes, mobile first, retina-ready"},"Simplex":{"title":"Simplex","author":"Brett Terpstra <http://brettterpstra.com>","description":"Lifted from http://bootswatch.com/ [https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE]"},"Swiss Mou":{"title":"Swiss Mou","author":"Waldemar Schott <http://waldemarschott.com/>, Brett Terpstra","description":"Based on Brett Terpstra's Swiss style included in Marked.app 2.4.11. Inline code style, the single change, is borrowed from Mou.app <http://25.io/mou/>."},"Teleprompter":{"title":"Teleprompter","author":"Brett Terpstra <http://brettterpstra.com>","description":"Use Marked as a Teleprompter (\"s\" to autoscroll)"},"Torpedo":{"title":"Torpedo","author":"Jocelyn Richard <http://jocelynrichard.com/>","description":"Works best with the font Cinta: http://www.myfonts.com/fonts/tipo-pepel/cinta/"},"Ulysses Freestraction Light":{"title":"Ulysses Freestraction Light","author":"Jonathan Poritsky <http://candlerblog.com>","description":"Based on the Freestraction color scheme used in Ulysses III <http://www.ulyssesapp.com>."},"Vostock":{"title":"Vostock","author":"Jocelyn Richard <http://jocelynrichard.com/>","description":"Works best with the free PT fonts: http://www.paratype.com/public/"},"Yeti":{"title":"Yeti","author":"Brett Terpstra <http://brettterpstra.com>","description":"Lifted from http://bootswatch.com/ [https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE]"},"github-updated":{"title":"GitHub Updated","author":"Luis Puerto","description":"Github README style. Includes theme for Pygmentized code blocks."}};
+  </script>
+
 <body>
 
-<header>
-  <a class="backbutton" href="styles.html">&larr; All Styles</a>
-  <label for="style">Select style: </label>
-  <select id="style" name="style" onchange="switchStyleWithObj(this)">
+  <header>
+    <div class="headerleft">
+      <a class="backbutton" href="styles.html">&larr;</a>
+      <select id="style" name="style" onchange="switchStyleWithObj(this)">
+    <option value="Academia">Academia</option>
+<option value="Academic">Academic</option>
+<option value="Amelia">Amelia</option>
+<option value="Avenue">Avenue</option>
+<option value="Bear">Bear</option>
+<option value="Blank Code Theme">Blank Code Theme</option>
+<option value="Firates">Firates</option>
 <option value="GitHub">GitHub</option>
+<option value="Gotham">Gotham</option>
+<option value="Gregarious">Gregarious</option>
+<option value="Highlighter">Highlighter</option>
 <option value="Image Reference Pane">Image Reference Pane</option>
 <option value="Juridico">Juridico</option>
-<option value="Blank Code Theme">Blank Code Theme</option>
-<option value="Pesto">Pesto</option>
-<option value="Vostock">Vostock</option>
-<option value="Torpedo">Torpedo</option>
-<option value="Custom">Custom</option>
-<option value="Gotham">Gotham</option>
-<option value="Simplex">Simplex</option>
-<option value="Teleprompter">Teleprompter</option>
-<option value="Highlighter">Highlighter</option>
-<option value="Academia">Academia</option>
-<option value="Academic">Academic</option>
-<option value="Palatino Memo">Palatino Memo</option>
-<option value="Firates">Firates</option>
-<option value="Ulysses Freestraction Light">Ulysses Freestraction Light</option>
-<option value="Bear">Bear</option>
-<option value="Pandoctor">Pandoctor</option>
 <option value="Kult">Kult</option>
-<option value="Avenue">Avenue</option>
-<option value="Amelia">Amelia</option>
+<option value="Palatino Memo">Palatino Memo</option>
+<option value="Pandoctor">Pandoctor</option>
+<option value="Pesto">Pesto</option>
+<option value="Simplex">Simplex</option>
 <option value="Swiss Mou">Swiss Mou</option>
+<option value="Teleprompter">Teleprompter</option>
+<option value="Torpedo">Torpedo</option>
+<option value="Ulysses Freestraction Light">Ulysses Freestraction Light</option>
+<option value="Vostock">Vostock</option>
 <option value="Yeti">Yeti</option>
-  </select>
-  <input type="checkbox" name="highcontrast" value="highcontrast" id="highcontrast"><label for="highcontrast"> High Contrast mode</label>
+<option value="github-updated">github-updated</option>
+      </select>
+      <input type="checkbox" name="highcontrast" value="highcontrast" id="highcontrast"><label for="highcontrast"> High Contrast</label>
+    </div>
 
-  <nav><a href="javascript:void(0)" id="prevstyle">&larr; Previous</a> <a href="javascript:void(0)" id="nextstyle">Next &rarr;</a></nav>
-</header>
+    <nav class="headerright">
+      <div class="themelinks">
+        <a href="" class="themedownload" target="_blank" title="Right click and Save As to download">Download</a>
+        <a href="https://github.com/ttscoff/MarkedCustomStyles">Repository</a>
+      </div>
+      <a href="javascript:void(0)" id="prevstyle" class="prevlink">&#9664;</a>
+      <a href="javascript:void(0)" id="nextstyle" class="nextlink">&#9654;</a>
+    </nav>
+  </header>
 
-<div id="wrapper">
-<p>This text is generated using raingrams from Lewis Carroll&#8217;s <a href="https://www.cs.cmu.edu/~rgs/alice-table.html">Alice in Wonderland</a>. It contains most standard elements generated by Markdown.</p>
+  <div id="meta">
+    <div class="info">
+      <p><span class="title"></span> by <span class="author"></span></p>
+      <p><span class="description"></span> <a target="_blank" title="Right click and Save As to download" href="" class="themedownload">[Download]</a></p>
+    </div>
 
-<p><span class="elementType">Header 1</span></p>
+    <nav>
+      <a href="javascript:void(0)" class="prevlink">&#9664;</a>
+      <a href="javascript:void(0)" class="nextlink">&#9654;</a>
+    </nav>
+  </div>
 
-<h1 id="hereputoneonso">Here put one on so</h1>
+  <div id="wrapper">
+  <p>This text is generated using raingrams from Lewis Carroll&#8217;s <a href="https://www.cs.cmu.edu/~rgs/alice-table.html">Alice in Wonderland</a>. It contains most standard elements generated by Markdown.</p>
 
-<p><span class="elementType">Header 2</span></p>
+  <p class="elementType"><span>Header 1</span></p>
 
-<h2 id="oneaslookthroughwasthispaper">One as look through was this paper</h2>
+  <h1 id="hereputoneonso">Here put one on so</h1>
 
-<p><span class="elementType">Header 3</span></p>
+  <p>Begin at one a-piece all she ran the oldest rule at least at last words Soo oop. Idiot. Poor Alice sharply I fancy CURTSEYING as you&#8217;re talking again in chains with trying. YOU&#8217;D better not to look up I&#8217;ll try to avoid shrinking rapidly she said as if his grey locks were beautifully marked in spite of use their fur and listen the less than that perhaps even room when they sat still as far we don&#8217;t even when his confusion he called lessons you&#8217;d take LESS said as its axis Talking of mine coming down was linked into a White Rabbit who it saw her voice sounded quite makes you or if one paw trying.</p>
 
-<h3 id="shytheywouldnttalkaboutas">Shy they wouldn&#8217;t talk about as</h3>
 
-<p><span class="elementType">Header 4</span></p>
+  <p class="elementType"><span>Header 2</span></p>
 
-<h4 id="stopthisbesomefun">Stop this be some fun</h4>
+  <h2 id="oneaslookthroughwasthispaper">One as look through was this paper</h2>
 
-<p><span class="elementType">Header 5</span></p>
+  <p>Ugh Serpent I should frighten them thought it were silent for fear of axes said Two days. Keep your shoes off without attending. Alice&#8217;s head Do cats nasty low trembling down down to save her great surprise the immediate adoption of axes said with fury and rightly too slippery and growing near her skirt upsetting all ornamented all mad as it&#8217;s asleep I beat them called the cook. holding her for catching mice in some mischief or she hardly suppose so easily in curving it be judge by far below her escape so indeed and large cat said her shoulders got burnt and feet I call after watching the Lizard&#8217;s slate-pencil and their throne when I chose the choking of green leaves and she stretched herself Which was ever so VERY remarkable in particular.</p>
 
-<h5 id="constantheavysobschokedwithafeatherflocktogether">constant heavy sobs choked with a feather flock together</h5>
+  <p class="elementType"><span>Header 3</span></p>
 
-<p><span class="elementType">Header 6</span></p>
+  <h3 id="shytheywouldnttalkaboutas">Shy they wouldn&#8217;t talk about as</h3>
 
-<h6 id="maybeitsalwayshatedcats">Maybe it&#8217;s always HATED cats</h6>
+  <p>Not QUITE right said than ever she helped herself with great interest in them say but you see. Leave off after a buttercup to meet the blows hurt it pointed to cats and meat While she might do let you talking. William replied in THAT like they&#8217;re about as to without considering at. Indeed she couldn&#8217;t have imitated somebody so managed.</p>
 
-<p><span class="elementType">Paragraph with bold, italics, and links</span></p>
+  <p class="elementType"><span>Header 4</span></p>
 
-<p>Stop this be some fun. they repeated aloud addressing nobody in Coils. Their heads <em>of</em> him deeply and loving <strong>heart</strong> would change she tucked her turn <a href="http://dummy.com">them up somewhere near our</a> Dinah stop. Thank you what they cried.</p>
+  <h4 id="stopthisbesomefun">Stop this be some fun</h4>
 
-<p>catch a constant heavy sobs choked with a feather flock together. <a href="http://dummy.com">Let&#8217;s <strong>go</strong> for <em>protection.</em></a><a href="#fn:1" id="fnref:1" title="see footnote" class="footnote">[1]</a></p>
+  <p class="elementType"><span>Header 5</span></p>
 
-<p><span class="elementType">unordered list</span></p>
+  <h5 id="constantheavysobschokedwithafeatherflocktogether">constant heavy sobs choked with a feather flock together</h5>
 
-<ul>
-<li>known</li>
-<li>sound</li>
-<li>noises</li>
-</ul>
+  <p class="elementType"><span>Header 6</span></p>
 
-<p><span class="elementType">ordered list</span></p>
+  <h6 id="maybeitsalwayshatedcats">Maybe it&#8217;s always HATED cats</h6>
 
-<ol>
-<li>execution</li>
-<li>Idiot</li>
-<li>variations</li>
-</ol>
+  <p class="elementType"><span>Paragraph with bold, italics, and links</span></p>
 
-<p><span class="elementType">Nested list, mixed</span></p>
+  <p>Stop this be some fun. they repeated aloud addressing nobody in Coils. Their heads <em>of</em> him deeply and loving <strong>heart</strong> would change she tucked her turn <a href="http://dummy.com">them up somewhere near our</a> Dinah stop. Thank you what they cried.</p>
 
-<ul>
-<li>Stolen.
+  <p>catch a constant heavy sobs choked with a feather flock together. <a href="http://dummy.com">Let&#8217;s <strong>go</strong> for <em>protection.</em></a><a href="#fn:1" id="fnref:1" title="see footnote" class="footnote">[1]</a></p>
 
-<ul>
-<li>By-the bye what.</li>
-<li>Did you hate cats eat eggs I might be really.</li>
-</ul></li>
-<li><a href="http://dummy.com">ever be particular at</a> any use without
+  <p>Some of <strong>YOUR watch</strong> them to ear and put his crown on I believe there&#8217;s a lobster as for it stays the youth and making her rather sleepy and reaching half the arch I&#8217;ve so <em>that Alice every moment</em> My name Alice very uneasy to follow except a cry of time with them of cucumber-frames there WAS when I wasn&#8217;t a wonderful Adventures till she heard in to set about again I told her here till I&#8217;m grown most extraordinary noise inside no arches to nobody spoke fancy to find that begins I grow up a queer-looking party swam to rest herself for <a href="https://example.com">catching mice in things</a> at in like being so you mean said a thunderstorm. Lastly she again in front of hands how small she dreamed of educations in a Duck and we don&#8217;t give yourself some sense in March. <em>from that only things.</em> Alas. about wasting IT the young Crab a bough of herself a shower of chance of more questions and muchness did they do let him into Alice&#8217;s Evidence Here Bill.</p>
 
-<ol>
-<li>Maybe it&#8217;s always HATED cats eat some day</li>
-<li>about <em>something</em> out that case with an air and till she began sneezing.
+  <p>However on What&#8217;s in asking. After these three weeks. Leave off being <strong>that</strong> nor did Alice not see <em>such an eel</em> on your pocket till you couldn&#8217;t get us. Yes I breathe when the riddle yet and we&#8217;ve no <a href="https://example.com">jury</a> or <a href="https://example.com">so</a> and go no right distance screaming with his shrill loud as yet please.</p>
 
-<ol>
-<li><strong>It</strong> all what would die. Fetch me help bursting out one sharp chin it gloomily then if a more to talk.</li>
-</ol></li>
-</ol></li>
-</ul>
+  <p>Everything&#8217;s got a wondering what he kept getting on each other Bill had kept shifting from him two miles down <strong>down stairs</strong>. I&#8217;LL soon fetch me to draw you never said advance twice she stood the tiny golden scale. Mind that it here that her idea came suddenly appeared on till I&#8217;ve something like to find any pepper in head could get on What&#8217;s your age <em>it sad and days</em> and repeated angrily. <a href="https://example.com">Explain all seemed quite so said</a> as Alice heard the thistle to see if I declare it&#8217;s no.</p>
 
-<p><span class="elementType">Image</span></p>
 
-<figure>
-<img src="http://placekitten.com/400/300" alt="dummy" id="img1" />
-<figcaption>dummy</figcaption>
-</figure>
+  <p class="elementType"><span>unordered list</span></p>
 
-<p><span class="elementType">Table</span></p>
+  <ul>
+  <li>known</li>
+  <li>sound</li>
+  <li>noises</li>
+  </ul>
 
-<table>
-<colgroup>
-<col style="text-align:center;"/>
-<col style="text-align:center;"/>
-<col style="text-align:center;"/>
-</colgroup>
+  <p class="elementType"><span>ordered list</span></p>
 
-<thead>
-<tr>
-  <th style="text-align:center;">THE</th>
-  <th style="text-align:center;">NEAR</th>
-  <th style="text-align:center;">HEARTHRUG</th>
-</tr>
-</thead>
+  <ol>
+  <li>execution</li>
+  <li>Idiot</li>
+  <li>variations</li>
+  </ol>
 
-<tbody>
-<tr>
-  <td style="text-align:center;">thousand</td>
-  <td style="text-align:center;">four</td>
-  <td style="text-align:center;">be</td>
-</tr>
-<tr>
-  <td style="text-align:center;">away</td>
-  <td style="text-align:center;">crawled</td>
-  <td style="text-align:center;">and</td>
-</tr>
-<tr>
-  <td style="text-align:center;">Has</td>
-  <td style="text-align:center;">jaw</td>
-  <td style="text-align:center;">my</td>
-</tr>
-<tr>
-  <td style="text-align:center;">the</td>
-  <td style="text-align:center;">leave</td>
-  <td style="text-align:center;">better</td>
-</tr>
-</tbody>
-</table>
+  <p class="elementType"><span>Nested list, mixed</span></p>
 
-<p><span class="elementType">Blockquote</span></p>
+  <ul>
+  <li>Stolen.
 
-<blockquote>
-<p>for tastes.<br/>
-the riddle yet had now let him into a mineral I could have said</p>
-</blockquote>
+  <ul>
+  <li>By-the bye what.</li>
+  <li>Did you hate cats eat eggs I might be really.</li>
+  </ul></li>
+  <li><a href="http://dummy.com">ever be particular at</a> any use without
 
-<p><span class="elementType">Footnote</span></p>
+  <ol>
+  <li>Maybe it&#8217;s always HATED cats eat some day</li>
+  <li>about <em>something</em> out that case with an air and till she began sneezing.
 
-<p>Off Nonsense. Hold your evidence the lowing of tears <strong>again</strong> into <a href="http://dummy.com"><em>the</em> nearer Alice allow</a> without a Little Bill was considering at. sh.<a href="#fn:2" id="fnref:2" title="see footnote" class="footnote">[2]</a></p>
+  <ol>
+  <li><strong>It</strong> all what would die. Fetch me help bursting out one sharp chin it gloomily then if a more to talk.</li>
+  </ol></li>
+  </ol></li>
+  </ul>
 
-<p><span class="elementType">Horizontal Rule</span></p>
+  <p class="elementType"><span>Figure, Image, Caption</span></p>
 
-<hr />
+  <figure>
+  <img src="http://placekitten.com/800/600" alt="Dummy Kitty Image" id="img1" />
+  <figcaption>Kitty Cat 800x600</figcaption>
+  </figure>
 
-<p><span class="elementType">Verbatim block</span></p>
+  <figure>
+  <img src="http://placekitten.com/400/300" alt="Dummy Kitty Image" id="img3" />
+  <figcaption>Last Kitty Cat, Promise 400x300</figcaption>
+  </figure>
 
-<pre><code> Soon her arm affectionately into alarm in his guilt said nothing being fast
- Wake up into this but he can listen the pie later.
- That'll be no one sharp hiss made you did said Consider your Majesty the guinea-pigs
- Are their forepaws to offer it must go round I call after waiting to win
- Sing her temper of Paris and I daresay it's called a Well of YOUR
- Fetch me.
-</code></pre>
+  <p class="elementType"><span>Table</span></p>
 
-<p><span class="elementType">Definition List</span></p>
+  <table>
+  <colgroup>
+  <col style="text-align:center;"/>
+  <col style="text-align:center;"/>
+  <col style="text-align:center;"/>
+  </colgroup>
 
-<dl>
-<dt>It proves nothing of rules</dt>
-<dd>you ever getting somewhere.</dd>
+  <thead>
+  <tr>
+    <th style="text-align:center;">THE</th>
+    <th style="text-align:center;">NEAR</th>
+    <th style="text-align:center;">HEARTHRUG</th>
+  </tr>
+  </thead>
 
-<dt>Soup does yer honour at home</dt>
-<dd>exclaimed in his father I mentioned Dinah if only took down went slowly back the royal children there.</dd>
+  <tbody>
+  <tr>
+    <td style="text-align:center;">thousand</td>
+    <td style="text-align:center;">four</td>
+    <td style="text-align:center;">be</td>
+  </tr>
+  <tr>
+    <td style="text-align:center;">away</td>
+    <td style="text-align:center;">crawled</td>
+    <td style="text-align:center;">and</td>
+  </tr>
+  <tr>
+    <td style="text-align:center;">Has</td>
+    <td style="text-align:center;">jaw</td>
+    <td style="text-align:center;">my</td>
+  </tr>
+  <tr>
+    <td style="text-align:center;">the</td>
+    <td style="text-align:center;">leave</td>
+    <td style="text-align:center;">better</td>
+  </tr>
+  </tbody>
+  </table>
 
-<dt>Two lines.</dt>
-<dd>Nor I breathe when they never happened she put her dream</dd>
+  <p class="elementType"><span>Blockquote</span></p>
 
-<dt>Hand it begins with the dance</dt>
-<dd>Get up somewhere.</dd>
+  <blockquote>
+  <p>for tastes.<br/>
+  the riddle yet had now let him into a mineral I could have said</p>
+  </blockquote>
 
-<dt>Just think this fit</dt>
-<dd>UNimportant your hair wants for YOU are first and beg pardon said there&#8217;s half afraid said but her they</dd>
-</dl>
+  <p class="elementType"><span>Footnote</span></p>
 
-<div class="footnotes">
-<hr />
-<ol>
+  <p>Off Nonsense. Hold your evidence the lowing of tears <strong>again</strong> into <a href="http://dummy.com"><em>the</em> nearer Alice allow</a> without a Little Bill was considering at. sh.<a href="#fn:2" id="fnref:2" title="see footnote" class="footnote">[2]</a></p>
 
-<li id="fn:1">
-<p>Turn a loud indignant voice sometimes Do cats eat or hippopotamus but <a href="#fnref:1" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
-</li>
+  <p class="elementType"><span>Horizontal Rule</span></p>
 
-<li id="fn:2">
-<p>However this he with her neck would catch hold it there stood the <a href="#fnref:2" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
-</li>
+  <hr />
 
-</ol>
-</div>
-</div>
+  <p class="elementType"><span>Verbatim block</span></p>
+
+  <pre><code> Soon her arm affectionately into alarm in his guilt said nothing being fast
+   Wake up into this but he can listen the pie later.
+   That'll be no one sharp hiss made you did said Consider your Majesty the guinea-pigs
+   Are their forepaws to offer it must go round I call after waiting to win
+   Sing her temper of Paris and I daresay it's called a Well of YOUR
+   Fetch me.
+  </code></pre>
+
+  <p class="elementType"><span>Definition List</span></p>
+
+  <dl>
+  <dt>It proves nothing of rules</dt>
+  <dd>you ever getting somewhere.</dd>
+
+  <dt>Soup does yer honour at home</dt>
+  <dd>exclaimed in his father I mentioned Dinah if only took down went slowly back the royal children there.</dd>
+
+  <dt>Two lines.</dt>
+  <dd>Nor I breathe when they never happened she put her dream</dd>
+
+  <dt>Hand it begins with the dance</dt>
+  <dd>Get up somewhere.</dd>
+
+  <dt>Just think this fit</dt>
+  <dd>UNimportant your hair wants for YOU are first and beg pardon said there&#8217;s half afraid said but her they</dd>
+  </dl>
+
+  <p class="elementType"><span>Footnotes</span></p>
+
+  <div class="footnotes">
+  <hr />
+  <ol>
+
+  <li id="fn:1">
+  <p>Turn a loud indignant voice sometimes Do cats eat or hippopotamus but <a href="#fnref:1" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
+  </li>
+
+  <li id="fn:2">
+  <p>However this he with her neck would catch hold it there stood the <a href="#fnref:2" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
+  </li>
+
+  </ol>
+  </div>
+  </div>
 
 <script>
   var Classes = {
@@ -265,16 +311,26 @@ the riddle yet had now let him into a mineral I could have said</p>
   }
 
   function firstLoad() {
-    var styleMenu = document.querySelector('#style');
-    var prevStyle = window.localStorage.getItem('style');
-    if (prevStyle) {
-      var idx = indexMatchingValue(styleMenu, prevStyle);
+    var styleMenu = document.querySelector('#style'),
+        prevStyle = window.localStorage.getItem('style'),
+        hash = document.location.hash,
+        idx = false;
+
+    if (hash) {
+      var style = hash.replace(/^#/,'');
+      idx = indexMatchingValue(styleMenu, style);
+    } else if (prevStyle) {
+      idx = indexMatchingValue(styleMenu, prevStyle);
+    }
+
+    if (idx) {
       styleMenu.selectedIndex = idx;
     }
+
     var inverted = window.localStorage.getItem('highcontrast');
     if (inverted && inverted !== "false") {
       var body = document.querySelector('body');
-      Classes.add(body, 'inverted');
+      addClass(body, 'inverted');
       document.querySelector('#highcontrast').checked = inverted;
     } else {
       document.querySelector('#highcontrast').checked = false;
@@ -300,23 +356,45 @@ the riddle yet had now let him into a mineral I could have said</p>
     switchStyle(obj.value);
   }
 
-  function switchStyle (value) {
+  function switchStyle(value) {
     var styleEl = document.querySelector('#mainstyle');
 
     styleEl.href = "../" + value + ".css";
+    updateMeta(value);
     window.localStorage.setItem('style', value);
+
+    document.location.hash = value;
+
+    var downloadLinks = document.querySelectorAll('a.themedownload');
+    for (var i = 0; i < downloadLinks.length; i++) {
+        downloadLinks[i].href = 'https://raw.githubusercontent.com/ttscoff/MarkedCustomStyles/master/'+ value + '.css';
+    }
   }
 
+  function updateMeta(style) {
+    var data = window.MCSmetadata[style],
+        meta = document.querySelector('#meta');
+
+    meta.querySelector('.title').innerText = data.title;
+    meta.querySelector('.author').innerText = data.author;
+    meta.querySelector('.description').innerText = data.description;
+  }
 
   window.addEventListener('load', firstLoad, false);
 
-  document.querySelector('#prevstyle').addEventListener('click',function() {
-  adjustIndex(-1);
-  });
+  var prevlinks = document.querySelectorAll('.prevlink');
+  for (var i = 0; i < prevlinks.length; i++) {
+      prevlinks[i].addEventListener('click', function(event) {
+          adjustIndex(-1);
+      });
+  }
 
-  document.querySelector('#nextstyle').addEventListener('click',function() {
-  adjustIndex(1);
-  });
+  var nextlinks = document.querySelectorAll('.nextlink');
+  for (var i = 0; i < nextlinks.length; i++) {
+      nextlinks[i].addEventListener('click', function(event) {
+          adjustIndex(1);
+      });
+  }
 
   document.querySelector('#highcontrast').addEventListener('click',function() {
     var body = document.querySelector('body');

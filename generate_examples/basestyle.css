@@ -15,9 +15,9 @@ header, #meta {
     text-shadow: none;
 }
 
-header a:focus, #meta a:focus {
+/*header a:focus, #meta a:focus {
     outline: none;
-}
+}*/
 
 header {
     left: 0;
@@ -44,8 +44,8 @@ header select#style {
     float: left;
 }
 
-.headercenter {
-    display: inline-block;
+.themelinks {
+    display: inline;
     text-align: center;
     margin: 0 10px;
     font-family: Helvetica, Arial, sans-serif;
@@ -54,20 +54,20 @@ header select#style {
     text-indent: 0;
 }
 
-.headercenter a {
-    color: #fff;
-    font-weight: 700;
-    padding: 5px;
-    display: inline-block;
+.themelinks a {
     background: #666;
     border-radius: 4px;
+    color: #fff;
+    display: inline-block;
+    font-weight: 700;
+    margin-right: 4px;
     transition: background .2s linear;
 }
 
-.headercenter a:link,
-.headercenter a:active,
-.headercenter a:hover,
-.headercenter a:visited {
+.themelinks a:link,
+.themelinks a:active,
+.themelinks a:hover,
+.themelinks a:visited {
     color: #fff;
     border: none;
     outline: none;
@@ -75,7 +75,7 @@ header select#style {
     text-decoration: none;
 }
 
-.headercenter a:hover {
+.themelinks a:hover {
     background: #888;
 }
 
@@ -85,7 +85,8 @@ header nav {
     line-height: 1;
 }
 
-header nav a, #meta nav a {
+header a,
+#meta nav a {
     color: #fff!important;
     font-family: Helvetica, Arial, sans-serif;
     text-decoration: none;
@@ -99,7 +100,8 @@ header nav a, #meta nav a {
     text-shadow: none;
 }
 
-header nav a:hover, #meta nav a:hover {
+header nav a:hover,
+#meta nav a:hover {
     background: #666;
     color: #fff;
     border: none;
@@ -109,10 +111,26 @@ header nav a:hover, #meta nav a:hover {
     text-decoration: none;
 }
 
-header nav a:focus, , #meta nav a:focus {
+header nav a:focus,
+#meta nav a:focus {
     outline: auto;
     text-decoration: none;
     border: none;
+}
+
+.backbutton {
+    border: solid 1px white;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1;
+    padding: 2px !important;
+    transition: background .2s linear;
+}
+
+.backbutton:hover {
+    color: #333!important;
+    background: white;
 }
 
 #meta {
@@ -174,8 +192,7 @@ header nav a:focus, , #meta nav a:focus {
 
 body #wrapper {
     border-left: 1px solid rgba(0,0,0,.15);
-    padding-left: 40px;
-    padding-top: 50px;
+    padding: 50px 0 40px 40px;
 }
 
 #wrapper .elementType {
@@ -231,4 +248,84 @@ body #wrapper {
 .outlines #wrapper ul,
 .outlines #wrapper ol {
     outline: solid 1px rgba(0,0,0,.25);
+}
+
+#stylepreviews {
+    font-size: 16px;
+    font-family: Avenir, "Helvetica Neue", Arial, sans-serif;
+}
+
+ul.previews {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+li.preview {
+    width: 100%;
+    margin-bottom: 20px;
+    max-width: 400px;
+}
+
+li.preview p {
+    margin: 0 0 .5em 0;
+    font-size: 14px;
+}
+
+li.preview img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media screen and (min-width: 640px) {
+    li.preview {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    li.preview {
+        width: 33%;
+    }
+}
+
+.preview a {
+    text-decoration: none;
+    color: #666;
+}
+
+.preview h3 {
+    background: #eee;
+    color: #666;
+    display: block;
+    line-height: 2;
+    margin: 0;
+    padding: 0 .5em;
+}
+
+.preview figure {
+    background: #fafafa;
+    border: solid 1px #ccc;
+    border-radius: 5px;
+    box-shadow: 3px 3px 4px rgba(0,0,0,.25);
+    height: 100%;
+    overflow: hidden;
+    transform: scale(1);
+    transition: transform .1s linear, box-shadow .1s ease-out;
+}
+
+.preview:hover {
+    z-index: 10;
+}
+
+.preview:hover figure {
+    transform: scale(1.1);
+    box-shadow: 9px 9px 10px rgba(0,0,0,.15);
+}
+
+.preview figcaption {
+    padding: 10px;
 }

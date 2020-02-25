@@ -4,28 +4,15 @@
     <link id="basestyle" rel="stylesheet" type="text/css" href="basestyle.css">
   </head>
 
-  <style>
-    #wrapper { max-width: 800px; margin: 0 auto; }
-  </style>
-  <body>
-
-  <header>
-    <label for="style">Select style: </label>
-    <select id="style" name="style" onchange="jumpToStyle(this)">
-  %%stylemenu%%
-    </select>
-    <input type="checkbox" name="highcontrast" value="highcontrast" id="highcontrast"><label for="highcontrast"> High Contrast mode</label>
-  </header>
+  <body id="stylepreviews">
 
   <h1>Marked Custom Styles</h1>
 
   <p>A collection of custom styles available for Marked 2. Have your own and want to share? Contact the super-friendly Marked developer, Brett Terpstra.</p>
 
-  <div id="wrapper">
-    <ul class="previews">
-      %%previews%%
-    </ul>
-  </div>
+  <ul class="previews">
+    %%previews%%
+  </ul>
 
   <script>
     function jumpToStyle(obj) {

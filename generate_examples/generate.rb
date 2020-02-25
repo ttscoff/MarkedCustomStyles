@@ -27,34 +27,36 @@ def get_meta(file)
 end
 
 def generate_options
-  meta = {}
+  metadata = {}
   options = []
   previews = []
-  files = Dir.glob('../*.css')
+  ignored_styles = ["Header.css", "Custom.css"]
+  files = Dir.glob('../*.css').sort
   # files.concat(Dir.glob('../*/*.css'))
   files.each do |f|
     # style = File.basename(f,".css")
-    next if File.basename(File.dirname(f)) == File.basename(Dir.pwd) || File.basename(f) == "Header.css"
+    next if File.basename(File.dirname(f)) == File.basename(Dir.pwd) || ignored_styles.include?(File.basename(f))
+    Dir.mkdir("styles") unless File.directory?("styles")
+    File.cp(f, "styles")
     style = File.basename(f,".css")
     meta = get_meta(f)
     metadata[style] = meta
     options.push(%Q{<option value="#{style}">#{style}</option>})
-    if File.exists?("../previews/#{style}.png")
+    if File.exists?("previews/#{style.gsub(/ /,'')}.png")
       preview = %Q{<li class="preview">}
-      preview += %Q{<a href="preview.html##{style}"><figure>}
-      preview += %Q{<img src="../previews/#{style}.png">}
-      preview += %Q{<figcaption><p class="byline"><span class="title">#{meta['title']}</span> <span class="author">by #{meta['author']}</span></p>}
+      preview += %Q{<a href="preview.html##{style}">}
+      preview += %Q{<figure><h3>#{meta['title']}</h3>}
+      preview += %Q{<img src="previews/#{style.gsub(/ /,'')}.png">}
+      preview += %Q{<figcaption><p class="byline">by #{meta['author']}</p>}
       preview += %Q{<p class="description">#{meta['description']}</p>}
       preview += %Q{</figcaption></figure></a></li>}
       previews.push(preview)
     end
-
-  [options, metadata]
   end
   {
     :stylemenu => options.join("\n"),
     :previews => previews.join("\n"),
-    :meta => meta
+    :meta => metadata
   }
 end
 
@@ -70,7 +72,7 @@ end
 
 template = IO.read('preview_template.html')
 
-File.open('styles.html', 'w') do |f|
+File.open('index.html', 'w') do |f|
   f.puts template.sub(/%%stylemenu%%/, styles[:stylemenu]).sub(/%%previews%%/, styles[:previews])
 end
 
