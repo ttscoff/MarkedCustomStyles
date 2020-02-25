@@ -1,10 +1,10 @@
 /*!
-   This document has been created with Marked.app <http://marked2app.com>
-   Please leave this notice in place, along with any additional credits below.
-   ---------------------------------------------------------------
-   Title: Pesto
-   Author: Andrew Patton @acusti <http://www.acusti.ca>
-   Description: Attention to typography, easy on the eyes, mobile first, retina-ready
+This document has been created with Marked.app <http://marked2app.com>
+Please leave this notice in place, along with any additional credits below.
+---------------------------------------------------------------
+Title: Pesto
+Author: Andrew Patton @acusti <http://www.acusti.ca>
+Description: Attention to typography, easy on the eyes, mobile first, retina-ready
 */
 
 @import "compass";
@@ -28,10 +28,17 @@ $body-padding-horizontal : (
 );
 
 // Colors
+$color-body-bg    : #fff;
 $color-accent     : rgb(141, 179, 89);
 $color-text-body  : rgb(87, 83, 74);
 $color-text-light : rgb(184, 186, 188);
 $color-ui-light   : lighten($color-text-light, 11%);
+
+$color-inverted-body-bg    : #333;
+$color-inverted-accent     : lighten($color-accent,20);
+$color-inverted-text-body  : #fff;
+$color-inverted-text-light : #eee;
+$color-inverted-ui-light   : lighten($color-inverted-text-light, 11%);
 
 // Box sizing
 *, *:before, *:after {
@@ -49,32 +56,34 @@ $color-ui-light   : lighten($color-text-light, 11%);
    http://www.adobe.com/type/browser/legal/pdfs/OpenFontLicense.pdf
 */
 
-// Non-retina regular weight fonts (use 300)
-@media (-webkit-max-device-pixel-ratio: 1.49),
-       (max-resolution: 143dpi) {
-	// Body text
-	@include font-face("Source Sans Pro", inline-font-files("SourceSansPro-Light.otf.woff", "woff"), false, 300, normal);
-	// Body text italic
-	@include font-face("Source Sans Pro", inline-font-files("SourceSansPro-LightIt.otf.woff", "woff"), false, 300, italic);
-	// Monospace
-	@include font-face("Source Code Pro", inline-font-files("SourceCodePro-Light.otf.woff", "woff"), false, 300, normal);
-}
-// Retina regular weight fonts (use 400)
-@media (-webkit-min-device-pixel-ratio: 1.5),
-       (min-resolution: 144dpi) {
-	// Body text
-	@include font-face("Source Sans Pro", inline-font-files("SourceSansPro-Regular.otf.woff", "woff"), false, 400, normal);
-	// Body text italic
-	@include font-face("Source Sans Pro", inline-font-files("SourceSansPro-It.otf.woff", "woff"), false, 400, italic);
-	// Monospace
-	@include font-face("Source Code Pro", inline-font-files("SourceCodePro-Regular.otf.woff", "woff"), false, 400, normal);
-}
-// Body text bold
-@include font-face("Source Sans Pro", inline-font-files("SourceSansPro-Bold.otf.woff", "woff"), false, 700, normal);
-// Body text bold italic
-@include font-face("Source Sans Pro", inline-font-files("SourceSansPro-BoldIt.otf.woff", "woff"), false, 700, italic);
-// Monospace
-@include font-face("Source Code Pro", inline-font-files("SourceCodePro-Bold.otf.woff", "woff"), false, 700, normal);
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,700|Source+Sans+Pro:300,300i,400,400i,700,700i&display=swap');
+
+// // Non-retina regular weight fonts (use 300)
+// @media (-webkit-max-device-pixel-ratio: 1.49),
+//        (max-resolution: 143dpi) {
+// 	// Body text
+// 	@include font-face("Source Sans Pro", inline-font-files("SourceSansPro-Light.otf.woff", "woff"), false, 300, normal);
+// 	// Body text italic
+// 	@include font-face("Source Sans Pro", inline-font-files("SourceSansPro-LightIt.otf.woff", "woff"), false, 300, italic);
+// 	// Monospace
+// 	@include font-face("Source Code Pro", inline-font-files("SourceCodePro-Light.otf.woff", "woff"), false, 300, normal);
+// }
+// // Retina regular weight fonts (use 400)
+// @media (-webkit-min-device-pixel-ratio: 1.5),
+//        (min-resolution: 144dpi) {
+// 	// Body text
+// 	@include font-face("Source Sans Pro", inline-font-files("SourceSansPro-Regular.otf.woff", "woff"), false, 400, normal);
+// 	// Body text italic
+// 	@include font-face("Source Sans Pro", inline-font-files("SourceSansPro-It.otf.woff", "woff"), false, 400, italic);
+// 	// Monospace
+// 	@include font-face("Source Code Pro", inline-font-files("SourceCodePro-Regular.otf.woff", "woff"), false, 400, normal);
+// }
+// // Body text bold
+// @include font-face("Source Sans Pro", inline-font-files("SourceSansPro-Bold.otf.woff", "woff"), false, 700, normal);
+// // Body text bold italic
+// @include font-face("Source Sans Pro", inline-font-files("SourceSansPro-BoldIt.otf.woff", "woff"), false, 700, italic);
+// // Monospace
+// @include font-face("Source Code Pro", inline-font-files("SourceCodePro-Bold.otf.woff", "woff"), false, 700, normal);
 
 
 html {
@@ -94,15 +103,23 @@ html, button, input, select, textarea {
 	font-family: sans-serif;
 }
 
-html, body, button, input, select, textarea {
+#wrapper, button, input, select, textarea {
 	color: $color-text-body;
 	font-family: "Source Sans Pro", "Myriad Pro", "Myriad", sans-serif;
 	font-weight: 300;
+
+	.inverted & {
+		color: $color-inverted-text-body;
+	}
 }
 
-body{
+body {
 	margin: 0 auto;
-	background-color: white;
+	background-color: $color-body-bg;
+}
+
+.inverted {
+	background-color: $color-inverted-body-bg;
 }
 
 body, textarea {
@@ -133,8 +150,12 @@ body {
 
 
 h1, h2, h3, dt {
-	color: #423F37;
+	color: $color-text-body;
 	font-weight: 700;
+
+	.inverted & {
+		color: $color-inverted-text-body;
+	}
 }
 
 h1 {
@@ -181,15 +202,26 @@ a {
 	background-size: 1px 1px;
 	background-position: 0 92%;
 	/* Clear descendors */
-	text-shadow: 1px 0 white, 2px 0 white, -1px 0 white, -2px 0 white;
+	text-shadow: 1px 0 $color-body-bg, 2px 0 $color-body-bg, -1px 0 $color-body-bg, -2px 0 $color-body-bg;
 	cursor: pointer;
 	outline: 0 none;
+
+	.inverted & {
+		background-image: linear-gradient(to bottom, transparent 50%, $color-inverted-ui-light 50%);
+		text-shadow: 1px 0 $color-inverted-body-bg, 2px 0 $color-inverted-body-bg, -1px 0 $color-inverted-body-bg, -2px 0 $color-inverted-body-bg;
+		color: $color-inverted-accent;
+	}
 }
 
 a:hover {
 	outline: 0 none;
 	color: darken($color-accent, 11%);
 	background-image: linear-gradient(to bottom, transparent 50%, darken($color-accent, 6%) 50%);
+
+	.inverted & {
+		color: lighten($color-inverted-accent, 11%);
+		background-image: linear-gradient(to bottom, transparent 50%, lighten($color-inverted-accent, 6%) 50%);
+	}
 }
 
 
@@ -219,8 +251,12 @@ code, tt {
 	background-color: #f8f8f8;
 	border-radius: 3px;
 	font-size: 0.85em;
-	color: #423F37;
+	color: $color-text-body;
 	padding: 0 5px;
+
+	.inverted & {
+		color: $color-inverted-text-body;
+	}
 }
 pre > code {
 	margin: 0;
@@ -239,15 +275,23 @@ aside {
 
 b, strong {
 	font-weight: bold;
-	color: #423F37;
+	color: $color-text-body;
 	font-weight: 700;
+
+	.inverted & {
+		color: $color-inverted-text-body;
+	}
 }
 
 blockquote {
-	color: #423F37;
+	color: $color-text-body;
 	font-size: 1.25em;
 	font-weight: 700;
 	margin: 1em 40px;
+
+	.inverted & {
+		color: $color-inverted-text-body;
+	}
 }
 
 blockquote {
@@ -291,17 +335,21 @@ img {
 
 
 ol > li:before {
-	color: #423F37;
+	color: $color-text-body;
 	content: counter(ol, decimal) ".";
 	counter-increment: ol;
 	font-weight: 700;
 	margin-right: 0.333em;
 	position: absolute;
 	right: 100%;
+
+	.inverted & {
+		color: $color-inverted-text-body;
+	}
 }
 
 ul > li:before {
-	background-color: #423F37;
+	background-color: $color-text-body;
 	border-radius: 50%;
 	content: "";
 	height: 0.3em;
@@ -310,6 +358,10 @@ ul > li:before {
 	margin-top: 0.6em;
 	position: absolute;
 	right: 100%;
+
+	.inverted & {
+		color: $color-inverted-text-body;
+	}
 }
 
 ol, ul, dl {
@@ -344,6 +396,10 @@ small, dd, figcaption {
 	font-size: 0.8rem;
 	font-style: italic;
 	line-height: 1.2;
+
+	.inverted & {
+		color: $color-inverted-text-light;
+	}
 }
 .footnote {
 	font-size: 0.8rem;
@@ -396,6 +452,10 @@ caption{display:table-caption;font-weight:300;font-size:1.3em;text-transform:upp
 		font-style: normal;
 		font-weight: 700;
 		color: inherit;
+	}
+
+	.inverted & {
+		color: $color-inverted-text-light;
 	}
 }
 

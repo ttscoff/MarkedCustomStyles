@@ -4,20 +4,36 @@
    ---------------------------------------------------------------
    Title: Just images
    Author: Sid O'Neill http://crateofpenguins.com
-   Description: Just for image reference.
+   Description: Just for image reference. Updated by Brett Terpstra.
 */
 
-body
-{
-max-width:340px;
-font-size:0px;
-line-height:0px;
+body {
+  background: #fff;
+  max-width: 340px;
+  margin: 0;
+  padding: 0;
 }
 
-img
-{
-margin:20px;
-max-width:340px;
-font-size:10px;
-line-height:12px;
+body.inverted {
+  background: #333;
+}
+
+#wrapper > * {
+  display: none;
+}
+
+#wrapper > figure,
+#wrapper > img {
+  display: block;
+}
+
+figure, img {
+  margin:20px;
+  max-width:340px;
+  font-size:16px;
+  line-height:24px;
+}
+
+.inverted figcaption {
+  color: #eee;
 }

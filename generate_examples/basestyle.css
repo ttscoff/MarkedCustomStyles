@@ -363,7 +363,8 @@ template {
   color: #fff;
 }
 
-#header select#style {
+#header #style {
+  color: #333;
   font-size: 14px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
@@ -477,19 +478,22 @@ template {
   background-image: url(images/inspect-hover.svg);
 }
 
-.backbutton {
-  border: solid 1px white;
-  border-radius: 4px;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1;
-  padding: 2px !important;
-  transition: background .2s linear;
+#header a.backbutton {
+  background-image: url(images/grid.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 0;
+  direction: ltr;
+  display: block;
+  height: 20px;
+  margin-right: 2px;
+  margin-top: 1px;
+  text-indent: -50000px;
+  width: 20px;
 }
 
-.backbutton:hover {
-  color: #333!important;
-  background: white;
+#header a.backbutton:hover {
+  background-image: url('images/grid-hover.svg');
 }
 
 #meta {
@@ -581,6 +585,12 @@ body #wrapper {
   width: 100px;
 }
 
+.inverted #wrapper .elementType span {
+  background: rgba(11, 125, 157, .7);
+  border: dotted 1px rgb(11, 125, 157);
+  color: rgba(255,255,255,.6);
+}
+
 @media (max-width:1060px) {
   body #wrapper {
     padding-left: inherit;
@@ -612,6 +622,14 @@ body #wrapper {
 #stylepreviews {
   font-size: 16px;
   font-family: 'Fira Sans', Avenir, "Helvetica Neue", Arial, sans-serif;
+}
+
+.installexample {
+  background-image: url(images/add-to-marked-hover.svg);
+  background-repeat: no-repeat;
+  padding-left: 24px;
+  color: #0b7d9d;
+  background-size: contain;
 }
 
 #previews {
@@ -692,7 +710,7 @@ body #wrapper {
   background-size: contain;
   border: none;
   margin: 0;
-  text-indent: -5000px;
+  text-indent: -50000px;
   direction: ltr;
   width: 30px;
 }
