@@ -1,6 +1,6 @@
 # Custom Styles for [Marked 2](http://marked2app.com)
 
-Want a quick look at some of the current styles in this repository? [Browse the Examples page.](http://ttscoff.github.io/MarkedCustomStyles/generate_examples/styles.html)
+Want a quick look at some of the current styles in this repository? [Browse the Examples page.](http://ttscoff.github.io/MarkedCustomStyles/generate_examples/index.html)
 
 Please feel free to fork and submit new styles! If you're not a Github user and you'd like to contribute, just [drop me a line](http://brettterpstra.com/contact/).
 
