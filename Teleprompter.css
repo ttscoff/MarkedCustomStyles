@@ -8,11 +8,10 @@
 */
 body {
   font-size: 40px;
-  line-height: 1.7;
+  line-height: 2;
   background-color: rgba(63, 63, 63, 1);
   background-image: linear-gradient(0deg, rgba(63, 63, 63, 1) 25%, rgba(29, 29, 29, 1) 25%, rgba(29, 29, 29, 1) 75%, rgba(63, 63, 63, 1) 75%);
   font-family: Helvetica;
-  font-size: 52px;
   color: #fff;
   background-attachment: fixed;
 }
@@ -21,11 +20,12 @@ a {
   text-decoration: none;
 }
 #wrapper {
-  padding: 50% 15px;
+  padding: 50% 25px;
   width: 100%;
   overflow: visible;
   box-sizing: border-box;
-  max-width: 1000px;
+  width: 80vw!important;
+  max-width: 30ch!important;
   margin: 0 auto;
 }
 body:before {
@@ -74,4 +74,43 @@ h5:before {
 }
 h6:before {
   content:'---';
+}
+
+img {
+  width: 200px;
+  height: auto;
+}
+
+hr {
+  border: 0;
+  border-top: dashed 4px;
+  margin: 2em 0;
+}
+
+blockquote {
+  margin: 0;
+  font-style: italic;
+}
+
+blockquote p::before {
+  content: '> ';
+  position: absolute;
+  left: -1em;
+}
+
+#wrapper pre {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+dt {
+  font-weight: 600;
+}
+
+dd {
+  margin: 0;
+}
+
+dd::before {
+  content: ': ';
 }
