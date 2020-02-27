@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*
 This document has been created with Marked.app <http://markedapp.com>, Copyright 2014 Brett Terpstra
 Please leave this notice in place, along with any additional credits below.
@@ -7,14 +6,25 @@ Title: Vostock
 Author: Jocelyn Richard <http://jocelynrichard.com/>
 Description: Works best with the free PT fonts: http://www.paratype.com/public/
  */
+
 /* ================================================ */
 /* 1. Remise à zéro */
 /* 2. Squelette */
 /* 3. Media queries */
 /* ================================================ */
+
 /* ================================================ */
 /* 1. Remise à zéro */
 /* ================================================ */
+
+$color-link: rgba(25, 107, 240, 1);
+$color-link-visited: darken($color-link, 15%);
+$color-link-hover: #2DAB5F;
+
+$color-inverted-link: lighten($color-link, 15%);
+$color-inverted-link-visited: darken($color-inverted-link, 5%);
+$color-inverted-link-hover: lighten($color-link-hover, 15%);
+
 html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, blockquote, pre, form, fieldset, table, th, td, img {
   margin: 0;
   padding: 0;
@@ -26,6 +36,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
 }
 
 /* Définition des balises sémantiques pour IE 6/7/8/9 et Firefox 3 */
+
 html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -33,15 +44,19 @@ html {
 }
 
 /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+
 /* ================================================ */
 /* 2. Squelette */
 /* ================================================ */
+
 /* ------------------------------------------------- */
 /* Général */
 /* ------------------------------------------------- */
+
 body {
   font-family: "pt serif", Georgia, serif;
   margin: 1rem 1rem 5rem 1rem;
+
   /* Pour avoir des marges même si l'outil hôte n'en prévoit pas */
   color: rgba(0, 0, 0, 0.7);
   text-shadow: 0 1px 0 white;
@@ -53,21 +68,24 @@ body {
   max-width: 38rem;
   margin: 0 auto;
   margin-left: auto !important;
+
   /* Pour contrer toc.css ajouté par Marked */
 }
 
 /* ------------------------------------------------- */
 /* Typographie */
 /* ------------------------------------------------- */
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "pt sans", "avenir next", sans-serif;
   font-weight: 700;
   line-height: 1.25;
   margin: 1.5rem 0;
-  color: black;
-}
-.inverted h1, .inverted h2, .inverted h3, .inverted h4, .inverted h5, .inverted h6 {
-  color: #fff;
+  color: rgba(0, 0, 0, 1);
+
+  .inverted & {
+    color: #fff;
+  }
 }
 
 h1 {
@@ -113,26 +131,32 @@ ul, ol {
 
 ul {
   list-style-type: none;
-}
-ul > li:before {
-  content: "\2022";
-  margin-left: -1.2rem;
-  padding-right: 0.75rem;
-}
-ul li {
-  margin: 0;
+
+  > li:before {
+    content: "\2022";
+    margin-left: -1.2rem;
+    padding-right: 0.75rem;
+  }
+
+  li {
+    margin: 0;
+  }
 }
 
 ol li {
   margin: 0;
 }
 
-ul ul, ul ol {
-  margin-left: 2rem;
+ul {
+  ul, ol {
+    margin-left: 2rem;
+  }
 }
 
-ol ul, ol ol {
-  margin-left: 2rem;
+ol {
+  ul, ol {
+    margin-left: 2rem;
+  }
 }
 
 ul p:not(:first-child), ol p:not(:first-child) {
@@ -153,31 +177,39 @@ ul li blockquote {
   margin-left: 0rem;
 }
 
-a:link {
-  /* p a:link ? */
-  color: #196bf0;
-  font-weight: 700;
-  text-decoration: none;
-}
-a:visited {
-  /* p a:visited ? */
-  color: #0c4bb1;
-}
-a:hover {
-  /* p a:hover ? */
-  color: #2DAB5F;
-}
-a:focus {
-  outline: 0.125rem solid;
-}
-.inverted a {
-  color: #6199f5;
-}
-.inverted a:visited {
-  color: #498af3;
-}
-.inverted a:hover {
-  color: #53d285;
+a {
+  &:link {
+    /* p a:link ? */
+    color: $color-link;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  &:visited {
+    /* p a:visited ? */
+    color: $color-link-visited;
+  }
+
+  &:hover {
+    /* p a:hover ? */
+    color: $color-link-hover;
+  }
+
+  &:focus {
+    outline: 0.125rem solid;
+  }
+
+  .inverted & {
+    color: $color-inverted-link;
+
+    &:visited {
+      color: $color-inverted-link-visited;
+    }
+
+    &:hover {
+      color: $color-inverted-link-hover;
+    }
+  }
 }
 
 table, caption, figcaption {
@@ -190,6 +222,7 @@ table, caption, figcaption {
 /* ------------------------------------------------- */
 /* Tableaux */
 /* ------------------------------------------------- */
+
 table {
   margin: 1rem 0 1.75rem 0;
   border-collapse: collapse;
@@ -199,9 +232,10 @@ th {
   border-bottom: 0.125rem solid rgba(0, 0, 0, 0.3);
   background-color: rgba(255, 255, 255, 0.7);
   padding: 0.25rem 0.75rem;
-}
-.inverted th {
-  background-color: #888;
+
+  .inverted & {
+    background-color: #888;
+  }
 }
 
 td {
@@ -210,30 +244,40 @@ td {
 
 tbody tr:nth-child(even) {
   background-color: rgba(255, 255, 255, 0.5);
-}
-.inverted tbody tr:nth-child(even) {
-  background-color: #555;
+
+  .inverted & {
+    background-color: #555;
+  }
 }
 
 /* ------------------------------------------------- */
 /* Divers */
 /* ------------------------------------------------- */
+
 a:link, pre {
   white-space: pre;
+
   /* CSS 2.0 */
   white-space: pre-wrap;
+
   /* CSS 2.1 */
   white-space: pre-line;
+
   /* CSS 3.0 */
   white-space: -pre-wrap;
+
   /* Opera 4-6 */
   white-space: -o-pre-wrap;
+
   /* Opera 7 */
   white-space: -moz-pre-wrap;
+
   /* Mozilla */
   white-space: -hp-pre-wrap;
+
   /* HP Printers */
   word-wrap: break-word;
+
   /* IE 5+ */
 }
 
@@ -253,20 +297,23 @@ code {
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 2px;
   color: #2DAB5F;
+
   /* #2DAB5F */
   text-shadow: none;
-}
-.inverted code {
-  background-color: #111;
-  border-color: #666;
+
+  .inverted & {
+    background-color: #111;
+    border-color: #666;
+  }
 }
 
 figure {
   margin: 1.5rem 0;
-}
-figure img {
-  max-width: 100%;
-  height: auto;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 li img {
@@ -277,6 +324,7 @@ li img {
 hr {
   clear: none;
   height: 2px;
+
   /* height: 0.125rem; */
   border: none;
   margin: 1.5rem auto;
@@ -311,35 +359,42 @@ a.footnote {
 }
 
 /* #generated-toc : id ajoutée par Marked pilotant l'affichage de la table des matières */
+
 #generated-toc {
   text-shadow: none;
-}
-#generated-toc ul {
-  /* Pour compenser l'attribution d'une puce custom plus haut */
-  margin: 0;
-  list-style-type: none;
-}
-#generated-toc ul li {
-  /* Pour compenser l'attribution d'une puce custom plus haut */
-  margin: 0;
-}
-#generated-toc ul li a {
-  font-weight: normal;
-  display: inline;
-}
-#generated-toc ul li ul li ul li a {
-  text-transform: lowercase;
-}
-#generated-toc ul > li:before {
-  /* Pour compenser l'attribution d'une puce custom plus haut */
-  content: none;
-  margin-left: 0;
-  padding-right: 0;
+
+  ul {
+    /* Pour compenser l'attribution d'une puce custom plus haut */
+    margin: 0;
+    list-style-type: none;
+
+    li {
+      /* Pour compenser l'attribution d'une puce custom plus haut */
+      margin: 0;
+
+      a {
+        font-weight: normal;
+        display: inline;
+      }
+
+      ul li ul li a {
+        text-transform: lowercase;
+      }
+    }
+
+    > li:before {
+      /* Pour compenser l'attribution d'une puce custom plus haut */
+      content: none;
+      margin-left: 0;
+      padding-right: 0;
+    }
+  }
 }
 
 /* ------------------------------------------------- */
 /* Animations */
 /* ------------------------------------------------- */
+
 a:hover {
   -moz-transition: all 0.2s ease-in-out;
   -webkit-transition: all 0.2s ease-in-out;
@@ -353,8 +408,11 @@ h1, h2, h3, h4, h5, h6, blockquote {
 /* ================================================ */
 /* 3. Media queries */
 /* ================================================ */
+
 /* Les styles par défaut sont prévus pour l'iPhone, on rajoute des éléments de style par tranche. */
+
 /* iPad et desktop */
+
 @media only screen and (min-width: 641px) {
   html {
     font-size: 17px;
@@ -372,19 +430,24 @@ h1, h2, h3, h4, h5, h6, blockquote {
     margin-left: 0;
   }
 }
+
 /* Impression */
+
 @media print {
   * {
     background: transparent !important;
     color: #000 !important;
+
     /* Le noir imprime plus vite et les navigateurs sont de toute manière inconsistants dans le traitement de la couleur : h5bp.com/s */
     text-shadow: none !important;
   }
 
   @page {
     margin: 1cm;
+
     /* Combiné avec le margin de #wrapper */
   }
+
   html {
     font-size: 15px;
   }
@@ -392,6 +455,7 @@ h1, h2, h3, h4, h5, h6, blockquote {
   #wrapper {
     max-width: none;
     margin: 1rem !important;
+
     /* Marge de sécurité pour les browser ne supportant pas @page */
   }
 
@@ -407,35 +471,47 @@ h1, h2, h3, h4, h5, h6, blockquote {
     margin-left: 0 !important;
   }
 
-  ul ul, ul ol {
-    margin-left: 2rem !important;
+  ul {
+    ul, ol {
+      margin-left: 2rem !important;
+    }
   }
 
-  ol ul, ol ol {
-    margin-left: 2rem !important;
+  ol {
+    ul, ol {
+      margin-left: 2rem !important;
+    }
   }
 
   ul p:not(:first-child), ol p:not(:first-child) {
     margin-left: 2rem !important;
   }
 
-  a:link, a:visited {
-    text-decoration: underline !important;
-    font-weight: normal !important;
-  }
-  a[href]:after {
-    content: " (" attr(href) ")";
-  }
-  a[href^="javascript:"]:after {
-    content: "";
-    /* Do not show javascript and internal links */
-  }
-  a[href^="#"] {
-    text-decoration: none !important;
-  }
-  a[href^="#"]:after {
-    content: "";
-    /* Do not show javascript and internal links */
+  a {
+    &:link, &:visited {
+      text-decoration: underline !important;
+      font-weight: normal !important;
+    }
+
+    &[href]:after {
+      content: " (" attr(href) ")";
+    }
+
+    &[href^="javascript:"]:after {
+      content: "";
+
+      /* Do not show javascript and internal links */
+    }
+
+    &[href^="#"] {
+      &:after {
+        content: "";
+
+        /* Do not show javascript and internal links */
+      }
+
+      text-decoration: none !important;
+    }
   }
 
   th {
@@ -467,21 +543,28 @@ h1, h2, h3, h4, h5, h6, blockquote {
   }
 
   /* #generated-toc : id ajoutée par Marked pilotant l'affichage de la table des matières */
-  #wrapper #generated-toc ul, #wrapper #generated-toc ol {
-    list-style-type: decimal;
-  }
-  #wrapper #generated-toc ul li, #wrapper #generated-toc ol li {
-    margin: 1rem 0;
-  }
-  #wrapper #generated-toc ul {
-    /* Pour compenser l'attribution d'une puce custom plus haut */
-    list-style-position: inside;
-  }
-  #wrapper #generated-toc ul > li:before {
-    /* Pour compenser l'attribution d'une puce custom plus haut */
-    content: none;
+
+  #wrapper #generated-toc {
+    ul, ol {
+      list-style-type: decimal;
+    }
+
+    ul li, ol li {
+      margin: 1rem 0;
+    }
+
+    ul {
+      /* Pour compenser l'attribution d'une puce custom plus haut */
+      list-style-position: inside;
+
+      > li:before {
+        /* Pour compenser l'attribution d'une puce custom plus haut */
+        content: none;
+      }
+    }
   }
 }
+
 .inverted {
   color: #fff;
   text-shadow: 0 1px 0 #333;
