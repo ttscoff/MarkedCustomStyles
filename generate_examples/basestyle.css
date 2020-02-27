@@ -15,6 +15,11 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+#wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 @-ms-viewport {
   width: device-width;
 }

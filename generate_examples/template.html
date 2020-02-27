@@ -5,10 +5,6 @@
     <link id="mainstyle" rel="stylesheet" type="text/css" href="">
   </head>
 
-  <style>
-    #wrapper { max-width: 800px; margin: 0 auto; }
-  </style>
-
   <script>
     window.MCSmetadata = %%metadata%%;
   </script>
@@ -285,20 +281,12 @@
   </script>
 
 <script>
-  var Classes = {
-    has: function(ele,cls) {
-      return !!ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+  var Settings = {
+    save: function(key, value) {
+      return window.localStorage.setItem(key, value);
     },
-
-    add: function(ele,cls) {
-      if (!Classes.has(ele,cls)) ele.className += " "+cls;
-    },
-
-    remove: function(ele,cls) {
-      if (Classes.has(ele,cls)) {
-        var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
-        ele.className=ele.className.replace(reg,' ');
-      }
+    get: function(key) {
+      return window.localStorage.getItem(key);
     }
   }
 
@@ -327,7 +315,7 @@
 
   function firstLoad() {
     var styleMenu = document.querySelector('#style'),
-        prevStyle = window.localStorage.getItem('style'),
+        prevStyle = Settings.get('style'),
         hash = document.location.hash,
         idx = false;
 
@@ -342,15 +330,36 @@
       styleMenu.selectedIndex = idx;
     }
 
-    var inverted = window.localStorage.getItem('highcontrast');
+    var inverted = Settings.get('highcontrast');
     if (inverted && inverted !== "false") {
-      var body = document.querySelector('body');
-      Classes.add(body, 'inverted');
+      $('body').addClass('inverted');
       document.querySelector('#highcontrast').checked = inverted;
     } else {
       document.querySelector('#highcontrast').checked = false;
     }
     syncStyle();
+
+    $('.prevlink').on('click', function(e) {
+      e.preventDefault();
+      adjustIndex(-1);
+    });
+
+    $('.nextlink').on('click', function(e) {
+      e.preventDefault();
+      adjustIndex(1);
+    });
+
+    $('#highcontrast').on('click', function() {
+      var body = document.querySelector('body');
+      if (this.checked) {
+        if (!$('body').hasClass('inverted')) {
+          $('body').addClass('inverted');
+        }
+      } else {
+        $('body').removeClass('inverted');
+      }
+      Settings.save('highcontrast',this.checked);
+    });
   }
 
   function indexMatchingValue(ele, text) {
@@ -372,19 +381,18 @@
   }
 
   function switchStyle(value) {
-    var styleEl = document.querySelector('#mainstyle'),
+    var $styleEl = $('#mainstyle'),
         styleURL = "styles/" + value + ".css";
 
-    styleEl.href = styleURL;
+    $styleEl.attr('href', styleURL);
     updateMeta(value);
-    window.localStorage.setItem('style', value);
+    Settings.save('style', value);
 
     document.location.hash = value;
 
-    var downloadLinks = document.querySelectorAll('a.themedownload');
-    for (var i = 0; i < downloadLinks.length; i++) {
-        downloadLinks[i].href = 'https://raw.githubusercontent.com/ttscoff/MarkedCustomStyles/master/'+ value + '.css';
-    }
+    $('a.themedownload').each(function(i, n) {
+      $(n).attr('href', 'https://raw.githubusercontent.com/ttscoff/MarkedCustomStyles/master/'+ value + '.css');
+    });
 
     var data = window.MCSmetadata[value];
     $('.addtomarked').each(function(i,n) {
@@ -410,40 +418,14 @@
 
   function updateMeta(style) {
     var data = window.MCSmetadata[style],
-        meta = document.querySelector('#meta');
+        $meta = $('#meta');
 
-    meta.querySelector('.title').innerText = data.title;
-    meta.querySelector('.author').innerText = data.author;
-    meta.querySelector('.description').innerText = data.description;
+    $meta.find('.title').text(data.title);
+    $meta.find('.author').text(data.author);
+    $meta.find('.description').text(data.description);
   }
 
-  window.addEventListener('load', firstLoad, false);
-
-  var prevlinks = document.querySelectorAll('.prevlink');
-  for (var i = 0; i < prevlinks.length; i++) {
-      prevlinks[i].addEventListener('click', function(event) {
-          adjustIndex(-1);
-      });
-  }
-
-  var nextlinks = document.querySelectorAll('.nextlink');
-  for (var i = 0; i < nextlinks.length; i++) {
-      nextlinks[i].addEventListener('click', function(event) {
-          adjustIndex(1);
-      });
-  }
-
-  document.querySelector('#highcontrast').addEventListener('click',function() {
-    var body = document.querySelector('body');
-    if (this.checked) {
-      if (!Classes.has(body, 'inverted')) {
-        Classes.add(body, 'inverted');
-      }
-    } else {
-      Classes.remove(body, 'inverted');
-    }
-    window.localStorage.setItem('highcontrast',this.checked);
-  });
+  $(window).on("load", firstLoad);
 
 </script>
 
