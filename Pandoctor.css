@@ -18,17 +18,15 @@
 /*** Style Definitions ***/
 #wrapper {
     font-size: 100%;
+    margin: 0 auto;
     padding-left: 4rem;
     padding-right: 4rem;
-    margin-left: auto;
-    margin-right: auto;
 }
 #wrapper, #wrapper p {
     -webkit-font-smoothing: antialiased;
     color: #111;
     font-family: "Hoefler Text";
     hyphens: auto;
-    margin: 0in;
     text-align: justify;
     text-indent: .25in;
     line-height: 200%;
