@@ -11,7 +11,7 @@ Description: Github README style. Includes theme for Pygmentized code blocks.
 #wrapper {
   color: #24292e;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-  margin: 0;
+  margin: 0 auto;
   text-size-adjust: 100%;
   max-width: 980px !important;
   padding: 40px 48px 48px !important;
