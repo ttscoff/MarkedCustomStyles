@@ -438,7 +438,7 @@ template {
 
 #header nav a:hover,
 #meta nav a:hover {
-  background: rgba(255, 255, 255, .25);
+  background: rgba(0, 0, 0, .25);
   border: none;
   box-shadow: none;
   text-decoration: none;
@@ -466,15 +466,15 @@ template {
 }
 
 #header .addtomarked::before {
-  background-image: url(images/add-to-marked.svg);
+  background-image: url(images/add-to-marked-circle.svg);
+}
+
+#header .addtomarked:hover::before {
+  background-image: url(images/add-to-marked-circle-hover.svg);
 }
 
 #header .themedownload::before {
   background-image: url(images/inspect.svg);
-}
-
-#header .addtomarked:hover::before {
-  background-image: url(images/add-to-marked-hover.svg);
 }
 
 #header .themedownload:hover::before {
@@ -630,7 +630,7 @@ body #wrapper {
 }
 
 .installexample {
-  background-image: url(images/add-to-marked-hover.svg);
+  background-image: url(images/add-to-marked-circle-hover.svg);
   background-repeat: no-repeat;
   padding-left: 24px;
   color: #0b7d9d;
@@ -700,10 +700,17 @@ body #wrapper {
 }
 
 .preview .actions {
+  opacity: 0;
   position: absolute;
   right: 0;
-  top: 0;
+  top: -40px;
   line-height: 2.3;
+}
+
+.preview:hover .actions {
+    opacity: 1;
+    top: 0;
+    transition: opacity .3s linear, top .3s linear;
 }
 
 .actions .button-preview,
@@ -717,27 +724,27 @@ body #wrapper {
   margin: 0;
   text-indent: -50000px;
   direction: ltr;
-  width: 30px;
+  width: 25px;
 }
 
 .actions .button-preview {
-  background-image: url('images/preview.svg');
+  background-image: url('images/preview-circle.svg');
 }
 
 .actions .button-preview:hover,
 .actions .button-preview:focus {
-  background-image: url('images/preview-hover.svg');
+  background-image: url('images/preview-circle-hover.svg');
   outline: none;
 }
 
 .actions .button-add {
-  background-image: url('images/add-to-marked.svg');
+  background-image: url('images/add-to-marked-circle.svg');
   margin: 0 5px;
 }
 
 .actions .button-add:hover,
 .actions .button-add:focus {
-  background-image: url('images/add-to-marked-hover.svg');
+  background-image: url('images/add-to-marked-circle-hover.svg');
   outline: none;
 }
 

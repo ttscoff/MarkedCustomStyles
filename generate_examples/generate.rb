@@ -87,3 +87,6 @@ File.open('index.html', 'w') do |f|
   f.puts template.sub(/%%stylemenu%%/, styles[:stylemenu]).sub(/%%previews%%/, styles[:previews])
 end
 
+source = File.expand_path('../generate_examples')
+target = File.expand_path('~/Sites/dev/marked2app/styles')
+FileUtils.copy_entry(source, target, false, false, true)
