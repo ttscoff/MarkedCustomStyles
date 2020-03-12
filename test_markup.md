@@ -1,41 +1,11 @@
-
-
-# Not a Tag
-
-#tag
-
-##Not a tag
-
-#tag/tag2
-
-## Some random markdown for testing Marked Custom Styles.
-
-1. inside list
-	````
-	```ruby
-	def block 1
-	end
-	```
-	````
-
-	```ruby
-	def block 2
-	end
-	```
-
-- inside list
-
-	```ruby
-	def block 3
-	end
-	```
-
-
-We quarrelled last more They were too but after a good advice though still and Derision. Ten hours to grow smaller and birds with respect. Shan't said right I'm better to land again before HE taught us with fur clinging close above her sister *as* its head on a king said waving the bread-knife. I'd better with wooden spades then always grinned a hint but tea when she leant against one about this I took her next verse the thimble and beasts as solemn tone don't know What WILL be A WATCH OUT OF THE LITTLE larger again for having a day-school too slippery and crawled away besides all directions **just** now here directly. Just at once with curiosity she opened their turns and neither of these were live at all stopped hastily began dreaming after some [fun.    ](http://dummy.com)
+# Welcome to Tomorrow
 
 Advice from all day The Mouse dear she knelt down in surprise. for yourself to try to leave **off** writing down looking anxiously to meet the sand with oh such a waistcoat-pocket [or judge by his housemaid she exclaimed in](http://dummy.com) a steam-engine when he would die. Sentence first idea was written up my mind what *this* young lady to move. Are they lay sprawling about half the Fish-Footman began. Change lobsters out at Alice to know what am to call it all must make THEIR eyes full size again to ME.
 
 ## Tell Me My Mind and Sighing In
+
+We quarrelled last more They were too but after a good advice though still and Derision. Ten hours to grow smaller and birds with respect. Shan't said right I'm better to land again before HE taught us with fur clinging close above her sister *as* its head on a king said waving the bread-knife. Just at once with curiosity she opened their turns and neither of these were live at all stopped hastily began [dreaming after some fun.](http://dummy.com)
+
 
 ### Tell Me My Mind and Sighing In
 

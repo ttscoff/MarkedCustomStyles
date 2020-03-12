@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*
-This document has been created with Marked 2 <https://markedwapp.com>
+This document has been created with Marked 2 <https://marked2app.com>
 Please leave this notice in place, along with any additional credits below.
 ---------------------------------------------------------------
 Title: Emma
@@ -673,17 +673,14 @@ blockquote cite:before {
   }
 }
 a:link {
-  /* p a:link ? */
   color: #a7036d;
   font-weight: 700;
   text-decoration: none;
 }
 a:visited {
-  /* p a:visited ? */
   color: #5c023c;
 }
 a:hover {
-  /* p a:hover ? */
   color: #e47191;
 }
 a:focus {
@@ -726,7 +723,6 @@ code {
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 2px;
   color: #588068;
-  /* #2DAB5F */
   text-shadow: none;
 }
 .inverted code {
@@ -750,7 +746,6 @@ li img {
 hr {
   clear: none;
   height: 2px;
-  /* height: 0.125rem; */
   border: none;
   margin: 1.5rem auto;
   width: 14rem;
@@ -759,7 +754,6 @@ hr {
 }
 
 sup, sub, a.footnote {
-  /* important rules for keeping line-height from being affected by sub */
   font-size: 1.4ex;
   height: 0;
   line-height: 1;
@@ -783,18 +777,15 @@ a.footnote {
   background-color: #fbfb48;
 }
 
-/* Impression */
 @media print {
   * {
     background: transparent !important;
     color: #000 !important;
-    /* Le noir imprime plus vite et les navigateurs sont de toute manière inconsistants dans le traitement de la couleur : h5bp.com/s */
     text-shadow: none !important;
   }
 
   @page {
     margin: 1cm;
-    /* Combiné avec le margin de #wrapper */
   }
   html {
     font-size: 15px;
@@ -803,7 +794,6 @@ a.footnote {
   #wrapper {
     max-width: none;
     margin: 1rem !important;
-    /* Marge de sécurité pour les browser ne supportant pas @page */
   }
 
   h1, h2, h3, h4, h5, h6, p {
@@ -858,7 +848,6 @@ a.footnote {
     page-break-inside: avoid;
   }
 
-  /* #generated-toc : id ajoutée par Marked pilotant l'affichage de la table des matières */
   #wrapper #generated-toc ul, #wrapper #generated-toc ol {
     list-style-type: decimal;
   }
@@ -866,11 +855,9 @@ a.footnote {
     margin: 1rem 0;
   }
   #wrapper #generated-toc ul {
-    /* Pour compenser l'attribution d'une puce custom plus haut */
     list-style-position: inside;
   }
   #wrapper #generated-toc ul > li:before {
-    /* Pour compenser l'attribution d'une puce custom plus haut */
     content: none;
   }
 }
