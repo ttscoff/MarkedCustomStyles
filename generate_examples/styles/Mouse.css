@@ -1,13 +1,13 @@
-@charset "UTF-8";
 /*
 This document has been created with Marked 2 <https://marked2app.com>
 Please leave this notice in place, along with any additional credits below.
 ---------------------------------------------------------------
-Title: Emma
+Title: Mouse
 Author: Brett Terpstra <https://brettterpstra.com>
-Description: A sweet little pit bull of a sans serif theme
+Description: Unassuming, light headers, serif body
+Fonts: Roboto Condensed, Vollkorn
  */
-@import url("https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400i,700,700i|Work+Sans:600&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed|Vollkorn:400,400i,700,700i&display=swap&subset=latin-ext");
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -193,7 +193,7 @@ textarea {
 }
 
 html {
-  font: 125%/1.45 'Quattrocento Sans', sans-serif;
+  font: 106.25%/1.67 'Vollkorn', serif;
   box-sizing: border-box;
   overflow-y: scroll;
 }
@@ -212,7 +212,7 @@ html {
 
 body {
   color: rgba(0, 0, 0, 0.8);
-  font-family: 'Quattrocento Sans', sans-serif;
+  font-family: 'Vollkorn', serif;
   font-weight: 400;
   word-wrap: break-word;
   font-kerning: normal;
@@ -231,7 +231,7 @@ img {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1.67rem;
 }
 
 h1 {
@@ -242,12 +242,12 @@ h1 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
-  color: rgba(0, 0, 0, 0.9);
-  font-family: 'Work Sans', sans-serif;
-  font-weight: 600;
+  margin-bottom: 1.67rem;
+  color: inherit;
+  font-family: 'Roboto Condensed', 'Helvetica Neue', 'Segoe UI', 'Helvetica', 'Arial', sans-serif;
+  font-weight: 400;
   text-rendering: optimizeLegibility;
-  font-size: 2rem;
+  font-size: 2.3rem;
   line-height: 1.1;
 }
 
@@ -259,12 +259,12 @@ h2 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
-  color: rgba(0, 0, 0, 0.9);
-  font-family: 'Work Sans', sans-serif;
-  font-weight: 600;
+  margin-bottom: 1.67rem;
+  color: inherit;
+  font-family: 'Roboto Condensed', 'Helvetica Neue', 'Segoe UI', 'Helvetica', 'Arial', sans-serif;
+  font-weight: 400;
   text-rendering: optimizeLegibility;
-  font-size: 1.51572rem;
+  font-size: 1.6483rem;
   line-height: 1.1;
 }
 
@@ -276,12 +276,12 @@ h3 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
-  color: rgba(0, 0, 0, 0.9);
-  font-family: 'Work Sans', sans-serif;
-  font-weight: 600;
+  margin-bottom: 1.67rem;
+  color: inherit;
+  font-family: 'Roboto Condensed', 'Helvetica Neue', 'Segoe UI', 'Helvetica', 'Arial', sans-serif;
+  font-weight: 400;
   text-rendering: optimizeLegibility;
-  font-size: 1.31951rem;
+  font-size: 1.39538rem;
   line-height: 1.1;
 }
 
@@ -293,10 +293,10 @@ h4 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
-  color: rgba(0, 0, 0, 0.9);
-  font-family: 'Work Sans', sans-serif;
-  font-weight: 600;
+  margin-bottom: 1.67rem;
+  color: inherit;
+  font-family: 'Roboto Condensed', 'Helvetica Neue', 'Segoe UI', 'Helvetica', 'Arial', sans-serif;
+  font-weight: 400;
   text-rendering: optimizeLegibility;
   font-size: 1rem;
   line-height: 1.1;
@@ -310,12 +310,12 @@ h5 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
-  color: rgba(0, 0, 0, 0.9);
-  font-family: 'Work Sans', sans-serif;
-  font-weight: 600;
+  margin-bottom: 1.67rem;
+  color: inherit;
+  font-family: 'Roboto Condensed', 'Helvetica Neue', 'Segoe UI', 'Helvetica', 'Arial', sans-serif;
+  font-weight: 400;
   text-rendering: optimizeLegibility;
-  font-size: 0.87055rem;
+  font-size: 0.84655rem;
   line-height: 1.1;
 }
 
@@ -327,12 +327,12 @@ h6 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
-  color: rgba(0, 0, 0, 0.9);
-  font-family: 'Work Sans', sans-serif;
-  font-weight: 600;
+  margin-bottom: 1.67rem;
+  color: inherit;
+  font-family: 'Roboto Condensed', 'Helvetica Neue', 'Segoe UI', 'Helvetica', 'Arial', sans-serif;
+  font-weight: 400;
   text-rendering: optimizeLegibility;
-  font-size: 0.81225rem;
+  font-size: 0.7789rem;
   line-height: 1.1;
 }
 
@@ -344,31 +344,31 @@ hgroup {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1.67rem;
 }
 
 ul {
-  margin-left: 1.45rem;
+  margin-left: 1.67rem;
   margin-right: 0;
   margin-top: 0;
   padding-bottom: 0;
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1.67rem;
   list-style-position: outside;
   list-style-image: none;
 }
 
 ol {
-  margin-left: 1.45rem;
+  margin-left: 1.67rem;
   margin-right: 0;
   margin-top: 0;
   padding-bottom: 0;
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1.67rem;
   list-style-position: outside;
   list-style-image: none;
 }
@@ -381,7 +381,7 @@ dl {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1.67rem;
 }
 
 dd {
@@ -392,7 +392,7 @@ dd {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1.67rem;
 }
 
 p {
@@ -403,7 +403,7 @@ p {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1.67rem;
 }
 
 figure {
@@ -414,7 +414,7 @@ figure {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1.67rem;
 }
 
 pre {
@@ -425,9 +425,9 @@ pre {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1.67rem;
   font-size: 0.85rem;
-  line-height: 1.45rem;
+  line-height: 1.67rem;
 }
 
 table {
@@ -438,9 +438,9 @@ table {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1.67rem;
   font-size: 1rem;
-  line-height: 1.45rem;
+  line-height: 1.67rem;
   border-collapse: collapse;
   width: 100%;
 }
@@ -453,23 +453,18 @@ fieldset {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1.67rem;
 }
 
 blockquote {
-  margin-left: 0;
-  margin-right: 0;
+  margin-left: 1.67rem;
+  margin-right: 1.67rem;
   margin-top: 0;
   padding-bottom: 0;
-  padding-left: 0.90625rem;
+  padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
-  font-size: 1.1487rem;
-  line-height: 1.45rem;
-  border-left: 0.54375rem solid #cd76ae;
-  color: rgba(0, 0, 0, 0.65);
-  font-style: italic;
+  margin-bottom: 1.67rem;
 }
 
 form {
@@ -480,7 +475,7 @@ form {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1.67rem;
 }
 
 noscript {
@@ -491,7 +486,7 @@ noscript {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1.67rem;
 }
 
 iframe {
@@ -502,7 +497,7 @@ iframe {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1.67rem;
 }
 
 hr {
@@ -513,7 +508,7 @@ hr {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: calc(1.45rem - 1px);
+  margin-bottom: calc(1.67rem - 1px);
   background: rgba(0, 0, 0, 0.2);
   border: none;
   height: 1px;
@@ -527,7 +522,7 @@ address {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1.67rem;
 }
 
 b {
@@ -547,7 +542,7 @@ th {
 }
 
 li {
-  margin-bottom: calc(1.45rem / 2);
+  margin-bottom: calc(1.67rem / 2);
 }
 
 ol li {
@@ -559,15 +554,15 @@ ul li {
 }
 
 li > ol {
-  margin-left: 1.45rem;
-  margin-bottom: calc(1.45rem / 2);
-  margin-top: calc(1.45rem / 2);
+  margin-left: 1.67rem;
+  margin-bottom: calc(1.67rem / 2);
+  margin-top: calc(1.67rem / 2);
 }
 
 li > ul {
-  margin-left: 1.45rem;
-  margin-bottom: calc(1.45rem / 2);
-  margin-top: calc(1.45rem / 2);
+  margin-left: 1.67rem;
+  margin-bottom: calc(1.67rem / 2);
+  margin-top: calc(1.67rem / 2);
 }
 
 blockquote *:last-child {
@@ -583,27 +578,38 @@ p *:last-child {
 }
 
 li > p {
-  margin-bottom: calc(1.45rem / 2);
+  margin-bottom: calc(1.67rem / 2);
 }
 
 code {
   font-size: 0.85rem;
-  line-height: 1.45rem;
+  line-height: 1.67rem;
 }
 
 kbd {
   font-size: 0.85rem;
-  line-height: 1.45rem;
+  line-height: 1.67rem;
 }
 
 samp {
   font-size: 0.85rem;
-  line-height: 1.45rem;
+  line-height: 1.67rem;
+}
+
+abbr {
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.5);
+  cursor: help;
 }
 
 acronym {
   border-bottom: 1px dotted rgba(0, 0, 0, 0.5);
   cursor: help;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.5);
+  cursor: help;
+  text-decoration: none;
 }
 
 thead {
@@ -617,10 +623,10 @@ td, th {
   -moz-font-feature-settings: "tnum";
   -ms-font-feature-settings: "tnum";
   -webkit-font-feature-settings: "tnum";
-  padding-left: 0.96667rem;
-  padding-right: 0.96667rem;
-  padding-top: 0.725rem;
-  padding-bottom: calc(0.725rem - 1px);
+  padding-left: 1.11333rem;
+  padding-right: 1.11333rem;
+  padding-top: 0.835rem;
+  padding-bottom: calc(0.835rem - 1px);
 }
 
 th:first-child, td:first-child {
@@ -631,69 +637,28 @@ th:last-child, td:last-child {
   padding-right: 0;
 }
 
-a:hover, a:active {
-  text-shadow: none;
-  background-image: none;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  margin-top: 2.175rem;
-  margin-bottom: 0.725rem;
-}
-
-blockquote > :last-child {
-  margin-bottom: 0;
-}
-
-blockquote cite {
-  font-size: 1rem;
-  line-height: 1.45rem;
-  color: rgba(0, 0, 0, 0.8);
-  font-style: normal;
-  font-weight: 400;
-}
-
-blockquote cite:before {
-  content: "— ";
-}
-
-@media only screen and (max-width: 480px) {
-  html {
-    font-size: 106.25%;
-    line-height: 24.65px;
-  }
-
-  blockquote {
-    border-left: 0.27187rem solid #1ca086;
-    color: rgba(0, 0, 0, 0.59);
-    padding-left: 0.81563rem;
-    font-style: italic;
-    margin-left: -1.0875rem;
-    margin-right: 0;
-  }
-}
 a:link {
-  color: #a7036d;
+  color: #5cc9f5;
   font-weight: 700;
   text-decoration: none;
 }
 a:visited {
-  color: #5c023c;
+  color: #14b1f1;
 }
 a:hover {
-  color: #e47191;
+  color: #a4e1f9;
 }
 a:focus {
   outline: 0.125rem solid;
 }
 .inverted a {
-  color: #f2049e;
+  color: #a4e1f9;
 }
 .inverted a:visited {
-  color: #d9048e;
+  color: #8cd9f8;
 }
 .inverted a:hover {
-  color: #f0b1c3;
+  color: #ecf9fe;
 }
 
 th {
@@ -722,7 +687,7 @@ code {
   border: 0.0625rem solid rgba(255, 255, 255, 0.7);
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 2px;
-  color: #588068;
+  color: #333;
   text-shadow: none;
 }
 .inverted code {
