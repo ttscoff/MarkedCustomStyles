@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 /*
 This document has been created with Marked.app <http://marked2app.com>
 Content is property of the document author
@@ -10,6 +11,7 @@ Description: A clean, friendly theme. Originally designed for use in nvUltra.
 Non-standard fonts used: Avenir
 ---
 */
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -29,11 +31,12 @@ html, body {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-}
-*:before, *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+
+  &:before, &:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
@@ -56,9 +59,10 @@ audio:not([controls]) {
 
 a {
   background-color: transparent;
-}
-a:active, a:hover {
-  outline: 0;
+
+  &:active, &:hover {
+    outline: 0;
+  }
 }
 
 abbr[title] {
@@ -144,21 +148,24 @@ button::-moz-focus-inner {
 }
 
 input {
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+
   line-height: normal;
-}
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-input[type="checkbox"], input[type="radio"] {
-  box-sizing: border-box;
-  padding: 0;
-}
-input[type="search"] {
-  -webkit-appearance: textfield;
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box;
+
+  &[type="checkbox"], &[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+  }
+
+  &[type="search"] {
+    -webkit-appearance: textfield;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+  }
 }
 
 fieldset {
@@ -181,6 +188,7 @@ optgroup {
 }
 
 /** Tables **/
+
 table {
   border: 1px solid rgba(0, 0, 0, 0.25);
   border-collapse: collapse;
@@ -224,27 +232,34 @@ tr {
   display: table-row;
 }
 
-table th, table td {
-  font-size: 1em;
-  line-height: 1.4;
-  padding: .5em 1em 0;
-}
-table thead {
-  background: rgba(0, 0, 0, 0.15);
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-}
-table tbody {
-  background: rgba(0, 0, 0, 0.05);
-}
-table tfoot {
-  background: rgba(0, 0, 0, 0.15);
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
+table {
+  th, td {
+    font-size: 1em;
+    line-height: 1.4;
+    padding: .5em 1em 0;
+  }
+
+  thead {
+    background: rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  tbody {
+    background: rgba(0, 0, 0, 0.05);
+  }
+
+  tfoot {
+    background: rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+  }
 }
 
 /** Typography **/
+
 /* Mobile first */
+
 html {
   font-family: "Avenir Next", Avenir, "Helvetica Neue", Arial, Helvetica, sans-serif;
   color: rgba(26, 25, 25, 0.75);
@@ -351,6 +366,7 @@ dt {
     margin-bottom: 0em;
   }
 }
+
 @media (min-height: 500px) and (min-width: 640px) {
   html {
     font-size: 16px;
@@ -396,6 +412,7 @@ dt {
     margin-bottom: 0em;
   }
 }
+
 p, ul, ol, pre, table, blockquote {
   margin-top: 0em;
   margin-bottom: 1.625em;
@@ -409,11 +426,13 @@ ul ul, ol ol, ul ol, ol ul {
 /*li p {
   display: inline;
 }*/
+
 li p:first-child {
   margin: 0;
 }
 
 /* Let's make sure all's aligned */
+
 hr, .hr {
   border: 1px solid #ddd;
 }
@@ -468,10 +487,11 @@ a {
   text-decoration: none;
   color: #0096f8;
   font-weight: 500;
-}
-a:hover, a:active, a:focus {
-  outline: 0;
-  color: #0074bf;
+
+  &:hover, &:active, &:focus {
+    outline: 0;
+    color: #0074bf;
+  }
 }
 
 del {
@@ -494,11 +514,14 @@ blockquote {
   position: relative;
 }
 
-q::before {
-  content: "“";
-}
-q::after {
-  content: "”";
+q {
+  &::before {
+    content: "“";
+  }
+
+  &::after {
+    content: "”";
+  }
 }
 
 code {
@@ -532,45 +555,54 @@ input:focus {
 }
 
 textarea {
+  &:focus {
+    border-color: #a0abb2;
+    outline: 0;
+  }
+
   resize: vertical;
 }
-textarea:focus {
-  border-color: #a0abb2;
-  outline: 0;
-}
 
-input[type="submit"] {
-  padding: .5rem 1.25rem .5625rem;
-  background-color: #0096f8;
-  color: rgba(255, 255, 255, 0.9);
-  font-weight: 500;
-  border: 0;
-}
-input[type="submit"]:hover, input[type="submit"]:focus {
-  background-color: #0074bf;
-  color: #fff;
-}
-input + input {
-  margin-left: 1.25rem;
+input {
+  &[type="submit"] {
+    padding: .5rem 1.25rem .5625rem;
+    background-color: #0096f8;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    border: 0;
+
+    &:hover, &:focus {
+      background-color: #0074bf;
+      color: #fff;
+    }
+  }
+
+  + input {
+    margin-left: 1.25rem;
+  }
 }
 
 label {
+  + input {
+    margin-left: 1.25rem;
+  }
+
   font-size: 1.1875rem;
-}
-label + input {
-  margin-left: 1.25rem;
 }
 
 .rtl {
   direction: rtl;
 }
 
-*::selection, *::-moz-selection {
-  color: #fff;
-  background: #dd8Ff1;
-}
-*::selection:window-inactive {
-  background: #d5B1de;
+* {
+  &::selection, &::-moz-selection {
+    color: #fff;
+    background: #dd8Ff1;
+  }
+
+  &::selection:window-inactive {
+    background: #d5B1de;
+  }
 }
 
 body > * {
@@ -582,6 +614,7 @@ body > * {
     padding: 20px;
   }
 }
+
 figure {
   text-align: center;
   max-width: 100%;
@@ -602,61 +635,77 @@ img {
 .inverted {
   background: #3b4646;
   color: #dadad8;
-}
-.inverted table thead {
-  background: rgba(0, 0, 0, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-}
-.inverted table tbody {
-  background: rgba(0, 0, 0, 0.05);
-}
-.inverted table tfoot {
-  background: rgba(0, 0, 0, 0.15);
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
-}
-.inverted html {
-  background: #3b4646;
-  color: #dadad8;
-}
-.inverted hr, .inverted .hr {
-  border: 1px solid #a7a7a6;
-}
-.inverted h1, .inverted h2, .inverted h3, .inverted h4, .inverted h5, .inverted h6, .inverted h1 strong, .inverted h2 strong, .inverted h3 strong, .inverted h4 strong, .inverted h5 strong, .inverted h6 strong {
-  color: #dadad8;
-}
-.inverted strong {
-  color: #dad7c7;
-}
-.inverted small {
-  color: #dad7c7;
-}
-.inverted p {
-  margin: 1.8125rem 0;
-}
-.inverted a {
-  color: #93c1d6;
-}
-.inverted a:hover, .inverted a:active, .inverted a:focus {
-  color: #93c1d6;
-}
-.inverted del {
-  color: #bbbab9;
-}
-.inverted code {
-  background-color: #586469;
-  border: 1px solid #888887;
-  color: #dadad8;
-}
-.inverted input, .inverted textarea {
-  border: 1px solid #ccdae3;
-  background-color: #fff;
-}
-.inverted input:focus, .inverted textarea:focus {
-  border-color: #a0abb2;
-}
-.inverted figcaption {
-  background: #586469;
-  color: #dadad8;
+
+  table thead {
+    background: rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  }
+
+  table tbody {
+    background: rgba(0, 0, 0, 0.05);
+  }
+
+  table tfoot {
+    background: rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  html {
+    background: #3b4646;
+    color: #dadad8;
+  }
+
+  hr, .hr {
+    border: 1px solid #a7a7a6;
+  }
+
+  h1, h2, h3, h4, h5, h6, h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
+    color: #dadad8;
+  }
+
+  strong {
+    color: #dad7c7;
+  }
+
+  small {
+    color: #dad7c7;
+  }
+
+  p {
+    margin: 1.8125rem 0;
+  }
+
+  a {
+    color: #93c1d6;
+  }
+
+  a:hover, a:active, a:focus {
+    color: #93c1d6;
+  }
+
+  del {
+    color: #bbbab9;
+  }
+
+  code {
+    background-color: #586469;
+    border: 1px solid #888887;
+    color: #dadad8;
+  }
+
+  input, textarea {
+    border: 1px solid #ccdae3;
+    background-color: #fff;
+  }
+
+  input:focus, textarea:focus {
+    border-color: #a0abb2;
+  }
+
+  figcaption {
+    background: #586469;
+    color: #dadad8;
+  }
 }
