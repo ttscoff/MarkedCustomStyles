@@ -801,6 +801,7 @@ th:last-child, td:last-child {
   pre,
   code {
     background: darken($color-inverted-text, 2);
+    color: $color-inverted-body;
     border: 0;
   }
 

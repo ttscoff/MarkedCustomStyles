@@ -762,6 +762,7 @@ th:last-child, td:last-child {
 .inverted pre,
 .inverted code {
   background: #d8d8d8;
+  color: #333;
   border: 0;
 }
 .inverted pre {
