@@ -433,6 +433,7 @@ template {
   border: none;
   border-radius: 8px;
   text-shadow: none;
+  box-shadow: none;
   transition: background .2s linear, color .2s linear;
 }
 
