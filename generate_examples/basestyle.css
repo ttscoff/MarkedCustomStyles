@@ -389,12 +389,17 @@ template {
   text-indent: 0;
 }
 
+.themelinks input {
+  -webkit-appearance: auto;
+}
+
 .themelinks a {
   background: #666;
   border-radius: 4px;
   color: #fff;
   display: inline-block;
   font-weight: 700;
+  line-height: 1;
   margin-right: 4px;
   transition: background .2s linear;
 }

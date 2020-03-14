@@ -261,14 +261,14 @@ table {
 /* Mobile first */
 
 html {
-  font-family: "Avenir Next", Avenir, "Helvetica Neue", Arial, Helvetica, sans-serif;
   color: rgba(26, 25, 25, 0.75);
   text-rendering: optimizeLegibility;
   font-size: 12px;
   line-height: 20px;
 }
 
-body {
+#wrapper {
+  font-family: "Avenir Next", Avenir, "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-size: 1.2em;
   line-height: 1.66666667em;
   margin: auto;
