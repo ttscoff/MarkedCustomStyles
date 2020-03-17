@@ -13,7 +13,7 @@ Non-standard fonts used: Karla
 @import url('https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i&display=swap&subset=latin-ext');
 
 $color-body: #ffffff;
-$color-inverted-body: #222222;
+$color-inverted-body: #422020;
 
 $color-text: hsla(0, 0%, 0%, 0.8);
 $color-inverted-text: #eaeaea;
@@ -22,7 +22,7 @@ $color-link: #9c202e;
 $color-link-visited: darken($color-link, 15%);
 $color-link-hover: lighten($color-link, 15%);
 
-$color-inverted-link: desaturate(lighten($color-link, 60%), 40%);
+$color-inverted-link: desaturate(lighten($color-link, 30%), 20%);
 $color-inverted-link-visited: darken($color-inverted-link, 5%);
 $color-inverted-link-hover: lighten($color-link-hover, 15%);
 
