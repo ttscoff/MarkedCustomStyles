@@ -389,8 +389,8 @@ template {
   text-indent: 0;
 }
 
-.themelinks input {
-  -webkit-appearance: auto;
+#header input {
+  -webkit-appearance: checkbox !important;
 }
 
 .themelinks a {
@@ -399,7 +399,7 @@ template {
   color: #fff;
   display: inline-block;
   font-weight: 700;
-  line-height: 1;
+  line-height: 1 !important;
   margin-right: 4px;
   transition: background .2s linear;
 }
@@ -433,6 +433,7 @@ template {
   font-weight: 600;
   display: block;
   float: left;
+  line-height: 1;
   padding: 4px 8px 2px;
   background: none;
   border: none;
