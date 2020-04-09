@@ -375,6 +375,10 @@ template {
   letter-spacing: 1px;
 }
 
+header div {
+  line-height: 1;
+}
+
 .headerleft {
   float: left;
 }
