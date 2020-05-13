@@ -1,0 +1,316 @@
+/*
+This document has been created with Marked.app <https://marked2app.com>, Copyright 2019 Brett Terpstra
+Content is property of the document author
+Please leave this notice in place, along with any additional credits below.
+---------------------------------------------------------------
+Title:  Academic CV
+Author:  Xule Lin
+Description: Academic style for CV
+paper size: US letter
+Notes: 12pt/16px, Times New Roman, Double-spaced, text-align left, headers adjusted for 1. section header, name, personal information, list style first level - none, second level - circle
+*/
+
+body {
+	-webkit-font-smoothing: antialiased;
+	font: normal 1em/2em "Times New Roman", courier, monospace;
+	width: auto; }
+
+html > body {
+	font-size: 12pt;
+	text-align: left;
+	line-height: 2em;
+	padding-left: 1em}
+
+#wrapper img {
+	max-width: 100%;
+	height: auto; }
+#wrapper p {
+	margin: 0in;
+	text-indent: 0em;
+	page-break-inside: auto;
+	padding-left: 1em;
+	line-height: 1em;
+	margin-bottom: 2em}
+#wrapper ul, #wrapper ol {
+	list-style-position: inside;
+	font-weight: bold;
+	padding: 0;
+	margin-top: 1em;
+	margin-bottom: 1em}
+	#wrapper ul ul, #wrapper ul ol, #wrapper ol ul, #wrapper ol ol {
+		font-weight: normal;
+		padding-left: 0;
+		margin-left: 1em;
+	  margin-top: 0em; }
+#wrapper ul {
+	list-style-type: none; }
+	#wrapper ul > li:before {
+		content: ' '; }
+	#wrapper ul > li:after {
+		content: ' '; }
+	#wrapper ul li > p:first-child {
+		margin: 0; }
+	#wrapper ul li p {
+		display: inline; }
+	#wrapper ul ul{
+		list-style-type: circle;}
+	#wrapper ul ol {
+		margin-bottom: 0; }
+#wrapper ol {
+	list-style-type: circle;
+	margin-left: 0.5in; }
+	#wrapper ol ul, #wrapper ol ol {
+		margin-bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+	font-size: 12pt;
+}
+
+/*h1 is for section header*/
+h1 {
+	line-height: 1;
+	text-align: left;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-top: 1.5em;
+	margin-bottom: 1em;
+	border-bottom-style: solid;
+	border-bottom-width: thin;
+}
+
+/*h2 is for name on top*/
+h2 {
+	font-size: 18pt;
+	text-align: center;
+	font-weight: bold;
+	margin-top: 1em;
+	margin-bottom: 0.5em;
+	border-bottom-style: double;
+	border-bottom-width: medium;
+}
+
+/*h3 is for personal information under name section*/
+h3 {
+	font-size: 12pt;
+	line-height: 0.5em;
+	width: 1;
+	text-align: center;
+	font-weight: normal;
+	margin-top: 0em;
+	margin-bottom: 0.5em;
+	padding-left: 0.5em
+}
+
+hr {
+	border: none;
+	margin-top: 1; }
+
+body, p, td, div {
+	line-height: 1em;
+	color: #111111;
+	word-wrap: break-word; }
+
+h1, h2, h3, h4, h5, h6 {
+	color: #111111;}
+
+a {
+	color: #111111;
+	text-decoration: underline;
+	-webkit-transition: color 0.2s ease-in-out;
+	-moz-transition: color 0.2s ease-in-out;
+	-o-transition: color 0.2s ease-in-out;
+	-ms-transition: color 0.2s ease-in-out;
+	transition: color 0.2s ease-in-out; }
+	a:hover {
+		color: #3593d9; }
+
+strong {
+	font-weight: bold;
+}
+
+em {
+	font-style: italic;
+	}
+
+strong em, em strong {
+	font-weight: 700;
+	font-style: italic; }
+
+.footnote {
+	color: #3c779c;
+	font-size: 1em;
+	vertical-align: super; }
+
+dd {
+	margin-bottom: 0; }
+
+caption, col, colgroup, table, tbody, td, tfoot, th, thead, tr {
+	border-spacing: 0; }
+
+table {
+	border: 1px solid rgba(0, 0, 0, 0.25);
+	border-collapse: collapse;
+	display: table;
+	empty-cells: hide;
+	margin: -1px 0 1em;
+	padding: 0;
+	table-layout: fixed; }
+
+caption {
+	display: table-caption;
+}
+
+col {
+	display: table-column; }
+
+colgroup {
+	display: table-column-group; }
+
+tbody {
+	display: table-row-group; }
+
+tfoot {
+	display: table-footer-group; }
+
+thead {
+	display: table-header-group; }
+
+td, th {
+	display: table-cell; }
+
+tr {
+	display: table-row; }
+
+table th, table td {
+	padding: 0 1em; }
+
+table thead {
+	background: rgba(0, 0, 0, 0.15);
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
+
+table tbody {
+	background: rgba(0, 0, 0, 0.05); }
+
+table tfoot {
+	background: rgba(0, 0, 0, 0.15);
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	border-top: 1px solid rgba(0, 0, 0, 0.2); }
+
+figure {
+	display: inline-block;
+	position: relative;
+	margin: 1em 0 1em; }
+
+figcaption {
+	font-style: italic;
+	text-align: center;
+	background: white;
+	color: #666666;
+	position: absolute;
+	left: 0;
+	bottom: -24px;
+	width: 98%;
+	padding: 1%;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out; }
+
+figure:hover > figcaption {
+	/* background: rgba(0,0,0,1) */ }
+
+.poetry pre {
+	display: block;
+	font-style: italic;
+	margin-left: 1em; }
+	.poetry pre code {
+		word-break: break-all;
+		word-break: break-word;
+		/* Non standard for webkit */
+		-webkit-hyphens: auto;
+		-moz-hyphens: auto;
+		hyphens: auto;
+		white-space: pre-wrap; }
+
+blockquote {
+	line-height: 1; /Chicago Style*/
+	text-indent: 0;
+	padding-left: 0.5in;
+	margin-bottom: 2;
+}
+
+#wrapper blockquote p {
+	text-indent: 0;
+}
+
+sup, sub, a.footnote {
+	font-size: 12pt;
+	height: 0;
+	line-height: 1;
+	position: relative;
+	vertical-align: super; }
+
+sub {
+	vertical-align: sub;
+	top: -1px; }
+
+p, h5 {
+	margin: 0; }
+
+dt, th {
+	font-weight: bold;
+		}
+
+table tr:nth-child(odd), table th:nth-child(odd), table td:nth-child(odd) {
+	background: rgba(255, 255, 255, 0.06); }
+
+table tr:nth-child(even), table td:nth-child(even) {
+	background: rgba(200, 200, 200, 0.25); }
+
+/*Hanging indent for references generated by custom processor*/
+.references.hanging-indent p {
+	text-indent: -0.5in !important; /*to start the first line flush to the left, express in negative here whatever distance you placed in the margin-left setting above. */
+	margin-left: 0.5in !important; /*this controls how much to indent the lines in your reference.  */
+	line-height: 1em;
+	margin-top: 2em !important;
+	margin-bottom: 2em !important;
+}
+
+
+@page {
+		size: letter;
+		margin: auto;
+}
+
+@media print {
+	body {
+		overflow: auto; }
+
+	img, pre, blockquote, table, figure, p {
+		page-break-inside: auto; }
+
+	#wrapper {
+		background: transparent;
+		color: #000;
+		position: relative; } }
+@media screen {
+	.inverted {
+		background: #252a2a; }
+		.inverted #wrapper {
+			background: #252a2a;
+			color: #eeeeee; }
+		.inverted hr {
+			border-color: #333f40 !important; }
+		.inverted p, .inverted td, .inverted li, .inverted h1, .inverted h2, .inverted h3, .inverted h4, .inverted h5, .inverted h6, .inverted th, .inverted .math, .inverted caption, .inverted dt, .inverted dd {
+			color: #eeeeee; }
+		.inverted table {
+			background: none; }
+			.inverted table tr:nth-child(odd), .inverted table td:nth-child(odd) {
+				background: none; }
+		.inverted a {
+			color: #acd1d5; }
+
+	::selection {
+		background: rgba(157, 193, 200, 0.5); } }
