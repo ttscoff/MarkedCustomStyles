@@ -250,6 +250,10 @@ body,
   background: #383838;
 }
 
+.inverted #wrapper blockquote {
+  background: #555;
+}
+
 #wrapper code {
   border: none;
   border-radius: 0;
