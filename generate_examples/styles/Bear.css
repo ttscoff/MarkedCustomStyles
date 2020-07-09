@@ -35,7 +35,12 @@ li li {
 
 li p {
 	font-size: 100%;
-	margin: .5em 0
+	margin: .5em 0;
+	line-height: 1.4;
+}
+
+.task-list-item-checkbox {
+	top: 0!important;
 }
 
 h1 {
@@ -70,7 +75,7 @@ p, td, div {
 }
 
 a {
-	color: rgba(222, 84, 86, 1.00);
+	color: rgb(222, 84, 86);
 	text-decoration: none;
 	-webkit-transition: color .2s ease-in-out;
 	-moz-transition: color .2s ease-in-out;
@@ -115,10 +120,14 @@ ul, ol, pre, table, blockquote {
 	margin-bottom: 2em
 }
 
+mark {
+	background: rgb(211, 255, 164);
+}
+
 blockquote {
 	padding: 0 0 0 1.5em;
 	margin: 2em 0 0 -1.5em;
-	border-left: 1px solid rgba(222, 84, 86, 1.00);
+	border-left: 1px solid rgb(222, 84, 86);
 }
 
 hr {
@@ -170,13 +179,42 @@ ul, ol {
 }
 
 
-ul ul, ul ol {
+ul ul, ul ol, ol ul, ol ol {
 	margin-bottom: .4em;
 	padding-left:  2em;
 }
 
 ul li {
-	list-style-type: disc;
+	list-style-type: none;
+	position: relative;
+}
+
+ul li:not(.task-list-item)::before {
+	color: rgb(222, 84, 86);
+	content: '●';
+	display: inline;
+	font-size: 11px;
+	left: -20px;
+	position: absolute;
+	top: 2px;
+}
+
+ol {
+  counter-reset: list;
+}
+
+ol li {
+  counter-increment: list;
+  list-style-type: none;
+  position: relative;
+}
+ol li:before {
+  color: rgb(222, 84, 86);
+  content: counter(list) ".";
+  left:-32px;
+  position: absolute;
+  text-align: right;
+  width: 26px;
 }
 
 caption, col, colgroup, table, tbody, td, tfoot, th, thead, tr {
@@ -282,7 +320,7 @@ figcaption {
 }
 
 blockquote p {
-	
+
 }
 
 sup, sub, a.footnote {
