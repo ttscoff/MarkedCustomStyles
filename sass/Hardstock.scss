@@ -602,9 +602,15 @@ li > p {
   margin-bottom: calc(1.65rem / 2);
 }
 
-code {
-  font-size: 0.85rem;
-  line-height: 1.65rem;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  code {
+    font-size: 1em;
+  }
 }
 
 kbd {
@@ -713,7 +719,7 @@ tbody tr:nth-child(even) {
 
 code {
   font-family: "Menlo", "Courier New", "Courier", monospace;
-  font-size: 0.85rem;
+  font-size: 1em;
   border: 0.0625rem solid rgba(255, 255, 255, 0.7);
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 2px;
