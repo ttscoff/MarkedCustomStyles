@@ -515,9 +515,7 @@ code, tt {
   border-radius: 3px;
   font-size: 85%;
   margin: 0;
-  padding-bottom: .2em;
-  padding-top: .2em;
-  padding: .4 .2;
+  padding: .2em .4em;
 }
 
 code::before, code::after {
