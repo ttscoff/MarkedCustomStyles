@@ -2,6 +2,7 @@
 require 'json'
 require 'fileutils'
 require 'uri'
+require 'cgi'
 
 def get_meta(file)
   content = IO.read(file)
@@ -50,11 +51,11 @@ def generate_options
       preview += %Q{<h3><a href="preview##{style}" title="#{meta['title']}">#{meta['title']}</a></h3>}
 
       preview += %Q{<span class="actions">}
-      preview += %Q{<button data-url="preview##{URI.encode(style)}" class="button-preview" title="Preview #{style}">Preview</button>}
+      preview += %Q{<button data-url="preview##{CGI.escape(style)}" class="button-preview" title="Preview #{style}">Preview</button>}
       preview += %Q{<button data-title="#{meta['title']}" data-style="styles/#{style}.css" class="button-add" title="Add to Marked">Install</button>}
       preview += %Q{</span>}
 
-      preview += %Q{<a href="preview##{URI.encode(style)}" title="#{meta['title']}">}
+      preview += %Q{<a href="preview##{CGI.escape(style)}" title="#{meta['title']}">}
       preview += %Q{<img src="previews/#{style.gsub(/ /,'')}.png">}
       preview += %Q{</a>}
       preview += %Q{<figcaption>}
