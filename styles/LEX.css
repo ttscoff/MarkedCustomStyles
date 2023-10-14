@@ -1,0 +1,935 @@
+/*
+This document has been created with Marked.app <http://marked2app.com>
+Content is property of the document author
+Please leave this notice in place, along with any additional credits below.
+---------------------------------------------------------------
+Title: discoverlexproject.org
+Author: StyleStealer
+Description: Collected from https://discoverlexproject.org/2021/02/25/our-work-is-about-healing/
+---
+*/
+@font-face { font-family: "Roboto"; src: url("https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfBBc4AMP6lQ.woff2") format("woff2"); font-style: normal; font-weight: 700; unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Roboto"; src: url("https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfChc4AMP6lbBP.woff2") format("woff2"); font-style: normal; font-weight: 700; unicode-range: U+100-24F, U+259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "Roboto"; src: url("https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfCxc4AMP6lbBP.woff2") format("woff2"); font-style: normal; font-weight: 700; unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: "Roboto"; src: url("https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfBxc4AMP6lbBP.woff2") format("woff2"); font-style: normal; font-weight: 700; unicode-range: U+370-3FF; }
+@font-face { font-family: "Roboto"; src: url("https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfCBc4AMP6lbBP.woff2") format("woff2"); font-style: normal; font-weight: 700; unicode-range: U+1F00-1FFF; }
+@font-face { font-family: "Roboto"; src: url("https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfABc4AMP6lbBP.woff2") format("woff2"); font-style: normal; font-weight: 700; unicode-range: U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+@font-face { font-family: "Roboto"; src: url("https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfCRc4AMP6lbBP.woff2") format("woff2"); font-style: normal; font-weight: 700; unicode-range: U+460-52F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+@font-face { font-family: "Roboto"; src: url("https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2") format("woff2"); font-style: normal; font-weight: 400; unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Roboto"; src: url("https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu7GxKKTU1Kvnz.woff2") format("woff2"); font-style: normal; font-weight: 400; unicode-range: U+100-24F, U+259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "Roboto"; src: url("https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu7WxKKTU1Kvnz.woff2") format("woff2"); font-style: normal; font-weight: 400; unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: "Roboto"; src: url("https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4WxKKTU1Kvnz.woff2") format("woff2"); font-style: normal; font-weight: 400; unicode-range: U+370-3FF; }
+@font-face { font-family: "Roboto"; src: url("https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu7mxKKTU1Kvnz.woff2") format("woff2"); font-style: normal; font-weight: 400; unicode-range: U+1F00-1FFF; }
+@font-face { font-family: "Roboto"; src: url("https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu5mxKKTU1Kvnz.woff2") format("woff2"); font-style: normal; font-weight: 400; unicode-range: U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+@font-face { font-family: "Roboto"; src: url("https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu72xKKTU1Kvnz.woff2") format("woff2"); font-style: normal; font-weight: 400; unicode-range: U+460-52F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+@font-face { font-family: "Archivo Black"; src: url("https://fonts.gstatic.com/s/archivoblack/v10/HTxqL289NzCGg4MzN6KJ7eW6CYyF_jzx13E.woff2") format("woff2"); font-style: normal; font-weight: 400; unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Archivo Black"; src: url("https://fonts.gstatic.com/s/archivoblack/v10/HTxqL289NzCGg4MzN6KJ7eW6CYKF_jzx13HOvQ.woff2") format("woff2"); font-style: normal; font-weight: 400; unicode-range: U+100-24F, U+259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "iconfont"; src: url("../fonts/iconfont.eot?#iefix") format("embedded-opentype"), url("../fonts/iconfont.woff") format("woff"), url("../fonts/iconfont.ttf") format("truetype"), url("../fonts/iconfont.svg#svgFontName") format("svg"); }
+body,#wrapper  {
+    color: rgb(36, 36, 36);
+    display: block;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20.45px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 32.7167px;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper  img { max-width: 100%; }
+#wrapper h1 {
+    color: rgb(32, 79, 87);
+    display: block;
+    font-family: "Archivo Black", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 52.9167px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 58.2167px;
+    margin-top: 19.8438px;
+    margin-bottom: 9px;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper h2 {
+    color: rgb(32, 79, 87);
+    display: block;
+    font-family: "Archivo Black", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 42.6833px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 46.95px;
+    margin-top: 19.7px;
+    margin-bottom: 9px;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper h3 {
+    color: rgb(32, 79, 87);
+    display: block;
+    font-family: "Archivo Black", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 33.05px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 36.35px;
+    margin-top: 19.1903px;
+    margin-bottom: 9px;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper h4 {
+    color: rgb(32, 79, 87);
+    display: block;
+    font-family: "Archivo Black", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 27.05px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 29.75px;
+    margin-top: 19.476px;
+    margin-bottom: 9px;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper h5 {
+    color: rgb(32, 79, 87);
+    display: block;
+    font-family: "Archivo Black", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 21.6333px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 23.8px;
+    margin-top: 19.47px;
+    margin-bottom: 9px;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper h6 {
+    color: rgb(32, 79, 87);
+    display: block;
+    font-family: "Archivo Black", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20.45px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 22.5px;
+    margin-top: 23.0063px;
+    margin-bottom: 9px;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper a h1 {
+    color: rgb(32, 79, 87);
+    display: block;
+    font-family: "Archivo Black", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 52.9167px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 58.2167px;
+    margin-top: 19.8438px;
+    margin-bottom: 9px;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper a h2 {
+    color: rgb(32, 79, 87);
+    display: block;
+    font-family: "Archivo Black", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 42.6833px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 46.95px;
+    margin-top: 19.7px;
+    margin-bottom: 9px;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper a h3 {
+    color: rgb(32, 79, 87);
+    display: block;
+    font-family: "Archivo Black", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 33.05px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 36.35px;
+    margin-top: 19.1903px;
+    margin-bottom: 9px;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper h1 a {
+    color: rgb(153, 6, 37);
+    display: inline;
+    font-family: "Archivo Black", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 52.9167px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: normal;
+    line-height: 58.2167px;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: start;
+    text-indent: 0;
+    text-decoration: rgb(153, 6, 37);
+}
+#wrapper h2 a {
+    color: rgb(153, 6, 37);
+    display: inline;
+    font-family: "Archivo Black", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 42.6833px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: normal;
+    line-height: 46.95px;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: start;
+    text-indent: 0;
+    text-decoration: rgb(153, 6, 37);
+}
+#wrapper h3 a {
+    color: rgb(153, 6, 37);
+    display: inline;
+    font-family: "Archivo Black", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 33.05px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: normal;
+    line-height: 36.35px;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: start;
+    text-indent: 0;
+    text-decoration: rgb(153, 6, 37);
+}
+#wrapper p {
+    color: rgb(36, 36, 36);
+    display: block;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20.45px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 32.7167px;
+    margin-top: 20.45px;
+    margin-bottom: 22.5px;
+    text-align: start;
+    text-indent: 0;
+    position: static;
+    overflow: visible;
+    white-space: normal;
+    word-break: normal;
+}
+#wrapper ol {
+    color: rgb(36, 36, 36);
+    display: block;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20.45px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 32.7167px;
+    margin-top: 20.45px;
+    margin-bottom: 22.5px;
+    text-align: start;
+    text-indent: 0;
+    list-style-position: outside;
+    list-style-type: decimal;
+}
+#wrapper ul {
+    color: rgb(36, 36, 36);
+    display: block;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20.45px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 32.7167px;
+    margin-top: 20.45px;
+    margin-bottom: 22.5px;
+    text-align: start;
+    text-indent: 0;
+    list-style-position: outside;
+    list-style-type: disc;
+}
+#wrapper ul li {
+    color: rgb(36, 36, 36);
+    display: list-item;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20.45px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 32.7167px;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: left;
+    text-indent: 0;
+    list-style-position: outside;
+    list-style-type: disc;
+}
+#wrapper ol li {
+    color: rgb(36, 36, 36);
+    display: list-item;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20.45px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 32.7167px;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: left;
+    text-indent: 0;
+    list-style-position: outside;
+    list-style-type: decimal;
+}
+#wrapper li ul {
+    color: rgb(36, 36, 36);
+    display: block;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20.45px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 32.7167px;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: left;
+    text-indent: 0;
+    list-style-position: outside;
+    list-style-type: circle;
+}
+#wrapper li ol {
+    color: rgb(36, 36, 36);
+    display: block;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20.45px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 32.7167px;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: left;
+    text-indent: 0;
+    list-style-position: outside;
+    list-style-type: decimal;
+}
+#wrapper ul li li {
+    color: rgb(36, 36, 36);
+    display: list-item;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20.45px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 32.7167px;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: left;
+    text-indent: 0;
+    list-style-position: outside;
+    list-style-type: circle;
+}
+#wrapper ol li li {
+    color: rgb(36, 36, 36);
+    display: list-item;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20.45px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 32.7167px;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: left;
+    text-indent: 0;
+    list-style-position: outside;
+    list-style-type: decimal;
+}
+#wrapper dl {
+    color: rgb(36, 36, 36);
+    display: block;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20.45px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 32.7167px;
+    margin-top: 20.45px;
+    margin-bottom: 22.5px;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper dd {
+    color: rgb(36, 36, 36);
+    display: block;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20.45px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 32.7167px;
+    margin-top: 0;
+    margin-bottom: 13.5px;
+    text-align: start;
+    text-indent: 0;
+    list-style-position: outside;
+    list-style-type: disc;
+}
+#wrapper dt {
+    color: rgb(36, 36, 36);
+    display: block;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20.45px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: normal;
+    line-height: 26.5833px;
+    margin-top: 0;
+    margin-bottom: 5.4px;
+    text-align: start;
+    text-indent: 0;
+    list-style-position: outside;
+    list-style-type: disc;
+}
+#wrapper strong {
+    color: rgb(36, 36, 36);
+    display: inline;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20.45px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: normal;
+    line-height: 32.7167px;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper em {
+    color: rgb(36, 36, 36);
+    display: inline;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20.45px;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 32.7167px;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper b {
+    color: rgb(36, 36, 36);
+    display: inline;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20.45px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: normal;
+    line-height: 32.7167px;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper i {
+    color: rgb(36, 36, 36);
+    display: inline;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20.45px;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 32.7167px;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper sup {
+    color: rgb(36, 36, 36);
+    display: inline;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15.3375px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper sub {
+    color: rgb(36, 36, 36);
+    display: inline;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15.3375px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper a {
+    color: rgb(153, 6, 37);
+    display: inline;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20.45px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: normal;
+    line-height: 32.7167px;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: start;
+    text-indent: 0;
+    text-decoration: rgb(153, 6, 37);
+}
+#wrapper p strong {
+    color: rgb(36, 36, 36);
+    display: inline;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20.45px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: normal;
+    line-height: 32.7167px;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper p em {
+    color: rgb(36, 36, 36);
+    display: inline;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20.45px;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 32.7167px;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper p sup {
+    color: rgb(36, 36, 36);
+    display: inline;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15.3375px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper p sub {
+    color: rgb(36, 36, 36);
+    display: inline;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15.3375px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper p b {
+    color: rgb(36, 36, 36);
+    display: inline;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20.45px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: normal;
+    line-height: 32.7167px;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper p i {
+    color: rgb(36, 36, 36);
+    display: inline;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20.45px;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 32.7167px;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper hr {
+    color: rgb(128, 128, 128);
+    display: block;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20.45px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 32.7167px;
+    margin-top: 22.5px;
+    margin-bottom: 21.375px;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper p strong a {
+    color: rgb(153, 6, 37);
+    display: inline;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20.45px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: normal;
+    line-height: 32.7167px;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: start;
+    text-indent: 0;
+    text-decoration: rgb(153, 6, 37);
+}
+#wrapper p em a {
+    color: rgb(153, 6, 37);
+    display: inline;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20.45px;
+    font-style: italic;
+    font-weight: 700;
+    letter-spacing: normal;
+    line-height: 32.7167px;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: start;
+    text-indent: 0;
+    text-decoration: rgb(153, 6, 37);
+}
+#wrapper p a em {
+    color: rgb(153, 6, 37);
+    display: inline;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20.45px;
+    font-style: italic;
+    font-weight: 700;
+    letter-spacing: normal;
+    line-height: 32.7167px;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper p a strong {
+    color: rgb(153, 6, 37);
+    display: inline;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20.45px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: normal;
+    line-height: 32.7167px;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper p code {
+    color: rgb(51, 51, 51);
+    display: inline;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 15.75px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 23.6333px;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: start;
+    text-indent: 0;
+    position: static;
+    overflow: visible;
+    white-space: normal;
+    word-break: normal;
+}
+#wrapper p a code {
+    color: rgb(51, 51, 51);
+    display: inline;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 15.75px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 23.6333px;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: start;
+    text-indent: 0;
+    position: static;
+    overflow: visible;
+    white-space: normal;
+    word-break: normal;
+}
+#wrapper p code a {
+    color: rgb(153, 6, 37);
+    display: inline;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 15.75px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: normal;
+    line-height: 23.6333px;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: start;
+    text-indent: 0;
+    text-decoration: rgb(153, 6, 37);
+}
+#wrapper pre {
+    color: rgb(36, 36, 36);
+    display: block;
+    font-family: monospace, monospace;
+    font-size: 20.45px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 32.7167px;
+    margin-top: 0;
+    margin-bottom: 22.5px;
+    text-align: start;
+    text-indent: 0;
+    position: static;
+    overflow: auto;
+    white-space: pre;
+    word-break: normal;
+}
+#wrapper code {
+    color: rgb(51, 51, 51);
+    display: inline;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 15.75px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 23.6333px;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: start;
+    text-indent: 0;
+    position: static;
+    overflow: visible;
+    white-space: normal;
+    word-break: normal;
+}
+#wrapper pre code {
+    color: rgb(51, 51, 51);
+    display: inline;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 15.75px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 23.6333px;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: start;
+    text-indent: 0;
+    position: static;
+    overflow: visible;
+    white-space: pre;
+    word-break: normal;
+}
+#wrapper blockquote {
+    color: rgb(255, 255, 255);
+    display: block;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20.45px;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 32.7167px;
+    margin-top: 18px;
+    margin-bottom: 18px;
+    text-align: start;
+    text-indent: 0;
+    position: relative;
+    overflow: visible;
+    white-space: normal;
+    word-break: normal;
+}
+#wrapper blockquote p {
+    color: rgb(255, 255, 255);
+    display: block;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20.45px;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 32.7167px;
+    margin-top: 2.7px;
+    margin-bottom: 2.7px;
+    text-align: start;
+    text-indent: 0;
+    position: static;
+    overflow: visible;
+    white-space: normal;
+    word-break: normal;
+}
+#wrapper cite {
+    color: rgb(36, 36, 36);
+    display: inline;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20.45px;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 32.7167px;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper img {
+    color: rgb(36, 36, 36);
+    display: inline-block;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20.45px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 32.7167px;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper figure {
+    color: rgb(36, 36, 36);
+    display: block;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20.45px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 32.7167px;
+    margin-top: 0;
+    margin-bottom: 33.75px;
+    text-align: start;
+    text-indent: 0;
+    position: static;
+    overflow: visible;
+    white-space: normal;
+    word-break: normal;
+}
+#wrapper figure img {
+    color: rgb(36, 36, 36);
+    display: inline-block;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20.45px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 32.7167px;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper figcaption {
+    color: rgb(87, 87, 87);
+    display: block;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 18.405px;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 9.2px;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper table {
+    color: rgb(36, 36, 36);
+    display: table;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20.45px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 32.7167px;
+    margin-top: 0;
+    margin-bottom: 22.5px;
+    text-align: start;
+    text-indent: 0;
+    position: static;
+    overflow: visible;
+    white-space: normal;
+    word-break: normal;
+}
+#wrapper tr {
+    color: rgb(36, 36, 36);
+    display: table-row;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20.45px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 32.7167px;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper th {
+    color: rgb(34, 34, 34);
+    display: table-cell;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15.75px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: normal;
+    line-height: 20.25px;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: left;
+    text-indent: 0;
+}
+#wrapper td {
+    color: rgb(34, 34, 34);
+    display: table-cell;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15.75px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 20.25px;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: left;
+    text-indent: 0;
+}

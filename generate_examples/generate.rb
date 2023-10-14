@@ -12,19 +12,13 @@ def get_meta(file)
     'description' => ''
   }
   title = content.match(/^\s*Title:(.*?)$/i)
-  if (title)
-    data['title'] = title[1].strip
-  end
+  data['title'] = title[1].strip if title
 
   author = content.match(/^\s*Author:(.*?)$/i)
-  if (author)
-    data['author'] = author[1].strip
-  end
+  data['author'] = author[1].strip if author
 
   description = content.match(/^\s*Description:(.*?)$/i)
-  if (description)
-    data['description'] = description[1].strip
-  end
+  data['description'] = description[1].strip if description
 
   data
 end
@@ -33,7 +27,7 @@ def generate_options
   metadata = {}
   options = []
   previews = []
-  ignored_styles = ["Header.css", "Custom.css"]
+  ignored_styles = ['Header.css', 'Custom.css']
   files = Dir.glob('../*.css').sort_by(&:downcase)
   # files.concat(Dir.glob('../*/*.css'))
   files.each do |f|

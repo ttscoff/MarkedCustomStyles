@@ -23,8 +23,8 @@ end
 
 begin
   css = IO.read(File.expand_path(url)).force_encoding('utf-8');
-  encoded = URI.encode(css.strip).gsub(/=/,'%3D').gsub(/&/,'%26')
-  print %Q{{"success": true, "url": "x-marked://addstyle?name=#{URI.encode(title)}&css=#{encoded}" }}
+  encoded = CGI.escape(css.strip).gsub(/=/,'%3D').gsub(/&/,'%26').gsub(/\+/, '%20')
+  print %({"success": true, "url": "x-marked://addstyle?name=#{CGI.escape(title)}&css=#{encoded}" })
 rescue Exception => e
   die_error("Failed to read style", e.message)
 end

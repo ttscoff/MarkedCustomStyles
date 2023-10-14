@@ -1,0 +1,75 @@
+/*
+   This document has been created with Marked.app <http://marked2app.com>
+   Please leave this notice in place, along with any additional credits below.
+   ---------------------------------------------------------------
+   Title: Teleprompter
+   Author: Brett Terpstra <http://brettterpstra.com>
+   Description: Use Marked as a Teleprompter ("s" to autoscroll)
+*/
+body {
+  font-size: 40px;
+  line-height: 2;
+  background-color: #3f3f3f;
+  background-image: linear-gradient(0deg, #3f3f3f 25%, #1d1d1d 25%, #1d1d1d 75%, #3f3f3f 75%);
+  font-family: Helvetica;
+  color: #fff;
+  background-attachment: fixed; }
+
+a {
+  color: #fff;
+  text-decoration: none; }
+
+#wrapper {
+  padding: 50% 25px;
+  width: 100%;
+  overflow: visible;
+  box-sizing: border-box;
+  width: 80vw !important;
+  max-width: 30ch !important;
+  margin: 0 auto; }
+
+#wrapper h1, #wrapper h2, #wrapper h3, #wrapper h4, #wrapper h5, #wrapper h6, #wrapper blockquote {
+  display: none; }
+
+ul, ol {
+  list-style-position: outside;
+  text-indent: 0;
+  padding: 0;
+  margin: 0; }
+
+ul ul, ul ol {
+  margin-left: 30px; }
+
+ol ul, ol ol {
+  margin-left: 30px; }
+
+img {
+  width: 200px;
+  height: auto; }
+
+hr {
+  border: 0;
+  border-top: dashed 4px;
+  margin: 2em 0; }
+
+blockquote {
+  margin: 0;
+  font-style: italic; }
+  blockquote p::before {
+    content: '> ';
+    position: absolute;
+    left: -1em; }
+
+#wrapper pre {
+  word-wrap: break-word;
+  white-space: pre-wrap; }
+
+dt {
+  font-weight: 600; }
+
+dd {
+  margin: 0; }
+  dd::before {
+    content: ': '; }
+
+/*# sourceMappingURL=Teleprompter%202.css.map */

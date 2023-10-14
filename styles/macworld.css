@@ -1,0 +1,1350 @@
+/*
+This document has been created with Marked.app <http://marked2app.com>
+Content is property of the document author
+Please leave this notice in place, along with any additional credits below.
+---------------------------------------------------------------
+Title: macworld.com
+Author: StyleStealer
+Description: Collected from https://www.macworld.com/article/3313350/macs/waterfield-air-porter-laptop-bag-review-a-carry-on-youll-want-to-carry-forever.html
+---
+*/
+@font-face { }
+@font-face { font-family: usmedia-icons; src: url("https://www.macworld.com/www.idge/css/webfonts/usmedia-icons.eot?#iefix-8iqfp5") format("embedded-opentype"), url("https://www.macworld.com/www.idge/css/webfonts/usmedia-icons.ttf?-8iqfp5") format("truetype"), url("https://www.macworld.com/www.idge/css/webfonts/usmedia-icons.woff?-8iqfp5") format("woff"), url("https://www.macworld.com/www.idge/css/webfonts/usmedia-icons.svg?-8iqfp5#usmedia-icons") format("svg"); font-weight: normal; font-style: normal; }
+@font-face { font-family: SSStandard; src: url("https://www.macworld.com/www.idgcsmb/webfonts/ss-standard.eot?#iefix") format("embedded-opentype"), url("https://www.macworld.com/www.idgcsmb/webfonts/ss-standard.woff") format("woff"), url("https://www.macworld.com/www.idgcsmb/webfonts/ss-standard.ttf") format("truetype"), url("https://www.macworld.com/www.idgcsmb/webfonts/ss-standard.svg#SSStandard") format("svg"); font-weight: normal; font-style: normal; }
+@font-face { font-family: SSSocial; src: url("https://www.macworld.com/www.idgcsmb/webfonts/ss-social-regular.eot?#iefix") format("embedded-opentype"), url("https://www.macworld.com/www.idgcsmb/webfonts/ss-social-regular.woff") format("woff"), url("https://www.macworld.com/www.idgcsmb/webfonts/ss-social-regular.ttf") format("truetype"), url("https://www.macworld.com/www.idgcsmb/webfonts/ss-social-regular.svg#SSSocialRegular") format("svg"); font-weight: normal; font-style: normal; }
+@font-face { font-family: SSSocial; src: url("https://www.macworld.com/www.idgcsmb/webfonts/ss-social-circle.eot?#iefix") format("embedded-opentype"), url("https://www.macworld.com/www.idgcsmb/webfonts/ss-social-circle.woff") format("woff"), url("https://www.macworld.com/www.idgcsmb/webfonts/ss-social-circle.ttf") format("truetype"), url("https://www.macworld.com/www.idgcsmb/webfonts/ss-social-circle.svg#SSSocialCircle") format("svg"); font-weight: bold; font-style: normal; }
+body,#wrapper  {
+    background: rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box;
+    border-bottom: 0 none rgb(34, 34, 34);
+    border-left: 0 none rgb(34, 34, 34);
+    border-radius: 0;
+    border-right: 0 none rgb(34, 34, 34);
+    border-top: 0 none rgb(34, 34, 34);
+    color: rgb(34, 34, 34);
+    display: block;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 19.6px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper  img { max-width: 100%; }
+#wrapper h1 {
+    background: none;
+    border-bottom: 0 none rgb(34, 34, 34);
+    border-left: 0 none rgb(34, 34, 34);
+    border-radius: 0;
+    border-right: 0 none rgb(34, 34, 34);
+    border-top: 0 none rgb(34, 34, 34);
+    color: rgb(34, 34, 34);
+    display: block;
+    font-family: proxima-nova, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: normal;
+    line-height: 19.6px;
+    margin-top: 14px;
+    margin-bottom: 3.5px;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper h2 {
+    background: none;
+    border-bottom: 0 none rgb(34, 34, 34);
+    border-left: 0 none rgb(34, 34, 34);
+    border-radius: 0;
+    border-right: 0 none rgb(34, 34, 34);
+    border-top: 0 none rgb(34, 34, 34);
+    color: rgb(34, 34, 34);
+    display: block;
+    font-family: proxima-nova, sans-serif;
+    font-size: 28.8px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: normal;
+    line-height: 33.6px;
+    margin-top: 26px;
+    margin-bottom: 16px;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper h3 {
+    background: none;
+    border-bottom: 0 none rgb(34, 34, 34);
+    border-left: 0 none rgb(34, 34, 34);
+    border-radius: 0;
+    border-right: 0 none rgb(34, 34, 34);
+    border-top: 0 none rgb(34, 34, 34);
+    color: rgb(34, 34, 34);
+    display: block;
+    font-family: proxima-nova, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: normal;
+    line-height: 28.8px;
+    margin-top: 26px;
+    margin-bottom: 16px;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper h4 {
+    background: none;
+    border-bottom: 0 none rgb(34, 34, 34);
+    border-left: 0 none rgb(34, 34, 34);
+    border-radius: 0;
+    border-right: 0 none rgb(34, 34, 34);
+    border-top: 0 none rgb(34, 34, 34);
+    color: rgb(34, 34, 34);
+    display: block;
+    font-family: proxima-nova, sans-serif;
+    font-size: 19.6px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: normal;
+    line-height: 23px;
+    margin-top: 26px;
+    margin-bottom: 16px;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper h5 {
+    background: none;
+    border-bottom: 0 none rgb(34, 34, 34);
+    border-left: 0 none rgb(34, 34, 34);
+    border-radius: 0;
+    border-right: 0 none rgb(34, 34, 34);
+    border-top: 0 none rgb(34, 34, 34);
+    color: rgb(34, 34, 34);
+    display: block;
+    font-family: proxima-nova, sans-serif;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: normal;
+    line-height: 22px;
+    margin-top: 26px;
+    margin-bottom: 16px;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper h6 {
+    background: none;
+    border-bottom: 0 none rgb(34, 34, 34);
+    border-left: 0 none rgb(34, 34, 34);
+    border-radius: 0;
+    border-right: 0 none rgb(34, 34, 34);
+    border-top: 0 none rgb(34, 34, 34);
+    color: rgb(34, 34, 34);
+    display: block;
+    font-family: proxima-nova, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: normal;
+    line-height: 17px;
+    margin-top: 0;
+    margin-bottom: 16px;
+    padding: 0 20px;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper a h1 {
+    background: none;
+    border-bottom: 0 none rgb(37, 167, 215);
+    border-left: 0 none rgb(37, 167, 215);
+    border-radius: 0;
+    border-right: 0 none rgb(37, 167, 215);
+    border-top: 0 none rgb(37, 167, 215);
+    color: rgb(37, 167, 215);
+    display: block;
+    font-family: proxima-nova, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: normal;
+    line-height: 19.6px;
+    margin-top: 14px;
+    margin-bottom: 3.5px;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper a h2 {
+    background: none;
+    border-bottom: 0 none rgb(37, 167, 215);
+    border-left: 0 none rgb(37, 167, 215);
+    border-radius: 0;
+    border-right: 0 none rgb(37, 167, 215);
+    border-top: 0 none rgb(37, 167, 215);
+    color: rgb(37, 167, 215);
+    display: block;
+    font-family: proxima-nova, sans-serif;
+    font-size: 28.8px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: normal;
+    line-height: 33.6px;
+    margin-top: 26px;
+    margin-bottom: 16px;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper a h3 {
+    background: none;
+    border-bottom: 0 none rgb(37, 167, 215);
+    border-left: 0 none rgb(37, 167, 215);
+    border-radius: 0;
+    border-right: 0 none rgb(37, 167, 215);
+    border-top: 0 none rgb(37, 167, 215);
+    color: rgb(37, 167, 215);
+    display: block;
+    font-family: proxima-nova, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: normal;
+    line-height: 28.8px;
+    margin-top: 26px;
+    margin-bottom: 16px;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper h1 a {
+    background: none;
+    border-bottom: 0 none rgb(37, 167, 215);
+    border-left: 0 none rgb(37, 167, 215);
+    border-radius: 0;
+    border-right: 0 none rgb(37, 167, 215);
+    border-top: 0 none rgb(37, 167, 215);
+    color: rgb(37, 167, 215);
+    display: inline;
+    font-family: proxima-nova, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: normal;
+    line-height: 19.6px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+    transition: all 0s ease 0s;
+    text-decoration: none;
+}
+#wrapper h2 a {
+    background: none;
+    border-bottom: 0 none rgb(37, 167, 215);
+    border-left: 0 none rgb(37, 167, 215);
+    border-radius: 0;
+    border-right: 0 none rgb(37, 167, 215);
+    border-top: 0 none rgb(37, 167, 215);
+    color: rgb(37, 167, 215);
+    display: inline;
+    font-family: proxima-nova, sans-serif;
+    font-size: 28.8px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: normal;
+    line-height: 33.6px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+    transition: all 0s ease 0s;
+    text-decoration: none;
+}
+#wrapper h3 a {
+    background: none;
+    border-bottom: 0 none rgb(37, 167, 215);
+    border-left: 0 none rgb(37, 167, 215);
+    border-radius: 0;
+    border-right: 0 none rgb(37, 167, 215);
+    border-top: 0 none rgb(37, 167, 215);
+    color: rgb(37, 167, 215);
+    display: inline;
+    font-family: proxima-nova, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: normal;
+    line-height: 28.8px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+    transition: all 0s ease 0s;
+    text-decoration: none;
+}
+#wrapper p {
+    background: none;
+    border-bottom: 0 none rgb(34, 34, 34);
+    border-left: 0 none rgb(34, 34, 34);
+    border-radius: 0;
+    border-right: 0 none rgb(34, 34, 34);
+    border-top: 0 none rgb(34, 34, 34);
+    color: rgb(34, 34, 34);
+    display: block;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 30px;
+    margin-top: 0;
+    margin-bottom: 16px;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+    position: static;
+    overflow: visible;
+    white-space: normal;
+    word-break: normal;
+}
+#wrapper ol {
+    background: none;
+    border-bottom: 0 none rgb(34, 34, 34);
+    border-left: 0 none rgb(34, 34, 34);
+    border-radius: 0;
+    border-right: 0 none rgb(34, 34, 34);
+    border-top: 0 none rgb(34, 34, 34);
+    color: rgb(34, 34, 34);
+    display: block;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 30px;
+    margin-top: 0;
+    margin-bottom: 16px;
+    padding: 0 0 0 40px;
+    text-align: start;
+    text-indent: 0;
+    list-style-position: outside;
+    list-style-type: decimal;
+}
+#wrapper ul {
+    background: none;
+    border-bottom: 0 none rgb(34, 34, 34);
+    border-left: 0 none rgb(34, 34, 34);
+    border-radius: 0;
+    border-right: 0 none rgb(34, 34, 34);
+    border-top: 0 none rgb(34, 34, 34);
+    color: rgb(34, 34, 34);
+    display: block;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 30px;
+    margin-top: 0;
+    margin-bottom: 16px;
+    padding: 0 0 0 40px;
+    text-align: start;
+    text-indent: 0;
+    list-style-position: outside;
+    list-style-type: disc;
+}
+#wrapper ul li {
+    background: none;
+    border-bottom: 0 none rgb(34, 34, 34);
+    border-left: 0 none rgb(34, 34, 34);
+    border-radius: 0;
+    border-right: 0 none rgb(34, 34, 34);
+    border-top: 0 none rgb(34, 34, 34);
+    color: rgb(34, 34, 34);
+    display: list-item;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 26.1px;
+    margin-top: 0;
+    margin-bottom: 8px;
+    padding: 0;
+    text-align: left;
+    text-indent: 0;
+    list-style-position: outside;
+    list-style-type: disc;
+}
+#wrapper ol li {
+    background: none;
+    border-bottom: 0 none rgb(34, 34, 34);
+    border-left: 0 none rgb(34, 34, 34);
+    border-radius: 0;
+    border-right: 0 none rgb(34, 34, 34);
+    border-top: 0 none rgb(34, 34, 34);
+    color: rgb(34, 34, 34);
+    display: list-item;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 26.1px;
+    margin-top: 0;
+    margin-bottom: 8px;
+    padding: 0;
+    text-align: left;
+    text-indent: 0;
+    list-style-position: outside;
+    list-style-type: decimal;
+}
+#wrapper li ul {
+    background: none;
+    border-bottom: 0 none rgb(34, 34, 34);
+    border-left: 0 none rgb(34, 34, 34);
+    border-radius: 0;
+    border-right: 0 none rgb(34, 34, 34);
+    border-top: 0 none rgb(34, 34, 34);
+    color: rgb(34, 34, 34);
+    display: block;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 26.1px;
+    margin-top: 0;
+    margin-bottom: 16px;
+    padding: 0 0 0 40px;
+    text-align: left;
+    text-indent: 0;
+    list-style-position: outside;
+    list-style-type: circle;
+}
+#wrapper li ol {
+    background: none;
+    border-bottom: 0 none rgb(34, 34, 34);
+    border-left: 0 none rgb(34, 34, 34);
+    border-radius: 0;
+    border-right: 0 none rgb(34, 34, 34);
+    border-top: 0 none rgb(34, 34, 34);
+    color: rgb(34, 34, 34);
+    display: block;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 26.1px;
+    margin-top: 0;
+    margin-bottom: 16px;
+    padding: 0 0 0 40px;
+    text-align: left;
+    text-indent: 0;
+    list-style-position: outside;
+    list-style-type: decimal;
+}
+#wrapper ul li li {
+    background: none;
+    border-bottom: 0 none rgb(34, 34, 34);
+    border-left: 0 none rgb(34, 34, 34);
+    border-radius: 0;
+    border-right: 0 none rgb(34, 34, 34);
+    border-top: 0 none rgb(34, 34, 34);
+    color: rgb(34, 34, 34);
+    display: list-item;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 26.1px;
+    margin-top: 0;
+    margin-bottom: 8px;
+    padding: 0;
+    text-align: left;
+    text-indent: 0;
+    list-style-position: outside;
+    list-style-type: circle;
+}
+#wrapper ol li li {
+    background: none;
+    border-bottom: 0 none rgb(34, 34, 34);
+    border-left: 0 none rgb(34, 34, 34);
+    border-radius: 0;
+    border-right: 0 none rgb(34, 34, 34);
+    border-top: 0 none rgb(34, 34, 34);
+    color: rgb(34, 34, 34);
+    display: list-item;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 26.1px;
+    margin-top: 0;
+    margin-bottom: 8px;
+    padding: 0;
+    text-align: left;
+    text-indent: 0;
+    list-style-position: outside;
+    list-style-type: decimal;
+}
+#wrapper dl {
+    background: none;
+    border-bottom: 0 none rgb(34, 34, 34);
+    border-left: 0 none rgb(34, 34, 34);
+    border-radius: 0;
+    border-right: 0 none rgb(34, 34, 34);
+    border-top: 0 none rgb(34, 34, 34);
+    color: rgb(34, 34, 34);
+    display: block;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 19.6px;
+    margin-top: 14px;
+    margin-bottom: 14px;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper dd {
+    background: none;
+    border-bottom: 0 none rgb(34, 34, 34);
+    border-left: 0 none rgb(34, 34, 34);
+    border-radius: 0;
+    border-right: 0 none rgb(34, 34, 34);
+    border-top: 0 none rgb(34, 34, 34);
+    color: rgb(34, 34, 34);
+    display: block;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 19.6px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+    list-style-position: outside;
+    list-style-type: disc;
+}
+#wrapper dt {
+    background: none;
+    border-bottom: 0 none rgb(34, 34, 34);
+    border-left: 0 none rgb(34, 34, 34);
+    border-radius: 0;
+    border-right: 0 none rgb(34, 34, 34);
+    border-top: 0 none rgb(34, 34, 34);
+    color: rgb(34, 34, 34);
+    display: block;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 19.6px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+    list-style-position: outside;
+    list-style-type: disc;
+}
+#wrapper strong {
+    background: none;
+    border-bottom: 0 none rgb(34, 34, 34);
+    border-left: 0 none rgb(34, 34, 34);
+    border-radius: 0;
+    border-right: 0 none rgb(34, 34, 34);
+    border-top: 0 none rgb(34, 34, 34);
+    color: rgb(34, 34, 34);
+    display: inline;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: normal;
+    line-height: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper em {
+    background: none;
+    border-bottom: 0 none rgb(34, 34, 34);
+    border-left: 0 none rgb(34, 34, 34);
+    border-radius: 0;
+    border-right: 0 none rgb(34, 34, 34);
+    border-top: 0 none rgb(34, 34, 34);
+    color: rgb(34, 34, 34);
+    display: inline;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper b {
+    background: none;
+    border-bottom: 0 none rgb(34, 34, 34);
+    border-left: 0 none rgb(34, 34, 34);
+    border-radius: 0;
+    border-right: 0 none rgb(34, 34, 34);
+    border-top: 0 none rgb(34, 34, 34);
+    color: rgb(34, 34, 34);
+    display: inline;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: normal;
+    line-height: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper i {
+    background: none;
+    border-bottom: 0 none rgb(34, 34, 34);
+    border-left: 0 none rgb(34, 34, 34);
+    border-radius: 0;
+    border-right: 0 none rgb(34, 34, 34);
+    border-top: 0 none rgb(34, 34, 34);
+    color: rgb(34, 34, 34);
+    display: inline;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper sup {
+    background: none;
+    border-bottom: 0 none rgb(34, 34, 34);
+    border-left: 0 none rgb(34, 34, 34);
+    border-radius: 0;
+    border-right: 0 none rgb(34, 34, 34);
+    border-top: 0 none rgb(34, 34, 34);
+    color: rgb(34, 34, 34);
+    display: inline;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 13.5px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper sub {
+    background: none;
+    border-bottom: 0 none rgb(34, 34, 34);
+    border-left: 0 none rgb(34, 34, 34);
+    border-radius: 0;
+    border-right: 0 none rgb(34, 34, 34);
+    border-top: 0 none rgb(34, 34, 34);
+    color: rgb(34, 34, 34);
+    display: inline;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 13.5px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper a {
+    background: none;
+    border-bottom: 0 none rgb(37, 167, 215);
+    border-left: 0 none rgb(37, 167, 215);
+    border-radius: 0;
+    border-right: 0 none rgb(37, 167, 215);
+    border-top: 0 none rgb(37, 167, 215);
+    color: rgb(37, 167, 215);
+    display: inline;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+    transition: all 0s ease 0s;
+    text-decoration: none;
+}
+#wrapper p strong {
+    background: none;
+    border-bottom: 0 none rgb(34, 34, 34);
+    border-left: 0 none rgb(34, 34, 34);
+    border-radius: 0;
+    border-right: 0 none rgb(34, 34, 34);
+    border-top: 0 none rgb(34, 34, 34);
+    color: rgb(34, 34, 34);
+    display: inline;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: normal;
+    line-height: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper p em {
+    background: none;
+    border-bottom: 0 none rgb(34, 34, 34);
+    border-left: 0 none rgb(34, 34, 34);
+    border-radius: 0;
+    border-right: 0 none rgb(34, 34, 34);
+    border-top: 0 none rgb(34, 34, 34);
+    color: rgb(34, 34, 34);
+    display: inline;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper p sup {
+    background: none;
+    border-bottom: 0 none rgb(34, 34, 34);
+    border-left: 0 none rgb(34, 34, 34);
+    border-radius: 0;
+    border-right: 0 none rgb(34, 34, 34);
+    border-top: 0 none rgb(34, 34, 34);
+    color: rgb(34, 34, 34);
+    display: inline;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 13.5px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper p sub {
+    background: none;
+    border-bottom: 0 none rgb(34, 34, 34);
+    border-left: 0 none rgb(34, 34, 34);
+    border-radius: 0;
+    border-right: 0 none rgb(34, 34, 34);
+    border-top: 0 none rgb(34, 34, 34);
+    color: rgb(34, 34, 34);
+    display: inline;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 13.5px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper p b {
+    background: none;
+    border-bottom: 0 none rgb(34, 34, 34);
+    border-left: 0 none rgb(34, 34, 34);
+    border-radius: 0;
+    border-right: 0 none rgb(34, 34, 34);
+    border-top: 0 none rgb(34, 34, 34);
+    color: rgb(34, 34, 34);
+    display: inline;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: normal;
+    line-height: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper p i {
+    background: none;
+    border-bottom: 0 none rgb(34, 34, 34);
+    border-left: 0 none rgb(34, 34, 34);
+    border-radius: 0;
+    border-right: 0 none rgb(34, 34, 34);
+    border-top: 0 none rgb(34, 34, 34);
+    color: rgb(34, 34, 34);
+    display: inline;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper hr {
+    background: none;
+    border-bottom: 0 none rgb(34, 34, 34);
+    border-left: 0 none rgb(34, 34, 34);
+    border-radius: 0;
+    border-right: 0 none rgb(34, 34, 34);
+    border-top: 1px solid rgb(204, 204, 204);
+    color: rgb(34, 34, 34);
+    display: block;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 19.6px;
+    margin-top: 14px;
+    margin-bottom: 14px;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper p strong a {
+    background: none;
+    border-bottom: 0 none rgb(37, 167, 215);
+    border-left: 0 none rgb(37, 167, 215);
+    border-radius: 0;
+    border-right: 0 none rgb(37, 167, 215);
+    border-top: 0 none rgb(37, 167, 215);
+    color: rgb(37, 167, 215);
+    display: inline;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: normal;
+    line-height: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+    transition: all 0s ease 0s;
+    text-decoration: none;
+}
+#wrapper p em a {
+    background: none;
+    border-bottom: 0 none rgb(37, 167, 215);
+    border-left: 0 none rgb(37, 167, 215);
+    border-radius: 0;
+    border-right: 0 none rgb(37, 167, 215);
+    border-top: 0 none rgb(37, 167, 215);
+    color: rgb(37, 167, 215);
+    display: inline;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+    transition: all 0s ease 0s;
+    text-decoration: none;
+}
+#wrapper p a em {
+    background: none;
+    border-bottom: 0 none rgb(37, 167, 215);
+    border-left: 0 none rgb(37, 167, 215);
+    border-radius: 0;
+    border-right: 0 none rgb(37, 167, 215);
+    border-top: 0 none rgb(37, 167, 215);
+    color: rgb(37, 167, 215);
+    display: inline;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper p a strong {
+    background: none;
+    border-bottom: 0 none rgb(37, 167, 215);
+    border-left: 0 none rgb(37, 167, 215);
+    border-radius: 0;
+    border-right: 0 none rgb(37, 167, 215);
+    border-top: 0 none rgb(37, 167, 215);
+    color: rgb(37, 167, 215);
+    display: inline;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: normal;
+    line-height: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper p code {
+    background: none;
+    border-bottom: 0 none rgb(124, 24, 6);
+    border-left: 0 none rgb(124, 24, 6);
+    border-radius: 0;
+    border-right: 0 none rgb(124, 24, 6);
+    border-top: 0 none rgb(124, 24, 6);
+    color: rgb(124, 24, 6);
+    display: inline;
+    font-family: Monaco, monospace, serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+    position: static;
+    overflow: visible;
+    white-space: normal;
+    word-break: normal;
+}
+#wrapper p a code {
+    background: none;
+    border-bottom: 0 none rgb(124, 24, 6);
+    border-left: 0 none rgb(124, 24, 6);
+    border-radius: 0;
+    border-right: 0 none rgb(124, 24, 6);
+    border-top: 0 none rgb(124, 24, 6);
+    color: rgb(124, 24, 6);
+    display: inline;
+    font-family: Monaco, monospace, serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+    position: static;
+    overflow: visible;
+    white-space: normal;
+    word-break: normal;
+}
+#wrapper p code a {
+    background: none;
+    border-bottom: 0 none rgb(37, 167, 215);
+    border-left: 0 none rgb(37, 167, 215);
+    border-radius: 0;
+    border-right: 0 none rgb(37, 167, 215);
+    border-top: 0 none rgb(37, 167, 215);
+    color: rgb(37, 167, 215);
+    display: inline;
+    font-family: Monaco, monospace, serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+    transition: all 0s ease 0s;
+    text-decoration: none;
+}
+#wrapper pre {
+    background: rgb(229, 229, 229) none repeat scroll 0% 0% / auto padding-box border-box;
+    border-bottom: 0 none rgb(34, 34, 34);
+    border-left: 0 none rgb(34, 34, 34);
+    border-radius: 3.5px;
+    border-right: 0 none rgb(34, 34, 34);
+    border-top: 0 none rgb(34, 34, 34);
+    color: rgb(34, 34, 34);
+    display: block;
+    font-family: Monaco, monospace, serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 19.6px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    text-align: start;
+    text-indent: 0;
+    position: static;
+    overflow: auto hidden;
+    white-space: pre;
+    word-break: normal;
+}
+#wrapper code {
+    background: none;
+    border-bottom: 0 none rgb(124, 24, 6);
+    border-left: 0 none rgb(124, 24, 6);
+    border-radius: 0;
+    border-right: 0 none rgb(124, 24, 6);
+    border-top: 0 none rgb(124, 24, 6);
+    color: rgb(124, 24, 6);
+    display: inline;
+    font-family: Monaco, monospace, serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+    position: static;
+    overflow: visible;
+    white-space: normal;
+    word-break: normal;
+}
+#wrapper pre code {
+    background: none;
+    border-bottom: 0 none rgb(124, 24, 6);
+    border-left: 0 none rgb(124, 24, 6);
+    border-radius: 0;
+    border-right: 0 none rgb(124, 24, 6);
+    border-top: 0 none rgb(124, 24, 6);
+    color: rgb(124, 24, 6);
+    display: inline;
+    font-family: Monaco, monospace, serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 21px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+    position: static;
+    overflow: visible;
+    white-space: pre;
+    word-break: normal;
+}
+#wrapper blockquote {
+    background: none;
+    border-bottom: 0 none rgb(34, 34, 34);
+    border-left: 1px solid rgb(217, 217, 217);
+    border-radius: 0;
+    border-right: 0 none rgb(34, 34, 34);
+    border-top: 0 none rgb(34, 34, 34);
+    color: rgb(34, 34, 34);
+    display: block;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 23.8px;
+    margin-top: 0;
+    margin-bottom: 16px;
+    padding: 5px 20px;
+    text-align: start;
+    text-indent: 0;
+    position: static;
+    overflow: visible;
+    white-space: normal;
+    word-break: normal;
+}
+#wrapper blockquote p {
+    background: none;
+    border-bottom: 0 none rgb(34, 34, 34);
+    border-left: 0 none rgb(34, 34, 34);
+    border-radius: 0;
+    border-right: 0 none rgb(34, 34, 34);
+    border-top: 0 none rgb(34, 34, 34);
+    color: rgb(34, 34, 34);
+    display: block;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 28.9px;
+    margin-top: 0;
+    margin-bottom: 11.9px;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+    position: static;
+    overflow: visible;
+    white-space: normal;
+    word-break: normal;
+}
+#wrapper cite {
+    background: none;
+    border-bottom: 0 none rgb(34, 34, 34);
+    border-left: 0 none rgb(34, 34, 34);
+    border-radius: 0;
+    border-right: 0 none rgb(34, 34, 34);
+    border-top: 0 none rgb(34, 34, 34);
+    color: rgb(34, 34, 34);
+    display: inline;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper img {
+    background: none;
+    border-bottom: 0 none rgb(34, 34, 34);
+    border-left: 0 none rgb(34, 34, 34);
+    border-radius: 0;
+    border-right: 0 none rgb(34, 34, 34);
+    border-top: 0 none rgb(34, 34, 34);
+    color: rgb(34, 34, 34);
+    display: inline;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 19.6px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper figure {
+    background: none;
+    border-bottom: 0 none rgb(34, 34, 34);
+    border-left: 0 none rgb(34, 34, 34);
+    border-radius: 0;
+    border-right: 0 none rgb(34, 34, 34);
+    border-top: 0 none rgb(34, 34, 34);
+    color: rgb(34, 34, 34);
+    display: block;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 19.6px;
+    margin-top: 8px;
+    margin-bottom: 16px;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+    position: static;
+    overflow: visible;
+    white-space: normal;
+    word-break: normal;
+}
+#wrapper figure img {
+    background: none;
+    border-bottom: 0 none rgb(34, 34, 34);
+    border-left: 0 none rgb(34, 34, 34);
+    border-radius: 0;
+    border-right: 0 none rgb(34, 34, 34);
+    border-top: 0 none rgb(34, 34, 34);
+    color: rgb(34, 34, 34);
+    display: block;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 19.6px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper figcaption {
+    background: none;
+    border-bottom: 0 none rgb(34, 34, 34);
+    border-left: 0 none rgb(34, 34, 34);
+    border-radius: 0;
+    border-right: 0 none rgb(34, 34, 34);
+    border-top: 0 none rgb(34, 34, 34);
+    color: rgb(34, 34, 34);
+    display: block;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 14.4px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 16px;
+    margin-top: 8px;
+    margin-bottom: 20.8px;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper table {
+    background: none;
+    border-bottom: 0 none rgb(128, 128, 128);
+    border-left: 0 none rgb(128, 128, 128);
+    border-radius: 0;
+    border-right: 0 none rgb(128, 128, 128);
+    border-top: 0 none rgb(128, 128, 128);
+    color: rgb(34, 34, 34);
+    display: table;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 19.6px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+    position: static;
+    overflow: visible;
+    white-space: normal;
+    word-break: normal;
+}
+#wrapper tr {
+    background: none;
+    border-bottom: 0 none rgb(128, 128, 128);
+    border-left: 0 none rgb(128, 128, 128);
+    border-radius: 0;
+    border-right: 0 none rgb(128, 128, 128);
+    border-top: 0 none rgb(128, 128, 128);
+    color: rgb(34, 34, 34);
+    display: table-row;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 19.6px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper th {
+    background: none;
+    border-bottom: 0 none rgb(34, 34, 34);
+    border-left: 0 none rgb(34, 34, 34);
+    border-radius: 0;
+    border-right: 0 none rgb(34, 34, 34);
+    border-top: 0 none rgb(34, 34, 34);
+    color: rgb(34, 34, 34);
+    display: table-cell;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: normal;
+    line-height: 19.6px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: center;
+    text-indent: 0;
+}
+#wrapper td {
+    background: none;
+    border-bottom: 0 none rgb(34, 34, 34);
+    border-left: 0 none rgb(34, 34, 34);
+    border-radius: 0;
+    border-right: 0 none rgb(34, 34, 34);
+    border-top: 0 none rgb(34, 34, 34);
+    color: rgb(34, 34, 34);
+    display: table-cell;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 19.6px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}

@@ -1,0 +1,41 @@
+@charset "UTF-8";
+/*
+This document has been created with Marked.app <http://marked2app.com>
+Content is property of the document author
+Please leave this notice in place, along with any additional credits below.
+---------------------------------------------------------------
+Title: Gregarious
+Author: Brett Terpstra
+Description: A clean, friendly theme. Originally designed for use in nvUltra.
+Non-standard fonts used: Avenir
+---
+*/
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+#wrapper {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  margin: 0; }
+
+#wrapper {
+  font-size: 12px;
+  line-height: 26px;
+  font-family: 'Avenir Next', Avenir, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  color: rgba(26, 25, 25, 0.75);
+  text-rendering: optimizeLegibility;
+  /* Let's make sure all's aligned */ }
+  @media screen and (min-width: 600px) {
+    #wrapper {
+      font-size: 14px; } }
+  @media screen and (min-width: 768px) {
+    #wrapper {
+      font-size: 16px; } }
+  #wrapper article, #wrapper aside, #wrapper details, #wrapper figcaption, #wrapper figure, #wrapper footer, #wrapper header, #wrapper hgroup, #wrapper main, #wrapper menu, #wrapper nav, #wrapper section, #wrapper summary {
+    display: block; }
+  #wrapper audio, #wrapper canvas, #wrapper progress, #wrapper video {
+    display: inline-block;
+    vertical-align: baseline; }
+  #wrapper audio:not([controls]) {
+    display: none;
+    height: 0; }
+  #wrapper [hidden], 

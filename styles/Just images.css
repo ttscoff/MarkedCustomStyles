@@ -1,0 +1,39 @@
+/*
+   This document has been created with Marked.app <http://markedapp.com>, Copyright 2011 Brett Terpstra
+   Please leave this notice in place, along with any additional credits below.
+   ---------------------------------------------------------------
+   Title: Just images
+   Author: Sid O'Neill http://crateofpenguins.com
+   Description: Just for image reference. Updated by Brett Terpstra.
+*/
+
+body {
+  background: #fff;
+  max-width: 340px;
+  margin: 0;
+  padding: 0;
+}
+
+body.inverted {
+  background: #333;
+}
+
+#wrapper > * {
+  display: none;
+}
+
+#wrapper > figure,
+#wrapper > img {
+  display: block;
+}
+
+figure, img {
+  margin:20px;
+  max-width:340px;
+  font-size:16px;
+  line-height:24px;
+}
+
+.inverted figcaption {
+  color: #eee;
+}

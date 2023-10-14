@@ -1350,3 +1350,41 @@ body,#wrapper  {
     text-align: left;
     text-indent: 0;
 }
+
+.inverted,
+.inverted #wrapper {
+  background: #333;
+  color: #eee!important;
+}
+
+.inverted #wrapper h1,
+.inverted #wrapper h2,
+.inverted #wrapper h3,
+.inverted #wrapper h4,
+.inverted #wrapper h5,
+.inverted #wrapper h6 {
+    color: #eee;
+}
+
+.inverted #wrapper p,
+.inverted #wrapper strong,
+.inverted #wrapper b,
+.inverted #wrapper em,
+.inverted #wrapper th,
+.inverted #wrapper td,
+.inverted #wrapper li {
+    color: #eee;
+}
+
+.inverted #wrapper pre {
+  background: #383838;
+}
+
+.inverted #wrapper blockquote {
+  background: #555;
+}
+
+.inverted #wrapper figcaption {
+  background: #4a4a4a;
+  color: #eee;
+}

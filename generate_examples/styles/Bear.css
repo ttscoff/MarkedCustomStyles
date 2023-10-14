@@ -16,13 +16,14 @@ body {
 	padding: 0;
 	background: #fff;
 	color: #303030;
-	font-size: 12px;
-	line-height: 1.5
+	font-size: 13px;
+	line-height: 1.5;
 }
 
 #wrapper {
-	padding: 20px;
+	padding: 40px 20px 600px!important;
 	margin: 0 auto;
+	max-width: 700px!important;
 }
 
 li {
@@ -84,14 +85,23 @@ a {
 	transition: color .2s ease-in-out
 }
 
+.footnote {
+	color: rgb(222, 84, 86)!important;
+}
+
 a:hover {
 	color: #3593d9
 }
 
 h1, h2, h3, h4, h5 {
-	margin: 2.75rem 0 2rem;
+	margin: 2.75rem 0 .5rem;
+	font-weight: 600;
+	line-height: 1.15;
+}
+
+h4, h5 {
 	font-weight: 500;
-	line-height: 1.15
+	margin: 1rem 0 .5rem;
 }
 
 h1 {
@@ -100,19 +110,19 @@ h1 {
 }
 
 h2 {
-	font-size: 1.7em
+	font-size: 1.8em
 }
 
 h3 {
-	font-size: 1.2em
+	font-size: 1.5em
 }
 
 h4 {
-	font-size: 1.563em
+	font-size: 1.2em
 }
 
 h5 {
-	font-size: 1.25em
+	font-size: 1.2em
 }
 
 ul, ol, pre, table, blockquote {
@@ -122,6 +132,8 @@ ul, ol, pre, table, blockquote {
 
 mark {
 	background: rgb(211, 255, 164);
+	padding: 0 4px;
+	border-radius: 4px;
 }
 
 blockquote {
@@ -184,12 +196,12 @@ ul ul, ul ol, ol ul, ol ol {
 	padding-left:  2em;
 }
 
-ul li {
+ul>li {
 	list-style-type: none;
 	position: relative;
 }
 
-ul li:not(.task-list-item)::before {
+ul>li:not(.task-list-item)::before {
 	color: rgb(222, 84, 86);
 	content: '●';
 	display: inline;
@@ -203,12 +215,12 @@ ol {
   counter-reset: list;
 }
 
-ol li {
+ol>li {
   counter-increment: list;
   list-style-type: none;
   position: relative;
 }
-ol li:before {
+ol>li:before {
   color: rgb(222, 84, 86);
   content: counter(list) ".";
   left:-32px;
@@ -228,7 +240,9 @@ table {
 	empty-cells: hide;
 	margin: -1px 0 1.3125em;
 	padding: 0;
-	table-layout: fixed
+	table-layout: fixed;
+	border-radius: 8px;
+	width: 100%;
 }
 
 caption {
@@ -245,59 +259,64 @@ colgroup {
 }
 
 tbody {
-	display: table-row-group
+	display: table-row-group;
 }
 
 tfoot {
-	display: table-footer-group
+	display: table-footer-group;
 }
 
 thead {
-	display: table-header-group
+	display: table-header-group;
 }
 
 td, th {
-	display: table-cell
+	display: table-cell;
 }
 
 tr {
-	display: table-row
+	display: table-row;
 }
+
+table th {
+	background: #f3f5f7;
+	font-weight: 600;
+}
+
+table tr:nth-child(even) {
+	background: #f3f5f7
+}
+
 
 table th, table td {
 	font-size: 1.1em;
 	line-height: 1.3;
-	padding: .5em 1em 0
-}
-
-table thead {
-	background: rgba(0, 0, 0, 0.15);
-	border: 1px solid rgba(0, 0, 0, 0.15);
-	border-bottom: 1px solid rgba(0, 0, 0, 0.2)
-}
-
-table tbody {
-	background: rgba(0, 0, 0, 0.05)
+	padding: .5em 1.5em;
+	border: solid 1px #ddd;
 }
 
 table tfoot {
 	background: rgba(0, 0, 0, 0.15);
 	border: 1px solid rgba(0, 0, 0, 0.15);
-	border-top: 1px solid rgba(0, 0, 0, 0.2)
+	border-top: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 figure {
 	display: inline-block;
 	overflow: hidden;
 	position: relative;
-	margin: 1em 0 2em
+	margin: 1em 0 2em;
 }
 
 figcaption {
 	font-style: italic;
 	text-align: center;
 	background: white;
-	color: #666
+	color: #666;
+}
+
+.underline {
+	border-bottom: 1px solid rgb(222, 84, 86);
 }
 
 .poetry pre {
@@ -306,7 +325,7 @@ figcaption {
 	font-size: 110% !important;
 	font-style: italic;
 	line-height: 1.6em;
-	margin-left: 1em
+	margin-left: 1em;
 }
 
 .poetry pre code {
@@ -316,11 +335,7 @@ figcaption {
 	-webkit-hyphens: auto;
 	-moz-hyphens: auto;
 	hyphens: auto;
-	white-space: pre-wrap
-}
-
-blockquote p {
-
+	white-space: pre-wrap;
 }
 
 sup, sub, a.footnote {
@@ -328,7 +343,7 @@ sup, sub, a.footnote {
 	height: 0;
 	line-height: 1;
 	position: relative;
-	vertical-align: super
+	vertical-align: super;
 }
 
 sub {
@@ -339,19 +354,12 @@ sub {
 p {
 	font-size: 1.1429em;
 	line-height: 1.72em;
-	margin: 1.3125em 0
+	margin: 0 0 1.3125em;
 }
 
 dt, th {
-	font-weight: 700
-}
-
-table tr:nth-child(odd), table th:nth-child(odd), table td:nth-child(odd) {
-	background: rgba(255, 255, 255, 0.06)
-}
-
-table tr:nth-child(even), table td:nth-child(even) {
-	background: rgba(200, 200, 200, 0.25)
+	font-weight: 700;
+	padding: 4px 1em!important;
 }
 
 @media print {

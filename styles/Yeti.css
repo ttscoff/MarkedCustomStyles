@@ -1,0 +1,577 @@
+/*
+   This document has been created with Marked.app <http://marked2app.com>
+   Please leave this notice in place,
+along with any additional credits below.
+   ---------------------------------------------------------------
+   Title: Yeti
+   Author: Brett Terpstra <http://brettterpstra.com>
+   Description: Lifted from http://bootswatch.com/ [https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE]
+*/
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local("Open Sans Light"), local("OpenSans-Light"), url("https://themes.googleusercontent.com/static/fonts/opensans/v7/DXI1ORHCpsQm3Vp6mXoaTaRDOzjiPcYnFooOUGCOsRk.woff") format("woff");
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Open Sans"), local("OpenSans"), url("https://themes.googleusercontent.com/static/fonts/opensans/v7/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff") format("woff");
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Open Sans Bold"), local("OpenSans-Bold"), url("https://themes.googleusercontent.com/static/fonts/opensans/v7/k3k702ZOKiLJc3WVjuplzKRDOzjiPcYnFooOUGCOsRk.woff") format("woff");
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 300;
+  src: local("Open Sans Light Italic"), local("OpenSansLight-Italic"), url("https://themes.googleusercontent.com/static/fonts/opensans/v7/PRmiXeptR36kaC0GEAetxvR_54zmj3SbGZQh3vCOwvY.woff") format("woff");
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: local("Open Sans Italic"), local("OpenSans-Italic"), url("https://themes.googleusercontent.com/static/fonts/opensans/v7/xjAJXh38I15wypJXxuGMBrrIa-7acMAeDBVuclsi6Gc.woff") format("woff");
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 700;
+  src: local("Open Sans Bold Italic"), local("OpenSans-BoldItalic"), url("https://themes.googleusercontent.com/static/fonts/opensans/v7/PRmiXeptR36kaC0GEAetxhbnBKKEOwRKgsHDreGcocg.woff") format("woff");
+}
+body {
+  background-color: #fff;
+}
+
+#wrapper {
+  -webkit-text-size-adjust: 100%;
+  color: #222;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  padding: 20px;
+}
+#wrapper article,
+#wrapper aside,
+#wrapper details,
+#wrapper figcaption,
+#wrapper figure,
+#wrapper footer,
+#wrapper header,
+#wrapper hgroup,
+#wrapper main,
+#wrapper nav,
+#wrapper section,
+#wrapper summary {
+  display: block;
+}
+#wrapper audio,
+#wrapper canvas,
+#wrapper video {
+  display: inline-block;
+}
+#wrapper audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+#wrapper [hidden], #wrapper template {
+  display: none;
+}
+#wrapper a {
+  background: transparent;
+}
+#wrapper a:focus {
+  outline: thin dotted;
+}
+#wrapper a:active, #wrapper a:hover {
+  outline: 0;
+}
+#wrapper h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+#wrapper abbr[title] {
+  border-bottom: 1px dotted;
+}
+#wrapper b,
+#wrapper strong {
+  font-weight: bold;
+}
+#wrapper dfn {
+  font-style: italic;
+}
+#wrapper hr {
+  box-sizing: content-box;
+  height: 0;
+}
+#wrapper mark {
+  background: #ff0;
+  color: #000;
+}
+#wrapper code,
+#wrapper kbd,
+#wrapper pre,
+#wrapper samp {
+  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-size: 1em;
+}
+#wrapper pre {
+  white-space: pre-wrap;
+}
+#wrapper q {
+  quotes: '\201C' '\201D' '\2018' '\2019';
+}
+#wrapper small {
+  font-size: 80%;
+}
+#wrapper sub {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+#wrapper sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  top: -.5em;
+  vertical-align: baseline;
+}
+#wrapper sub {
+  bottom: -.25em;
+}
+#wrapper img {
+  border: 0;
+  vertical-align: middle;
+}
+#wrapper svg:not(:root) {
+  overflow: hidden;
+}
+#wrapper figure {
+  margin: 0;
+}
+#wrapper fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: .35em .625em .75em;
+}
+#wrapper legend {
+  border: 0;
+  padding: 0;
+}
+#wrapper button,
+#wrapper input,
+#wrapper select,
+#wrapper textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+#wrapper button,
+#wrapper input {
+  line-height: normal;
+}
+#wrapper button,
+#wrapper select {
+  text-transform: none;
+}
+#wrapper button,
+#wrapper html input[type='button'] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+#wrapper input[type='reset'], #wrapper input[type='submit'] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+#wrapper input[type='radio'][disabled], #wrapper input[type='checkbox'][disabled] {
+  cursor: not-allowed;
+}
+#wrapper button[disabled],
+#wrapper html input[disabled] {
+  cursor: default;
+}
+#wrapper input[type='checkbox'], #wrapper input[type='radio'] {
+  box-sizing: border-box;
+  padding: 0;
+}
+#wrapper input[type='search'] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box;
+}
+#wrapper input[type='search']::-webkit-search-cancel-button, #wrapper input[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+#wrapper button::-moz-focus-inner,
+#wrapper input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+#wrapper textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+#wrapper table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+@media print {
+  #wrapper * {
+    background: transparent !important;
+    box-shadow: none !important;
+    color: #000 !important;
+    text-shadow: none !important;
+  }
+  #wrapper a {
+    text-decoration: underline;
+  }
+  #wrapper a:visited {
+    text-decoration: underline;
+  }
+  #wrapper a[href]::after {
+    content: " (" attr(href) ")";
+  }
+  #wrapper abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+  #wrapper a[href^='javascript:']::after, #wrapper a[href^='#']::after {
+    content: '';
+  }
+  #wrapper pre,
+  #wrapper blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  #wrapper thead {
+    display: table-header-group;
+  }
+  #wrapper tr {
+    page-break-inside: avoid;
+  }
+  #wrapper img {
+    page-break-inside: avoid;
+    max-width: 100% !important;
+  }
+  @page {
+    #wrapper {
+      margin: 2cm .5cm;
+    }
+  }
+  #wrapper p,
+  #wrapper h2,
+  #wrapper h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  #wrapper h2,
+  #wrapper h3 {
+    page-break-after: avoid;
+  }
+  #wrapper select {
+    background: #fff !important;
+  }
+}
+#wrapper * {
+  box-sizing: border-box;
+}
+#wrapper *::before, #wrapper *::after {
+  box-sizing: border-box;
+}
+#wrapper input,
+#wrapper button,
+#wrapper select,
+#wrapper textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+#wrapper a {
+  color: #008cba;
+  text-decoration: none;
+}
+#wrapper a:hover {
+  color: #00526e;
+  text-decoration: underline;
+}
+#wrapper a:focus {
+  color: #00526e;
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+  text-decoration: underline;
+}
+#wrapper hr {
+  border: 0;
+  border-top: 1px solid #ddd;
+  margin-bottom: 21px;
+  margin-top: 21px;
+}
+#wrapper h1,
+#wrapper h2,
+#wrapper h3,
+#wrapper h4,
+#wrapper h5,
+#wrapper h6 {
+  color: inherit;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.1;
+}
+#wrapper h1 small,
+#wrapper h2 small,
+#wrapper h3 small,
+#wrapper h4 small,
+#wrapper h5 small,
+#wrapper h6 small {
+  color: #999;
+  font-weight: normal;
+  line-height: 1;
+}
+#wrapper h1,
+#wrapper h2,
+#wrapper h3 {
+  margin-bottom: 10.5px;
+  margin-top: 21px;
+}
+#wrapper h1 small,
+#wrapper h2 small,
+#wrapper h3 small {
+  font-size: 65%;
+}
+#wrapper h4,
+#wrapper h5,
+#wrapper h6 {
+  margin-bottom: 10.5px;
+  margin-top: 10.5px;
+}
+#wrapper h4 small,
+#wrapper h5 small,
+#wrapper h6 small {
+  font-size: 75%;
+}
+#wrapper h1 {
+  font-size: 39px;
+}
+#wrapper h2 {
+  font-size: 32px;
+}
+#wrapper h3 {
+  font-size: 26px;
+}
+#wrapper h4 {
+  font-size: 19px;
+}
+#wrapper h5 {
+  font-size: 15px;
+}
+#wrapper h6 {
+  font-size: 13px;
+}
+#wrapper p {
+  margin: 0 0 10.5px;
+}
+#wrapper ul,
+#wrapper ol {
+  margin-bottom: 10.5px;
+  margin-top: 0;
+}
+#wrapper ul ul,
+#wrapper ol ul,
+#wrapper ul ol,
+#wrapper ol ol {
+  margin-bottom: 0;
+}
+#wrapper dl {
+  margin-bottom: 21px;
+  margin-top: 0;
+}
+#wrapper dt,
+#wrapper dd {
+  line-height: 1.428571429;
+}
+#wrapper dt {
+  font-weight: bold;
+}
+#wrapper dd {
+  margin-left: 0;
+}
+#wrapper abbr[title], #wrapper abbr[data-original-title] {
+  border-bottom: 1px dotted #999999;
+  cursor: help;
+}
+#wrapper blockquote {
+  border-left: 5px solid #dddddd;
+  margin: 0 0 21px;
+  padding: 10.5px 21px;
+}
+#wrapper blockquote p {
+  font-size: 18.75px;
+  font-weight: 300;
+  line-height: 1.25;
+}
+#wrapper blockquote p:last-child {
+  margin-bottom: 0;
+}
+#wrapper blockquote small {
+  color: #6f6f6f;
+  display: block;
+  line-height: 1.428571429;
+}
+#wrapper blockquote small::before {
+  content: '\2014 \00A0';
+}
+#wrapper blockquote.pull-right {
+  border-left: 0;
+  border-right: 5px solid #dddddd;
+  padding-left: 0;
+  padding-right: 15px;
+}
+#wrapper blockquote.pull-right p,
+#wrapper blockquote.pull-right small {
+  text-align: right;
+}
+#wrapper blockquote.pull-right small::before {
+  content: '';
+}
+#wrapper blockquote.pull-right small::after {
+  content: '\00A0 \2014';
+}
+#wrapper blockquote::before, #wrapper blockquote::after {
+  content: '';
+}
+#wrapper address {
+  font-style: normal;
+  line-height: 1.428571429;
+  margin-bottom: 21px;
+}
+#wrapper code {
+  background-color: #f9f2f4;
+  border-radius: 0;
+  color: #c7254e;
+  font-size: 90%;
+  padding: 2px 4px;
+  white-space: nowrap;
+}
+#wrapper pre {
+  background-color: #f5f5f5;
+  border-radius: 0;
+  border: 1px solid #ccc;
+  color: #333;
+  display: block;
+  font-size: 14px;
+  line-height: 1.428571429;
+  margin: 0 0 10.5px;
+  padding: 10px;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+#wrapper pre code {
+  background-color: transparent;
+  border-radius: 0;
+  color: inherit;
+  font-size: inherit;
+  padding: 0;
+  white-space: pre-wrap;
+}
+#wrapper table {
+  background-color: transparent;
+  max-width: 100%;
+}
+#wrapper th {
+  text-align: left;
+}
+#wrapper table col[class*='col-'] {
+  display: table-column;
+  float: none;
+  position: static;
+}
+#wrapper table td[class*='col-'],
+#wrapper table th[class*='col-'] {
+  display: table-cell;
+  float: none;
+}
+#wrapper fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+#wrapper legend {
+  border-bottom: 1px solid #e5e5e5;
+  border: 0;
+  color: #333;
+  display: block;
+  font-size: 22.5px;
+  line-height: inherit;
+  margin-bottom: 21px;
+  padding: 0;
+  width: 100%;
+}
+#wrapper label {
+  display: inline-block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+#wrapper input[type='search'] {
+  box-sizing: border-box;
+}
+#wrapper input[type='radio'], #wrapper input[type='checkbox'] {
+  margin: 4px 0 0;
+  line-height: normal;
+}
+#wrapper input[type='file'] {
+  display: block;
+}
+#wrapper select[multiple], #wrapper select[size] {
+  height: auto;
+}
+#wrapper select optgroup {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+}
+#wrapper input[type='file']:focus, #wrapper input[type='radio']:focus, #wrapper input[type='checkbox']:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+#wrapper input[type='number']::-webkit-outer-spin-button, #wrapper input[type='number']::-webkit-inner-spin-button {
+  height: auto;
+}
+#wrapper output {
+  color: #6f6f6f;
+  display: block;
+  font-size: 15px;
+  line-height: 1.428571429;
+  padding-top: 7px;
+  vertical-align: middle;
+}
+#wrapper fieldset[disabled] input[type='radio'], #wrapper fieldset[disabled] input[type='checkbox'] {
+  cursor: not-allowed;
+}
+#wrapper dt {
+  margin-top: .5em;
+}
+
+.inverted {
+  background-color: #222;
+}
+.inverted #wrapper {
+  color: #fafafa;
+}
+.inverted #wrapper a {
+  color: #009fd4;
+}
+.inverted #wrapper a:hover {
+  color: #21c8ff;
+}
+.inverted #wrapper a:focus {
+  color: #21c8ff;
+}
+.inverted #wrapper pre {
+  background: #444;
+  color: #ccc;
+}

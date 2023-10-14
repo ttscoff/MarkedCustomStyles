@@ -1,0 +1,1356 @@
+/*
+This document has been created with Marked.app <http://marked2app.com>
+Content is property of the document author
+Please leave this notice in place, along with any additional credits below.
+---------------------------------------------------------------
+Title: developers.google.com
+Author: StyleStealer
+Description: Ripped from https://developers.google.com/web/updates/2017/05/devtools-release-notes#lighthouse
+---
+*/
+@font-face { font-family: "Roboto Mono"; font-style: normal; font-weight: 700; src: local("Roboto Mono Bold"), local("RobotoMono-Bold"), url("https://fonts.gstatic.com/s/robotomono/v4/N4duVc9C58uwPiY8_59Fz_79_ZuUxCigM2DespTnFaw.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215; }
+@font-face { font-family: "Roboto Mono"; font-style: normal; font-weight: 700; src: local("Roboto Mono Bold"), local("RobotoMono-Bold"), url("https://fonts.gstatic.com/s/robotomono/v4/N4duVc9C58uwPiY8_59Fz4gd9OEPUCN3AdYW0e8tat4.woff2") format("woff2"); unicode-range: U+100-24F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "Roboto Mono"; font-style: normal; font-weight: 700; src: local("Roboto Mono Bold"), local("RobotoMono-Bold"), url("https://fonts.gstatic.com/s/robotomono/v4/N4duVc9C58uwPiY8_59Fz8bIQSYZnWLaWC9QNCpTK_U.woff2") format("woff2"); unicode-range: U+102-103, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: "Roboto Mono"; font-style: normal; font-weight: 700; src: local("Roboto Mono Bold"), local("RobotoMono-Bold"), url("https://fonts.gstatic.com/s/robotomono/v4/N4duVc9C58uwPiY8_59Fzwn6Wqxo-xwxilDXPU8chVU.woff2") format("woff2"); unicode-range: U+370-3FF; }
+@font-face { font-family: "Roboto Mono"; font-style: normal; font-weight: 700; src: local("Roboto Mono Bold"), local("RobotoMono-Bold"), url("https://fonts.gstatic.com/s/robotomono/v4/N4duVc9C58uwPiY8_59Fz1T7aJLK6nKpn36IMwTcMMc.woff2") format("woff2"); unicode-range: U+1F00-1FFF; }
+@font-face { font-family: "Roboto Mono"; font-style: normal; font-weight: 700; src: local("Roboto Mono Bold"), local("RobotoMono-Bold"), url("https://fonts.gstatic.com/s/robotomono/v4/N4duVc9C58uwPiY8_59Fz1x-M1I1w5OMiqnVF8xBLhU.woff2") format("woff2"); unicode-range: U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+@font-face { font-family: "Roboto Mono"; font-style: normal; font-weight: 700; src: local("Roboto Mono Bold"), local("RobotoMono-Bold"), url("https://fonts.gstatic.com/s/robotomono/v4/N4duVc9C58uwPiY8_59FzwXaAXup5mZlfK6xRLrhsco.woff2") format("woff2"); unicode-range: U+460-52F, U+20B4, U+2DE0-2DFF, U+A640-A69F; }
+@font-face { font-family: "Roboto Mono"; font-style: normal; font-weight: 500; src: local("Roboto Mono Medium"), local("RobotoMono-Medium"), url("https://fonts.gstatic.com/s/robotomono/v4/N4duVc9C58uwPiY8_59Fz3JuJo8UJJfpGKt7pXjBv4s.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215; }
+@font-face { font-family: "Roboto Mono"; font-style: normal; font-weight: 500; src: local("Roboto Mono Medium"), local("RobotoMono-Medium"), url("https://fonts.gstatic.com/s/robotomono/v4/N4duVc9C58uwPiY8_59Fzy68rctvF73tXrwnoj-zJz4.woff2") format("woff2"); unicode-range: U+100-24F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "Roboto Mono"; font-style: normal; font-weight: 500; src: local("Roboto Mono Medium"), local("RobotoMono-Medium"), url("https://fonts.gstatic.com/s/robotomono/v4/N4duVc9C58uwPiY8_59Fz6PcLl0yDmMtkG7_P3l3CDk.woff2") format("woff2"); unicode-range: U+102-103, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: "Roboto Mono"; font-style: normal; font-weight: 500; src: local("Roboto Mono Medium"), local("RobotoMono-Medium"), url("https://fonts.gstatic.com/s/robotomono/v4/N4duVc9C58uwPiY8_59FzxmC68gGJJgPtDEdj05FzjA.woff2") format("woff2"); unicode-range: U+370-3FF; }
+@font-face { font-family: "Roboto Mono"; font-style: normal; font-weight: 500; src: local("Roboto Mono Medium"), local("RobotoMono-Medium"), url("https://fonts.gstatic.com/s/robotomono/v4/N4duVc9C58uwPiY8_59Fzzgcsvc-_65yuXk0DrKs_mM.woff2") format("woff2"); unicode-range: U+1F00-1FFF; }
+@font-face { font-family: "Roboto Mono"; font-style: normal; font-weight: 500; src: local("Roboto Mono Medium"), local("RobotoMono-Medium"), url("https://fonts.gstatic.com/s/robotomono/v4/N4duVc9C58uwPiY8_59Fz1kR6VAKjAZ1Ikp7q-CGbHQ.woff2") format("woff2"); unicode-range: U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+@font-face { font-family: "Roboto Mono"; font-style: normal; font-weight: 500; src: local("Roboto Mono Medium"), local("RobotoMono-Medium"), url("https://fonts.gstatic.com/s/robotomono/v4/N4duVc9C58uwPiY8_59Fzx1iuknFNd2RHS7qIzZYzNc.woff2") format("woff2"); unicode-range: U+460-52F, U+20B4, U+2DE0-2DFF, U+A640-A69F; }
+@font-face { font-family: "Roboto Mono"; font-style: normal; font-weight: 400; src: local("Roboto Mono"), local("RobotoMono-Regular"), url("https://fonts.gstatic.com/s/robotomono/v4/hMqPNLsu_dywMa4C_DEpY4gp9Q8gbYrhqGlRav_IXfk.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215; }
+@font-face { font-family: "Roboto Mono"; font-style: normal; font-weight: 400; src: local("Roboto Mono"), local("RobotoMono-Regular"), url("https://fonts.gstatic.com/s/robotomono/v4/hMqPNLsu_dywMa4C_DEpY6E8kM4xWR1_1bYURRojRGc.woff2") format("woff2"); unicode-range: U+100-24F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "Roboto Mono"; font-style: normal; font-weight: 400; src: local("Roboto Mono"), local("RobotoMono-Regular"), url("https://fonts.gstatic.com/s/robotomono/v4/hMqPNLsu_dywMa4C_DEpY9DiNsR5a-9Oe_Ivpu8XWlY.woff2") format("woff2"); unicode-range: U+102-103, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: "Roboto Mono"; font-style: normal; font-weight: 400; src: local("Roboto Mono"), local("RobotoMono-Regular"), url("https://fonts.gstatic.com/s/robotomono/v4/hMqPNLsu_dywMa4C_DEpYwt_Rm691LTebKfY2ZkKSmI.woff2") format("woff2"); unicode-range: U+370-3FF; }
+@font-face { font-family: "Roboto Mono"; font-style: normal; font-weight: 400; src: local("Roboto Mono"), local("RobotoMono-Regular"), url("https://fonts.gstatic.com/s/robotomono/v4/hMqPNLsu_dywMa4C_DEpY1BW26QxpSj-_ZKm_xT4hWw.woff2") format("woff2"); unicode-range: U+1F00-1FFF; }
+@font-face { font-family: "Roboto Mono"; font-style: normal; font-weight: 400; src: local("Roboto Mono"), local("RobotoMono-Regular"), url("https://fonts.gstatic.com/s/robotomono/v4/hMqPNLsu_dywMa4C_DEpY14sYYdJg5dU2qzJEVSuta0.woff2") format("woff2"); unicode-range: U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+@font-face { font-family: "Roboto Mono"; font-style: normal; font-weight: 400; src: local("Roboto Mono"), local("RobotoMono-Regular"), url("https://fonts.gstatic.com/s/robotomono/v4/hMqPNLsu_dywMa4C_DEpY_ZraR2Tg8w2lzm7kLNL0-w.woff2") format("woff2"); unicode-range: U+460-52F, U+20B4, U+2DE0-2DFF, U+A640-A69F; }
+@font-face { font-family: Roboto; font-style: italic; font-weight: 700; src: local("Roboto Bold Italic"), local("Roboto-BoldItalic"), url("https://fonts.gstatic.com/s/roboto/v16/t6Nd4cfPRhZP44Q5QAjcC4gp9Q8gbYrhqGlRav_IXfk.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215; }
+@font-face { font-family: Roboto; font-style: italic; font-weight: 700; src: local("Roboto Bold Italic"), local("Roboto-BoldItalic"), url("https://fonts.gstatic.com/s/roboto/v16/t6Nd4cfPRhZP44Q5QAjcC6E8kM4xWR1_1bYURRojRGc.woff2") format("woff2"); unicode-range: U+100-24F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: Roboto; font-style: italic; font-weight: 700; src: local("Roboto Bold Italic"), local("Roboto-BoldItalic"), url("https://fonts.gstatic.com/s/roboto/v16/t6Nd4cfPRhZP44Q5QAjcC9DiNsR5a-9Oe_Ivpu8XWlY.woff2") format("woff2"); unicode-range: U+102-103, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: Roboto; font-style: italic; font-weight: 700; src: local("Roboto Bold Italic"), local("Roboto-BoldItalic"), url("https://fonts.gstatic.com/s/roboto/v16/t6Nd4cfPRhZP44Q5QAjcCwt_Rm691LTebKfY2ZkKSmI.woff2") format("woff2"); unicode-range: U+370-3FF; }
+@font-face { font-family: Roboto; font-style: italic; font-weight: 700; src: local("Roboto Bold Italic"), local("Roboto-BoldItalic"), url("https://fonts.gstatic.com/s/roboto/v16/t6Nd4cfPRhZP44Q5QAjcC1BW26QxpSj-_ZKm_xT4hWw.woff2") format("woff2"); unicode-range: U+1F00-1FFF; }
+@font-face { font-family: Roboto; font-style: italic; font-weight: 700; src: local("Roboto Bold Italic"), local("Roboto-BoldItalic"), url("https://fonts.gstatic.com/s/roboto/v16/t6Nd4cfPRhZP44Q5QAjcC14sYYdJg5dU2qzJEVSuta0.woff2") format("woff2"); unicode-range: U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+@font-face { font-family: Roboto; font-style: italic; font-weight: 700; src: local("Roboto Bold Italic"), local("Roboto-BoldItalic"), url("https://fonts.gstatic.com/s/roboto/v16/t6Nd4cfPRhZP44Q5QAjcC_ZraR2Tg8w2lzm7kLNL0-w.woff2") format("woff2"); unicode-range: U+460-52F, U+20B4, U+2DE0-2DFF, U+A640-A69F; }
+@font-face { font-family: Roboto; font-style: italic; font-weight: 500; src: local("Roboto Medium Italic"), local("Roboto-MediumItalic"), url("https://fonts.gstatic.com/s/roboto/v16/OLffGBTaF0XFOW1gnuHF0Ygp9Q8gbYrhqGlRav_IXfk.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215; }
+@font-face { font-family: Roboto; font-style: italic; font-weight: 500; src: local("Roboto Medium Italic"), local("Roboto-MediumItalic"), url("https://fonts.gstatic.com/s/roboto/v16/OLffGBTaF0XFOW1gnuHF0aE8kM4xWR1_1bYURRojRGc.woff2") format("woff2"); unicode-range: U+100-24F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: Roboto; font-style: italic; font-weight: 500; src: local("Roboto Medium Italic"), local("Roboto-MediumItalic"), url("https://fonts.gstatic.com/s/roboto/v16/OLffGBTaF0XFOW1gnuHF0dDiNsR5a-9Oe_Ivpu8XWlY.woff2") format("woff2"); unicode-range: U+102-103, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: Roboto; font-style: italic; font-weight: 500; src: local("Roboto Medium Italic"), local("Roboto-MediumItalic"), url("https://fonts.gstatic.com/s/roboto/v16/OLffGBTaF0XFOW1gnuHF0Qt_Rm691LTebKfY2ZkKSmI.woff2") format("woff2"); unicode-range: U+370-3FF; }
+@font-face { font-family: Roboto; font-style: italic; font-weight: 500; src: local("Roboto Medium Italic"), local("Roboto-MediumItalic"), url("https://fonts.gstatic.com/s/roboto/v16/OLffGBTaF0XFOW1gnuHF0VBW26QxpSj-_ZKm_xT4hWw.woff2") format("woff2"); unicode-range: U+1F00-1FFF; }
+@font-face { font-family: Roboto; font-style: italic; font-weight: 500; src: local("Roboto Medium Italic"), local("Roboto-MediumItalic"), url("https://fonts.gstatic.com/s/roboto/v16/OLffGBTaF0XFOW1gnuHF0V4sYYdJg5dU2qzJEVSuta0.woff2") format("woff2"); unicode-range: U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+@font-face { font-family: Roboto; font-style: italic; font-weight: 500; src: local("Roboto Medium Italic"), local("Roboto-MediumItalic"), url("https://fonts.gstatic.com/s/roboto/v16/OLffGBTaF0XFOW1gnuHF0fZraR2Tg8w2lzm7kLNL0-w.woff2") format("woff2"); unicode-range: U+460-52F, U+20B4, U+2DE0-2DFF, U+A640-A69F; }
+@font-face { font-family: Roboto; font-style: italic; font-weight: 400; src: local("Roboto Italic"), local("Roboto-Italic"), url("https://fonts.gstatic.com/s/roboto/v16/vPcynSL0qHq_6dX7lKVByXYhjbSpvc47ee6xR_80Hnw.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215; }
+@font-face { font-family: Roboto; font-style: italic; font-weight: 400; src: local("Roboto Italic"), local("Roboto-Italic"), url("https://fonts.gstatic.com/s/roboto/v16/vSzulfKSK0LLjjfeaxcREhkAz4rYn47Zy2rvigWQf6w.woff2") format("woff2"); unicode-range: U+100-24F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: Roboto; font-style: italic; font-weight: 400; src: local("Roboto Italic"), local("Roboto-Italic"), url("https://fonts.gstatic.com/s/roboto/v16/K23cxWVTrIFD6DJsEVi07RkAz4rYn47Zy2rvigWQf6w.woff2") format("woff2"); unicode-range: U+102-103, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: Roboto; font-style: italic; font-weight: 400; src: local("Roboto Italic"), local("Roboto-Italic"), url("https://fonts.gstatic.com/s/roboto/v16/cDKhRaXnQTOVbaoxwdOr9xkAz4rYn47Zy2rvigWQf6w.woff2") format("woff2"); unicode-range: U+370-3FF; }
+@font-face { font-family: Roboto; font-style: italic; font-weight: 400; src: local("Roboto Italic"), local("Roboto-Italic"), url("https://fonts.gstatic.com/s/roboto/v16/1hZf02POANh32k2VkgEoUBkAz4rYn47Zy2rvigWQf6w.woff2") format("woff2"); unicode-range: U+1F00-1FFF; }
+@font-face { font-family: Roboto; font-style: italic; font-weight: 400; src: local("Roboto Italic"), local("Roboto-Italic"), url("https://fonts.gstatic.com/s/roboto/v16/OpXUqTo0UgQQhGj_SFdLWBkAz4rYn47Zy2rvigWQf6w.woff2") format("woff2"); unicode-range: U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+@font-face { font-family: Roboto; font-style: italic; font-weight: 400; src: local("Roboto Italic"), local("Roboto-Italic"), url("https://fonts.gstatic.com/s/roboto/v16/WxrXJa0C3KdtC7lMafG4dRkAz4rYn47Zy2rvigWQf6w.woff2") format("woff2"); unicode-range: U+460-52F, U+20B4, U+2DE0-2DFF, U+A640-A69F; }
+@font-face { font-family: Roboto; font-style: normal; font-weight: 700; src: local("Roboto Bold"), local("Roboto-Bold"), url("https://fonts.gstatic.com/s/roboto/v16/d-6IYplOFocCacKzxwXSOJBw1xU1rKptJj_0jans920.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215; }
+@font-face { font-family: Roboto; font-style: normal; font-weight: 700; src: local("Roboto Bold"), local("Roboto-Bold"), url("https://fonts.gstatic.com/s/roboto/v16/97uahxiqZRoncBaCEI3aW4X0hVgzZQUfRDuZrPvH3D8.woff2") format("woff2"); unicode-range: U+100-24F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: Roboto; font-style: normal; font-weight: 700; src: local("Roboto Bold"), local("Roboto-Bold"), url("https://fonts.gstatic.com/s/roboto/v16/PwZc-YbIL414wB9rB1IAPYX0hVgzZQUfRDuZrPvH3D8.woff2") format("woff2"); unicode-range: U+102-103, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: Roboto; font-style: normal; font-weight: 700; src: local("Roboto Bold"), local("Roboto-Bold"), url("https://fonts.gstatic.com/s/roboto/v16/jSN2CGVDbcVyCnfJfjSdfIX0hVgzZQUfRDuZrPvH3D8.woff2") format("woff2"); unicode-range: U+370-3FF; }
+@font-face { font-family: Roboto; font-style: normal; font-weight: 700; src: local("Roboto Bold"), local("Roboto-Bold"), url("https://fonts.gstatic.com/s/roboto/v16/UX6i4JxQDm3fVTc1CPuwqoX0hVgzZQUfRDuZrPvH3D8.woff2") format("woff2"); unicode-range: U+1F00-1FFF; }
+@font-face { font-family: Roboto; font-style: normal; font-weight: 700; src: local("Roboto Bold"), local("Roboto-Bold"), url("https://fonts.gstatic.com/s/roboto/v16/isZ-wbCXNKAbnjo6_TwHToX0hVgzZQUfRDuZrPvH3D8.woff2") format("woff2"); unicode-range: U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+@font-face { font-family: Roboto; font-style: normal; font-weight: 700; src: local("Roboto Bold"), local("Roboto-Bold"), url("https://fonts.gstatic.com/s/roboto/v16/77FXFjRbGzN4aCrSFhlh3oX0hVgzZQUfRDuZrPvH3D8.woff2") format("woff2"); unicode-range: U+460-52F, U+20B4, U+2DE0-2DFF, U+A640-A69F; }
+@font-face { font-family: Roboto; font-style: normal; font-weight: 500; src: local("Roboto Medium"), local("Roboto-Medium"), url("https://fonts.gstatic.com/s/roboto/v16/RxZJdnzeo3R5zSexge8UUZBw1xU1rKptJj_0jans920.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215; }
+@font-face { font-family: Roboto; font-style: normal; font-weight: 500; src: local("Roboto Medium"), local("Roboto-Medium"), url("https://fonts.gstatic.com/s/roboto/v16/oOeFwZNlrTefzLYmlVV1UIX0hVgzZQUfRDuZrPvH3D8.woff2") format("woff2"); unicode-range: U+100-24F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: Roboto; font-style: normal; font-weight: 500; src: local("Roboto Medium"), local("Roboto-Medium"), url("https://fonts.gstatic.com/s/roboto/v16/mbmhprMH69Zi6eEPBYVFhYX0hVgzZQUfRDuZrPvH3D8.woff2") format("woff2"); unicode-range: U+102-103, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: Roboto; font-style: normal; font-weight: 500; src: local("Roboto Medium"), local("Roboto-Medium"), url("https://fonts.gstatic.com/s/roboto/v16/mx9Uck6uB63VIKFYnEMXrYX0hVgzZQUfRDuZrPvH3D8.woff2") format("woff2"); unicode-range: U+370-3FF; }
+@font-face { font-family: Roboto; font-style: normal; font-weight: 500; src: local("Roboto Medium"), local("Roboto-Medium"), url("https://fonts.gstatic.com/s/roboto/v16/rGvHdJnr2l75qb0YND9NyIX0hVgzZQUfRDuZrPvH3D8.woff2") format("woff2"); unicode-range: U+1F00-1FFF; }
+@font-face { font-family: Roboto; font-style: normal; font-weight: 500; src: local("Roboto Medium"), local("Roboto-Medium"), url("https://fonts.gstatic.com/s/roboto/v16/oHi30kwQWvpCWqAhzHcCSIX0hVgzZQUfRDuZrPvH3D8.woff2") format("woff2"); unicode-range: U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+@font-face { font-family: Roboto; font-style: normal; font-weight: 500; src: local("Roboto Medium"), local("Roboto-Medium"), url("https://fonts.gstatic.com/s/roboto/v16/ZLqKeelYbATG60EpZBSDy4X0hVgzZQUfRDuZrPvH3D8.woff2") format("woff2"); unicode-range: U+460-52F, U+20B4, U+2DE0-2DFF, U+A640-A69F; }
+@font-face { font-family: Roboto; font-style: normal; font-weight: 400; src: local("Roboto"), local("Roboto-Regular"), url("https://fonts.gstatic.com/s/roboto/v16/oMMgfZMQthOryQo9n22dcuvvDin1pK8aKteLpeZ5c0A.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215; }
+@font-face { font-family: Roboto; font-style: normal; font-weight: 400; src: local("Roboto"), local("Roboto-Regular"), url("https://fonts.gstatic.com/s/roboto/v16/Ks_cVxiCiwUWVsFWFA3Bjn-_kf6ByYO6CLYdB4HQE-Y.woff2") format("woff2"); unicode-range: U+100-24F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: Roboto; font-style: normal; font-weight: 400; src: local("Roboto"), local("Roboto-Regular"), url("https://fonts.gstatic.com/s/roboto/v16/NJ4vxlgWwWbEsv18dAhqnn-_kf6ByYO6CLYdB4HQE-Y.woff2") format("woff2"); unicode-range: U+102-103, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: Roboto; font-style: normal; font-weight: 400; src: local("Roboto"), local("Roboto-Regular"), url("https://fonts.gstatic.com/s/roboto/v16/_VYFx-s824kXq_Ul2BHqYH-_kf6ByYO6CLYdB4HQE-Y.woff2") format("woff2"); unicode-range: U+370-3FF; }
+@font-face { font-family: Roboto; font-style: normal; font-weight: 400; src: local("Roboto"), local("Roboto-Regular"), url("https://fonts.gstatic.com/s/roboto/v16/tnj4SB6DNbdaQnsM8CFqBX-_kf6ByYO6CLYdB4HQE-Y.woff2") format("woff2"); unicode-range: U+1F00-1FFF; }
+@font-face { font-family: Roboto; font-style: normal; font-weight: 400; src: local("Roboto"), local("Roboto-Regular"), url("https://fonts.gstatic.com/s/roboto/v16/uYECMKoHcO9x1wdmbyHIm3-_kf6ByYO6CLYdB4HQE-Y.woff2") format("woff2"); unicode-range: U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+@font-face { font-family: Roboto; font-style: normal; font-weight: 400; src: local("Roboto"), local("Roboto-Regular"), url("https://fonts.gstatic.com/s/roboto/v16/sTdaA6j0Psb920Vjv-mrzH-_kf6ByYO6CLYdB4HQE-Y.woff2") format("woff2"); unicode-range: U+460-52F, U+20B4, U+2DE0-2DFF, U+A640-A69F; }
+@font-face { font-family: Roboto; font-style: normal; font-weight: 300; src: local("Roboto Light"), local("Roboto-Light"), url("https://fonts.gstatic.com/s/roboto/v16/Hgo13k-tfSpn0qi1SFdUfZBw1xU1rKptJj_0jans920.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215; }
+@font-face { font-family: Roboto; font-style: normal; font-weight: 300; src: local("Roboto Light"), local("Roboto-Light"), url("https://fonts.gstatic.com/s/roboto/v16/Pru33qjShpZSmG3z6VYwnYX0hVgzZQUfRDuZrPvH3D8.woff2") format("woff2"); unicode-range: U+100-24F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: Roboto; font-style: normal; font-weight: 300; src: local("Roboto Light"), local("Roboto-Light"), url("https://fonts.gstatic.com/s/roboto/v16/NYDWBdD4gIq26G5XYbHsFIX0hVgzZQUfRDuZrPvH3D8.woff2") format("woff2"); unicode-range: U+102-103, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: Roboto; font-style: normal; font-weight: 300; src: local("Roboto Light"), local("Roboto-Light"), url("https://fonts.gstatic.com/s/roboto/v16/I3S1wsgSg9YCurV6PUkTOYX0hVgzZQUfRDuZrPvH3D8.woff2") format("woff2"); unicode-range: U+370-3FF; }
+@font-face { font-family: Roboto; font-style: normal; font-weight: 300; src: local("Roboto Light"), local("Roboto-Light"), url("https://fonts.gstatic.com/s/roboto/v16/-L14Jk06m6pUHB-5mXQQnYX0hVgzZQUfRDuZrPvH3D8.woff2") format("woff2"); unicode-range: U+1F00-1FFF; }
+@font-face { font-family: Roboto; font-style: normal; font-weight: 300; src: local("Roboto Light"), local("Roboto-Light"), url("https://fonts.gstatic.com/s/roboto/v16/Fl4y0QdOxyyTHEGMXX8kcYX0hVgzZQUfRDuZrPvH3D8.woff2") format("woff2"); unicode-range: U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+@font-face { font-family: Roboto; font-style: normal; font-weight: 300; src: local("Roboto Light"), local("Roboto-Light"), url("https://fonts.gstatic.com/s/roboto/v16/0eC6fl06luXEYWpBSJvXCIX0hVgzZQUfRDuZrPvH3D8.woff2") format("woff2"); unicode-range: U+460-52F, U+20B4, U+2DE0-2DFF, U+A640-A69F; }
+@font-face { font-family: "Material Icons"; font-style: normal; font-weight: 400; src: url("https://fonts.gstatic.com/s/materialicons/v28/2fcrYFNaTjcS6g4U3t-Y5UEw0lE80llgEseQY3FEmqw.woff2") format("woff2"); }
+body,#wrapper  {
+    background: none;
+    border-bottom: 0 none rgb(33, 33, 33);
+    border-left: 0 none rgb(33, 33, 33);
+    border-radius: 0;
+    border-right: 0 none rgb(33, 33, 33);
+    border-top: 0 none rgb(33, 33, 33);
+    color: rgb(33, 33, 33);
+    display: block;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 24px;
+    margin: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper  img { max-width: 100%; }
+#wrapper h1 {
+    background: none;
+    border-bottom: 0 none rgb(117, 117, 117);
+    border-left: 0 none rgb(117, 117, 117);
+    border-radius: 0;
+    border-right: 0 none rgb(117, 117, 117);
+    border-top: 0 none rgb(117, 117, 117);
+    color: rgb(117, 117, 117);
+    display: block;
+    font-family: Roboto, sans-serif;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 300;
+    letter-spacing: -0.34px;
+    line-height: 40px;
+    margin: 0 0 20px;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper h2 {
+    background: none;
+    border-bottom: 1px solid rgb(235, 235, 235);
+    border-left: 0 none rgb(33, 33, 33);
+    border-radius: 0;
+    border-right: 0 none rgb(33, 33, 33);
+    border-top: 0 none rgb(33, 33, 33);
+    color: rgb(33, 33, 33);
+    display: block;
+    font-family: Roboto, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    letter-spacing: -0.24px;
+    line-height: 32px;
+    margin: 0 0 20px;
+    padding: 0 0 3px;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper h3 {
+    background: none;
+    border-bottom: 0 none rgb(33, 33, 33);
+    border-left: 0 none rgb(33, 33, 33);
+    border-radius: 0;
+    border-right: 0 none rgb(33, 33, 33);
+    border-top: 0 none rgb(33, 33, 33);
+    color: rgb(33, 33, 33);
+    display: block;
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 32px;
+    margin: 0 0 16px;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper h4 {
+    background: none;
+    border-bottom: 0 none rgb(33, 33, 33);
+    border-left: 0 none rgb(33, 33, 33);
+    border-radius: 0;
+    border-right: 0 none rgb(33, 33, 33);
+    border-top: 0 none rgb(33, 33, 33);
+    color: rgb(33, 33, 33);
+    display: block;
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 32px;
+    margin: 0 0 16px;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper h5 {
+    background: none;
+    border-bottom: 0 none rgb(33, 33, 33);
+    border-left: 0 none rgb(33, 33, 33);
+    border-radius: 0;
+    border-right: 0 none rgb(33, 33, 33);
+    border-top: 0 none rgb(33, 33, 33);
+    color: rgb(33, 33, 33);
+    display: block;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: bold;
+    letter-spacing: normal;
+    line-height: 24px;
+    margin: 0 0 16px;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper h6 {
+    background: none;
+    border-bottom: 0 none rgb(33, 33, 33);
+    border-left: 0 none rgb(33, 33, 33);
+    border-radius: 0;
+    border-right: 0 none rgb(33, 33, 33);
+    border-top: 0 none rgb(33, 33, 33);
+    color: rgb(33, 33, 33);
+    display: block;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: normal;
+    line-height: 24px;
+    margin: 0 0 16px;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper a h1 {
+    background: none;
+    border-bottom: 0 none rgb(117, 117, 117);
+    border-left: 0 none rgb(117, 117, 117);
+    border-radius: 0;
+    border-right: 0 none rgb(117, 117, 117);
+    border-top: 0 none rgb(117, 117, 117);
+    color: rgb(117, 117, 117);
+    display: block;
+    font-family: Roboto, sans-serif;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 300;
+    letter-spacing: -0.34px;
+    line-height: 40px;
+    margin: 0 0 20px;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper a h2 {
+    background: none;
+    border-bottom: 1px solid rgb(235, 235, 235);
+    border-left: 0 none rgb(3, 155, 229);
+    border-radius: 0;
+    border-right: 0 none rgb(3, 155, 229);
+    border-top: 0 none rgb(3, 155, 229);
+    color: rgb(3, 155, 229);
+    display: block;
+    font-family: Roboto, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    letter-spacing: -0.24px;
+    line-height: 32px;
+    margin: 40px 0 20px;
+    padding: 0 0 3px;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper a h3 {
+    background: none;
+    border-bottom: 0 none rgb(3, 155, 229);
+    border-left: 0 none rgb(3, 155, 229);
+    border-radius: 0;
+    border-right: 0 none rgb(3, 155, 229);
+    border-top: 0 none rgb(3, 155, 229);
+    color: rgb(3, 155, 229);
+    display: block;
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 32px;
+    margin: 32px 0 16px;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper h1 a {
+    background: none;
+    border-bottom: 0 none rgb(3, 155, 229);
+    border-left: 0 none rgb(3, 155, 229);
+    border-radius: 0;
+    border-right: 0 none rgb(3, 155, 229);
+    border-top: 0 none rgb(3, 155, 229);
+    color: rgb(3, 155, 229);
+    display: inline;
+    font-family: Roboto, sans-serif;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 300;
+    letter-spacing: -0.34px;
+    line-height: 40px;
+    margin: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+    transition: all 0s ease 0s;
+    text-decoration: none;
+}
+#wrapper h2 a {
+    background: none;
+    border-bottom: 0 none rgb(3, 155, 229);
+    border-left: 0 none rgb(3, 155, 229);
+    border-radius: 0;
+    border-right: 0 none rgb(3, 155, 229);
+    border-top: 0 none rgb(3, 155, 229);
+    color: rgb(3, 155, 229);
+    display: inline;
+    font-family: Roboto, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    letter-spacing: -0.24px;
+    line-height: 32px;
+    margin: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+    transition: all 0s ease 0s;
+    text-decoration: none;
+}
+#wrapper h3 a {
+    background: none;
+    border-bottom: 0 none rgb(3, 155, 229);
+    border-left: 0 none rgb(3, 155, 229);
+    border-radius: 0;
+    border-right: 0 none rgb(3, 155, 229);
+    border-top: 0 none rgb(3, 155, 229);
+    color: rgb(3, 155, 229);
+    display: inline;
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 32px;
+    margin: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+    transition: all 0s ease 0s;
+    text-decoration: none;
+}
+#wrapper p {
+    background: none;
+    border-bottom: 0 none rgb(33, 33, 33);
+    border-left: 0 none rgb(33, 33, 33);
+    border-radius: 0;
+    border-right: 0 none rgb(33, 33, 33);
+    border-top: 0 none rgb(33, 33, 33);
+    color: rgb(33, 33, 33);
+    display: block;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 24px;
+    margin: 16px 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+    position: static;
+    overflow: visible;
+    white-space: normal;
+    word-break: normal;
+}
+#wrapper ol {
+    background: none;
+    border-bottom: 0 none rgb(33, 33, 33);
+    border-left: 0 none rgb(33, 33, 33);
+    border-radius: 0;
+    border-right: 0 none rgb(33, 33, 33);
+    border-top: 0 none rgb(33, 33, 33);
+    color: rgb(33, 33, 33);
+    display: block;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 24px;
+    margin: 0;
+    padding: 0 0 0 40px;
+    text-align: start;
+    text-indent: 0;
+    list-style-position: outside;
+    list-style-type: decimal;
+}
+#wrapper ul {
+    background: none;
+    border-bottom: 0 none rgb(33, 33, 33);
+    border-left: 0 none rgb(33, 33, 33);
+    border-radius: 0;
+    border-right: 0 none rgb(33, 33, 33);
+    border-top: 0 none rgb(33, 33, 33);
+    color: rgb(33, 33, 33);
+    display: block;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 24px;
+    margin: 0;
+    padding: 0 0 0 40px;
+    text-align: start;
+    text-indent: 0;
+    list-style-position: outside;
+    list-style-type: disc;
+}
+#wrapper ul li {
+    background: none;
+    border-bottom: 0 none rgb(33, 33, 33);
+    border-left: 0 none rgb(33, 33, 33);
+    border-radius: 0;
+    border-right: 0 none rgb(33, 33, 33);
+    border-top: 0 none rgb(33, 33, 33);
+    color: rgb(33, 33, 33);
+    display: list-item;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 24px;
+    margin: 8px 0;
+    padding: 0;
+    text-align: left;
+    text-indent: 0;
+    list-style-position: outside;
+    list-style-type: disc;
+}
+#wrapper ol li {
+    background: none;
+    border-bottom: 0 none rgb(33, 33, 33);
+    border-left: 0 none rgb(33, 33, 33);
+    border-radius: 0;
+    border-right: 0 none rgb(33, 33, 33);
+    border-top: 0 none rgb(33, 33, 33);
+    color: rgb(33, 33, 33);
+    display: list-item;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 24px;
+    margin: 8px 0;
+    padding: 0;
+    text-align: left;
+    text-indent: 0;
+    list-style-position: outside;
+    list-style-type: decimal;
+}
+#wrapper li ul {
+    background: none;
+    border-bottom: 0 none rgb(33, 33, 33);
+    border-left: 0 none rgb(33, 33, 33);
+    border-radius: 0;
+    border-right: 0 none rgb(33, 33, 33);
+    border-top: 0 none rgb(33, 33, 33);
+    color: rgb(33, 33, 33);
+    display: block;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 24px;
+    margin: 0;
+    padding: 0 0 0 40px;
+    text-align: left;
+    text-indent: 0;
+    list-style-position: outside;
+    list-style-type: disc;
+}
+#wrapper li ol {
+    background: none;
+    border-bottom: 0 none rgb(33, 33, 33);
+    border-left: 0 none rgb(33, 33, 33);
+    border-radius: 0;
+    border-right: 0 none rgb(33, 33, 33);
+    border-top: 0 none rgb(33, 33, 33);
+    color: rgb(33, 33, 33);
+    display: block;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 24px;
+    margin: 0;
+    padding: 0 0 0 40px;
+    text-align: left;
+    text-indent: 0;
+    list-style-position: outside;
+    list-style-type: lower-alpha;
+}
+#wrapper ul li li {
+    background: none;
+    border-bottom: 0 none rgb(33, 33, 33);
+    border-left: 0 none rgb(33, 33, 33);
+    border-radius: 0;
+    border-right: 0 none rgb(33, 33, 33);
+    border-top: 0 none rgb(33, 33, 33);
+    color: rgb(33, 33, 33);
+    display: list-item;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 24px;
+    margin: 8px 0;
+    padding: 0;
+    text-align: left;
+    text-indent: 0;
+    list-style-position: outside;
+    list-style-type: disc;
+}
+#wrapper ol li li {
+    background: none;
+    border-bottom: 0 none rgb(33, 33, 33);
+    border-left: 0 none rgb(33, 33, 33);
+    border-radius: 0;
+    border-right: 0 none rgb(33, 33, 33);
+    border-top: 0 none rgb(33, 33, 33);
+    color: rgb(33, 33, 33);
+    display: list-item;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 24px;
+    margin: 8px 0;
+    padding: 0;
+    text-align: left;
+    text-indent: 0;
+    list-style-position: outside;
+    list-style-type: lower-alpha;
+}
+#wrapper dl {
+    background: none;
+    border-bottom: 0 none rgb(33, 33, 33);
+    border-left: 0 none rgb(33, 33, 33);
+    border-radius: 0;
+    border-right: 0 none rgb(33, 33, 33);
+    border-top: 0 none rgb(33, 33, 33);
+    color: rgb(33, 33, 33);
+    display: block;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 24px;
+    margin: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper dd {
+    background: none;
+    border-bottom: 0 none rgb(33, 33, 33);
+    border-left: 0 none rgb(33, 33, 33);
+    border-radius: 0;
+    border-right: 0 none rgb(33, 33, 33);
+    border-top: 0 none rgb(33, 33, 33);
+    color: rgb(33, 33, 33);
+    display: block;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 24px;
+    margin: 16px 0;
+    padding: 0 0 0 40px;
+    text-align: start;
+    text-indent: 0;
+    list-style-position: outside;
+    list-style-type: disc;
+}
+#wrapper dt {
+    background: none;
+    border-bottom: 0 none rgb(33, 33, 33);
+    border-left: 0 none rgb(33, 33, 33);
+    border-radius: 0;
+    border-right: 0 none rgb(33, 33, 33);
+    border-top: 0 none rgb(33, 33, 33);
+    color: rgb(33, 33, 33);
+    display: block;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: bold;
+    letter-spacing: normal;
+    line-height: 24px;
+    margin: 0 0 16px;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+    list-style-position: outside;
+    list-style-type: disc;
+}
+#wrapper strong {
+    background: none;
+    border-bottom: 0 none rgb(33, 33, 33);
+    border-left: 0 none rgb(33, 33, 33);
+    border-radius: 0;
+    border-right: 0 none rgb(33, 33, 33);
+    border-top: 0 none rgb(33, 33, 33);
+    color: rgb(33, 33, 33);
+    display: inline;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: bold;
+    letter-spacing: normal;
+    line-height: 24px;
+    margin: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper em {
+    background: none;
+    border-bottom: 0 none rgb(33, 33, 33);
+    border-left: 0 none rgb(33, 33, 33);
+    border-radius: 0;
+    border-right: 0 none rgb(33, 33, 33);
+    border-top: 0 none rgb(33, 33, 33);
+    color: rgb(33, 33, 33);
+    display: inline;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 24px;
+    margin: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper b {
+    background: none;
+    border-bottom: 0 none rgb(33, 33, 33);
+    border-left: 0 none rgb(33, 33, 33);
+    border-radius: 0;
+    border-right: 0 none rgb(33, 33, 33);
+    border-top: 0 none rgb(33, 33, 33);
+    color: rgb(33, 33, 33);
+    display: inline;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: bold;
+    letter-spacing: normal;
+    line-height: 24px;
+    margin: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper i {
+    background: none;
+    border-bottom: 0 none rgb(33, 33, 33);
+    border-left: 0 none rgb(33, 33, 33);
+    border-radius: 0;
+    border-right: 0 none rgb(33, 33, 33);
+    border-top: 0 none rgb(33, 33, 33);
+    color: rgb(33, 33, 33);
+    display: inline;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 24px;
+    margin: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper sup {
+    background: none;
+    border-bottom: 0 none rgb(33, 33, 33);
+    border-left: 0 none rgb(33, 33, 33);
+    border-radius: 0;
+    border-right: 0 none rgb(33, 33, 33);
+    border-top: 0 none rgb(33, 33, 33);
+    color: rgb(33, 33, 33);
+    display: inline;
+    font-family: Roboto, sans-serif;
+    font-size: 13.3333px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 13.3333px;
+    margin: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper sub {
+    background: none;
+    border-bottom: 0 none rgb(33, 33, 33);
+    border-left: 0 none rgb(33, 33, 33);
+    border-radius: 0;
+    border-right: 0 none rgb(33, 33, 33);
+    border-top: 0 none rgb(33, 33, 33);
+    color: rgb(33, 33, 33);
+    display: inline;
+    font-family: Roboto, sans-serif;
+    font-size: 13.3333px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 24px;
+    margin: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper a {
+    background: none;
+    border-bottom: 0 none rgb(3, 155, 229);
+    border-left: 0 none rgb(3, 155, 229);
+    border-radius: 0;
+    border-right: 0 none rgb(3, 155, 229);
+    border-top: 0 none rgb(3, 155, 229);
+    color: rgb(3, 155, 229);
+    display: inline;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 24px;
+    margin: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+    transition: all 0s ease 0s;
+    text-decoration: none;
+}
+#wrapper p strong {
+    background: none;
+    border-bottom: 0 none rgb(33, 33, 33);
+    border-left: 0 none rgb(33, 33, 33);
+    border-radius: 0;
+    border-right: 0 none rgb(33, 33, 33);
+    border-top: 0 none rgb(33, 33, 33);
+    color: rgb(33, 33, 33);
+    display: inline;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: bold;
+    letter-spacing: normal;
+    line-height: 24px;
+    margin: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper p em {
+    background: none;
+    border-bottom: 0 none rgb(33, 33, 33);
+    border-left: 0 none rgb(33, 33, 33);
+    border-radius: 0;
+    border-right: 0 none rgb(33, 33, 33);
+    border-top: 0 none rgb(33, 33, 33);
+    color: rgb(33, 33, 33);
+    display: inline;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 24px;
+    margin: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper p sup {
+    background: none;
+    border-bottom: 0 none rgb(33, 33, 33);
+    border-left: 0 none rgb(33, 33, 33);
+    border-radius: 0;
+    border-right: 0 none rgb(33, 33, 33);
+    border-top: 0 none rgb(33, 33, 33);
+    color: rgb(33, 33, 33);
+    display: inline;
+    font-family: Roboto, sans-serif;
+    font-size: 13.3333px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 13.3333px;
+    margin: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper p sub {
+    background: none;
+    border-bottom: 0 none rgb(33, 33, 33);
+    border-left: 0 none rgb(33, 33, 33);
+    border-radius: 0;
+    border-right: 0 none rgb(33, 33, 33);
+    border-top: 0 none rgb(33, 33, 33);
+    color: rgb(33, 33, 33);
+    display: inline;
+    font-family: Roboto, sans-serif;
+    font-size: 13.3333px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 24px;
+    margin: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper p b {
+    background: none;
+    border-bottom: 0 none rgb(33, 33, 33);
+    border-left: 0 none rgb(33, 33, 33);
+    border-radius: 0;
+    border-right: 0 none rgb(33, 33, 33);
+    border-top: 0 none rgb(33, 33, 33);
+    color: rgb(33, 33, 33);
+    display: inline;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: bold;
+    letter-spacing: normal;
+    line-height: 24px;
+    margin: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper p i {
+    background: none;
+    border-bottom: 0 none rgb(33, 33, 33);
+    border-left: 0 none rgb(33, 33, 33);
+    border-radius: 0;
+    border-right: 0 none rgb(33, 33, 33);
+    border-top: 0 none rgb(33, 33, 33);
+    color: rgb(33, 33, 33);
+    display: inline;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 24px;
+    margin: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper hr {
+    background: rgb(235, 235, 235) none repeat scroll 0% 0% / auto padding-box border-box;
+    border-bottom: 0 none rgb(33, 33, 33);
+    border-left: 0 none rgb(33, 33, 33);
+    border-radius: 0;
+    border-right: 0 none rgb(33, 33, 33);
+    border-top: 0 none rgb(33, 33, 33);
+    color: rgb(33, 33, 33);
+    display: block;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 24px;
+    margin: 16px 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper p strong a {
+    background: none;
+    border-bottom: 0 none rgb(3, 155, 229);
+    border-left: 0 none rgb(3, 155, 229);
+    border-radius: 0;
+    border-right: 0 none rgb(3, 155, 229);
+    border-top: 0 none rgb(3, 155, 229);
+    color: rgb(3, 155, 229);
+    display: inline;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: bold;
+    letter-spacing: normal;
+    line-height: 24px;
+    margin: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+    transition: all 0s ease 0s;
+    text-decoration: none;
+}
+#wrapper p em a {
+    background: none;
+    border-bottom: 0 none rgb(3, 155, 229);
+    border-left: 0 none rgb(3, 155, 229);
+    border-radius: 0;
+    border-right: 0 none rgb(3, 155, 229);
+    border-top: 0 none rgb(3, 155, 229);
+    color: rgb(3, 155, 229);
+    display: inline;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 24px;
+    margin: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+    transition: all 0s ease 0s;
+    text-decoration: none;
+}
+#wrapper p a em {
+    background: none;
+    border-bottom: 0 none rgb(3, 155, 229);
+    border-left: 0 none rgb(3, 155, 229);
+    border-radius: 0;
+    border-right: 0 none rgb(3, 155, 229);
+    border-top: 0 none rgb(3, 155, 229);
+    color: rgb(3, 155, 229);
+    display: inline;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 24px;
+    margin: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper p a strong {
+    background: none;
+    border-bottom: 0 none rgb(3, 155, 229);
+    border-left: 0 none rgb(3, 155, 229);
+    border-radius: 0;
+    border-right: 0 none rgb(3, 155, 229);
+    border-top: 0 none rgb(3, 155, 229);
+    color: rgb(3, 155, 229);
+    display: inline;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: bold;
+    letter-spacing: normal;
+    line-height: 24px;
+    margin: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper p code {
+    background: rgb(247, 247, 247) none repeat scroll 0% 0% / auto padding-box border-box;
+    border-bottom: 0 none rgb(55, 71, 79);
+    border-left: 0 none rgb(55, 71, 79);
+    border-radius: 0;
+    border-right: 0 none rgb(55, 71, 79);
+    border-top: 0 none rgb(55, 71, 79);
+    color: rgb(55, 71, 79);
+    display: inline;
+    font-family: "Roboto Mono", monospace;
+    font-size: 14.4px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: normal;
+    line-height: 14.4px;
+    margin: 0;
+    padding: 1px 4px;
+    text-align: start;
+    text-indent: 0;
+    position: static;
+    overflow: visible;
+    white-space: normal;
+    word-break: break-word;
+}
+#wrapper p a code {
+    background: rgb(247, 247, 247) none repeat scroll 0% 0% / auto padding-box border-box;
+    border-bottom: 0 none rgb(3, 155, 229);
+    border-left: 0 none rgb(3, 155, 229);
+    border-radius: 0;
+    border-right: 0 none rgb(3, 155, 229);
+    border-top: 0 none rgb(3, 155, 229);
+    color: rgb(3, 155, 229);
+    display: inline;
+    font-family: "Roboto Mono", monospace;
+    font-size: 14.4px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: normal;
+    line-height: 14.4px;
+    margin: 0;
+    padding: 1px 4px;
+    text-align: start;
+    text-indent: 0;
+    position: static;
+    overflow: visible;
+    white-space: normal;
+    word-break: break-word;
+}
+#wrapper p code a {
+    background: none;
+    border-bottom: 0 none rgb(3, 155, 229);
+    border-left: 0 none rgb(3, 155, 229);
+    border-radius: 0;
+    border-right: 0 none rgb(3, 155, 229);
+    border-top: 0 none rgb(3, 155, 229);
+    color: rgb(3, 155, 229);
+    display: inline;
+    font-family: "Roboto Mono", monospace;
+    font-size: 14.4px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: normal;
+    line-height: 14.4px;
+    margin: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+    transition: all 0s ease 0s;
+    text-decoration: none;
+}
+#wrapper pre {
+    background: rgb(247, 247, 247) none repeat scroll 0% 0% / auto padding-box border-box;
+    border-bottom: 0 none rgb(55, 71, 79);
+    border-left: 0 none rgb(55, 71, 79);
+    border-radius: 0;
+    border-right: 0 none rgb(55, 71, 79);
+    border-top: 0 none rgb(55, 71, 79);
+    color: rgb(55, 71, 79);
+    display: block;
+    font-family: "Roboto Mono", monospace;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 20px;
+    margin: 16px 0;
+    padding: 8px;
+    text-align: start;
+    text-indent: 0;
+    position: relative;
+    overflow: auto;
+    white-space: pre;
+    word-break: normal;
+}
+#wrapper code {
+    background: rgb(247, 247, 247) none repeat scroll 0% 0% / auto padding-box border-box;
+    border-bottom: 0 none rgb(3, 155, 229);
+    border-left: 0 none rgb(3, 155, 229);
+    border-radius: 0;
+    border-right: 0 none rgb(3, 155, 229);
+    border-top: 0 none rgb(3, 155, 229);
+    color: rgb(3, 155, 229);
+    display: inline;
+    font-family: "Roboto Mono", monospace;
+    font-size: 14.4px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: normal;
+    line-height: 14.4px;
+    margin: 0;
+    padding: 1px 4px;
+    text-align: start;
+    text-indent: 0;
+    position: static;
+    overflow: visible;
+    white-space: normal;
+    word-break: break-word;
+}
+#wrapper pre code {
+    background: none;
+    border-bottom: 0 none rgb(55, 71, 79);
+    border-left: 0 none rgb(55, 71, 79);
+    border-radius: 0;
+    border-right: 0 none rgb(55, 71, 79);
+    border-top: 0 none rgb(55, 71, 79);
+    color: rgb(55, 71, 79);
+    display: inline;
+    font-family: "Roboto Mono", monospace;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 14px;
+    margin: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+    position: static;
+    overflow: visible;
+    white-space: pre;
+    word-break: normal;
+}
+#wrapper blockquote {
+    background: rgb(247, 247, 247) none repeat scroll 0% 0% / auto padding-box border-box;
+    border-bottom: 0 none rgb(33, 33, 33);
+    border-left: 0 none rgb(33, 33, 33);
+    border-radius: 0;
+    border-right: 0 none rgb(33, 33, 33);
+    border-top: 0 none rgb(33, 33, 33);
+    color: rgb(33, 33, 33);
+    display: block;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 24px;
+    margin: 16px 0;
+    padding: 8px;
+    text-align: start;
+    text-indent: 0;
+    position: static;
+    overflow: visible;
+    white-space: normal;
+    word-break: normal;
+}
+#wrapper blockquote p {
+    background: none;
+    border-bottom: 0 none rgb(33, 33, 33);
+    border-left: 0 none rgb(33, 33, 33);
+    border-radius: 0;
+    border-right: 0 none rgb(33, 33, 33);
+    border-top: 0 none rgb(33, 33, 33);
+    color: rgb(33, 33, 33);
+    display: block;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 24px;
+    margin: 0 0 16px;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+    position: static;
+    overflow: visible;
+    white-space: normal;
+    word-break: normal;
+}
+#wrapper cite {
+    background: none;
+    border-bottom: 0 none rgb(33, 33, 33);
+    border-left: 0 none rgb(33, 33, 33);
+    border-radius: 0;
+    border-right: 0 none rgb(33, 33, 33);
+    border-top: 0 none rgb(33, 33, 33);
+    color: rgb(33, 33, 33);
+    display: inline;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 24px;
+    margin: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper img {
+    background: none;
+    border-bottom: 0 none rgb(33, 33, 33);
+    border-left: 0 none rgb(33, 33, 33);
+    border-radius: 0;
+    border-right: 0 none rgb(33, 33, 33);
+    border-top: 0 none rgb(33, 33, 33);
+    color: rgb(33, 33, 33);
+    display: inline;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 24px;
+    margin: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper figure {
+    background: none;
+    border-bottom: 0 none rgb(33, 33, 33);
+    border-left: 0 none rgb(33, 33, 33);
+    border-radius: 0;
+    border-right: 0 none rgb(33, 33, 33);
+    border-top: 0 none rgb(33, 33, 33);
+    color: rgb(33, 33, 33);
+    display: block;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 24px;
+    margin: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+    position: static;
+    overflow: visible;
+    white-space: normal;
+    word-break: normal;
+}
+#wrapper figure img {
+    background: none;
+    border-bottom: 0 none rgb(33, 33, 33);
+    border-left: 0 none rgb(33, 33, 33);
+    border-radius: 0;
+    border-right: 0 none rgb(33, 33, 33);
+    border-top: 0 none rgb(33, 33, 33);
+    color: rgb(33, 33, 33);
+    display: inline;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 24px;
+    margin: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper figcaption {
+    background: none;
+    border-bottom: 0 none rgb(33, 33, 33);
+    border-left: 0 none rgb(33, 33, 33);
+    border-radius: 0;
+    border-right: 0 none rgb(33, 33, 33);
+    border-top: 0 none rgb(33, 33, 33);
+    color: rgb(33, 33, 33);
+    display: block;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 24px;
+    margin: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper table {
+    background: none;
+    border-bottom: 0 none rgb(33, 33, 33);
+    border-left: 0 none rgb(33, 33, 33);
+    border-radius: 0;
+    border-right: 0 none rgb(33, 33, 33);
+    border-top: 0 none rgb(33, 33, 33);
+    color: rgb(33, 33, 33);
+    display: table;
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 20px;
+    margin: 16px 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+    position: static;
+    overflow: visible;
+    white-space: normal;
+    word-break: normal;
+}
+#wrapper tr {
+    background: rgb(120, 144, 156) none repeat scroll 0% 0% / auto padding-box border-box;
+    border-bottom: 0 none rgb(33, 33, 33);
+    border-left: 0 none rgb(33, 33, 33);
+    border-radius: 0;
+    border-right: 0 none rgb(33, 33, 33);
+    border-top: 1px solid rgb(207, 216, 220);
+    color: rgb(33, 33, 33);
+    display: table-row;
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 20px;
+    margin: 0;
+    padding: 0;
+    text-align: start;
+    text-indent: 0;
+}
+#wrapper th {
+    background: none;
+    border-bottom: 0 none rgb(255, 255, 255);
+    border-left: 0 none rgb(255, 255, 255);
+    border-radius: 0;
+    border-right: 0 none rgb(255, 255, 255);
+    border-top: 0 none rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    display: table-cell;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: normal;
+    line-height: 24px;
+    margin: 0;
+    padding: 8px;
+    text-align: left;
+    text-indent: 0;
+}
+#wrapper td {
+    background: rgba(255, 255, 255, 0.95) none repeat scroll 0% 0% / auto padding-box border-box;
+    border-bottom: 0 none rgb(33, 33, 33);
+    border-left: 0 none rgb(33, 33, 33);
+    border-radius: 0;
+    border-right: 0 none rgb(33, 33, 33);
+    border-top: 0 none rgb(33, 33, 33);
+    color: rgb(33, 33, 33);
+    display: table-cell;
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 20px;
+    margin: 0;
+    padding: 7px 8px 8px;
+    text-align: left;
+    text-indent: 0;
+}
