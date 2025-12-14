@@ -39,7 +39,7 @@ def generate_options
     meta = get_meta(f)
     metadata[style] = meta
     options.push(%Q{<option value="#{style}">#{style}</option>})
-    if File.exists?("previews/#{style.gsub(/ /,'')}.png")
+    if File.exist?("previews/#{style.gsub(/ /,'')}.png")
       preview = %Q{<li class="preview"><figure>}
 
       preview += %Q{<h3><a href="preview##{style}" title="#{meta['title']}">#{meta['title']}</a></h3>}
@@ -76,9 +76,9 @@ File.open('preview.html', 'w') do |f|
   f.puts output
 end
 
-template = IO.read('preview_template.html')
+template = IO.read('preview_template2.html')
 
-File.open('index.html', 'w') do |f|
+File.open('body.html', 'w') do |f|
   f.puts template.sub(/%%stylemenu%%/, styles[:stylemenu]).sub(/%%previews%%/, styles[:previews])
 end
 

@@ -1,22 +1,20 @@
-/*
-   This document has been created with Marked.app <http://markedapp.com>
+/* 
+   This document has been created with Marked.app <http://markedapp.com>, Copyright 2011 Brett Terpstra
    Please leave this notice in place, along with any additional credits below.
    ---------------------------------------------------------------
-   Title: Academia
-   Author: David Smith <http://www.davidsmith.name>
-   Description: A basic theme for displaying academic documents.
+   Title: Theme title
+   Author: Your name and optional url
+   Description: Basic description of the theme.
 */
 body {
     -webkit-font-smoothing: antialiased;
-    font-style: normal;
-    font-size: 12pt;
-    font-family: "Hoefler Text", Palatino, Georgia, Times, Serif;
-	text-align: justify;
-	hyphens: auto;
-	width: 825px;
-	margin: auto;
+    font: normal .8764em/1.5em Arial,Verdana,sans-serif;
+    margin: 0;
 }
 
+html>body {
+    font-size: 13px;
+}
 
 li {
     font-size: 110%;
@@ -74,20 +72,8 @@ h6 {
 
 body,p,td,div {
     color: #111;
-    font-family: "Hoefler Text", Palatino, Georgia, Times, Serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
     word-wrap: break-word;
-}
-
-p {
-    text-indent: 2em;
-}
-
-blockquote + p {
-    text-indent: 0em;
-}
-
-h1+p,h2+p,h3+p,h4+p,h5+p,h6+p {
-    text-indent: 0em;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -110,7 +96,7 @@ a:hover {
 
 .footnote {
     color: #0d6ea1;
-    font-size: .83em;
+    font-size: .8em;
     vertical-align: super;
 }
 
@@ -229,40 +215,29 @@ figure:hover>figcaption {
 
 .poetry pre {
     display: block;
-    font-family: "Hoefler Text", Georgia, Garamond, serif !important;
-    font-size: .83em !important;
-    font-style: normal;
+    font-family: Georgia, Garamond, serif !important;
+    font-size: 110% !important;
+    font-style: italic;
     line-height: 1.6em;
     margin-left: 1em;
-    text-indene: 0em;
 }
 
 .poetry pre code {
-    font-family: "Hoefler Text", Georgia, Garamond, serif !important;
-    font-size: .83em !important;
-    text-indent: 0em;
+    font-family: Georgia, Garamond, serif !important;
 }
 
 blockquote p {
-    font-size: .83em;
-    font-style: normal;
+    font-size: 110%;
+    font-style: italic;
     line-height: 1.6em;
-    text-indent: 0em;
 }
 
-.footnoteRef sup,sub {
-    font-size: 2ex;
-    font-style: normal;
+sup,sub,a.footnote {
+    font-size: 1.4ex;
     height: 0;
     line-height: 1;
     position: relative;
     vertical-align: super;
-    padding-left: 0.35ex;
-}
-
-div.refs>p,div#refs>div[id^="ref"]>p {
-    padding-left: 2em;
-    text-indent: -2em;
 }
 
 sub {

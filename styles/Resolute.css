@@ -1,0 +1,726 @@
+/*
+This document has been created with Marked.app <http://marked2app.com>
+Content is property of the document author
+Please leave this notice in place, along with any additional credits below.
+---------------------------------------------------------------
+Title: Resolute
+Author: Brett Terpstra
+Description: A sturdy theme. Originally designed for use in nvUltra.
+Non-standard fonts used: Rubik, Karla
+---
+*/
+@import url('https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i|Rubik:700,700i&display=swap');
+
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%
+}
+
+body {
+  margin: 0 auto;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block
+}
+
+audio, canvas, progress, video {
+  display: inline-block;
+  vertical-align: baseline
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0
+}
+[hidden], template {
+  display: none
+}
+
+a {
+  background-color: transparent
+}
+
+a:active, a:hover {
+  outline: 0
+}
+
+abbr[title] {
+  border-bottom: 1px dotted
+}
+
+b, strong {
+  font-weight: bold
+}
+
+dfn {
+  font-style: italic
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0
+}
+
+mark {
+  background: #ff0;
+  color: #000
+}
+
+small {
+  font-size: 80%
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline
+}
+
+sup {
+  top: -0.5em
+}
+
+sub {
+  bottom: -0.25em
+}
+
+svg:not(:root) {
+  overflow: hidden
+}
+
+figure {
+  display: inline-block;
+  width: 100%;
+  margin: 1em 0;
+  text-align: center;
+}
+
+figcaption {
+  font-style: italic;
+  text-align: center;
+  background: white;
+  color: #666666;
+}
+
+img {
+  border: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+  border:  none;
+  border-top-style: solid;
+  border-top-color: #cfcabf;
+  border-top-width: 2px;
+  background: none;
+  width:  70%;
+  margin: 2em auto;
+}
+
+pre {
+  overflow: auto
+}
+
+code, kbd, pre, samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+button {
+  overflow: visible
+}
+
+button, select {
+  text-transform: none
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0
+}
+
+input {
+  line-height: normal
+}
+
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box
+}
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em
+}
+
+legend {
+  border: 0;
+  padding: 0
+}
+
+textarea {
+  overflow: auto
+}
+
+optgroup {
+  font-weight: bold
+}
+
+table {
+  border: 1px solid rgba(177, 174, 158, 0.5);
+  border-collapse: collapse;
+  display: table;
+  empty-cells: hide;
+  margin: -1px auto 1.3125em auto;
+  padding: 0;
+  table-layout: fixed;
+  width: 100%;
+}
+
+caption {
+  display: table-caption;
+  font-weight: 700;
+}
+
+col {
+  display: table-column;
+}
+
+colgroup {
+  display: table-column-group;
+}
+
+tbody {
+  display: table-row-group;
+}
+
+tfoot {
+  display: table-footer-group;
+}
+
+thead {
+  display: table-header-group;
+}
+
+td, th {
+  display: table-cell;
+}
+
+tr {
+  display: table-row;
+}
+
+table th, table td {
+  font-size: 1em;
+  line-height: 1.4;
+  padding: .5em 1em 0;
+  border: 1px solid rgba(220, 215, 187,.25);
+}
+
+table thead {
+  background: rgba(63, 146, 185, 1);
+  color:  white;
+  text-transform: uppercase;
+}
+
+table tbody {
+  background: rgba(255, 254, 246, .5);
+}
+
+table tfoot {
+  background: rgba(220, 215, 187, .5);
+}
+
+table th+th,table td+td,table th+td{
+	border-left:1px solid #ddd;
+}
+
+table thead tr:first-child th:first-child,table tbody tr:first-child td:first-child{
+	-webkit-border-radius:4px 0 0 0;
+	-moz-border-radius:4px 0 0 0;
+	border-radius:4px 0 0 0
+}
+
+table thead tr:first-child th:last-child{
+	-webkit-border-radius:0 4px 0 0;
+	-moz-border-radius:0 4px 0 0;
+	border-radius:0 4px 0 0
+}
+
+table tr:nth-child(odd),table th:nth-child(odd),table td:nth-child(odd){
+	background:rgba(200, 237, 255,0.06)
+}
+
+table tr:nth-child(even),table td:nth-child(even){
+	background:rgba(38, 116, 152,0.08)
+}
+
+table tbody tr:first-child td:last-child{
+	-webkit-border-radius:0 4px 0 0;
+	-moz-border-radius:0 4px 0 0;
+	border-radius:0 4px 0 0
+}
+
+table tbody tr:last-child td:first-child{
+	-webkit-border-radius:0 0 0 4px;
+	-moz-border-radius:0 0 0 4px;
+	border-radius:0 0 0 4px
+}
+
+table tbody tr:last-child td:last-child{
+	-webkit-border-radius:0 0 4px 0;
+	-moz-border-radius:0 0 4px 0;
+	border-radius:0 0 4px 0
+}
+
+table tbody tr:nth-child(odd){
+	background-color:rgba(38, 116, 152,0.02)
+}
+
+
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box
+}
+
+body {
+  font-family: Karla, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  color: rgba(26, 25, 25, 0.75);
+  background-color: #fffdfa;
+  text-rendering: optimizeLegibility
+}
+
+h1, h2, h3 {
+  font-family: Rubik;
+  font-weight: 700;
+}
+
+h4, h5, h6 {
+  font-family: Rubik;
+  font-weight: 700;
+  font-style: italic;
+}
+
+html, body {
+  width: 100%;
+}
+
+/** Vertical Rhythm **/
+html {
+  font-size: 18px;
+  line-height: 27px;
+}
+@media screen and (max-height:700px) {
+  html {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+@media screen and (max-width:640px) {
+  html {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+body {
+  font-size: 1em;
+  line-height: 1.5em;
+  margin: auto;
+}
+
+h1,
+h2,
+h3 {
+  word-break: break-word;
+}
+
+h1 {
+  font-size: 3.38888889em;
+  line-height: 1.32786885em;
+  margin-top: 0.44262295em;
+  margin-bottom: 0.8852459em;
+}
+
+h2 {
+  font-size: 2.27777778em;
+  line-height: 1.31707317em;
+  margin-top: 0.65853659em;
+  margin-bottom: 0.65853659em;
+}
+
+h3 {
+  font-size: 1.5em;
+  line-height: 1em;
+  margin-top: 1em;
+  margin-bottom: 0em;
+}
+
+h4 {
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-top: 1.5em;
+  margin-bottom: 0em;
+}
+
+h5, h6 {
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-top: 1.5em;
+  margin-bottom: 0em;
+}
+
+li p:first-child {
+	margin: 0;
+}
+
+p, ul, ol, pre, table, blockquote {
+  margin-top: 0em;
+  margin-bottom: 1.5em;
+}
+
+ul ul, ol ol, ul ol, ol ul {
+  margin-top: 0em;
+  margin-bottom: 0em;
+}
+/** End Vertical Rhythm **/
+
+h1, h2, h3, h4, h5, h6, h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
+  color: #444
+}
+
+h4, h5, h6, strong {
+  font-weight: normal
+}
+
+strong {
+  font-family: Karla;
+  font-weight: 700;
+}
+
+em {
+  font-family: Karla;
+  font-weight: 400;
+  font-style: italic;
+}
+
+strong em, em strong {
+  font-family: Karla;
+  font-style: italic;
+  font-weight: 700;
+}
+
+small {
+  color: rgba(26, 25, 25, 0.55)
+}
+
+p {
+  margin: 1.8125rem 0
+}
+
+a, input, textarea {
+  transition: color .1s ease-out, border-color .1s ease-out, background-color .1s ease-out, background-image .1s ease-out
+}
+
+a {
+  text-decoration: none;
+  color: #e53554;
+  font-weight: 500
+}
+
+a:hover, a:active, a:focus {
+  outline: 0;
+  color: #ff6983
+}
+
+del {
+  color: rgba(26, 25, 25, 0.55);
+}
+
+ul, ol {
+  list-style-position: outside;
+  margin-top: 0;
+  padding-left: 2em
+}
+
+ul {
+  list-style-type: disc
+}
+
+dt {
+	font-weight: 700;
+}
+
+blockquote {
+  margin: 0;
+  font-style: italic;
+  position: relative;
+  padding:  0 1rem;
+  border-left: 4px solid #bbb6ad;
+}
+
+blockquote {
+  background: #f5f2eb;
+  border-left: 10px solid #bbb6ad;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+blockquote p {
+  display: inline;
+}
+
+q::before {
+  content: "\201C"
+}
+
+q::after {
+  content: "\201D"
+}
+
+code {
+  font-family: Consolas, Menlo, monospace;
+  font-size: .85rem;
+  color: #242932;
+  padding: 1px .3125rem;
+  background-color: #f5f3ee;
+  border-radius: .125rem;
+  border: 1px solid #d6d8db;
+  white-space: pre-wrap;
+  overflow-wrap: break-word
+}
+
+pre code {
+  display: block;
+  padding: .625rem 1rem
+}
+
+label {
+  font-size: 1.1875rem
+}
+
+.rtl {
+  direction: rtl
+}
+
+*::selection {
+  color: #fff;
+  background: #e0516a
+}
+*::-moz-selection {
+  color: #fff;
+  background: #e0516a
+}
+*::selection:window-inactive {
+  background: #e0516a
+}
+
+@media print {
+  body {
+    padding: 20px;
+  }
+}
+
+/*
+  CriticMarkup CSS by Fletcher T. Penney
+
+  Shows CSS tricks to improve visibility of CriticMarkup output
+*/
+
+del {
+  background:rgba(224, 81, 106, .35);
+}
+
+ins {
+  background:rgba(75, 209, 151, .35);
+}
+
+span.critic.comment {
+  color:#4b9ad1;
+}
+
+span.critic.comment::before {
+  content:"{>> ";
+}
+
+span.critic.comment::after {
+  content:" <<}";
+}
+
+.inverted figcaption {
+  background: white;
+  color: #666666;
+}
+
+.inverted hr {
+  border-top-style: solid;
+  border-top-color: #797878;
+  border-top-width: 2px;
+  background: none;
+}
+
+.inverted fieldset {
+  border: 1px solid #c0c0c0;
+}
+
+.inverted table {
+  border: 1px solid rgba(177, 174, 158, 0.5);
+}
+
+.inverted table th,
+
+.inverted table td {
+  border: 1px solid rgba(220, 215, 187, .25);
+}
+
+.inverted table thead {
+  background: rgba(63, 146, 185, 1);
+  color:  white;
+}
+
+.inverted table tbody {
+  background: rgba(255, 254, 246, .5);
+}
+
+.inverted table tfoot {
+  background: rgba(220, 215, 187, .5);
+}
+
+.inverted table th+th,
+.inverted table td+td,
+.inverted table th+td {
+  border-left:1px solid #ddd;
+}
+
+.inverted table tbody tr:nth-child(odd){
+  background-color:rgba(38, 116, 152, .02)
+}
+
+.inverted {
+  background-color: #403f3f;
+  color: #fffdfa;
+}
+
+.inverted h1,
+.inverted h2,
+.inverted h3,
+.inverted h4,
+.inverted h5,
+.inverted h6,
+.inverted h1 strong,
+.inverted h2 strong,
+.inverted h3 strong,
+.inverted h4 strong,
+.inverted h5 strong,
+.inverted h6 strong {
+  color: #fffdfa;
+}
+
+.inverted small {
+  color: rgba(26, 25, 25, .55)
+}
+
+.inverted a {
+  color: #e2415e;
+}
+
+.inverted a:hover,
+.inverted a:active,
+.inverted a:focus {
+  color: #e28495
+}
+
+.inverted blockquote {
+  background: #f5f2eb;
+  border-left: 10px solid #bbb6ad;
+  color: #777;
+}
+
+.inverted blockquote:before {
+  color: #ccc;
+}
+
+.inverted code {
+  color: #242932;
+  background-color: #f5f3ee;
+  border: 1px solid #d6d8db;
+}
+
+.inverted input,
+.inverted textarea {
+  border: 1px solid #ccdae3;
+  background-color: #fff;
+}
+
+.inverted input:focus,
+.inverted textarea:focus {
+  border-color: #a0abb2;
+}
+
+.inverted *::selection {
+  color: #fff;
+  background: #e0516a
+}
+
+.inverted *::-moz-selection {
+  color: #fff;
+  background: #e0516a
+}
+
+.inverted *::selection:window-inactive {
+  background: #e0516a
+}
+
+.inverted del,
+.inverted ins,
+.inverted mark,
+.inverted span.critic {
+  color: #fffdfa!important;
+}
+
+.inverted del {
+  background:rgba(224, 81, 106, .35);
+}
+
+.inverted ins {
+  background: #67b03e;
+}
+
+.inverted mark,
+.inverted span.critic {
+  background: #b1a859;
+}
+
+.inverted span.critic.comment,
+.inverted span.criticcomment {
+  background: #629bc3;
+}

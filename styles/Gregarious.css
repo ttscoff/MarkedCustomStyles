@@ -10,32 +10,653 @@ Description: A clean, friendly theme. Originally designed for use in nvUltra.
 Non-standard fonts used: Avenir
 ---
 */
-/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
-#wrapper {
+html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  margin: 0; }
+}
 
-#wrapper {
-  font-size: 12px;
-  line-height: 26px;
-  font-family: 'Avenir Next', Avenir, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+body {
+  margin: 0;
+  padding: 10px 2em;
+}
+
+html, body {
+  width: 100%;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+audio, canvas, progress, video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden], template {
+  display: none;
+}
+
+a {
+  background-color: transparent;
+}
+a:active, a:hover {
+  outline: 0;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+pre {
+  overflow: auto;
+}
+
+code, kbd, pre, samp {
+  font-family: Consolas, Menlo, monospace;
+}
+
+button, input, optgroup, select, textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+button {
+  overflow: visible;
+  text-transform: none;
+}
+
+select {
+  text-transform: none;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+input {
+  line-height: normal;
+}
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+}
+
+optgroup {
+  font-weight: bold;
+}
+
+/** Tables **/
+table {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-collapse: collapse;
+  display: table;
+  empty-cells: hide;
+  margin: -1px auto 1.3125em auto;
+  padding: 0;
+  table-layout: fixed;
+}
+
+caption {
+  display: table-caption;
+  font-weight: 700;
+}
+
+col {
+  display: table-column;
+}
+
+colgroup {
+  display: table-column-group;
+}
+
+tbody {
+  display: table-row-group;
+}
+
+tfoot {
+  display: table-footer-group;
+}
+
+thead {
+  display: table-header-group;
+}
+
+td, th {
+  display: table-cell;
+}
+
+tr {
+  display: table-row;
+}
+
+table th, table td {
+  font-size: 1em;
+  line-height: 1.4;
+  padding: .5em 1em 0;
+}
+table thead {
+  background: rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+table tbody {
+  background: rgba(0, 0, 0, 0.05);
+}
+table tfoot {
+  background: rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/** Typography **/
+/* Mobile first */
+html {
   color: rgba(26, 25, 25, 0.75);
   text-rendering: optimizeLegibility;
-  /* Let's make sure all's aligned */ }
-  @media screen and (min-width: 600px) {
-    #wrapper {
-      font-size: 14px; } }
-  @media screen and (min-width: 768px) {
-    #wrapper {
-      font-size: 16px; } }
-  #wrapper article, #wrapper aside, #wrapper details, #wrapper figcaption, #wrapper figure, #wrapper footer, #wrapper header, #wrapper hgroup, #wrapper main, #wrapper menu, #wrapper nav, #wrapper section, #wrapper summary {
-    display: block; }
-  #wrapper audio, #wrapper canvas, #wrapper progress, #wrapper video {
-    display: inline-block;
-    vertical-align: baseline; }
-  #wrapper audio:not([controls]) {
-    display: none;
-    height: 0; }
-  #wrapper [hidden], 
+  font-size: 12px;
+  line-height: 20px;
+}
+
+#wrapper {
+  font-family: "Avenir Next", Avenir, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: 1.2em;
+  line-height: 1.66666667em;
+  margin: auto;
+}
+
+h1 {
+  font-size: 2.83333333em;
+  line-height: 1.17647059em;
+  margin-top: 0.58823529em;
+  margin-bottom: 1.17647058em;
+}
+
+h2 {
+  font-size: 2em;
+  line-height: 1.66666667em;
+  margin-top: 0.83333333em;
+  margin-bottom: 0.83333333em;
+}
+
+h3 {
+  font-size: 1.41666667em;
+  line-height: 1.17647059em;
+  margin-top: 1.17647059em;
+  margin-bottom: 0em;
+}
+
+h4, h5 {
+  font-size: 1em;
+  line-height: 1.66666667em;
+  margin-top: 1.66666667em;
+  margin-bottom: 0em;
+}
+
+p, ul, ol, pre, table, blockquote {
+  margin-top: 0em;
+  margin-bottom: 1.66666667em;
+}
+
+ul ul, ol ol, ul ol, ol ul {
+  margin-top: 0em;
+  margin-bottom: 0em;
+}
+
+dt {
+  font-weight: 600;
+}
+
+@media (min-height: 500px) and (min-width: 300px) {
+  html {
+    font-size: 14px;
+    line-height: 23px;
+  }
+
+  body {
+    font-size: 1.1em;
+    line-height: 1.64285714em;
+    margin: auto;
+  }
+
+  h1 {
+    font-size: 3.35714286em;
+    line-height: 1.46808511em;
+    margin-top: 0.4893617em;
+    margin-bottom: 0.9787234em;
+  }
+
+  h2 {
+    font-size: 2.28571429em;
+    line-height: 1.4375em;
+    margin-top: 0.71875em;
+    margin-bottom: 0.71875em;
+  }
+
+  h3 {
+    font-size: 1.5em;
+    line-height: 1.0952381em;
+    margin-top: 1.0952381em;
+    margin-bottom: 0em;
+  }
+
+  h4, h5 {
+    font-size: 1em;
+    line-height: 1.64285714em;
+    margin-top: 1.64285714em;
+    margin-bottom: 0em;
+  }
+
+  p, ul, ol, pre, table, blockquote {
+    margin-top: 0em;
+    margin-bottom: 1.64285714em;
+  }
+
+  ul ul, ol ol, ul ol, ol ul {
+    margin-top: 0em;
+    margin-bottom: 0em;
+  }
+}
+@media (min-height: 500px) and (min-width: 640px) {
+  html {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  h1, h2, h3 {
+    word-break: break-word;
+  }
+
+  body {
+    font-size: 1em;
+    line-height: 1.625em;
+    margin: auto;
+    padding: 3em 1em;
+  }
+
+  h1 {
+    font-size: 4.125em;
+    line-height: 1.18181818em;
+    margin-top: 0.39393939em;
+    margin-bottom: 0.78787878em;
+  }
+
+  h2 {
+    font-size: 2.5625em;
+    line-height: 1.26829268em;
+    margin-top: 0.63414634em;
+    margin-bottom: 0.63414634em;
+  }
+
+  h3 {
+    font-size: 1.625em;
+    line-height: 1em;
+    margin-top: 1em;
+    margin-bottom: 0em;
+  }
+
+  h4, h5 {
+    font-size: 1em;
+    line-height: 1.625em;
+    margin-top: 1.625em;
+    margin-bottom: 0em;
+  }
+}
+p, ul, ol, pre, table, blockquote {
+  margin-top: 0em;
+  margin-bottom: 1.625em;
+}
+
+ul ul, ol ol, ul ol, ol ul {
+  margin-top: 0em;
+  margin-bottom: 0em;
+}
+
+/*li p {
+  display: inline;
+}*/
+li p:first-child {
+  margin: 0;
+}
+
+/* Let's make sure all's aligned */
+hr, .hr {
+  border: 1px solid #ddd;
+}
+
+a, b, i, strong, em, small, code {
+  line-height: 0;
+}
+
+sub {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+h1, h2, h3, h4, h5, h6, h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
+  color: #1A1919;
+}
+
+h4, h5, h6 {
+  font-weight: 500;
+}
+
+strong {
+  font-weight: 500;
+  color: rgba(26, 25, 25, 0.85);
+}
+
+small {
+  color: rgba(26, 25, 25, 0.55);
+}
+
+p {
+  margin: 1.8125rem 0;
+}
+
+a, input, textarea {
+  transition: color 0.1s ease-out, border-color 0.1s ease-out, background-color 0.1s ease-out, background-image 0.1s ease-out;
+}
+
+a {
+  text-decoration: none;
+  color: #0096f8;
+  font-weight: 500;
+}
+a:hover, a:active, a:focus {
+  outline: 0;
+  color: #0074bf;
+}
+
+del {
+  color: rgba(26, 25, 25, 0.55);
+}
+
+ul, ol {
+  list-style-position: outside;
+  margin-top: 1.8125rem;
+  padding-left: 1.65em;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+blockquote {
+  margin: 0;
+  font-style: italic;
+  position: relative;
+}
+
+q::before {
+  content: "“";
+}
+q::after {
+  content: "”";
+}
+
+code {
+  background-color: #eaedf0;
+  border-radius: .125rem;
+  border: 1px solid #d6d8db;
+  color: #242932;
+  font-size: .85rem;
+  line-height: 1.25rem;
+  overflow-wrap: break-word;
+  padding: 1px .3125rem;
+  white-space: pre-wrap;
+}
+
+pre code {
+  display: block;
+  padding: 0.625rem 1rem;
+}
+
+input, textarea {
+  padding: .5rem .625rem;
+  border-radius: .25rem;
+  border: 1px solid #ccdae3;
+  background-color: #fff;
+  -webkit-appearance: none;
+}
+
+input:focus {
+  border-color: #a0abb2;
+  outline: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+textarea:focus {
+  border-color: #a0abb2;
+  outline: 0;
+}
+
+input[type="submit"] {
+  padding: .5rem 1.25rem .5625rem;
+  background-color: #0096f8;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+  border: 0;
+}
+input[type="submit"]:hover, input[type="submit"]:focus {
+  background-color: #0074bf;
+  color: #fff;
+}
+input + input {
+  margin-left: 1.25rem;
+}
+
+label {
+  font-size: 1.1875rem;
+}
+label + input {
+  margin-left: 1.25rem;
+}
+
+.rtl {
+  direction: rtl;
+}
+
+*::selection, *::-moz-selection {
+  color: #fff;
+  background: #dd8Ff1;
+}
+*::selection:window-inactive {
+  background: #d5B1de;
+}
+
+body > * {
+  padding: 0 2rem;
+}
+
+@media print {
+  body {
+    padding: 20px;
+  }
+}
+figure {
+  text-align: center;
+  max-width: 100%;
+}
+
+figcaption {
+  font-style: italic;
+  text-align: center;
+  background: white;
+  color: #666666;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.inverted {
+  background: #3b4646;
+  color: #dadad8;
+}
+.inverted table thead {
+  background: rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+.inverted table tbody {
+  background: rgba(0, 0, 0, 0.05);
+}
+.inverted table tfoot {
+  background: rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+.inverted html {
+  background: #3b4646;
+  color: #dadad8;
+}
+.inverted hr, .inverted .hr {
+  border: 1px solid #a7a7a6;
+}
+.inverted h1, .inverted h2, .inverted h3, .inverted h4, .inverted h5, .inverted h6, .inverted h1 strong, .inverted h2 strong, .inverted h3 strong, .inverted h4 strong, .inverted h5 strong, .inverted h6 strong {
+  color: #dadad8;
+}
+.inverted strong {
+  color: #dad7c7;
+}
+.inverted small {
+  color: #dad7c7;
+}
+.inverted p {
+  margin: 1.8125rem 0;
+}
+.inverted a {
+  color: #93c1d6;
+}
+.inverted a:hover, .inverted a:active, .inverted a:focus {
+  color: #93c1d6;
+}
+.inverted del {
+  color: #bbbab9;
+}
+.inverted code {
+  background-color: #586469;
+  border: 1px solid #888887;
+  color: #dadad8;
+}
+.inverted input, .inverted textarea {
+  border: 1px solid #ccdae3;
+  background-color: #fff;
+}
+.inverted input:focus, .inverted textarea:focus {
+  border-color: #a0abb2;
+}
+.inverted figcaption {
+  background: #586469;
+  color: #dadad8;
+}

@@ -1,3 +1,5 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 # Custom Styles for [Marked 2](http://marked2app.com)
 
 Want a quick look at some of the current styles in this repository? [Browse the gallery.](https://marked2app.com/styles/)
@@ -28,7 +30,7 @@ When viewed through the gallery, every style has an "Install" button that will a
 
 To install manually:
 
-1. Save the CSS file to your disk. You can open any Style in the list and then hit the "Raw" button to get a file ready for "Save to...". I suggest saving to `~/Library/Application Support/Marked 2/Custom CSS`, as (at some point) in the future Marked will read from that folder automatically. 
+1. Save the CSS file to your disk. You can open any Style in the list and then hit the "Raw" button to get a file ready for "Save to...". I suggest saving to `~/Library/Application Support/Marked 2/Custom CSS`, as (at some point) in the future Marked will read from that folder automatically.
 
 2. Then, open up the Style Preferences in Marked and click the "+" button under the Custom Styles list. Locate the file and select it. Now it will appear in your Styles dropdown selection and you can optionally make it the default window style.
 

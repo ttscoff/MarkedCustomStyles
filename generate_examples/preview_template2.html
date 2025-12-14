@@ -1,0 +1,56 @@
+<section id="previews">
+    <h2 style="font-size: 46px;font-weight:600">Marked Custom Styles</h2>
+
+    <p>A collection of custom styles available for Marked 2. Have your own and want to share? Use the <a
+            href="/styleshare/">Custom Style Uploader</a> to submit for review.</p>
+
+    <p>If you're browsing on a Mac with Marked 2 installed, you can click the <span
+            class="installexample">Install</span> button on any style to instantly add it to Marked. If you'd rather
+        install manually, just use the CSS link to save the style to disk, then use the Custom Styles section of the
+        Preferences->Style pane to add it.</p>
+
+    <p>To view all source files, including the default styles, visit <a
+            href="https://github.com/ttscoff/MarkedCustomStyles">the GitHub repository</a>.</p>
+
+    <ul class="previews">
+        %%previews%%
+    </ul>
+</section>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+
+<script>
+    function jumpToStyle(obj) {
+        document.location = 'preview#' + obj.value;
+    }
+
+    $('.button-preview').on('click', function (ev) {
+        ev.preventDefault();
+        var previewURL = $(this).data('url');
+        document.location = previewURL;
+    });
+
+    $('.button-add').on('click', function (ev) {
+        ev.preventDefault();
+        var $button = $(this);
+        $button.addClass('waiting');
+        var title = $(this).data('title'),
+            style = $(this).data('style');
+
+        $.getJSON('generate_url.cgi', {
+            name: title,
+            style: style
+        }, function (data) {
+            $button.removeClass('waiting');
+            if (data.success) {
+                document.location = data.url;
+            } else {
+                alert("Error installing style: " + data.error);
+            }
+        });
+    });
+</script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || []; _gaq.push(["_setAccount", "UA-19894778-5"]); _gaq.push(["_trackPageview"]); (function () { var b = document.createElement("script"); b.type = "text/javascript"; b.async = true; b.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js'; var a = document.getElementsByTagName("script")[0]; a.parentNode.insertBefore(b, a); })();
+</script>

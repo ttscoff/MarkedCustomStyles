@@ -1,0 +1,478 @@
+/*
+This document has been created with Marked.app <https://marked2app.com>, Copyright 2019 Brett Terpstra
+Content is property of the document author
+Please leave this notice in place, along with any additional credits below.
+---------------------------------------------------------------
+Title: Meeting Minutes Classic
+Author: Bram de Haan <https://atelierbramdehaan.nl/>
+Description:  Unassuming styling for readable structured documents
+Fonts: Apple system fonts; serif (New York)
+---
+*/
+html {
+  font-size: 16px;
+}
+
+html,
+body {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAlCAYAAAAqXEs9AAAAAXNSR0IArs4c6QAABVNJREFUWEeNWNmS2zgMBHXa+f9v3Eom8Ux2UxVb4rXVAEFRFKWynmyJInF0NwCZx9d/kYjIOkfjMBJRpMU6mscBt9sX3jB4ZIhiTL9lqQ+B+q6j1Voax1GWVZe8bsgFT0PXydO0p2GDIpGPshE/i5GMwe+YDBXjsh3NA/Y3l9XSNI1kV0fTdOGcvqYGfTy+Yt/159EonsByeFZf1joax4HWxuHOOY7HMPTJ0e391VnebxySwwgEIhR8oK5PoUunWefJdIZwt9PIpVDXaZJXyvTtU6lpLB3hTCfbJCPyR1L2RhRCCNmwNiYkp7vUJ6iFEKnr5MAQI3VqSdrIh0gxBI5ijpD1nuZpLICCDYAhn0Ja4CkSOWzQI9WbP8AN75GiJWsSLjW6xXrYY32gscgOGwSG4fgh5fIMUDg6BEd9t4HUe089G3a8WiTQaIGF0zgeiJJTplRk2idPAdJx7DPjyrwf0hZDWrc9KQ3KgE83nd+ityNa1qHElPIg5zznFSnw3lHX901d4dCzjp3Qu6kX2BPR3ZPJPL7+xA0HgpsNC5t5YArYpqRtnVHTXlIcqIemtRSyoW0HlqmmVHp1qlMIPbzU88QoUfx8RaLXapldkBes984xZrcsJPFAyrD4xpu0L9WJ+mUcDv0AzmoHQG88EyGNVFK/PKWOqvl4/I44SOm6suRvWAA2YqB8b1lWmueJ/fcZY3LELtUZvJGG3jTX4x1lG8TZt4Qxe5qUtMTK8/mi+/1Gr2Wl2zzJ0hPALuuanJRlotY9F+NopLhaLsBwXqMYIIx/YqsUWOsphkjTXNQZVlhDznuyztJ9nhkDjCFjdrVqkwg5zAefDNJO4US3vv/8jKd0PcFUmffVOpqKVqWsSwmme4DXqS3Ah2qxo329ecsehB6RE3066g9YB30BJnM2ISycpuNVsprX//r8N2ql1VyWngmzBoqsxObYYpw1Saec3R4462lIDH0tlm7zmIpriOQ8Ql9SX1oI7oGq6gzXFZgwFHjRan60QzB0dZVRMv/8eEShvHaKW2CBB7QGqNjLYqln+qKhOhZTlodIjCfVq2PwkpMn6eP1dT9UenIopnxDWttldTRDr05SVqbjKjr6OjIBZm/VvlGtsdHfvy/69u2WRa+luJnSjZNRBWY0+wWiJUVledm8akZIH9el4l387oTzJDzageZONEohNj9+/Y59ZzgFor77oggRBMWvim5t+BsEy/vVTjLtsYEyCVbiAGENQBxzn/NcLd2niVAW0IoA3FcdY8uwDVuGQsA5VT/0/eMTUM1qy13iBKZIw5VBV0wG2u2haev7IQ+H70TmdI3OZTwGISo+0jT2nMfa6vcOOupNmQ4oPPaGh8M4nDZ6pqxlrT63Nma1ng3Pag6t4ql3P4Hoe1e9lpYqnOssGraOuB8ClTHS1IJ8Fhktrgr053Oh+31m789qVhasC6pmYdwNcsVQtzELAAxsH8B+nES3U9bF0jSP9Hyt3OvASf1msK6epqk1Mm3pzsV1NwYVXz/0vkwVMoGU0oCUILo6EB6qd1qPbhLOaHnR6NdCe1E6DDNN24yyREg3CM0S47IOpUBpSut+GZiBvMB4TMTaR4nUBCnklw1aTP1OasByFItvQuU81hqfShyyTHRD7hTgGCYUrSqs1HVxvSqK9YFld/gOQ1sG1wPmZS27rtL7b0XADnpraBgrvemo6/c9YqvECCy2KScbhMX4HqSMeL0s3W6tWW0Ddcm21jegpkOKM4v+Seqm9mNcwvSTHhL5fC10v82HL126sZJb61ddcFfnaErebh8q0JRtk4bUSYnk8VPOQP8DvwHHlTmsY+AAAAAASUVORK5CYII=');
+}
+
+.meetingminutesclassic #wrapper {
+  padding: 2rem 8vw 8rem;
+  overflow: auto;
+  max-width: 53rem !important;
+  margin: auto;
+  background-color: rgba(255,255,255,.5);
+}
+@media (min-width: 1200px) {
+  .meetingminutesclassic #wrapper {
+    padding-right: 6rem;
+    padding-left: 6rem;
+  }
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  font: normal 100%/1.5 ui-serif, Marion-Regular, Georgia, serif;
+  padding: 0 !important;
+  background-color: hsl(220, 16%, 94%);
+  min-height: 100vh;
+}
+
+li p {
+  margin: 0;
+  padding-bottom: 0;
+}
+
+body,p,td,div {
+  color: hsl(220, 16%, 15%);
+  word-wrap: break-word;
+}
+
+body,p,div {
+  font-family: ui-serif, Marion-Regular, Georgia, serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: --apple-system-headline;
+  word-wrap: break-word;
+  padding-top: .5em;
+  line-height: 1.15;
+}
+h2,h3,h4,h5,h6,dl {
+  margin-top: .5625em;
+}
+h2,h3 {
+  color: hsl(220, 16%, 25%);
+}
+h4,h5,h6,dt {
+  color: hsl(220, 16%, 20%);
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 100;
+  letter-spacing: -0.0125em;
+  word-spacing: 0.025em;
+  margin: 0 0 1.65em;
+  color: hsl(220, 16%, 35%);
+}
+h2 {
+  font-size: 1.75em;
+  margin-bottom: .65em;
+}
+h3 {
+  font-size: 1.5em;
+  margin-bottom: .7em;
+}
+h4 {
+  font-size: 1.33334em;
+  margin-bottom: .75em;
+}
+h5,
+h6 {
+  font-size: 1.25em;
+}
+h5 {
+  margin-bottom: .875em;
+}
+h6 {
+  margin-bottom: .25em;
+}
+
+a {
+  transition: all .25s ease-in-out;
+  color: hsl(240, 50%, 50%);
+  text-decoration-thickness: .005em;
+}
+h2 a,
+h3 a,
+h4 a,
+h5 a {
+  /* color: hsl(240, 75%, 62%); */
+  color: inherit;
+  text-decoration-thickness: .0025em;
+}
+
+a:hover {
+  color: hsl(250, 85%, 55%);
+  text-decoration-thickness: .05em;
+}
+
+.footnote,
+.footnotes {
+  font-size: .8em;
+  color: hsl(220, 50%, 45%);
+  vertical-align: super;
+  line-height: 1.4;
+}
+.reversefootnote {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+#wrapper img {
+  margin: 1.5em auto;
+  display: block;
+}
+#wrapper figure img {
+  margin-bottom: 0;
+}
+
+dd,
+li > p:first-child {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+#wrapper > ul,
+#wrapper > ol {
+  padding: 0 0 1.5rem;
+}
+
+ul ul,
+ol ul {
+  padding-left: .6em;
+  margin-bottom: .75em;
+}
+ul ol,
+ol ol {
+  padding-left: 1.3em;
+}
+ul li {
+  position: relative;
+}
+ul li:before {
+  content: "\B7 \A0";
+  position: absolute;
+  color: hsl(220, 16%, 60%);
+  font-size: 1.125rem;
+  top: -.125rem;
+  left: -.5em;
+}
+ul ol li:before {
+  display: none;
+}
+
+hr {
+  border: 1px solid hsl(220, 12%, 75%);
+  border-bottom-width: 0;
+  max-width: 40em;
+  margin: 3em 0 4em;
+}
+
+caption,col,colgroup,table,tbody,td,tfoot,th,thead,tr {
+  border-spacing: 0;
+}
+
+table {
+  font-family: ui-sans-serif, -apple-system, AvenirNext-Regular, "Helvetica Neue", Helvetica, Verdana, sans-serif;
+  border: 1px solid hsla(220, 20%, 75%, 0.33);
+  border-collapse: collapse;
+  display: table;
+  empty-cells: hide;
+  margin: 1.5rem 0 3rem;
+  padding: 0;
+  table-layout: fixed;
+  font-weight: 300;
+}
+caption {
+  display: table-caption;
+  font-weight: 500;
+}
+col {
+  display: table-column;
+}
+colgroup {
+  display: table-column-group;
+}
+tbody {
+  display: table-row-group;
+}
+tfoot {
+  display: table-footer-group;
+}
+thead {
+  display: table-header-group;
+}
+td,th {
+  display: table-cell;
+} th {
+  font-weight: 500;
+}
+tr {
+  display: table-row;
+}
+table th,table td {
+  font-size: .875rem;
+  line-height: 1.5;
+  padding: 0.5em 1em;
+  text-align: left;
+}
+table td code {
+  font-size: .8rem;
+}
+table thead {
+  background-color: hsla(220, 16%, 25%, 0.25);
+  border: 1px solid hsla(220, 16%, 10%, 0.1);
+  border-bottom: 1px solid hsla(220, 16%, 10%, 0.15);
+}
+table tbody {
+  background-color: hsla(220, 16%, 10%, 0.05);
+}
+table tfoot {
+  background-color: hsla(220, 16%, 10%, 0.15);
+  border: 1px solid hsla(220, 16%, 10%, 0.15);
+  border-top: 1px solid hsla(220, 16%, 10%, 0.2);
+}
+table strong,
+table b {
+  font-weight: 500;
+}
+table tr:nth-child(odd),table th:nth-child(odd),table td:nth-child(odd) {
+  background-color: hsla(220, 100%, 100%, 0.15);
+}
+table tr:nth-child(even),table td:nth-child(even) {
+  background-color: hsla(220, 10%, 78%, 0.15);
+}
+
+figure {
+  display: inline-block;
+  position: relative;
+  margin: 1em 0 2em;
+}
+figcaption {
+  text-align: center;
+  background-color: hsl(220, 16%, 94%);
+  color: hsl(220, 16%, 50%);
+  font-size: .8rem;
+  padding: .5em 1em .4em;
+  margin-bottom: 1rem;
+  letter-spacing: .025em;
+}
+
+.poetry pre {
+  display: block;
+  font-family: ui-serif, Marion-Regular, Georgia, serif !important;;
+  font-size: 110% !important;
+  font-style: italic;
+  line-height: 1.6;
+  margin-left: 1em;
+}
+.poetry pre code {
+  font-family: ui-serif, Marion-Regular, Georgia, serif !important;;
+}
+
+blockquote {
+  margin: 1.5rem 0 3rem;
+  padding: 1rem 1.5rem;
+  border-left: .25rem solid hsl(220, 25%, 85%);
+  background-color: hsl(220, 16%, 92%);
+}
+blockquote p {
+  color: hsl(220, 16%, 35%);
+  font-style: italic;
+  padding-bottom: 0;
+  max-width: 37em;
+}
+
+sup,sub,a.footnote {
+  font-size: 1.4ex;
+  height: 0;
+  line-height: 1;
+  position: relative;
+  vertical-align: super;
+}
+sub {
+  vertical-align: sub;
+  top: -1px;
+}
+
+h1,h2,h3,h4,h5,h6, p {
+  max-width: 66ch;
+}
+
+p,
+pre {
+  margin: 0;
+}
+p {
+  padding-bottom: 1.5em;
+}
+pre[style] {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: .5em 1em;
+  margin-bottom: 3rem;
+  max-width: 40rem;
+  height: auto !important;
+  border-radius: .5rem;
+}
+li > pre {
+  margin-top: 1em;
+}
+tt, code, kbd, samp {
+  font-family: Consolas, Menlo-Regular, menlo, monaco, monospace;
+  font-size: .875rem;
+}
+p > code,
+li > code {
+  display: inline-block;
+  background-color: hsl(220, 16%, 85%);
+  border-radius: 5px;
+  padding: .125em .5em;
+  color: hsl(220, 16%, 8%);
+  transform: translateY(-.075em);
+}
+a > code {
+  font-size: 1rem;
+}
+
+dl {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 2.66667rem;
+  row-gap: 1.33334rem;
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  line-height: 1.33334em;
+}
+
+dt {
+  text-align:right;
+  font-weight: bold;
+}
+dd {
+  grid-column: span 1/-1;
+}
+
+@media print {
+  img, table, figure {
+    page-break-inside: avoid;
+  }
+  #wrapper {
+    background-color: #fff;
+    color: #303030;
+    padding: 2em 4em 3em !important;
+    position: relative;
+    text-indent: 0;
+  }
+}
+@media screen {
+  .inverted {
+    background-color: hsl(220,6%,10%);
+  }
+  .inverted #wrapper {
+    background-color: rgba(0,0,0,.25);
+    color: hsl(220, 16%, 94%);
+  }
+  html:has(.inverted),
+  .inverted {
+    background-image:
+      url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAlCAYAAAAqXEs9AAAAAXNSR0IArs4c6QAABHtJREFUWEelWN1WpDAMThn+1Yv1GfTsuOs5+/4v5cXqDgxQuicpKWlpYdReOAht/vMlqXp6fjGQWvhFrR/zPIdpmuhFkecw4rMBUIp+4HQ6gdYaTqcMsiyDaZzoPf1RAGVZwnAdPJqSNbJSJJAByAtkNvoSuN0GwChHSGUKiryAYRhoBxHKMpjneTkRaCK5Lp+qqoQrCsfLAJRVsQgUWMhZQtCt6wr6/ko70RJohWFABb6xInKrp+ezkdp75MUBdMFqAV8IpRQYYz2P1pIxoFQGxsyb90yhrmvo+x7417pMrLJEV8Q1D5n5Ylm3FmUB4yjPGyjLyrkXz+zyiAX1PmNfjLqqoL9aV6ZW0zTQd51nudReF9RoU2n6jfagPLNXVQVXFGRxq392J6idW+2ex8cf8Pb2Rs8YuxuXSQYYvJzmXwndogjdt0IA0YsHdRyH9oIYaTlmAodYaLLWbKBubGay9fiMzNimqaHreqevsxCBFuKKATjlFuDWJVXx1cpztKLcu5yKHGnbFuZZO/iQFmL+gcsM2NgQgMVSCQZFkcM4WsTmVEdgRbC8dJ1NYdR6Qfm2aeh9eq3E1fnl1bCGEj2lWUNCsoR4blqwiMxMELAKfpi5nBwy7Z3ZBNBFtRLWcq72NgbRGvwbCoe4hHGGntnGkCP8OaJsFXQTF9lbLBvucQKx1JgJ0zjCSVT2I98fuiMgENvPIeIFNaW6npPtgaTLcYQKYLuArQauqizgOoywqebLYeTBkOLVxjCGPqtlKrYkZEgsa+oaur7fgKFDeBbo5derMUYdInKIN1sFLMWoYvuVZIEaWw+TpQNVsfFkuz7sf+bZUCshfcptAxKTFuGKTpg1TO7I3V0Ll38X29AF4UGN3s/zq9GItKJVle6wpkZQS2yIlA48zwI5KKHSdWAqa6EzkoyEROACR+uYKJleYpnrqWWvZV86AF6Deu0YY+gchf0bZEIsmrWmAtt1V3DlJlbhl2JMLdDu1BGx28PDPbz//SCjxkqIPXKDxAlwI4HQ3+Mwbju6dJFf29CdPTbjtsLJ4A9R3esYXaEMGvXblDaQ5wUgPGD8dJe12nNHQOiPALp0p1mmQGOmibVpP26CaaF02GAx7eMGr4Rx9OeyL8XQxvWRSp6dctB6otytxDy364Hlo0v7qL8DZuhvXIhbOGXSuCT2xFI9XZi3X9ZR+uDUkfkRLtDVOPCFiwZFHLETUJdRBbBxtAhkgdFG+wR13UQJr4xWk6TT/ja7hK2wq2Vh6llG9uJBFsuwcD7c38P7x4fjjvCBVyF0w7Gz2raBy+WyTC5rb+4ECs/etQ38u8SbcnZfrKpz/UoPnAGn2Aj1+/WPwV5W9sbMDAmDsdDGPqbnINj3BgIWQQ6NbuoN5PNiKNZ4YxZJnEGhtR5BaxYx5ZdUYd6pKnsdIwpXhhdKwUwuYYKf26b15i+HQx1Or/41TUqVAIf26+J32lzr1p66wwxLS38VDd0aA5tqz1MHbonPXHFAq5aLJw76HC8qtHb3inkRjtzxMes/x5efuxqqoesAAAAASUVORK5CYII=');
+  }
+  .inverted hr {
+    border-color: hsl(220, 12%, 35%) !important;
+  }
+  .inverted h1, .inverted h2, .inverted h3, .inverted h4, .inverted h5, .inverted h6, .inverted th, .inverted caption, .inverted dt {
+    color: hsl(220, 50%, 80%);
+    letter-spacing: .035em;
+  }
+  .inverted p, .inverted td, .inverted li, .inverted .math, .inverted dd {
+    color:  hsl(220, 16%, 92%);
+    letter-spacing: .03334em;
+  }
+  .inverted figcaption {
+    background-color: hsl(220, 16%, 25%);
+    color: hsl(220, 16%, 94%);
+    letter-spacing: 0.05em;
+  }
+  .inverted p > code,
+  .inverted li > code {
+    background-color: hsl(220, 16%, 28%);
+    color: #fff;
+  }
+
+  .inverted pre[style],
+  .inverted pre[style] code {
+    letter-spacing: .05em;
+    border-color: hsl(220, 16%, 16%) !important;
+  }
+
+  .inverted table {
+    background-color: none;
+  }
+  .inverted table tr:nth-child(odd),
+  .inverted table td:nth-child(odd) {
+    background-color: hsla(220, 100%, 100%, 0.15);
+  }
+  .inverted a {
+    color: hsl(225, 75%, 75%);
+  }
+  .inverted blockquote {
+    border-color: hsl(220, 25%, 30%);
+    background-color: hsl(220, 20%, 20%);
+  }
+  .inverted ul li:before {
+    color: hsl(220, 80%, 80%);
+  }
+  ::selection {
+    background-color: rgba(157, 193, 200, 0.5);
+  }
+  h1::selection {
+    background-color: rgba(45, 156, 208, 0.3);
+  }
+  h2::selection {
+    background-color: rgba(90, 182, 224, 0.3);
+  }
+  h3::selection, h4::selection, h5::selection, h6::selection, li::selection, ol::selection {
+    background-color: rgba(133, 201, 232, 0.3);
+  }
+  code::selection {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #eee;
+  }
+  code span::selection {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+    color: #eee !important;
+  }
+  a::selection {
+    background-color: rgba(255, 230, 102, 0.2);
+  }
+  .inverted a::selection {
+    background-color: rgba(255, 230, 102, 0.6);
+  }
+  td::selection, th::selection, caption::selection {
+    background-color: rgba(180, 237, 95, 0.5);
+  }
+}

@@ -3,9 +3,9 @@ This document has been created with Marked.app <http://marked2app.com>
 Content is property of the document author
 Please leave this notice in place, along with any additional credits below.
 ---------------------------------------------------------------
-Title: brettterpstra.com
-Author: StyleStealer
-Description: Collected from https://brettterpstra.com/2022/11/30/bretts-favorites-2022-personal-projects/
+Title: BrettTerpstra.com 2023
+Author: Brett Terpstra
+Description: Borrowed from brettterpstra.com
 ---
 */
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap");
@@ -1349,4 +1349,42 @@ body,#wrapper  {
     padding: 10px 10px 9px;
     text-align: left;
     text-indent: 0;
+}
+
+.inverted,
+.inverted #wrapper {
+  background: #333;
+  color: #eee!important;
+}
+
+.inverted #wrapper h1,
+.inverted #wrapper h2,
+.inverted #wrapper h3,
+.inverted #wrapper h4,
+.inverted #wrapper h5,
+.inverted #wrapper h6 {
+    color: #eee;
+}
+
+.inverted #wrapper p,
+.inverted #wrapper strong,
+.inverted #wrapper b,
+.inverted #wrapper em,
+.inverted #wrapper th,
+.inverted #wrapper td,
+.inverted #wrapper li {
+    color: #eee;
+}
+
+.inverted #wrapper pre {
+  background: #383838;
+}
+
+.inverted #wrapper blockquote {
+  background: #555;
+}
+
+.inverted #wrapper figcaption {
+  background: #4a4a4a;
+  color: #eee;
 }
